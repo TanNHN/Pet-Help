@@ -1,24 +1,29 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'file:///C:/Users/Tan/Desktop/HCI/pet_help/lib/components/list_header.dart';
-import 'file:///C:/Users/Tan/Desktop/HCI/pet_help/lib/components/listview.dart';
 import 'package:pet_help/view/login_page.dart';
 
-class MyHomePage extends StatelessWidget {
-  final String title;
+import 'package:pet_help/view/uploadImages.dart';
 
-  MyHomePage({Key key, this.title}) : super(key: key);
+// ignore: camel_case_types
+class rescue_page extends StatefulWidget {
+  @override
+  State<StatefulWidget> createState() {
+    RescuePageStage rescuePageStage = new RescuePageStage();
+    return rescuePageStage;
+  }
+}
 
+//https://medium.com/flutterpub/create-beautiful-forms-with-flutter-47075cfe712
+class RescuePageStage extends State<rescue_page> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Center(
-          child: Text(
-            'Post',
-            style: GoogleFonts.lato(
-                fontStyle: FontStyle.italic, color: Colors.white, fontSize: 30),
-          ),
+        title: Padding(
+          padding: const EdgeInsets.fromLTRB(80, 0, 0, 0),
+          child: Text("Add pet"),
         ),
         backgroundColor: Color.fromRGBO(253, 158, 121, 1),
       ),
@@ -126,14 +131,7 @@ class MyHomePage extends StatelessWidget {
           ],
         ),
       ),
-      body: Column(
-        children: [HeaderList(), Expanded(child: ListViewPet())],
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: null,
-        backgroundColor: Color.fromRGBO(253, 158, 121, 1),
-        child: Icon(Icons.add),
-      ),
+      body: UploadImages(),
     );
   }
 }
