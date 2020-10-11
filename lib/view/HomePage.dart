@@ -19,7 +19,7 @@ class MyHomePage extends StatelessWidget {
         title: Text(
           'Home',
           style: GoogleFonts.lato(
-              fontStyle: FontStyle.italic, color: Colors.white, fontSize: 30),
+              fontStyle: FontStyle.normal, color: Colors.white, fontSize: 30),
         ),
         centerTitle: true,
         backgroundColor: Color.fromRGBO(253, 158, 121, 1),
@@ -144,15 +144,6 @@ class MyHomePage extends StatelessWidget {
           ],
         ),
       ),
-      // floatingActionButton: FloatingActionButton(
-      //   onPressed: () {
-      //     Navigator.of(context).pushReplacement(MaterialPageRoute(
-      //       builder: (context) => Pick(),
-      //     ));
-      //   },
-      //   backgroundColor: Color.fromRGBO(253, 158, 121, 1),
-      //   child: Icon(Icons.add),
-      // ),
     );
   }
 }
