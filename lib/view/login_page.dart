@@ -1,12 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_login/flutter_login.dart';
-import 'file:///E:/CN7/HCI/Project/Pet-Help/lib/view/HomePage.dart';
 
+import 'HomePage.dart';
 
-const users = const {
-  'anhdung@gmail.com': '12345',
-  'user' : '1111'
-};
+const users = const {'anhdung@gmail.com': '12345', 'user': '1111'};
 
 class LoginScreen extends StatelessWidget {
   Duration get loginTime => Duration(milliseconds: 2250);
