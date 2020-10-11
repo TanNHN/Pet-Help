@@ -40,10 +40,21 @@ dependencies:
   carousel_pro: ^1.0.0
   firebase_storage: ^3.1.1
   cloud_firestore: ^0.13.0+1
+  loading_animations: "^2.1.0"
+  image_picker: ^0.6.7+11
+  geolocator: ^5.3.1
+  pp_local_notifications: ^0.0.1
+  google_maps_flutter: ^1.0.2
+  flutter_launcher_icons: ^0.8.1
 
+flutter-icon:
+  image_path: "src/icon/logoApp.png"
+  iso: true
+  android : true
 dev_dependencies:
   flutter_test:
     sdk: flutter
+
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -57,12 +68,14 @@ flutter:
   uses-material-design: true
   assets:
     - src/image/avt.jpg
+    - src/image/background.jpg
     - src/icon/contact.png
     - src/icon/cat.png
     - src/icon/profile.png
     - src/icon/pet-house.png
     - src/icon/post.png
     - src/icon/logout.png
+    - src/data/pet.json
 
   # To add assets to your application, add an assets section, like this:
 

@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'file:///C:/Users/Tan/Desktop/HCI/pet_help/lib/components/list_header.dart';
-import 'file:///C:/Users/Tan/Desktop/HCI/pet_help/lib/components/listview.dart';
+import 'package:pet_help/components/BottomNaviBar.dart';
+import 'package:pet_help/components/listView.dart';
+import 'package:pet_help/components/list_header.dart';
 import 'package:pet_help/view/login_page.dart';
+import 'package:pet_help/view/proflie.dart';
 
 class MyHomePage extends StatelessWidget {
   final String title;
@@ -12,14 +14,14 @@ class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomPadding: false,
       appBar: AppBar(
-        title: Center(
-          child: Text(
-            'Post',
-            style: GoogleFonts.lato(
-                fontStyle: FontStyle.italic, color: Colors.white, fontSize: 30),
-          ),
+        title: Text(
+          'Home',
+          style: GoogleFonts.lato(
+              fontStyle: FontStyle.italic, color: Colors.white, fontSize: 30),
         ),
+        centerTitle: true,
         backgroundColor: Color.fromRGBO(253, 158, 121, 1),
       ),
       drawer: Drawer(
@@ -65,14 +67,15 @@ class MyHomePage extends StatelessWidget {
                 icon: new Image.asset("src/icon/profile.png"),
               ),
               onTap: () {
+                Navigator.of(context).push(
+                    new MaterialPageRoute(builder: (context) => ProfileApp()));
                 // Update the state of the app
                 // ...
                 // Then close the drawer
-                Navigator.pop(context);
               },
             ),
             ListTile(
-              title: Text('My pet'),
+              title: Text('My pets'),
               leading: new Tab(
                 icon: new Image.asset("src/icon/pet-house.png"),
               ),
@@ -126,14 +129,30 @@ class MyHomePage extends StatelessWidget {
           ],
         ),
       ),
-      body: Column(
-        children: [HeaderList(), Expanded(child: ListViewPet())],
+      body: Container(
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage("src/image/background.jpg"),
+            fit: BoxFit.cover,
+          ),
+        ),
+        child: Column(
+          children: [
+            HeaderList(),
+            Expanded(child: ListViewPet()),
+            BottomNaviBar()
+          ],
+        ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: null,
-        backgroundColor: Color.fromRGBO(253, 158, 121, 1),
-        child: Icon(Icons.add),
-      ),
+      // floatingActionButton: FloatingActionButton(
+      //   onPressed: () {
+      //     Navigator.of(context).pushReplacement(MaterialPageRoute(
+      //       builder: (context) => Pick(),
+      //     ));
+      //   },
+      //   backgroundColor: Color.fromRGBO(253, 158, 121, 1),
+      //   child: Icon(Icons.add),
+      // ),
     );
   }
 }

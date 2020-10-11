@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_login/flutter_login.dart';
-import 'file:///C:/Users/Tan/Desktop/HCI/pet_help/lib/view/HomePage.dart';
+
+import 'HomePage.dart';
 
 const users = const {'anhdung@gmail.com': '12345', 'user': '1111'};
 
