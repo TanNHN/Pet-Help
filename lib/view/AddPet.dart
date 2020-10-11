@@ -7,16 +7,16 @@ import 'package:pet_help/view/login_page.dart';
 import 'package:pet_help/view/uploadImages.dart';
 
 // ignore: camel_case_types
-class rescue_page extends StatefulWidget {
+class AddPet extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    RescuePageStage rescuePageStage = new RescuePageStage();
+    AddPetStage rescuePageStage = new AddPetStage();
     return rescuePageStage;
   }
 }
 
 //https://medium.com/flutterpub/create-beautiful-forms-with-flutter-47075cfe712
-class RescuePageStage extends State<rescue_page> {
+class AddPetStage extends State<AddPet> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
