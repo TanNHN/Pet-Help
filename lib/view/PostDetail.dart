@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import 'app_bar.dart';
-import 'item_image.dart';
+import '../components/app_bar.dart';
+import '../components/item_image.dart';
 
 class PostDetail extends StatelessWidget {
   @override
