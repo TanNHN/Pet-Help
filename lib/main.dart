@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pet_help/components/PostDetail.dart';
-
-import 'package:pet_help/view/AddPet.dart';
-import 'package:pet_help/view/HomePage.dart';
-import 'package:pet_help/view/findRescue.dart';
+import 'package:pet_help/view/PostDetail.dart';
 
 void main() {
   runApp(MyApp());

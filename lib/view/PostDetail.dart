@@ -18,11 +18,11 @@ class PostDetail extends StatelessWidget {
 class Body extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
     return Column(
       children: <Widget>[
         Itemimage(
           imgSrc: "assets/images/dog.png",
+          size: null,
         ),
         Expanded(
           child: ItemInfo(),
