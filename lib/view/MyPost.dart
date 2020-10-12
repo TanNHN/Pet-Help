@@ -46,88 +46,11 @@ class MyPost extends StatelessWidget {
                       width: 75,
                       height: 75,
                       padding: EdgeInsets.all(15),
-                      child: Image.asset('src/icon/cat.png'),
-                      decoration: BoxDecoration(
-                          color: Colors.white, shape: BoxShape.circle),
                     ),
                   ),
-                  Padding(
-                    padding: const EdgeInsets.fromLTRB(10, 0, 0, 0),
-                    child: Text(
-                      'Tom\nUser@gmail.com',
-                      style: GoogleFonts.lato(
-                          fontStyle: FontStyle.normal,
-                          color: Colors.black,
-                          fontSize: 20),
-                    ),
-                  ),
+
                 ],
               ),
-            ),
-            ListTile(
-              title: Text('Profile'),
-              leading: new Tab(
-                icon: new Image.asset("src/icon/profile.png"),
-              ),
-              onTap: () {
-                Navigator.of(context).push(
-                    new MaterialPageRoute(builder: (context) => ProfileApp()));
-                // Update the state of the app
-                // ...
-                // Then close the drawer
-              },
-            ),
-            ListTile(
-              title: Text('My pets'),
-              leading: new Tab(
-                icon: new Image.asset("src/icon/pet-house.png"),
-              ),
-              onTap: () {
-                // Update the state of the app
-                // ...
-                // Then close the drawer
-                Navigator.pop(context);
-              },
-            ),
-            ListTile(
-              title: Text('My Post'),
-              leading: new Tab(
-                icon: new Image.asset("src/icon/post.png"),
-              ),
-              onTap: () {
-                // Update the state of the app
-                // ...
-                // Then close the drawer
-                Navigator.pop(context);
-              },
-            ),
-            ListTile(
-              title: Text('Contact'),
-              leading: new Tab(
-                icon: new Image.asset("src/icon/contact.png"),
-              ),
-              onTap: () {
-                // Update the state of the app
-                // ...
-                // Then close the drawer
-                Navigator.pop(context);
-              },
-            ),
-            ListTile(
-              title: Text('Log out'),
-              leading: new Tab(
-                icon: new Image.asset("src/icon/logout.png"),
-              ),
-              onTap: () {
-                // Update the state of the app
-                // ...
-                // Then close the drawer
-                Navigator.of(context).pushReplacement(
-                  MaterialPageRoute(
-                    builder: (context) => LoginScreen(),
-                  ),
-                );
-              },
             ),
           ],
         ),
