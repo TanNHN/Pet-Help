@@ -8,10 +8,11 @@ class BottomNaviBar extends StatelessWidget {
       child: Scaffold(
         floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
         floatingActionButton: FloatingActionButton(
-          backgroundColor: Colors.green,
+          backgroundColor: Colors.white,
           elevation: 5,
           child: Icon(
-            Icons.search,
+            Icons.add,
+            color: Colors.red,
           ),
           onPressed: () {},
         ),
