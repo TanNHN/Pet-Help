@@ -20,7 +20,7 @@ class MyPet extends StatelessWidget {
       resizeToAvoidBottomPadding: false,
       appBar: AppBar(
         title: Text(
-          'My Pet',
+          'PET',
           style: GoogleFonts.lato(
               fontStyle: FontStyle.normal, color: Colors.white, fontSize: 30),
         ),
