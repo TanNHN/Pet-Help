@@ -26,9 +26,14 @@ class MyPost extends StatelessWidget {
         ),
         centerTitle: true,
         backgroundColor: Color.fromRGBO(253, 158, 121, 1),
-        leading: IconButton(
-          icon: Icon(Icons.arrow_back),
-          onPressed: () => Navigator.pop(context),
+        leading: Builder(
+          builder: (BuildContext context) {
+            return IconButton(
+              icon: const Icon(Icons.arrow_back),
+              onPressed: () { Navigator.pop(context); },
+
+            );
+          },
         ),
       ),
 
