@@ -96,10 +96,9 @@ class MyHomePage extends StatelessWidget {
                 icon: new Image.asset("src/icon/post.png"),
               ),
               onTap: () {
-                // Update the state of the app
-                // ...
-                // Then close the drawer
-                Navigator.pop(context);
+                // Navigator.of(context).pushReplacement(MaterialPageRoute(
+                  // builder: (context) => MyPos(),
+                ));
               },
             ),
             ListTile(
