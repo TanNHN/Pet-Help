@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:pet_help/view/HomePage.dart';
+import 'package:pet_help/view/MyPost.dart';
 import 'package:pet_help/view/findRescue.dart';
 
 class BottomNaviBar extends StatelessWidget {
@@ -40,21 +42,33 @@ class BottomNaviBar extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
                   IconButton(
-                    icon: Icon(Icons.home, color: Colors.white),
-                    onPressed: () {},
-                  ),
-                  IconButton(
-                    icon: Icon(Icons.view_list, color: Colors.white),
-                    onPressed: () {},
+                    icon: Icon(
+                      Icons.home,
+                      color: Colors.white,
+                      size: 35,
+                    ),
+                    onPressed: () {
+                      Navigator.of(context).pushReplacement(
+                        MaterialPageRoute(
+                          builder: (context) => MyHomePage(),
+                        ),
+                      );
+                    },
                   ),
                   SizedBox(width: 25),
                   IconButton(
-                    icon: Icon(Icons.call, color: Colors.white),
-                    onPressed: () {},
-                  ),
-                  IconButton(
-                    icon: Icon(Icons.person_outline, color: Colors.white),
-                    onPressed: () {},
+                    icon: Icon(
+                      Icons.article,
+                      color: Colors.white,
+                      size: 35,
+                    ),
+                    onPressed: () {
+                      Navigator.of(context).pushReplacement(
+                        MaterialPageRoute(
+                          builder: (context) => MyPost(),
+                        ),
+                      );
+                    },
                   ),
                 ],
               ),

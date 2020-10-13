@@ -3,6 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 // import 'package:pet_help/components/BottomNaviBar.dart';
 import 'package:pet_help/components/listView.dart';
 import 'package:pet_help/components/list_header.dart';
+import 'package:pet_help/view/HomePage.dart';
 import 'package:pet_help/view/loadimg.dart';
 import 'package:pet_help/view/login_page.dart';
 import 'package:pet_help/view/proflie.dart';
@@ -12,7 +13,7 @@ import 'AddPet.dart';
 class MyPost extends StatelessWidget {
   final String title;
 
-  MyPost ({Key key, this.title}) : super(key: key);
+  MyPost({Key key, this.title}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +21,7 @@ class MyPost extends StatelessWidget {
       resizeToAvoidBottomPadding: false,
       appBar: AppBar(
         title: Text(
-          'POST',
+          'Bài Post của tôi',
           style: GoogleFonts.lato(
               fontStyle: FontStyle.normal, color: Colors.white, fontSize: 30),
         ),
@@ -30,8 +31,11 @@ class MyPost extends StatelessWidget {
           builder: (BuildContext context) {
             return IconButton(
               icon: const Icon(Icons.arrow_back),
-              onPressed: () { Navigator.pop(context); },
-
+              onPressed: () {
+                Navigator.of(context).pushReplacement(MaterialPageRoute(
+                  builder: (context) => MyHomePage(),
+                ));
+              },
             );
           },
         ),

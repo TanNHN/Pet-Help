@@ -7,6 +7,7 @@ import 'package:pet_help/view/HomePage.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:pet_help/view/HomePage.dart';
+import 'package:pet_help/view/MyPet.dart';
 import 'package:pet_help/view/loadimg.dart';
 import 'loadimg.dart';
 
@@ -152,7 +153,7 @@ class PetReportStage extends State<PetReport> {
                           onPressed: () {
                             Navigator.of(context)
                                 .pushReplacement(MaterialPageRoute(
-                              builder: (context) => MyHomePage(),
+                              builder: (context) => MyPet(),
                             ));
                           },
                           child: Text(

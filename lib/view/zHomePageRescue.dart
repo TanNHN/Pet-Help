@@ -5,10 +5,12 @@ import 'package:pet_help/components/listView.dart';
 import 'package:pet_help/components/list_header.dart';
 import 'package:pet_help/view/Contact.dart';
 import 'package:pet_help/view/Login.dart';
+import 'package:pet_help/view/MyPet.dart';
+import 'package:pet_help/view/MyPost.dart';
 import 'package:pet_help/view/login_page.dart';
 import 'package:pet_help/view/proflie.dart';
 
-class MyHomePage extends StatelessWidget {
+class MyHomePageRescue extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
