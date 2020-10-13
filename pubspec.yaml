@@ -77,7 +77,9 @@ flutter:
     - src/icon/pet-house.png
     - src/icon/post.png
     - src/icon/logout.png
+    - src/icon/logoCute.png
     - src/data/pet.json
+    - src/data/contact.json
 
   # To add assets to your application, add an assets section, like this:
 
