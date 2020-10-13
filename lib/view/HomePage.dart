@@ -4,6 +4,8 @@ import 'package:pet_help/components/BottomNaviBar.dart';
 import 'package:pet_help/components/listView.dart';
 import 'package:pet_help/components/list_header.dart';
 import 'package:pet_help/view/Contact.dart';
+import 'package:pet_help/view/MyPet.dart';
+import 'package:pet_help/view/MyPost.dart';
 import 'package:pet_help/view/login_page.dart';
 import 'package:pet_help/view/proflie.dart';
 
@@ -84,10 +86,9 @@ class MyHomePage extends StatelessWidget {
                 icon: new Image.asset("src/icon/pet-house.png"),
               ),
               onTap: () {
-                // Update the state of the app
-                // ...
-                // Then close the drawer
-                Navigator.pop(context);
+                Navigator.of(context).pushReplacement(MaterialPageRoute(
+                  builder: (context) => MyPet(),
+                ));
               },
             ),
             ListTile(
@@ -96,8 +97,8 @@ class MyHomePage extends StatelessWidget {
                 icon: new Image.asset("src/icon/post.png"),
               ),
               onTap: () {
-                // Navigator.of(context).pushReplacement(MaterialPageRoute(
-                  // builder: (context) => MyPos(),
+                Navigator.of(context).pushReplacement(MaterialPageRoute(
+                  builder: (context) => MyPost(),
                 ));
               },
             ),
