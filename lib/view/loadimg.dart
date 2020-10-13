@@ -70,34 +70,30 @@ class _ImgLoadState extends State<ImgLoad> {
     return Container(
       child: Column(
         children: <Widget>[
-          Container(
-            decoration: BoxDecoration(
-                image: DecorationImage(
-                  image: NetworkImage(
-                    'https://lh3.googleusercontent.com/proxy/oxIRPMpDWBvUUM8bH0xRl79PujP1ogms1Kn_ZhFATt9cnLk7Ooqgf9RUMhdLUIPe4EIkTdZcj3fd1E1FXzJ4OD_wIgHsjOecYYuT5QdA2Yace7SeVTo6ETNRZK5J',
+          GestureDetector(
+            onTap: () {
+              loadAssets();
+            },
+            child: Container(
+              decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: NetworkImage(
+                      'https://www.nalc.gov.uk/components/com_easyblog/themes/wireframe/images/placeholder-image.png',
+                    ),
+                    fit: BoxFit.cover,
                   ),
-                  fit: BoxFit.cover,
-                ),
-                color: Colors.white,
-                boxShadow: [
-                  new BoxShadow(
-                      color: Colors.black54,
-                      offset: new Offset(1.0, 2.0),
-                      blurRadius: 3.5),
-                ]),
-            height: 290,
-            width: 340,
-            child: Expanded(
-              child: buildGridView(),
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.fromLTRB(200, 0, 0, 0),
-            child: RaisedButton.icon(
-              label: Text("Upload Image"),
-              icon: Icon(Icons.camera_alt),
-              color: Colors.white,
-              onPressed: loadAssets,
+                  color: Colors.white,
+                  boxShadow: [
+                    new BoxShadow(
+                        color: Colors.black54,
+                        offset: new Offset(1.0, 2.0),
+                        blurRadius: 3.5),
+                  ]),
+              height: 290,
+              width: 350,
+              child: Expanded(
+                child: buildGridView(),
+              ),
             ),
           ),
         ],

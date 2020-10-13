@@ -11,7 +11,7 @@ class _splash_screenState extends State<splash_screen> {
   @override
   Widget build(BuildContext context) {
     return new SplashScreen(
-      seconds: 3,
+      seconds: 1,
       navigateAfterSeconds: MyHomePage(),
       image: new Image.asset('src/image/welcomeScreen.png'),
       backgroundColor: Colors.orange[50],
