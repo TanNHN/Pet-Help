@@ -71,6 +71,10 @@ flutter:
     - src/image/avt.jpg
     - src/image/background.jpg
     - src/image/welcomeScreen.png
+    - src/image/cmnd1.png
+    - src/image/cmnd2.png
+    - src/image/download.jpg
+    - src/image/download (1).jpg
     - src/icon/contact.png
     - src/icon/cat.png
     - src/icon/profile.png
@@ -78,8 +82,11 @@ flutter:
     - src/icon/post.png
     - src/icon/logout.png
     - src/data/pet.json
+<<<<<<< HEAD
     - src/image/PostSuccessful.png
 
+=======
+>>>>>>> ac18e24a342179b406b00f69e27910a6417f6b83
   # To add assets to your application, add an assets section, like this:
 
 
