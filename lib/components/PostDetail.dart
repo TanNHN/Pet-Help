@@ -24,7 +24,7 @@ class Body extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
     return Column(
       children: <Widget>[
-        Itemimage(imgSrc: "assets/images/dog.png",
+        Itemimage(imgSrc: "src/image/background.jpg",
         ),
         Expanded(
         child: ItemInfo(),
