@@ -2,6 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:multi_image_picker/multi_image_picker.dart';
+import 'package:pet_help/view/MyPet.dart';
 import 'package:pet_help/view/utils.dart';
 
 class UploadImages extends StatefulWidget {
@@ -81,8 +82,8 @@ class _UploadImagesState extends State<UploadImages> {
                         backgroundDarkerColor: Colors.orange,
                         child: Center(
                             child: Text(
-                          "Pick images",
-                          style: TextStyle(color: Colors.white),
+                          "Đăng hình ảnh",
+                          style: TextStyle(color: Colors.white, fontSize: 20),
                         )),
                       ),
                     ),
@@ -149,48 +150,66 @@ class _UploadImagesState extends State<UploadImages> {
           new Column(
             children: <Widget>[
               new ListTile(
-                leading: const Icon(Icons.person),
                 title: new TextField(
                   decoration: new InputDecoration(
-                    hintText: "Name",
+                    hintText: "Tên",
                   ),
                 ),
               ),
               new ListTile(
-                leading: const Icon(Icons.phone),
                 title: new TextField(
                   decoration: new InputDecoration(
-                    hintText: "Phone",
+                    hintText: "Giới tính",
                   ),
                 ),
               ),
               new ListTile(
-                leading: const Icon(Icons.email),
                 title: new TextField(
                   decoration: new InputDecoration(
-                    hintText: "Email",
+                    hintText: "Thuộc giống",
+                  ),
+                ),
+              ),
+              new ListTile(
+                title: new TextField(
+                  decoration: new InputDecoration(
+                    hintText: "Cân nặng",
+                  ),
+                ),
+              ),
+              new ListTile(
+                title: new TextField(
+                  decoration: new InputDecoration(
+                    hintText: "Tình trạng hiện tại",
                   ),
                 ),
               ),
               const Divider(
                 height: 1.0,
               ),
-              new ListTile(
-                leading: const Icon(Icons.label),
-                title: const Text('Nick'),
-                subtitle: const Text('None'),
-              ),
-              new ListTile(
-                leading: const Icon(Icons.today),
-                title: const Text('Birthday'),
-                subtitle: const Text('February 20, 1980'),
-              ),
-              new ListTile(
-                leading: const Icon(Icons.group),
-                title: const Text('Contact group'),
-                subtitle: const Text('Not specified'),
-              )
             ],
+          ),
+          Padding(
+            padding: const EdgeInsets.all(12),
+            child: SizedBox(
+              width: double.infinity,
+              height: 45,
+              child: RaisedButton(
+                color: Color.fromRGBO(253, 158, 121, 1),
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(8))),
+                onPressed: () {
+                  Navigator.of(context).pushReplacement(MaterialPageRoute(
+                    builder: (context) => MyPet(),
+                  ));
+                },
+                child: Text("Tạo thú cưng ",
+                    style: TextStyle(
+                      fontSize: 24,
+                      color: Colors.white,
+                    )),
+              ),
+            ),
           ),
         ],
       ),

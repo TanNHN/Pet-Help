@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pet_help/view/HomePage.dart';
-import 'package:pet_help/view/HomePageRescue.dart';
+import 'package:pet_help/view/zHomePageRescue.dart';
 
 class Login extends StatefulWidget {
   @override
@@ -41,7 +41,7 @@ class LoginState extends State<Login> {
                   style: TextStyle(fontSize: 18, color: Colors.black),
                   decoration: InputDecoration(
                       labelText: 'Tên tài khoản',
-                      errorText: userInvalid ? null : "Tên tài khoảng trống"),
+                      errorText: userInvalid ? "Tên tài khoảng trống" : null),
                 ),
               ),
               Padding(
@@ -52,7 +52,7 @@ class LoginState extends State<Login> {
                   obscureText: true,
                   decoration: InputDecoration(
                       labelText: 'Mật khẩu',
-                      errorText: passInvalid ? null : "Mật khẩu trống"),
+                      errorText: passInvalid ? "Mật khẩu trống" : null),
                 ),
               ),
               Padding(
@@ -105,13 +105,13 @@ class LoginState extends State<Login> {
 
   void onSignInClick() {
     setState(() {
-      // if (userController.text.isEmpty && passController.text.isEmpty) {
-      //   userInvalid = true;
-      //   passInvalid = true;
-      // } else {
-      //   userInvalid = false;
-      //   passInvalid = false;
-      // }
+      if (userController.text.isEmpty && passController.text.isEmpty) {
+        userInvalid = true;
+        passInvalid = true;
+      } else {
+        userInvalid = false;
+        passInvalid = false;
+      }
       if (userController.text == "admin" && passController.text == "123") {
         Navigator.of(context).push(
             new MaterialPageRoute(builder: (context) => MyHomePageRescue()));
@@ -119,8 +119,7 @@ class LoginState extends State<Login> {
           passController.text == "123") {
         Navigator.of(context)
             .push(new MaterialPageRoute(builder: (context) => MyHomePage()));
-      } else
-        return 'Sai tài khoản hay mật khẩu';
+      }
     });
   }
 }
