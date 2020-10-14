@@ -5,6 +5,7 @@ import 'package:pet_help/view/HomePage.dart';
 import 'package:pet_help/view/MyPet.dart';
 import 'package:pet_help/view/MyPost.dart';
 import 'package:pet_help/view/PetReport.dart';
+import 'package:pet_help/view/PostSuccessful.dart';
 import 'package:pet_help/view/findRescue.dart';
 import 'package:pet_help/view/splash_screen.dart';
 
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        home: MyHomePage (
+        home: PostSuccessful (
             // title: 'Post',
             ));
   }
