@@ -3,27 +3,23 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:pet_help/components/BottomNaviBar.dart';
 import 'package:pet_help/components/listView.dart';
 import 'package:pet_help/components/list_header.dart';
-import 'package:pet_help/view/Contact.dart';
 import 'package:pet_help/view/login_page.dart';
 import 'package:pet_help/view/proflie.dart';
 
 class MyHomePage extends StatelessWidget {
+  final String title;
+
+  MyHomePage({Key key, this.title}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomPadding: false,
       appBar: AppBar(
-        title: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Padding(
-              padding: const EdgeInsets.fromLTRB(0, 0, 130, 40),
-              child: Image.asset(
-                'src/icon/logoCute.png',
-                height: 110,
-              ),
-            ),
-          ],
+        title: Text(
+          'Home',
+          style: GoogleFonts.lato(
+              fontStyle: FontStyle.italic, color: Colors.white, fontSize: 30),
         ),
         centerTitle: true,
         backgroundColor: Color.fromRGBO(253, 158, 121, 1),
@@ -96,9 +92,10 @@ class MyHomePage extends StatelessWidget {
                 icon: new Image.asset("src/icon/post.png"),
               ),
               onTap: () {
-                Navigator.of(context).pushReplacement(MaterialPageRoute(
-                    // builder: (context) => MyPos(),
-                    ));
+                // Update the state of the app
+                // ...
+                // Then close the drawer
+                Navigator.pop(context);
               },
             ),
             ListTile(
@@ -107,9 +104,10 @@ class MyHomePage extends StatelessWidget {
                 icon: new Image.asset("src/icon/contact.png"),
               ),
               onTap: () {
-                Navigator.of(context).pushReplacement(MaterialPageRoute(
-                  builder: (context) => ContactView(),
-                ));
+                // Update the state of the app
+                // ...
+                // Then close the drawer
+                Navigator.pop(context);
               },
             ),
             ListTile(
@@ -146,6 +144,15 @@ class MyHomePage extends StatelessWidget {
           ],
         ),
       ),
+      // floatingActionButton: FloatingActionButton(
+      //   onPressed: () {
+      //     Navigator.of(context).pushReplacement(MaterialPageRoute(
+      //       builder: (context) => Pick(),
+      //     ));
+      //   },
+      //   backgroundColor: Color.fromRGBO(253, 158, 121, 1),
+      //   child: Icon(Icons.add),
+      // ),
     );
   }
 }

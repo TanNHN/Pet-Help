@@ -14,7 +14,7 @@ class _HeaderListState extends State<HeaderList> {
           Padding(
             padding: const EdgeInsets.all(10.0),
             child: Container(
-              width: 310,
+              width: 320,
               height: 40,
               decoration: BoxDecoration(
                   color: Colors.white,

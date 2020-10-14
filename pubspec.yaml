@@ -36,7 +36,7 @@ dependencies:
   image: ^2.1.18
   flutter_login: ^1.0.14
   loadmore: ^1.0.4
-  multi_image_picker: ^4.7.14
+  multi_image_picker: ^4.6.1
   carousel_pro: ^1.0.0
   firebase_storage: ^3.1.1
   cloud_firestore: ^0.13.0+1
@@ -46,7 +46,6 @@ dependencies:
   pp_local_notifications: ^0.0.1
   google_maps_flutter: ^1.0.2
   flutter_launcher_icons: ^0.8.1
-  splashscreen: ^1.2.0
 
 flutter-icon:
   image_path: "src/icon/logoApp.png"
@@ -70,11 +69,6 @@ flutter:
   assets:
     - src/image/avt.jpg
     - src/image/background.jpg
-    - src/image/welcomeScreen.png
-    - src/image/cmnd1.png
-    - src/image/cmnd2.png
-    - src/image/download.jpg
-    - src/image/download (1).jpg
     - src/icon/contact.png
     - src/icon/cat.png
     - src/icon/profile.png
@@ -82,11 +76,8 @@ flutter:
     - src/icon/post.png
     - src/icon/logout.png
     - src/data/pet.json
-<<<<<<< HEAD
     - src/image/PostSuccessful.png
 
-=======
->>>>>>> ac18e24a342179b406b00f69e27910a6417f6b83
   # To add assets to your application, add an assets section, like this:
 
 
