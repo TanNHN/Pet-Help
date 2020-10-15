@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:pet_help/components/DropDownScreen.dart';
 
 import 'package:pet_help/view/HomePage.dart';
 import 'package:pet_help/view/PetProfile.dart';
@@ -22,79 +23,115 @@ class RescuePetList extends StatelessWidget {
                 // ),
                 SizedBox(height: 10),
                 Row(
-
-                  mainAxisAlignment: MainAxisAlignment.center,
-
                   children: <Widget>[
-
-                    Container(
-                      height: 30,
-                      width: 120,
-
-                      alignment: Alignment.center,
-                      padding: EdgeInsets.fromLTRB(14, 6, 8, 4),
-                      decoration: BoxDecoration(
-                          color: Colors.blueAccent,
-                          borderRadius: BorderRadius.only(topLeft: Radius.circular(8),bottomLeft:Radius.circular(8) ),
-                          border: Border(
-                            top: BorderSide(width: 1.0, color: Colors.blueAccent),
-                            left: BorderSide(width: 1.0, color: Colors.blueAccent),
-                            right: BorderSide(width: 1.0, color: Colors.blueAccent),
-                            bottom: BorderSide(width: 1.0, color: Colors.blueAccent),
-                          )
-                      ),
-                      child: Row(
-                        children: [
-                          Container(
-
-                            child: (
-                                Column(
-                                  children: [
-                                    Align(
-                                      child: (
-                                          Text("Đã được nhận", style: TextStyle(color: Colors.white),)
-                                      ),
-                                    ),
-                                  ],
-                                )
-                            ),
-                          ),
-
-                        ],
-                      ),
-                    ),
-                    Container(
-                      height: 30,
-                      width: 120,
-
-                      alignment: Alignment.center,
-                      padding:EdgeInsets.fromLTRB(7, 6, 8, 4),
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.only(topRight: Radius.circular(8),bottomRight:Radius.circular(8) ),
-                          border: Border(
-                            top: BorderSide(width: 1.0, color: Colors.blueAccent),
-                            left: BorderSide(width: 1.0, color: Colors.blueAccent),
-                            right: BorderSide(width: 1.0, color: Colors.blueAccent),
-                            bottom: BorderSide(width: 1.0, color: Colors.blueAccent),
-                          )
-                      ),
-                      child: Row(
-                        children: [
-                          Container(
-                            child: (
-                                Column(
-                                  children: [
-                                    Text("Chưa được nhận",style: TextStyle(color: Colors.blueAccent),),
-                                  ],
-                                )
-                            ),
-                          ),
-
-                        ],
-                      ),
-                    ),
+                    DropDownScreen(),
                   ],
                 ),
+                // Row(
+                //
+                //   mainAxisAlignment: MainAxisAlignment.center,
+                //
+                //   children: <Widget>[
+                //
+                //     Container(
+                //       height: 30,
+                //       width: 120,
+                //
+                //       alignment: Alignment.center,
+                //       padding: EdgeInsets.fromLTRB(14, 6, 8, 4),
+                //       decoration: BoxDecoration(
+                //           color: Colors.blueAccent,
+                //           borderRadius: BorderRadius.only(topLeft: Radius.circular(8),bottomLeft:Radius.circular(8) ),
+                //           border: Border(
+                //             top: BorderSide(width: 1.0, color: Colors.blueAccent),
+                //             left: BorderSide(width: 1.0, color: Colors.blueAccent),
+                //             right: BorderSide(width: 1.0, color: Colors.blueAccent),
+                //             bottom: BorderSide(width: 1.0, color: Colors.blueAccent),
+                //           )
+                //       ),
+                //       child: Row(
+                //         children: [
+                //           Container(
+                //
+                //             child: (
+                //                 Column(
+                //                   children: [
+                //                     Align(
+                //                       child: (
+                //                           Text("Được nhận nuôi", style: TextStyle(color: Colors.white),)
+                //                       ),
+                //                     ),
+                //                   ],
+                //                 )
+                //             ),
+                //           ),
+                //
+                //         ],
+                //       ),
+                //     ),
+                //     Container(
+                //       height: 30,
+                //       width: 120,
+                //
+                //       alignment: Alignment.center,
+                //       padding:EdgeInsets.fromLTRB(7, 6, 8, 4),
+                //       decoration: BoxDecoration(
+                //
+                //           border: Border(
+                //             top: BorderSide(width: 1.0, color: Colors.blueAccent),
+                //             left: BorderSide(width: 1.0, color: Colors.blueAccent),
+                //             right: BorderSide(width: 1.0, color: Colors.blueAccent),
+                //             bottom: BorderSide(width: 1.0, color: Colors.blueAccent),
+                //           )
+                //       ),
+                //       child: Row(
+                //         children: [
+                //           Container(
+                //             child: (
+                //                 Column(
+                //                   children: [
+                //                     Text("Đang tìm người",style: TextStyle(color: Colors.blueAccent),),
+                //                   ],
+                //                 )
+                //             ),
+                //           ),
+                //
+                //         ],
+                //       ),
+                //     ),
+                //     Container(
+                //       height: 30,
+                //       width: 120,
+                //
+                //       alignment: Alignment.center,
+                //       padding:EdgeInsets.fromLTRB(7, 6, 8, 4),
+                //       decoration: BoxDecoration(
+                //           borderRadius: BorderRadius.only(topRight: Radius.circular(8),bottomRight:Radius.circular(8) ),
+                //           border: Border(
+                //             top: BorderSide(width: 1.0, color: Colors.blueAccent),
+                //             left: BorderSide(width: 1.0, color: Colors.blueAccent),
+                //             right: BorderSide(width: 1.0, color: Colors.blueAccent),
+                //             bottom: BorderSide(width: 1.0, color: Colors.blueAccent),
+                //           )
+                //       ),
+                //       child: Row(
+                //         children: [
+                //           Container(
+                //             child: (
+                //                 Column(
+                //                   children: [
+                //                     Text("Chưa được nhận",style: TextStyle(color: Colors.blueAccent),),
+                //                   ],
+                //                 )
+                //             ),
+                //           ),
+                //
+                //         ],
+                //       ),
+                //     ),
+                //   ],
+                // ),
+
                 SizedBox(height: 20,),
                 new GestureDetector(
                   onTap: () {
