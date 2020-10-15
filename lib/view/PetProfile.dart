@@ -71,22 +71,22 @@ class ItemInfo extends StatelessWidget {
 
                       Column(
                         children: [
-                          Text("Gender", style: TextStyle(color: Colors.blueAccent)),
-                          Text("Boy",  style: TextStyle(color: Colors.orange)),
+                          Text("Giới tính", style: TextStyle(color: Colors.blueAccent)),
+                          Text("Nam",  style: TextStyle(color: Colors.orange)),
 
                         ],
                       ),
                       Column(
                         children: [
-                          Text("Color", style: TextStyle(color: Colors.blueAccent)),
-                          Text("White" , style: TextStyle(color: Colors.orange)),
+                          Text("Màu sắc", style: TextStyle(color: Colors.blueAccent)),
+                          Text("Trắng" , style: TextStyle(color: Colors.orange)),
 
                         ],
                       ),
                       Column(
                         children: [
-                          Text("Breed", style: TextStyle(color: Colors.blueAccent)),
-                          Text("Russian" , style: TextStyle(color: Colors.orange)),
+                          Text("Giống", style: TextStyle(color: Colors.blueAccent)),
+                          Text("Nga" , style: TextStyle(color: Colors.orange)),
 
                         ],
                       ),
@@ -117,7 +117,7 @@ class ItemInfo extends StatelessWidget {
                   child: Column(
                     children: [
                       Align(
-                        child: Text("Vaccinated", style: TextStyle(color: Colors.blueAccent)),
+                        child: Text("Đã tiêm ngừa", style: TextStyle(color: Colors.blueAccent)),
                       )
 
                     ],
@@ -143,7 +143,7 @@ class ItemInfo extends StatelessWidget {
                   child: Column(
                     children: [
                       Align(
-                        child: Text("Dewormed", style: TextStyle(color: Colors.blueAccent)),
+                        child: Text("Đã tẩy giun", style: TextStyle(color: Colors.blueAccent)),
                       )
 
                     ],
@@ -169,7 +169,7 @@ class ItemInfo extends StatelessWidget {
                   child: Column(
                     children: [
                       Align(
-                        child: Text("Castrated", style: TextStyle(color: Colors.blueAccent)),
+                        child: Text("Đã thiến", style: TextStyle(color: Colors.blueAccent)),
                       )
                     ],
                   ),
@@ -187,10 +187,10 @@ class ItemInfo extends StatelessWidget {
               children: [
                 Container(
                   height: 15,
-                  width: 200,
+                  width: 220,
                   alignment: Alignment(12,0.1),
                   child: Text(
-                    "Last reported: 20/5/1999",
+                    "Cập nhật lần cuối: 20/5/1999",
                     style: TextStyle(color: Colors.grey, fontSize: 15),
                   ),
                 ),
@@ -226,7 +226,7 @@ class ItemInfo extends StatelessWidget {
                     children: [
 
                       Text(
-                        "Adopter: ",
+                        "Người nhận nuôi: ",
                         textAlign: TextAlign.center,
                         style: TextStyle(fontSize: 20),
 
@@ -276,7 +276,7 @@ class ItemInfo extends StatelessWidget {
               children: <Widget>[
                 Container(
                   height: 43,
-                  width: 110,
+                  width: 150,
 
                   alignment: Alignment.center,
                   padding: EdgeInsets.all(12),
@@ -289,7 +289,7 @@ class ItemInfo extends StatelessWidget {
 
                       Align(
 
-                        child: Text("View Report", style: TextStyle(color: Colors.white,fontSize: 14,fontWeight: FontWeight.bold)),
+                        child: Text("Xem thông tin", style: TextStyle(color: Colors.white,fontSize: 14,fontWeight: FontWeight.bold)),
                       )
 
                     ],
@@ -311,7 +311,7 @@ class ItemInfo extends StatelessWidget {
                   child: Column(
                     children: [
                       Align(
-                        child: Text("Contact User", style: TextStyle(color: Colors.white,fontSize: 14,fontWeight: FontWeight.bold)),
+                        child: Text("Liên hệ", style: TextStyle(color: Colors.white,fontSize: 14,fontWeight: FontWeight.bold)),
                       )
                     ],
                   ),

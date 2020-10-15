@@ -72,29 +72,29 @@ class ItemInfo extends StatelessWidget {
                   children: [
                     Column(
                       children: [
-                        Text("Age", style: TextStyle(color: Colors.blueAccent)),
-                        Text("1 Year", style: TextStyle(color: Colors.orange)),
+                        Text("Tuổi", style: TextStyle(color: Colors.blueAccent)),
+                        Text("1 ", style: TextStyle(color: Colors.orange)),
 
                       ],
                     ),
                     Column(
                       children: [
-                        Text("Gender", style: TextStyle(color: Colors.blueAccent)),
-                        Text("Boy",  style: TextStyle(color: Colors.orange)),
+                        Text("Giới tính", style: TextStyle(color: Colors.blueAccent)),
+                        Text("Nam",  style: TextStyle(color: Colors.orange)),
 
                       ],
                     ),
                     Column(
                       children: [
-                        Text("Color", style: TextStyle(color: Colors.blueAccent)),
-                        Text("White" , style: TextStyle(color: Colors.orange)),
+                        Text("Màu sắc", style: TextStyle(color: Colors.blueAccent)),
+                        Text("Trắng" , style: TextStyle(color: Colors.orange)),
 
                       ],
                     ),
                     Column(
                       children: [
-                        Text("Breed", style: TextStyle(color: Colors.blueAccent)),
-                        Text("Russian" , style: TextStyle(color: Colors.orange)),
+                        Text("Giống", style: TextStyle(color: Colors.blueAccent)),
+                        Text("Nga" , style: TextStyle(color: Colors.orange)),
 
                       ],
                     ),
@@ -125,7 +125,7 @@ class ItemInfo extends StatelessWidget {
                 child: Column(
                   children: [
                     Align(
-                      child: Text("Vaccinated", style: TextStyle(color: Colors.blueAccent)),
+                      child: Text("Đã tiêm ngừa", style: TextStyle(color: Colors.blueAccent)),
                     )
 
                   ],
@@ -151,7 +151,7 @@ class ItemInfo extends StatelessWidget {
                 child: Column(
                   children: [
                     Align(
-                      child: Text("Dewormed", style: TextStyle(color: Colors.blueAccent)),
+                      child: Text("Đã tẩy giun", style: TextStyle(color: Colors.blueAccent)),
                     )
 
                   ],
@@ -177,7 +177,7 @@ class ItemInfo extends StatelessWidget {
                 child: Column(
                   children: [
                     Align(
-                      child: Text("Castrated", style: TextStyle(color: Colors.blueAccent)),
+                      child: Text("Đã thiến", style: TextStyle(color: Colors.blueAccent)),
                     )
                   ],
                 ),
@@ -211,7 +211,7 @@ class ItemInfo extends StatelessWidget {
                 width: 350,
                 alignment: Alignment.center,
                 child: Text(
-                  "Bum is a Russian cat. He's known for being quiet and sweet. Although Bum tend to be relax and easygoing, Bum also command an air of royalty.",
+                  "Bum là một con mèo Nga.Bé rất trầm tính và ngọt ngào. Mặc dù đôi khi Bum cũng hay tăng động , nhưng rất có khí chất hoàng gia.",
                   textAlign: TextAlign.left,
                   overflow: TextOverflow.ellipsis,
                   maxLines: 3,
@@ -234,7 +234,7 @@ class ItemInfo extends StatelessWidget {
               
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                Text("I want to adopt", style: TextStyle(color: Colors.white, fontSize: 17, fontWeight: FontWeight.bold),),
+                Text("Muốn nhận nuôi", style: TextStyle(color: Colors.white, fontSize: 17, fontWeight: FontWeight.bold),),
               ],
             ),
               ),
