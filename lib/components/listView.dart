@@ -3,9 +3,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'dart:async';
 import 'package:flutter/services.dart' show rootBundle;
+import 'package:pet_help/view/PostDetail.dart';
 import 'dart:convert';
 
 import 'package:pet_help/view/HomePage.dart';
+import 'package:pet_help/view/PetProfile.dart';
 
 class ListViewPet extends StatefulWidget {
   @override
@@ -113,7 +115,7 @@ class _ListViewPetState extends State<ListViewPet> {
                               onPressed: () {
                                 Navigator.of(context)
                                     .pushReplacement(MaterialPageRoute(
-                                  builder: (context) => MyHomePage(),
+                                  builder: (context) => PostDetail(),
                                 ));
                               },
                               child: Text(
