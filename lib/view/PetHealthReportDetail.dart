@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:pet_help/view/ViewPetReportList.dart';
+import 'package:pet_help/view/PetHealthReportList.dart';
 
-class PetHealthReport extends StatelessWidget {
+class PetHealthReportDetail extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -170,6 +170,70 @@ class PetHealthReport extends StatelessWidget {
                               ),
                             ),
                           ),
+                        ),
+                        Row(
+                          children: <Widget>[
+                            SizedBox(
+                              width: 160,
+                              height: 60,
+                              child: Padding(
+                                padding:
+                                    const EdgeInsets.fromLTRB(12, 0, 0, 12),
+                                child: RaisedButton(
+                                  color: Colors.white,
+                                  shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(18.0),
+                                      side: BorderSide(
+                                          color: Color.fromRGBO(
+                                              253, 158, 121, 1))),
+                                  onPressed: () {
+                                    Navigator.of(context)
+                                        .pushReplacement(MaterialPageRoute(
+                                      builder: (context) => ViewPetReportList(),
+                                    ));
+                                  },
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(8.0),
+                                    child: Text(
+                                      'Nhắn tin',
+                                      style: TextStyle(
+                                          color:
+                                              Color.fromRGBO(253, 158, 121, 1),
+                                          fontSize: 20),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
+                            SizedBox(
+                              width: 160,
+                              height: 60,
+                              child: Padding(
+                                padding:
+                                    const EdgeInsets.fromLTRB(12, 0, 0, 12),
+                                child: RaisedButton(
+                                  color: Color.fromRGBO(253, 158, 121, 1),
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(18.0),
+                                  ),
+                                  onPressed: () {
+                                    Navigator.of(context)
+                                        .pushReplacement(MaterialPageRoute(
+                                      builder: (context) => ViewPetReportList(),
+                                    ));
+                                  },
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(8.0),
+                                    child: Text(
+                                      'Duyệt',
+                                      style: TextStyle(
+                                          color: Colors.white, fontSize: 20),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ],
                         )
                       ],
                     ),

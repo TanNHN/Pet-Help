@@ -85,11 +85,13 @@ flutter:
     - src/image/rescue_cat1.jpg
     - src/image/rescue_cat2.jpg
     - src/image/rescue_cat3.jpg
+    - src/image/nga.jpg
     - src/image/pet_4.jpg
     - src/image/pet_5.jpg
     - src/image/pet_6.jpg
     - src/icon/contact.png
     - src/icon/cat.png
+    - src/icon/adopt.png
     - src/icon/profile.png
     - src/icon/pet-house.png
     - src/icon/post.png

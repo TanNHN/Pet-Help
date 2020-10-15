@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pet_help/view/AdoptRequestList.dart';
 import 'package:pet_help/view/HomePage.dart';
-import 'package:pet_help/view/PetHealthReport.dart';
+import 'package:pet_help/view/PetHealthReportDetail.dart';
 import 'package:pet_help/view/PetProfile.dart';
 
 class AdoptRequest extends StatelessWidget {
@@ -378,7 +378,7 @@ class AdoptRequest extends StatelessWidget {
                         onPressed: () {
                           Navigator.of(context)
                               .pushReplacement(MaterialPageRoute(
-                            builder: (context) => MyHomePage(),
+                            builder: (context) => AdoptRequestList(),
                           ));
                         },
                         child: Text(
@@ -403,7 +403,7 @@ class AdoptRequest extends StatelessWidget {
                         onPressed: () {
                           Navigator.of(context)
                               .pushReplacement(MaterialPageRoute(
-                            builder: (context) => MyHomePage(),
+                            builder: (context) => AdoptRequestList(),
                           ));
                         },
                         child: Text(

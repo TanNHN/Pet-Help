@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pet_help/view/HomePage.dart';
-import 'package:pet_help/view/PetHealthReport.dart';
+import 'package:pet_help/view/PetHealthReportDetail.dart';
 import 'package:pet_help/view/PetProfile.dart';
 import 'package:pet_help/view/PostDetail.dart';
 
@@ -40,7 +40,7 @@ class ViewPetReportList extends StatelessWidget {
                     Navigator.push(
                       context,
                       new MaterialPageRoute(
-                          builder: (context) => new PetHealthReport()),
+                          builder: (context) => new PetHealthReportDetail()),
                     );
                   },
                   child: Container(
@@ -62,7 +62,7 @@ class ViewPetReportList extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: <Widget>[
                           Padding(
-                            padding: const EdgeInsets.fromLTRB(8, 0, 0, 8),
+                            padding: const EdgeInsets.fromLTRB(8, 10, 0, 8),
                             child: Row(
                               children: [
                                 Icon(Icons.person),
@@ -148,10 +148,36 @@ class ViewPetReportList extends StatelessWidget {
                               ],
                             ),
                           ),
+                          Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: SizedBox(
+                              width: 170,
+                              height: 40,
+                              child: RaisedButton(
+                                color: Colors.white,
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(18.0),
+                                    side: BorderSide(
+                                        color:
+                                            Color.fromRGBO(253, 158, 121, 1))),
+                                onPressed: () {
+                                  Navigator.of(context)
+                                      .pushReplacement(MaterialPageRoute(
+                                    builder: (context) => MyHomePage(),
+                                  ));
+                                },
+                                child: Text(
+                                  'Chưa duyệt',
+                                  style: TextStyle(
+                                      color: Colors.red, fontSize: 15),
+                                ),
+                              ),
+                            ),
+                          ),
                         ],
                       ),
                     ]),
-                    height: 140,
+                    height: 200,
                     decoration: BoxDecoration(
                         color: Colors.white,
                         borderRadius: BorderRadius.circular(15),
@@ -183,7 +209,7 @@ class ViewPetReportList extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
                         Padding(
-                          padding: const EdgeInsets.all(8.0),
+                          padding: const EdgeInsets.all(10),
                           child: Row(
                             children: [
                               Icon(Icons.person),
@@ -269,10 +295,35 @@ class ViewPetReportList extends StatelessWidget {
                             ],
                           ),
                         ),
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: SizedBox(
+                            width: 170,
+                            height: 40,
+                            child: RaisedButton(
+                              color: Colors.white,
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(18.0),
+                                  side: BorderSide(
+                                      color: Color.fromRGBO(253, 158, 121, 1))),
+                              onPressed: () {
+                                Navigator.of(context)
+                                    .pushReplacement(MaterialPageRoute(
+                                  builder: (context) => MyHomePage(),
+                                ));
+                              },
+                              child: Text(
+                                'Đã duyệt',
+                                style:
+                                    TextStyle(color: Colors.blue, fontSize: 15),
+                              ),
+                            ),
+                          ),
+                        ),
                       ],
                     ),
                   ]),
-                  height: 140,
+                  height: 200,
                   decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(15),

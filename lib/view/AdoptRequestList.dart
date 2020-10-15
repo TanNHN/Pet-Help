@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:pet_help/view/AdoptRequest.dart';
 import 'package:pet_help/view/HomePage.dart';
-import 'package:pet_help/view/PetHealthReport.dart';
+import 'package:pet_help/view/PetHealthReportDetail.dart';
 import 'package:pet_help/view/PostDetail.dart';
+import 'package:pet_help/view/RescueHome.dart';
 
 class AdoptRequestList extends StatelessWidget {
   @override
@@ -13,7 +14,7 @@ class AdoptRequestList extends StatelessWidget {
               icon: Icon(Icons.arrow_back, color: Colors.black),
               onPressed: () {
                 Navigator.of(context).pushReplacement(MaterialPageRoute(
-                  builder: (context) => MyHomePage(),
+                  builder: (context) => RescueHome(),
                 ));
               }),
           title: Container(
@@ -97,7 +98,7 @@ class AdoptRequestList extends StatelessWidget {
                                   ),
                                 ),
                                 Text(
-                                  "Tan1",
+                                  "Lê Duẩn",
                                   style: TextStyle(
                                     fontSize: 15,
                                     fontWeight: FontWeight.bold,

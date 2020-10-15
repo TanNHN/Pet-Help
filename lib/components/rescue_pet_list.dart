@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 import 'package:pet_help/view/HomePage.dart';
 import 'package:pet_help/view/PetProfile.dart';
-import 'package:pet_help/view/ViewPetReportList.dart';
+import 'package:pet_help/view/PetHealthReportList.dart';
 
 class RescuePetList extends StatefulWidget {
   @override
@@ -71,7 +71,7 @@ class RescuePetListState extends State<RescuePetList> {
                     child: Row(
                       children: <Widget>[
                         Image.asset(
-                          'src/image/pet_4.jpg',
+                          'src/image/meo1.jpg',
                           width: 140,
                           height: 240,
                         ),

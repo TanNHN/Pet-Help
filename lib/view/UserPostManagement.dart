@@ -124,7 +124,7 @@ class UserPostManagement extends StatelessWidget {
                                     ),
                                   ),
                                   Text(
-                                    "Dũng Xạo",
+                                    "Tom",
                                     style: TextStyle(
                                       fontSize: 17,
                                       fontWeight: FontWeight.bold,

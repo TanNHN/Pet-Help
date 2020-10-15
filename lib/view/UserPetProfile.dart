@@ -5,10 +5,10 @@ import 'package:pet_help/components/chat.dart';
 import 'package:pet_help/components/item_image.dart';
 import 'package:pet_help/view/Contact.dart';
 import 'package:pet_help/view/HomePage.dart';
-import 'package:pet_help/view/PetHealthReport.dart';
-import 'package:pet_help/view/PetReport.dart';
+import 'package:pet_help/view/PetHealthReportDetail.dart';
+import 'package:pet_help/view/PetReportForm.dart';
 import 'package:pet_help/view/RescuePetManagement.dart';
-import 'package:pet_help/view/ViewPetReportList.dart';
+import 'package:pet_help/view/PetHealthReportList.dart';
 
 class UserPetProfile extends StatefulWidget {
   @override
@@ -19,12 +19,12 @@ class UserPetProfile extends StatefulWidget {
 }
 
 class ItemInfo extends State<UserPetProfile> {
-  String imgUrl = "src/image/meo1.jpg";
+  String imgUrl = "src/image/pet_4.jpg";
 
   @override
   void initState() {
     super.initState();
-    imgUrl = 'src/image/meo1.jpg';
+    imgUrl = 'src/image/pet_4.jpg';
   }
 
   @override
@@ -35,7 +35,7 @@ class ItemInfo extends State<UserPetProfile> {
             icon: Icon(Icons.arrow_back, color: Colors.black),
             onPressed: () {
               Navigator.of(context).pushReplacement(MaterialPageRoute(
-                builder: (context) => RescuePetManagement(),
+                builder: (context) => MyHomePage(),
               ));
             }),
         title: Container(
@@ -82,11 +82,11 @@ class ItemInfo extends State<UserPetProfile> {
                                       GestureDetector(
                                         onTap: () {
                                           setState(() {
-                                            imgUrl = "src/image/meo1.jpg";
+                                            imgUrl = "src/image/pet_4.jpg";
                                           });
                                         },
                                         child: Image.asset(
-                                          'src/image/meo1.jpg',
+                                          'src/image/pet_4.jpg',
                                         ),
                                       ),
                                       Padding(
@@ -278,7 +278,7 @@ class ItemInfo extends State<UserPetProfile> {
                         GestureDetector(
                             onTap: () {
                               Navigator.of(context).push(new MaterialPageRoute(
-                                  builder: (context) => PetReport()));
+                                  builder: (context) => PetReportForm()));
                             },
                             child: Container(
                               height: 43,

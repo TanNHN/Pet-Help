@@ -5,8 +5,8 @@ import 'package:pet_help/components/chat.dart';
 import 'package:pet_help/components/item_image.dart';
 import 'package:pet_help/view/Contact.dart';
 import 'package:pet_help/view/HomePage.dart';
+import 'package:pet_help/view/PetHealthReportList.dart';
 import 'package:pet_help/view/RescuePetManagement.dart';
-import 'package:pet_help/view/ViewPetReportList.dart';
 
 class PetProfile extends StatefulWidget {
   @override

@@ -15,12 +15,12 @@ class PostDetail extends StatefulWidget {
 }
 
 class ItemInfo extends State<PostDetail> {
-  String imgUrl = "src/image/meo1.jpg";
+  String imgUrl = "src/image/nga.jpg";
 
   @override
   void initState() {
     super.initState();
-    imgUrl = 'src/image/meo1.jpg';
+    imgUrl = 'src/image/nga.jpg';
   }
 
   @override
@@ -78,11 +78,11 @@ class ItemInfo extends State<PostDetail> {
                                       GestureDetector(
                                         onTap: () {
                                           setState(() {
-                                            imgUrl = "src/image/meo1.jpg";
+                                            imgUrl = "src/image/nga.jpg";
                                           });
                                         },
                                         child: Image.asset(
-                                          'src/image/meo1.jpg',
+                                          'src/image/nga.jpg',
                                         ),
                                       ),
                                       Padding(

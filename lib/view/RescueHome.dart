@@ -4,6 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:pet_help/components/BottomNaviBar.dart';
 import 'package:pet_help/components/list_header.dart';
 import 'package:pet_help/components/rescue_home_list.dart';
+import 'package:pet_help/view/AdoptRequestList.dart';
 import 'package:pet_help/view/Contact.dart';
 import 'package:pet_help/view/Login.dart';
 import 'package:pet_help/view/UserPetManagement.dart';
@@ -62,7 +63,7 @@ class RescueHome extends StatelessWidget {
               ),
             ),
             ListTile(
-              title: Text('Profile'),
+              title: Text('Trang cá nhân'),
               leading: new Tab(
                 icon: new Image.asset("src/icon/profile.png"),
               ),
@@ -75,7 +76,7 @@ class RescueHome extends StatelessWidget {
               },
             ),
             ListTile(
-              title: Text('My pets'),
+              title: Text('Thú cưng của tôi'),
               leading: new Tab(
                 icon: new Image.asset("src/icon/pet-house.png"),
               ),
@@ -86,13 +87,27 @@ class RescueHome extends StatelessWidget {
               },
             ),
             ListTile(
-              title: Text('My Post'),
+              title: Text('Bài viết của tôi'),
               leading: new Tab(
                 icon: new Image.asset("src/icon/post.png"),
               ),
               onTap: () {
                 Navigator.of(context).pushReplacement(MaterialPageRoute(
                   builder: (context) => MyPost(),
+                ));
+              },
+            ),
+            ListTile(
+              title: Text('Đơn nhận nuôi'),
+              leading: new Tab(
+                icon: new Image.asset(
+                  "src/icon/adopt.png",
+                  width: 40,
+                ),
+              ),
+              onTap: () {
+                Navigator.of(context).pushReplacement(MaterialPageRoute(
+                  builder: (context) => AdoptRequestList(),
                 ));
               },
             ),

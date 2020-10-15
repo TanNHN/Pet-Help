@@ -11,7 +11,7 @@ import 'package:pet_help/view/GMap2.dart';
 import 'package:pet_help/view/HomePage.dart';
 import 'package:pet_help/view/RescueHome.dart';
 import 'package:pet_help/view/RescuePetManagement.dart';
-import 'package:pet_help/view/ViewPetReportList.dart';
+import 'package:pet_help/view/PetHealthReportList.dart';
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:flutter/material.dart';
