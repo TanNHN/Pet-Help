@@ -5,6 +5,8 @@ import 'package:pet_help/components/BottomNaviBar.dart';
 import 'package:pet_help/components/list_header.dart';
 import 'package:pet_help/components/rescue_home_list.dart';
 import 'package:pet_help/components/rescue_pet_list.dart';
+import 'package:pet_help/view/HomePage.dart';
+import 'package:pet_help/view/RescueHome.dart';
 
 class RescuePetManagement extends StatelessWidget {
   @override
@@ -12,26 +14,28 @@ class RescuePetManagement extends StatelessWidget {
     return Scaffold(
       resizeToAvoidBottomPadding: false,
       appBar: AppBar(
-        title: Text(
-          'Quản lý thú cưng',
-          style: TextStyle(
-              fontStyle: FontStyle.normal, color: Colors.white, fontSize: 30),
-        ),
-        centerTitle: true,
-        backgroundColor: Color.fromRGBO(253, 158, 121, 1),
-      ),
-      body: Container(
-        decoration: BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage("src/image/background.jpg"),
-            fit: BoxFit.cover,
+        leading: IconButton(
+            icon: Icon(Icons.arrow_back, color: Colors.black),
+            onPressed: () {
+              Navigator.of(context).pushReplacement(MaterialPageRoute(
+                builder: (context) => RescueHome(),
+              ));
+            }),
+        title: Container(
+          child: Text(
+            'Thú cưng',
+            style: TextStyle(color: Colors.white, fontSize: 20),
           ),
         ),
+        backgroundColor: Color.fromRGBO(253, 158, 121, 1),
+        centerTitle: true,
+      ),
+      body: Container(
+        decoration: BoxDecoration(),
         child: Column(
           children: [
             HeaderList(),
             Expanded(child: RescuePetList()),
-            BottomNaviBar()
           ],
         ),
       ),

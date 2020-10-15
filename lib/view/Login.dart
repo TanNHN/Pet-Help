@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pet_help/view/HomePage.dart';
+import 'package:pet_help/view/RescueHome.dart';
 import 'package:pet_help/view/zHomePageRescue.dart';
 
 class Login extends StatefulWidget {
@@ -112,9 +113,9 @@ class LoginState extends State<Login> {
         userInvalid = false;
         passInvalid = false;
       }
-      if (userController.text == "admin" && passController.text == "123") {
-        Navigator.of(context).push(
-            new MaterialPageRoute(builder: (context) => MyHomePageRescue()));
+      if (userController.text == "cuutro" && passController.text == "123") {
+        Navigator.of(context)
+            .push(new MaterialPageRoute(builder: (context) => RescueHome()));
       } else if (userController.text == "user" &&
           passController.text == "123") {
         Navigator.of(context)

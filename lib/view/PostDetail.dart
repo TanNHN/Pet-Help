@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:pet_help/view/AdoptForm.dart';
 import 'package:pet_help/view/HomePage.dart';
 
 import '../components/app_bar.dart';
@@ -318,26 +319,32 @@ class ItemInfo extends State<PostDetail> {
                     SizedBox(
                       height: 18,
                     ),
-                    Container(
-                      alignment: Alignment(0.6, 1.0),
-                      padding: EdgeInsets.all(6),
-                      height: 30,
-                      width: 250,
-                      decoration: BoxDecoration(
-                        color: Colors.orange,
-                        borderRadius: BorderRadius.circular(8.0),
-                      ),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: <Widget>[
-                          Text(
-                            "Nhận nuôi",
-                            style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 17,
-                                fontWeight: FontWeight.bold),
-                          ),
-                        ],
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.of(context).push(new MaterialPageRoute(
+                            builder: (context) => AdoptForm()));
+                      },
+                      child: Container(
+                        alignment: Alignment(0.6, 1.0),
+                        padding: EdgeInsets.all(6),
+                        height: 30,
+                        width: 250,
+                        decoration: BoxDecoration(
+                          color: Colors.orange,
+                          borderRadius: BorderRadius.circular(8.0),
+                        ),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: <Widget>[
+                            Text(
+                              "Nhận nuôi",
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 17,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                   ],

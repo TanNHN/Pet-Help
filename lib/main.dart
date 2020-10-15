@@ -5,12 +5,15 @@ import 'package:pet_help/view/AddPet.dart';
 import 'package:pet_help/view/AdoptForm.dart';
 import 'package:pet_help/view/AdoptRequest.dart';
 import 'package:pet_help/view/AdoptRequestList.dart';
+import 'package:pet_help/view/Contact.dart';
 import 'package:pet_help/view/HomePage.dart';
 import 'package:pet_help/view/Login.dart';
-import 'package:pet_help/view/MyPet.dart';
-import 'package:pet_help/view/MyPost.dart';
+import 'package:pet_help/view/UserPetManagement.dart';
+import 'package:pet_help/view/RescuePostManagement.dart';
 import 'package:pet_help/view/PetReport.dart';
 import 'package:pet_help/view/PostDetail.dart';
+import 'package:pet_help/view/UserPostDetail.dart';
+import 'package:pet_help/view/GMap.dart';
 import 'package:pet_help/view/ViewPetReportList.dart';
 import 'package:pet_help/view/PetProfile.dart';
 import 'package:pet_help/view/RescueHome.dart';
@@ -27,7 +30,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        home: RescueHome(
+        home: MyHomePage(
             // title: 'Post',
             ));
   }

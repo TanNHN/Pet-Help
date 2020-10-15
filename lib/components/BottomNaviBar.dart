@@ -1,7 +1,6 @@
-
 import 'package:flutter/material.dart';
 import 'package:pet_help/view/HomePage.dart';
-import 'package:pet_help/view/MyPost.dart';
+import 'package:pet_help/view/RescuePostManagement.dart';
 import 'package:pet_help/view/findRescue.dart';
 
 class BottomNaviBar extends StatelessWidget {

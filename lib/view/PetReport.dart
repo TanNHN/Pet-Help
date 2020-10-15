@@ -7,7 +7,8 @@ import 'package:pet_help/view/HomePage.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:pet_help/view/HomePage.dart';
-import 'package:pet_help/view/MyPet.dart';
+import 'package:pet_help/view/UserPetManagement.dart';
+import 'package:pet_help/view/UserPetProfile.dart';
 import 'package:pet_help/view/loadimg.dart';
 import 'loadimg.dart';
 
@@ -79,7 +80,7 @@ class PetReportStage extends State<PetReport> {
             icon: Icon(Icons.arrow_back, color: Colors.black),
             onPressed: () {
               Navigator.of(context).pushReplacement(MaterialPageRoute(
-                builder: (context) => MyHomePage(),
+                builder: (context) => UserPetProfile(),
               ));
             }),
         title: Container(
@@ -153,7 +154,7 @@ class PetReportStage extends State<PetReport> {
                           onPressed: () {
                             Navigator.of(context)
                                 .pushReplacement(MaterialPageRoute(
-                              builder: (context) => MyPet(),
+                              builder: (context) => UserPetManagement(),
                             ));
                           },
                           child: Text(

@@ -2,7 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:multi_image_picker/multi_image_picker.dart';
-import 'package:pet_help/view/MyPet.dart';
+import 'package:pet_help/view/UserPetManagement.dart';
 import 'package:pet_help/view/utils.dart';
 
 class UploadImages extends StatefulWidget {
@@ -200,7 +200,7 @@ class _UploadImagesState extends State<UploadImages> {
                     borderRadius: BorderRadius.all(Radius.circular(8))),
                 onPressed: () {
                   Navigator.of(context).pushReplacement(MaterialPageRoute(
-                    builder: (context) => MyPet(),
+                    builder: (context) => UserPetManagement(),
                   ));
                 },
                 child: Text("Tạo thú cưng ",

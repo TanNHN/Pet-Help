@@ -6,9 +6,6 @@ import 'package:flutter/services.dart' show rootBundle;
 import 'package:pet_help/view/PostDetail.dart';
 import 'dart:convert';
 
-import 'package:pet_help/view/HomePage.dart';
-import 'package:pet_help/view/PetProfile.dart';
-
 class ListViewPet extends StatefulWidget {
   @override
   _ListViewPetState createState() => _ListViewPetState();
@@ -142,7 +139,7 @@ class _ListViewPetState extends State<ListViewPet> {
                             children: [
                               Icon(Icons.person),
                               Text(
-                                "Post by",
+                                "Đăng bởi",
                                 style: TextStyle(
                                     fontSize: 13, fontWeight: FontWeight.bold),
                               ),

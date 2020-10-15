@@ -5,8 +5,8 @@ import 'package:pet_help/components/listView.dart';
 import 'package:pet_help/components/list_header.dart';
 import 'package:pet_help/view/Contact.dart';
 import 'package:pet_help/view/Login.dart';
-import 'package:pet_help/view/MyPet.dart';
-import 'package:pet_help/view/MyPost.dart';
+import 'package:pet_help/view/UserPetManagement.dart';
+import 'package:pet_help/view/RescuePostManagement.dart';
 import 'package:pet_help/view/login_page.dart';
 import 'package:pet_help/view/proflie.dart';
 
@@ -88,7 +88,7 @@ class MyHomePageRescue extends StatelessWidget {
               ),
               onTap: () {
                 Navigator.of(context).pushReplacement(MaterialPageRoute(
-                  builder: (context) => MyPet(),
+                  builder: (context) => UserPetManagement(),
                 ));
               },
             ),

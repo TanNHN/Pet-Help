@@ -3,554 +3,336 @@ import 'package:flutter/material.dart';
 
 import 'package:pet_help/view/HomePage.dart';
 import 'package:pet_help/view/PetProfile.dart';
+import 'package:pet_help/view/ViewPetReportList.dart';
 
+class RescuePetList extends StatefulWidget {
+  @override
+  State<StatefulWidget> createState() {
+    RescuePetListState rescuePetListState = new RescuePetListState();
+    return rescuePetListState;
+  }
+}
 
+class RescuePetListState extends State<RescuePetList> {
+  int _value = 1;
 
-class RescuePetList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
         body: SingleChildScrollView(
-          child: Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Column(
-              children: [
-                // Text(
-                //   "Báo cáo sức khỏe của Bum",
-                //   style: TextStyle(fontSize: 30),
-                // ),
-                SizedBox(height: 10),
-                Row(
-
-                  mainAxisAlignment: MainAxisAlignment.center,
-
-                  children: <Widget>[
-
-                    Container(
-                      height: 30,
-                      width: 120,
-
-                      alignment: Alignment.center,
-                      padding: EdgeInsets.fromLTRB(14, 6, 8, 4),
-                      decoration: BoxDecoration(
-                          color: Colors.blueAccent,
-                          borderRadius: BorderRadius.only(topLeft: Radius.circular(8),bottomLeft:Radius.circular(8) ),
-                          border: Border(
-                            top: BorderSide(width: 1.0, color: Colors.blueAccent),
-                            left: BorderSide(width: 1.0, color: Colors.blueAccent),
-                            right: BorderSide(width: 1.0, color: Colors.blueAccent),
-                            bottom: BorderSide(width: 1.0, color: Colors.blueAccent),
-                          )
-                      ),
-                      child: Row(
-                        children: [
-                          Container(
-
-                            child: (
-                                Column(
-                                  children: [
-                                    Align(
-                                      child: (
-                                          Text("Đã được nhận", style: TextStyle(color: Colors.white),)
-                                      ),
-                                    ),
-                                  ],
-                                )
-                            ),
-                          ),
-
-                        ],
-                      ),
+      child: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Column(
+          children: [
+            // Text(
+            //   "Báo cáo sức khỏe của Bum",
+            //   style: TextStyle(fontSize: 30),
+            // ),
+            SizedBox(height: 10),
+            Container(
+              padding: EdgeInsets.all(8.0),
+              child: DropdownButton(
+                  value: _value,
+                  items: [
+                    DropdownMenuItem(
+                      child: Text("Tất cả"),
+                      value: 1,
                     ),
-                    Container(
-                      height: 30,
-                      width: 120,
-
-                      alignment: Alignment.center,
-                      padding:EdgeInsets.fromLTRB(7, 6, 8, 4),
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.only(topRight: Radius.circular(8),bottomRight:Radius.circular(8) ),
-                          border: Border(
-                            top: BorderSide(width: 1.0, color: Colors.blueAccent),
-                            left: BorderSide(width: 1.0, color: Colors.blueAccent),
-                            right: BorderSide(width: 1.0, color: Colors.blueAccent),
-                            bottom: BorderSide(width: 1.0, color: Colors.blueAccent),
-                          )
-                      ),
-                      child: Row(
-                        children: [
-                          Container(
-                            child: (
-                                Column(
-                                  children: [
-                                    Text("Chưa được nhận",style: TextStyle(color: Colors.blueAccent),),
-                                  ],
-                                )
-                            ),
-                          ),
-
-                        ],
-                      ),
+                    DropdownMenuItem(
+                      child: Text("Đang được nuôi"),
+                      value: 2,
                     ),
+                    DropdownMenuItem(
+                        child: Text("Đang tìm người nuôi"), value: 3),
+                    DropdownMenuItem(child: Text("Đã được nhận nuôi"), value: 4)
                   ],
-                ),
-                SizedBox(height: 20,),
-                new GestureDetector(
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      new MaterialPageRoute(
-                          builder: (context) => new PetProfile()),
-                    );
-                  },
-                  child: Container(
-
-                    width: double.infinity,
-                    child:
-                    Row(
-                        children: <Widget>[
-                          Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Row(
-                              children: <Widget>[
-                                Image.asset(
-                                  'src/image/pet_4.jpg',
-                                  width: 140,
-                                  height: 240,
-                                ),
-                              ],
-                            ),
-                          ),
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: <Widget>[
-                              Padding(
-
-                                padding: const EdgeInsets.fromLTRB(8, 23, 8, 8),
-                                child: Container(
-                                  width: 220,
-                                  child: Row(
-                                      children: <Widget>[
-                                        Column(
-                                          children: [
-                                            Text(
-                                              "Bum",
-
-
-                                              style: TextStyle(
-                                                fontSize: 30,
-                                                fontWeight: FontWeight.bold,
-
-                                              ),
-                                            )
-                                          ],
-                                        ),
-                                        Padding(
-                                          padding: const EdgeInsets.fromLTRB(55, 0, 8, 8),
-
-                                          child: Container(
-                                            width: 90,
-                                            child:
-                                            Text(
-                                              "Đã được nhận",
-
-
-                                              style: TextStyle(
-                                                fontSize: 20,
-                                                fontWeight: FontWeight.bold,
-                                                color: Colors.redAccent,
-                                              ),
-                                            ),
-                                          ),
-                                        ),
-                                      ],
-                                      ),
-
-                                ),
-                              ),
-
-                              Padding(
-                                padding: const EdgeInsets.fromLTRB(8, 15, 0, 8),
-                                child: Row(
-                                  children: [
-
-                                    Text(
-                                      "Cập nhật lần cuối: ",
-                                      style: TextStyle(
-                                        fontSize: 14,
-
-                                        color: Colors.grey,
-                                      ),
-                                    ),
-                                    Text(
-                                      "15/02/2015",
-                                      style: TextStyle(
-                                        fontSize: 14,
-
-                                        color: Colors.grey,
-                                      ),
-                                    )
-                                  ],
-                                ),
-                              ),
-
-                              Padding(
-                                padding: const EdgeInsets.fromLTRB(8, 18, 3, 4),
-
-                                child: Row(
-
-                                  children: <Widget>[
-
-                                    Text(
-                                      "Từ: ",
-                                      style: TextStyle(
-                                        fontSize: 15,
-                                        fontWeight: FontWeight.bold,
-
-                                      ),
-                                    ),
-                                    Container(
-                                      alignment: Alignment.center,
-                                      width: 170,
-                                      child: Text(
-                                        "Bệnh viện Pet PRO",
-                                        maxLines: 2,
-                                        style: TextStyle(
-                                          fontSize: 15,
-                                          fontWeight: FontWeight.bold,
-                                          color: Color.fromRGBO(253, 158, 121, 1),
-
-                                        ),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ],
-                          ),
-                        ]
-                    ),
-
-
-                    height: 200,
-                    decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(15),
-                        boxShadow: [
-                          new BoxShadow(
-                              color: Colors.black54,
-                              offset: new Offset(1.0, 2.0),
-                              blurRadius: 3.5),
-                        ]),
-                  ),
-
-                ),
-                SizedBox(height: 10),
-                new GestureDetector(
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      new MaterialPageRoute(
-                          builder: (context) => new PetProfile()),
-                    );
-                  },
-                  child: Container(
-
-                    width: double.infinity,
-                    child:
-                    Row(
-                        children: <Widget>[
-                          Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Row(
-                              children: <Widget>[
-                                Image.asset(
-                                  'src/image/pet_5.jpg',
-                                  width: 140,
-                                  height: 240,
-                                ),
-                              ],
-                            ),
-                          ),
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: <Widget>[
-                              Padding(
-
-                                padding: const EdgeInsets.fromLTRB(8, 23, 8, 8),
-                                child: Container(
-                                  width: 220,
-                                  child: Row(
-                                    children: <Widget>[
-                                      Column(
-                                        children: [
-                                          Text(
-                                            "Cái",
-
-
-                                            style: TextStyle(
-                                              fontSize: 30,
-                                              fontWeight: FontWeight.bold,
-
-                                            ),
-                                          )
-                                        ],
-                                      ),
-                                      Padding(
-                                        padding: const EdgeInsets.fromLTRB(55, 0, 8, 8),
-
-                                        child: Container(
-                                          width: 100,
-                                          child:
-                                          Text(
-                                            "Chưa được nhận",
-
-
-                                            style: TextStyle(
-                                              fontSize: 20,
-                                              fontWeight: FontWeight.bold,
-                                              color: Colors.blueAccent,
-                                            ),
-                                          ),
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-
-                                ),
-                              ),
-
-                              Padding(
-                                padding: const EdgeInsets.fromLTRB(8, 15, 0, 8),
-                                child: Row(
-                                  children: [
-
-                                    Text(
-                                      "Cập nhật lần cuối: ",
-                                      style: TextStyle(
-                                        fontSize: 14,
-
-                                        color: Colors.grey,
-                                      ),
-                                    ),
-                                    Text(
-                                      "20/08/2019",
-                                      style: TextStyle(
-                                        fontSize: 14,
-
-                                        color: Colors.grey,
-                                      ),
-                                    )
-                                  ],
-                                ),
-                              ),
-
-                              Padding(
-                                padding: const EdgeInsets.fromLTRB(8, 18, 3, 4),
-
-                                child: Row(
-
-                                  children: <Widget>[
-
-                                    Text(
-                                      "Từ: ",
-                                      style: TextStyle(
-                                        fontSize: 15,
-                                        fontWeight: FontWeight.bold,
-
-                                      ),
-                                    ),
-                                    Container(
-                                      alignment: Alignment.center,
-                                      width: 170,
-                                      child: Text(
-                                        "Bệnh viện New Pet Hospital",
-                                        maxLines: 2,
-                                        style: TextStyle(
-                                          fontSize: 15,
-                                          fontWeight: FontWeight.bold,
-                                          color: Color.fromRGBO(253, 158, 121, 1),
-
-                                        ),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ],
-                          ),
-                        ]
-                    ),
-
-
-                    height: 200,
-                    decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(15),
-                        boxShadow: [
-                          new BoxShadow(
-                              color: Colors.black54,
-                              offset: new Offset(1.0, 2.0),
-                              blurRadius: 3.5),
-                        ]),
-                  ),
-
-                ),
-                SizedBox(height: 10),
-                new GestureDetector(
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      new MaterialPageRoute(
-                          builder: (context) => new PetProfile()),
-                    );
-                  },
-                  child: Container(
-
-                    width: double.infinity,
-                    child:
-                    Row(
-                        children: <Widget>[
-                          Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Row(
-                              children: <Widget>[
-                                Image.asset(
-                                  'src/image/pet_6.jpg',
-                                  width: 140,
-                                  height: 240,
-                                ),
-                              ],
-                            ),
-                          ),
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: <Widget>[
-                              Padding(
-
-                                padding: const EdgeInsets.fromLTRB(8, 23, 8, 8),
-                                child: Container(
-                                  width: 220,
-                                  child: Row(
-                                    children: <Widget>[
-                                      Column(
-                                        children: [
-                                          Text(
-                                            "Bê",
-
-
-                                            style: TextStyle(
-                                              fontSize: 30,
-                                              fontWeight: FontWeight.bold,
-
-                                            ),
-                                          )
-                                        ],
-                                      ),
-                                      Padding(
-                                        padding: const EdgeInsets.fromLTRB(55, 0, 8, 8),
-
-                                        child: Container(
-                                          width: 90,
-                                          child:
-                                          Text(
-                                            "Đã được nhận",
-
-
-                                            style: TextStyle(
-                                              fontSize: 20,
-                                              fontWeight: FontWeight.bold,
-                                              color: Colors.redAccent,
-                                            ),
-                                          ),
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-
-                                ),
-                              ),
-
-                              Padding(
-                                padding: const EdgeInsets.fromLTRB(8, 15, 0, 8),
-                                child: Row(
-                                  children: [
-
-                                    Text(
-                                      "Cập nhật lần cuối: ",
-                                      style: TextStyle(
-                                        fontSize: 14,
-
-                                        color: Colors.grey,
-                                      ),
-                                    ),
-                                    Text(
-                                      "15/02/2020",
-                                      style: TextStyle(
-                                        fontSize: 14,
-
-                                        color: Colors.grey,
-                                      ),
-                                    )
-                                  ],
-                                ),
-                              ),
-
-                              Padding(
-                                padding: const EdgeInsets.fromLTRB(8, 18, 3, 4),
-
-                                child: Row(
-
-                                  children: <Widget>[
-
-                                    Text(
-                                      "Từ: ",
-                                      style: TextStyle(
-                                        fontSize: 15,
-                                        fontWeight: FontWeight.bold,
-
-                                      ),
-                                    ),
-                                    Container(
-                                      alignment: Alignment.center,
-                                      width: 170,
-                                      child: Text(
-                                        "Cứu trợ SAR",
-                                        maxLines: 2,
-                                        style: TextStyle(
-                                          fontSize: 15,
-                                          fontWeight: FontWeight.bold,
-                                          color: Color.fromRGBO(253, 158, 121, 1),
-
-                                        ),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ],
-                          ),
-                        ]
-                    ),
-
-
-                    height: 200,
-                    decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(15),
-                        boxShadow: [
-                          new BoxShadow(
-                              color: Colors.black54,
-                              offset: new Offset(1.0, 2.0),
-                              blurRadius: 3.5),
-                        ]),
-                  ),
-
-                ),
-              ],
+                  onChanged: (value) {
+                    setState(() {
+                      _value = value;
+                    });
+                  }),
             ),
-          ),
-        ));
+
+            SizedBox(
+              height: 20,
+            ),
+            new GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  new MaterialPageRoute(builder: (context) => new PetProfile()),
+                );
+              },
+              child: Container(
+                width: double.infinity,
+                child: Row(children: <Widget>[
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Row(
+                      children: <Widget>[
+                        Image.asset(
+                          'src/image/pet_4.jpg',
+                          width: 140,
+                          height: 240,
+                        ),
+                      ],
+                    ),
+                  ),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: <Widget>[
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(8, 23, 8, 8),
+                        child: Container(
+                          width: 220,
+                          child: Row(
+                            children: <Widget>[
+                              Column(
+                                children: [
+                                  Text(
+                                    "Bum",
+                                    style: TextStyle(
+                                      fontSize: 30,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  )
+                                ],
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: SizedBox(
+                          width: 160,
+                          height: 40,
+                          child: RaisedButton(
+                            color: Colors.white,
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(18.0),
+                                side: BorderSide(
+                                    color: Color.fromRGBO(253, 158, 121, 1))),
+                            onPressed: () {
+                              Navigator.of(context)
+                                  .pushReplacement(MaterialPageRoute(
+                                builder: (context) => MyHomePage(),
+                              ));
+                            },
+                            child: Text(
+                              'Đã được nhận nuôi',
+                              style: TextStyle(
+                                  color: Color.fromRGBO(253, 158, 121, 1),
+                                  fontSize: 15),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ]),
+                height: 200,
+                decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(15),
+                    boxShadow: [
+                      new BoxShadow(
+                          color: Colors.black54,
+                          offset: new Offset(1.0, 2.0),
+                          blurRadius: 3.5),
+                    ]),
+              ),
+            ),
+            SizedBox(height: 10),
+            new GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  new MaterialPageRoute(builder: (context) => new PetProfile()),
+                );
+              },
+              child: Container(
+                width: double.infinity,
+                child: Row(children: <Widget>[
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Row(
+                      children: <Widget>[
+                        Image.asset(
+                          'src/image/pet_5.jpg',
+                          width: 140,
+                          height: 240,
+                        ),
+                      ],
+                    ),
+                  ),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: <Widget>[
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(8, 23, 8, 8),
+                        child: GestureDetector(
+                          onTap: () {
+                            Navigator.of(context).push(new MaterialPageRoute(
+                                builder: (context) => PetProfile()));
+                          },
+                          child: Container(
+                            width: 220,
+                            child: Row(
+                              children: <Widget>[
+                                Column(
+                                  children: [
+                                    Text(
+                                      "Nga",
+                                      style: TextStyle(
+                                        fontSize: 30,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: SizedBox(
+                                        width: 170,
+                                        height: 40,
+                                        child: RaisedButton(
+                                          color: Colors.white,
+                                          shape: RoundedRectangleBorder(
+                                              borderRadius:
+                                                  BorderRadius.circular(18.0),
+                                              side: BorderSide(
+                                                  color: Color.fromRGBO(
+                                                      253, 158, 121, 1))),
+                                          onPressed: () {
+                                            Navigator.of(context)
+                                                .pushReplacement(
+                                                    MaterialPageRoute(
+                                              builder: (context) =>
+                                                  MyHomePage(),
+                                            ));
+                                          },
+                                          child: Text(
+                                            'Đang tìm người nuôi',
+                                            style: TextStyle(
+                                                color: Colors.blue,
+                                                fontSize: 15),
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ]),
+                height: 200,
+                decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(15),
+                    boxShadow: [
+                      new BoxShadow(
+                          color: Colors.black54,
+                          offset: new Offset(1.0, 2.0),
+                          blurRadius: 3.5),
+                    ]),
+              ),
+            ),
+            SizedBox(height: 10),
+            new GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  new MaterialPageRoute(builder: (context) => new PetProfile()),
+                );
+              },
+              child: Container(
+                width: double.infinity,
+                child: Row(children: <Widget>[
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Row(
+                      children: <Widget>[
+                        Image.asset(
+                          'src/image/pet_6.jpg',
+                          width: 140,
+                          height: 240,
+                        ),
+                      ],
+                    ),
+                  ),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: <Widget>[
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(8, 23, 8, 8),
+                        child: Container(
+                          width: 220,
+                          child: Row(
+                            children: <Widget>[
+                              Column(
+                                children: [
+                                  Text(
+                                    "Bê",
+                                    style: TextStyle(
+                                      fontSize: 30,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.all(8.0),
+                                    child: SizedBox(
+                                      width: 170,
+                                      height: 40,
+                                      child: RaisedButton(
+                                        color: Colors.white,
+                                        shape: RoundedRectangleBorder(
+                                            borderRadius:
+                                                BorderRadius.circular(18.0),
+                                            side: BorderSide(
+                                                color: Color.fromRGBO(
+                                                    253, 158, 121, 1))),
+                                        onPressed: () {
+                                          Navigator.of(context).pushReplacement(
+                                              MaterialPageRoute(
+                                            builder: (context) => MyHomePage(),
+                                          ));
+                                        },
+                                        child: Text(
+                                          'Đang được chăm sóc',
+                                          style: TextStyle(
+                                              color: Colors.blue, fontSize: 13),
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ]),
+                height: 200,
+                decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(15),
+                    boxShadow: [
+                      new BoxShadow(
+                          color: Colors.black54,
+                          offset: new Offset(1.0, 2.0),
+                          blurRadius: 3.5),
+                    ]),
+              ),
+            ),
+          ],
+        ),
+      ),
+    ));
   }
 }
