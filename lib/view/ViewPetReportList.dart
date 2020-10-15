@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pet_help/view/HomePage.dart';
 import 'package:pet_help/view/PetHealthReport.dart';
+import 'package:pet_help/view/PetProfile.dart';
 import 'package:pet_help/view/PostDetail.dart';
 
 class ViewPetReportList extends StatelessWidget {
@@ -12,7 +13,7 @@ class ViewPetReportList extends StatelessWidget {
               icon: Icon(Icons.arrow_back, color: Colors.black),
               onPressed: () {
                 Navigator.of(context).pushReplacement(MaterialPageRoute(
-                  builder: (context) => MyHomePage(),
+                  builder: (context) => PetProfile(),
                 ));
               }),
           title: Container(

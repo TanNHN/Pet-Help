@@ -73,6 +73,11 @@ flutter:
     - src/image/welcomeScreen.png
     - src/image/cmnd1.png
     - src/image/cmnd2.png
+    - src/image/meo1.jpg
+    - src/image/cat2.jpg
+    - src/image/cat3.jpg
+    - src/image/cat4.jpg
+
     - src/image/download.jpg
     - src/image/download (1).jpg
     - src/icon/contact.png

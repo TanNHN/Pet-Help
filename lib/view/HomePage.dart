@@ -48,7 +48,6 @@ class MyHomePage extends StatelessWidget {
                     child: Container(
                       width: 75,
                       height: 75,
-                      padding: EdgeInsets.all(15),
                       child: Image.asset('src/icon/cat.png'),
                       decoration: BoxDecoration(
                           color: Colors.white, shape: BoxShape.circle),
@@ -143,7 +142,6 @@ class MyHomePage extends StatelessWidget {
           children: [
             HeaderList(),
             Expanded(child: ListViewPet()),
-            BottomNaviBar()
           ],
         ),
       ),

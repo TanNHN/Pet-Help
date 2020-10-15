@@ -6,6 +6,7 @@ import 'package:flutter/services.dart' show rootBundle;
 import 'dart:convert';
 
 import 'package:pet_help/view/HomePage.dart';
+import 'package:pet_help/view/PostDetail.dart';
 
 class ListViewPet extends StatefulWidget {
   @override
@@ -113,7 +114,7 @@ class _ListViewPetState extends State<ListViewPet> {
                               onPressed: () {
                                 Navigator.of(context)
                                     .pushReplacement(MaterialPageRoute(
-                                  builder: (context) => MyHomePage(),
+                                  builder: (context) => PostDetail(),
                                 ));
                               },
                               child: Text(
@@ -138,7 +139,7 @@ class _ListViewPetState extends State<ListViewPet> {
                           ),
                           Row(
                             children: [
-                              Icon(Icons.person),
+                              Icon(Icons.house),
                               Text(
                                 "Post by",
                                 style: TextStyle(

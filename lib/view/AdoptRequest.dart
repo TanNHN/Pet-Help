@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:pet_help/view/AdoptRequestList.dart';
 import 'package:pet_help/view/HomePage.dart';
 import 'package:pet_help/view/PetHealthReport.dart';
+import 'package:pet_help/view/PetProfile.dart';
 
 class AdoptRequest extends StatelessWidget {
   @override
@@ -173,8 +174,7 @@ class AdoptRequest extends StatelessWidget {
                                 Navigator.push(
                                   context,
                                   new MaterialPageRoute(
-                                      builder: (context) =>
-                                          new PetHealthReport()),
+                                      builder: (context) => new PetProfile()),
                                 );
                               },
                               child: Container(
