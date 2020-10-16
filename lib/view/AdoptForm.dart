@@ -67,6 +67,7 @@ class AdoptFormStage extends State<AdoptForm> {
 
   @override
   Widget build(BuildContext context) {
+    int _value = 1;
     return Scaffold(
         appBar: AppBar(
           leading: IconButton(
@@ -96,6 +97,16 @@ class AdoptFormStage extends State<AdoptForm> {
                       labelText: 'Họ và tên',
                     ),
                   )),
+              // Padding(
+              //     padding: const EdgeInsets.all(10),
+              //     // child: Text('Hello World!'),
+              //     // child: TextField(
+              //     //   decoration: InputDecoration(
+              //     //     border: OutlineInputBorder(),
+              //     //     labelText: 'Giới tính',
+              //     //   ),
+              //     // )
+              //   ),
               Padding(
                   padding: const EdgeInsets.all(10),
                   child: TextField(
@@ -113,15 +124,87 @@ class AdoptFormStage extends State<AdoptForm> {
                       labelText: 'Địa chỉ',
                     ),
                   )),
-              Padding(
-                  padding: const EdgeInsets.all(10),
-                  child: TextField(
-                    obscureText: true,
-                    decoration: InputDecoration(
-                      border: OutlineInputBorder(),
-                      labelText: 'Môi trường sống hiện tại',
+              // Padding(
+              //     padding: const EdgeInsets.all(10),
+              //     child: TextField(
+              //       obscureText: true,
+              //       decoration: InputDecoration(
+              //         border: OutlineInputBorder(),
+              //         labelText: 'Môi trường sống hiện tại',
+              //       ),
+              //     )),
+              Row(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.all(10),
+                    child: Text(
+                      "Môi trường sống hiện tại",
+                      style: TextStyle(fontSize: 15, color: Colors.black54,),
                     ),
-                  )),
+                  ),
+                  DropdownButton(
+                      value: _value,
+                      items: [
+                        DropdownMenuItem(
+                          child: Text("Nhà riêng"),
+                          value: 1,
+                        ),
+                        DropdownMenuItem(
+                          child: Text("Chung cư"),
+                          value: 2,
+                        ),
+                        DropdownMenuItem(
+                            child: Text("Trọ"),
+                            value: 3
+                        ),
+                        DropdownMenuItem(
+                            child: Text("Ký túc xá"),
+                            value: 4
+                        ),
+                        // DropdownMenuItem(
+                        //     child: Text("Yếu"),
+                        //     value: 5
+                        // ),
+                      ],
+                      onChanged: (value) {
+                        setState(() {
+                          _value = value;
+                        });
+                      }),
+                ],
+              ),
+              Row(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.all(10),
+                    child: Text(
+                      "Giới tính",
+                      style: TextStyle(fontSize: 15, color: Colors.black54,),
+                    ),
+                  ),
+                  DropdownButton(
+                      value: _value,
+                      items: [
+                        DropdownMenuItem(
+                          child: Text("Nam"),
+                          value: 1,
+                        ),
+                        DropdownMenuItem(
+                          child: Text("Nữ"),
+                          value: 2,
+                        ),
+                        DropdownMenuItem(
+                            child: Text("None"),
+                            value: 3
+                        ),
+                      ],
+                      onChanged: (value) {
+                        setState(() {
+                          _value = value;
+                        });
+                      }),
+                ],
+              ),
               Container(
                 child: RichText(
                   text: TextSpan(
@@ -144,6 +227,16 @@ class AdoptFormStage extends State<AdoptForm> {
                 child: ImgLoad(),
               ),
               Padding(
+                  padding: const EdgeInsets.all(10),
+                  child: TextField(
+                    obscureText: true,
+                    decoration: InputDecoration(
+                      border: OutlineInputBorder(),
+                      labelText: 'Ghi chú',
+                    ),
+                  )),
+
+              Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: SizedBox(
                   width: 200,
@@ -159,7 +252,7 @@ class AdoptFormStage extends State<AdoptForm> {
                       ));
                     },
                     child: Text(
-                      'Gửi báo cáo',
+                      'Gửi đơn',
                       style: TextStyle(color: Colors.white),
                     ),
                   ),
