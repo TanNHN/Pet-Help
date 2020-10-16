@@ -5,10 +5,12 @@ import 'package:pet_help/components/chat.dart';
 import 'package:pet_help/components/item_image.dart';
 import 'package:pet_help/view/Contact.dart';
 import 'package:pet_help/view/HomePage.dart';
-import 'package:pet_help/view/PetHealthReportList.dart';
+import 'package:pet_help/view/PetHealthReportDetail.dart';
+import 'package:pet_help/view/PetReportForm.dart';
 import 'package:pet_help/view/RescuePetManagement.dart';
+import 'package:pet_help/view/PetHealthReportList.dart';
 
-class PetProfile extends StatefulWidget {
+class UserPetProfile extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
     ItemInfo itemInfo = new ItemInfo();
@@ -16,13 +18,13 @@ class PetProfile extends StatefulWidget {
   }
 }
 
-class ItemInfo extends State<PetProfile> {
-  String imgUrl = "src/image/meo1.jpg";
+class ItemInfo extends State<UserPetProfile> {
+  String imgUrl = "src/image/pet_4.jpg";
 
   @override
   void initState() {
     super.initState();
-    imgUrl = 'src/image/meo1.jpg';
+    imgUrl = 'src/image/pet_4.jpg';
   }
 
   @override
@@ -33,7 +35,7 @@ class ItemInfo extends State<PetProfile> {
             icon: Icon(Icons.arrow_back, color: Colors.black),
             onPressed: () {
               Navigator.of(context).pushReplacement(MaterialPageRoute(
-                builder: (context) => RescuePetManagement(),
+                builder: (context) => MyHomePage(),
               ));
             }),
         title: Container(
@@ -80,11 +82,11 @@ class ItemInfo extends State<PetProfile> {
                                       GestureDetector(
                                         onTap: () {
                                           setState(() {
-                                            imgUrl = "src/image/meo1.jpg";
+                                            imgUrl = "src/image/pet_4.jpg";
                                           });
                                         },
                                         child: Image.asset(
-                                          'src/image/meo1.jpg',
+                                          'src/image/pet_4.jpg',
                                         ),
                                       ),
                                       Padding(
@@ -228,11 +230,11 @@ class ItemInfo extends State<PetProfile> {
                       child: Row(
                         children: <Widget>[
                           Text(
-                            "Người nhận nuôi: ",
+                            "Nhận nuôi từ: ",
                             style: TextStyle(color: Colors.grey),
                           ),
                           Text(
-                            "Nguyễn ",
+                            "Trung tâm cứu trợ Luân Hồi",
                             style: TextStyle(color: Colors.orange),
                           ),
                         ],
@@ -257,13 +259,16 @@ class ItemInfo extends State<PetProfile> {
                             children: [
                               GestureDetector(
                                 onTap: () {
-                                  Navigator.of(context).push(
-                                      new MaterialPageRoute(
-                                          builder: (context) =>
-                                              ViewPetReportList()));
+                                  Navigator.of(context)
+                                      .push(new MaterialPageRoute(
+                                    builder: (context) => ChatScreen(
+                                      name: "User",
+                                      UrlImage: "",
+                                    ),
+                                  ));
                                 },
                                 child: Align(
-                                  child: Text("Liên hệ",
+                                  child: Text("Liên hệ trung tâm",
                                       style: TextStyle(
                                           color: Colors.white,
                                           fontSize: 14,
@@ -276,7 +281,7 @@ class ItemInfo extends State<PetProfile> {
                         GestureDetector(
                             onTap: () {
                               Navigator.of(context).push(new MaterialPageRoute(
-                                  builder: (context) => ViewPetReportList()));
+                                  builder: (context) => PetReportForm()));
                             },
                             child: Container(
                               height: 43,
@@ -290,7 +295,7 @@ class ItemInfo extends State<PetProfile> {
                               child: Column(
                                 children: [
                                   Align(
-                                    child: Text("Xem báo cáo",
+                                    child: Text("Báo cáo tình trạng",
                                         style: TextStyle(
                                             color: Colors.white,
                                             fontSize: 14,

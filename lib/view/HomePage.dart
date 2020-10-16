@@ -3,23 +3,32 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:pet_help/components/BottomNaviBar.dart';
 import 'package:pet_help/components/listView.dart';
 import 'package:pet_help/components/list_header.dart';
+import 'package:pet_help/view/Contact.dart';
+import 'package:pet_help/view/Login.dart';
+import 'package:pet_help/view/RescuePostManagement.dart';
+import 'package:pet_help/view/UserPetManagement.dart';
+import 'package:pet_help/view/UserPostManagement.dart';
 import 'package:pet_help/view/login_page.dart';
 import 'package:pet_help/view/proflie.dart';
 
 class MyHomePage extends StatelessWidget {
-  final String title;
-
-  MyHomePage({Key key, this.title}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
+    var bottomNaviBar = BottomNaviBar;
     return Scaffold(
       resizeToAvoidBottomPadding: false,
       appBar: AppBar(
-        title: Text(
-          'Home',
-          style: GoogleFonts.lato(
-              fontStyle: FontStyle.normal, color: Colors.white, fontSize: 30),
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Padding(
+              padding: const EdgeInsets.fromLTRB(0, 0, 130, 40),
+              child: Image.asset(
+                'src/icon/logoCute.png',
+                height: 110,
+              ),
+            ),
+          ],
         ),
         centerTitle: true,
         backgroundColor: Color.fromRGBO(253, 158, 121, 1),
@@ -42,7 +51,6 @@ class MyHomePage extends StatelessWidget {
                     child: Container(
                       width: 75,
                       height: 75,
-                      padding: EdgeInsets.all(15),
                       child: Image.asset('src/icon/cat.png'),
                       decoration: BoxDecoration(
                           color: Colors.white, shape: BoxShape.circle),
@@ -80,10 +88,9 @@ class MyHomePage extends StatelessWidget {
                 icon: new Image.asset("src/icon/pet-house.png"),
               ),
               onTap: () {
-                // Update the state of the app
-                // ...
-                // Then close the drawer
-                Navigator.pop(context);
+                Navigator.of(context).pushReplacement(MaterialPageRoute(
+                  builder: (context) => UserPetManagement(),
+                ));
               },
             ),
             ListTile(
@@ -92,10 +99,9 @@ class MyHomePage extends StatelessWidget {
                 icon: new Image.asset("src/icon/post.png"),
               ),
               onTap: () {
-                // Update the state of the app
-                // ...
-                // Then close the drawer
-                Navigator.pop(context);
+                Navigator.of(context).pushReplacement(MaterialPageRoute(
+                  builder: (context) => UserPostManagement(),
+                ));
               },
             ),
             ListTile(
@@ -104,10 +110,9 @@ class MyHomePage extends StatelessWidget {
                 icon: new Image.asset("src/icon/contact.png"),
               ),
               onTap: () {
-                // Update the state of the app
-                // ...
-                // Then close the drawer
-                Navigator.pop(context);
+                Navigator.of(context).pushReplacement(MaterialPageRoute(
+                  builder: (context) => ContactView(),
+                ));
               },
             ),
             ListTile(
@@ -121,7 +126,7 @@ class MyHomePage extends StatelessWidget {
                 // Then close the drawer
                 Navigator.of(context).pushReplacement(
                   MaterialPageRoute(
-                    builder: (context) => LoginScreen(),
+                    builder: (context) => Login(),
                   ),
                 );
               },

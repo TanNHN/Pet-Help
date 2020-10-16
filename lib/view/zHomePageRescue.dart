@@ -1,28 +1,32 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:pet_help/components/BottomNaviBar.dart';
-import 'package:pet_help/components/BottomNaviBarRescue.dart';
+import 'package:pet_help/components/listView.dart';
 import 'package:pet_help/components/list_header.dart';
-import 'package:pet_help/components/rescue_home_list.dart';
-import 'package:pet_help/view/AdoptRequestList.dart';
 import 'package:pet_help/view/Contact.dart';
 import 'package:pet_help/view/Login.dart';
 import 'package:pet_help/view/UserPetManagement.dart';
 import 'package:pet_help/view/RescuePostManagement.dart';
-import 'package:pet_help/view/RescuePetManagement.dart';
+import 'package:pet_help/view/login_page.dart';
 import 'package:pet_help/view/proflie.dart';
 
-class RescueHome extends StatelessWidget {
+class MyHomePageRescue extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomPadding: false,
       appBar: AppBar(
-        title: Text(
-          'Home',
-          style: GoogleFonts.lato(
-              fontStyle: FontStyle.normal, color: Colors.white, fontSize: 30),
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Padding(
+              padding: const EdgeInsets.fromLTRB(0, 0, 130, 40),
+              child: Image.asset(
+                'src/icon/logoCute.png',
+                height: 110,
+              ),
+            ),
+          ],
         ),
         centerTitle: true,
         backgroundColor: Color.fromRGBO(253, 158, 121, 1),
@@ -45,7 +49,8 @@ class RescueHome extends StatelessWidget {
                     child: Container(
                       width: 75,
                       height: 75,
-                      child: Image.asset('src/image/avt.jpg'),
+                      padding: EdgeInsets.all(15),
+                      child: Image.asset('src/icon/cat.png'),
                       decoration: BoxDecoration(
                           color: Colors.white, shape: BoxShape.circle),
                     ),
@@ -53,7 +58,7 @@ class RescueHome extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.fromLTRB(10, 0, 0, 0),
                     child: Text(
-                      'Cuu Tro Luân Hồi\ncuutro@gmail.com',
+                      'Tom\nUser@gmail.com',
                       style: GoogleFonts.lato(
                           fontStyle: FontStyle.normal,
                           color: Colors.black,
@@ -64,7 +69,7 @@ class RescueHome extends StatelessWidget {
               ),
             ),
             ListTile(
-              title: Text('Trang cá nhân'),
+              title: Text('Profile'),
               leading: new Tab(
                 icon: new Image.asset("src/icon/profile.png"),
               ),
@@ -77,38 +82,24 @@ class RescueHome extends StatelessWidget {
               },
             ),
             ListTile(
-              title: Text('Thú cưng của tôi'),
+              title: Text('My pets'),
               leading: new Tab(
                 icon: new Image.asset("src/icon/pet-house.png"),
               ),
               onTap: () {
                 Navigator.of(context).pushReplacement(MaterialPageRoute(
-                  builder: (context) => RescuePetManagement(),
+                  builder: (context) => UserPetManagement(),
                 ));
               },
             ),
             ListTile(
-              title: Text('Bài viết của tôi'),
+              title: Text('My Post'),
               leading: new Tab(
                 icon: new Image.asset("src/icon/post.png"),
               ),
               onTap: () {
                 Navigator.of(context).pushReplacement(MaterialPageRoute(
                   builder: (context) => MyPost(),
-                ));
-              },
-            ),
-            ListTile(
-              title: Text('Đơn nhận nuôi'),
-              leading: new Tab(
-                icon: new Image.asset(
-                  "src/icon/adopt.png",
-                  width: 40,
-                ),
-              ),
-              onTap: () {
-                Navigator.of(context).pushReplacement(MaterialPageRoute(
-                  builder: (context) => AdoptRequestList(),
                 ));
               },
             ),
@@ -152,8 +143,8 @@ class RescueHome extends StatelessWidget {
         child: Column(
           children: [
             HeaderList(),
-            Expanded(child: RescueHomeList()),
-            BottomNaviBarRescue()
+            Expanded(child: ListViewPet()),
+            BottomNaviBar()
           ],
         ),
       ),

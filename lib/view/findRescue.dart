@@ -7,60 +7,62 @@ import 'package:image_picker/image_picker.dart';
 import 'package:pet_help/components/location.dart';
 import 'package:pet_help/view/HomePage.dart';
 
+import 'loadimg.dart';
+
 class Pick extends StatefulWidget {
   @override
   _PickState createState() => _PickState();
 }
 
 class _PickState extends State<Pick> {
-  File _image;
-  _imgFromCamera() async {
-    File image = await ImagePicker.pickImage(
-        source: ImageSource.camera, imageQuality: 50);
+  // File _image;
+  // _imgFromCamera() async {
+  // File image = await ImagePicker.pickImage(
+  //     source: ImageSource.camera, imageQuality: 50);
 
-    setState(() {
-      _image = image;
-    });
-  }
+  // setState(() {
+  //   _image = image;
+  // });
+  // }
 
-  _imgFromGallery() async {
-    File image = await ImagePicker.pickImage(
-        source: ImageSource.gallery, imageQuality: 50);
+  // _imgFromGallery() async {
+  //   File image = await ImagePicker.pickImage(
+  //       source: ImageSource.gallery, imageQuality: 50);
 
-    setState(() {
-      _image = image;
-    });
-  }
+  // setState(() {
+  //   _image = image;
+  // });
+  // }
 
-  void _showPicker(context) {
-    showModalBottomSheet(
-        context: context,
-        builder: (BuildContext bc) {
-          return SafeArea(
-            child: Container(
-              child: new Wrap(
-                children: <Widget>[
-                  new ListTile(
-                      leading: new Icon(Icons.photo_library),
-                      title: new Text('Bộ sưu tập'),
-                      onTap: () {
-                        _imgFromGallery();
-                        Navigator.of(context).pop();
-                      }),
-                  new ListTile(
-                    leading: new Icon(Icons.photo_camera),
-                    title: new Text('Camera'),
-                    onTap: () {
-                      _imgFromCamera();
-                      Navigator.of(context).pop();
-                    },
-                  ),
-                ],
-              ),
-            ),
-          );
-        });
-  }
+  // void _showPicker(context) {
+  //   showModalBottomSheet(
+  //       context: context,
+  //       builder: (BuildContext bc) {
+  //         return SafeArea(
+  //           child: Container(
+  //             child: new Wrap(
+  //               children: <Widget>[
+  //                 new ListTile(
+  //                     leading: new Icon(Icons.photo_library),
+  //                     title: new Text('Bộ sưu tập'),
+  //                     onTap: () {
+  //                       _imgFromGallery();
+  //                       Navigator.of(context).pop();
+  //                     }),
+  //                 new ListTile(
+  //                   leading: new Icon(Icons.photo_camera),
+  //                   title: new Text('Camera'),
+  //                   onTap: () {
+  //                     _imgFromCamera();
+  //                     Navigator.of(context).pop();
+  //                   },
+  //                 ),
+  //               ],
+  //             ),
+  //           ),
+  //         );
+  //       });
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -79,7 +81,7 @@ class _PickState extends State<Pick> {
           child: Text(
             'Tìm cứu trợ'.toUpperCase(),
             style: GoogleFonts.lato(
-                fontStyle: FontStyle.normal, color: Colors.white, fontSize: 30),
+                fontStyle: FontStyle.normal, color: Colors.white, fontSize: 25),
           ),
         ),
         backgroundColor: Color.fromRGBO(253, 158, 121, 1),
@@ -98,59 +100,52 @@ class _PickState extends State<Pick> {
               SizedBox(
                 height: 20,
               ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Text(
-                  'Upload image',
-                  style: TextStyle(
-                      fontSize: 25,
-                      color: Colors.green,
-                      fontWeight: FontWeight.bold),
-                ),
-              ),
+              // Padding(
+              //   padding: const EdgeInsets.all(8.0),
+              //   child: Text(
+              //     'Upload image',
+              //     style: TextStyle(
+              //         fontSize: 25,
+              //         color: Colors.green,
+              //         fontWeight: FontWeight.bold),
+              //   ),
+              // ),
               Center(
                 child: Column(
                   children: [
                     Container(
-                      decoration: BoxDecoration(),
-                      child: Container(
-                        alignment: Alignment.center,
-                        height: 260,
-                        width: 300,
-                        decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(50),
-                            boxShadow: [
-                              new BoxShadow(
-                                  color: Colors.black54,
-                                  offset: new Offset(1.0, 2.0),
-                                  blurRadius: 3.5),
-                            ]),
-                        child: GestureDetector(
-                          onTap: () {
-                            _showPicker(context);
-                          },
-                          child: _image != null
-                              ? ClipRRect(
-                                  borderRadius: BorderRadius.circular(50),
-                                  child: Image.file(
-                                    _image,
-                                    width: 300,
-                                    height: 300,
-                                    fit: BoxFit.cover,
-                                  ),
-                                )
-                              : Container(
-                                  decoration: BoxDecoration(
-                                      color: Colors.grey[200],
-                                      borderRadius: BorderRadius.circular(50)),
-                                  width: 100,
-                                  height: 100,
-                                  child: Icon(Icons.camera_alt),
-                                ),
-                        ),
-                      ),
+                      // decoration: BoxDecoration(),
+                      // child: Container(
+                      //   alignment: Alignment.center,
+                      //   height: 260,
+                      //   width: 300,
+
+                      child: ImgLoad(),
+                      // child: GestureDetector(
+                      //   onTap: () {
+                      //     _showPicker(context);
+                      //   },
+                      //   child: _image != null
+                      //       ? ClipRRect(
+                      //           borderRadius: BorderRadius.circular(50),
+                      //           child: Image.file(
+                      //             _image,
+                      //             width: 300,
+                      //             height: 300,
+                      //             fit: BoxFit.cover,
+                      //           ),
+                      //         )
+                      //       : Container(
+                      //           decoration: BoxDecoration(
+                      //               color: Colors.grey[200],
+                      //               borderRadius: BorderRadius.circular(50)),
+                      //           width: 100,
+                      //           height: 100,
+                      //           child: Icon(Icons.camera_alt),
+                      //         ),
+                      // ),
                     ),
+                    // ),
                     Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: DashboardScreen(),
