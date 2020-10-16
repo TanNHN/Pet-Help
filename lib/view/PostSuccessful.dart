@@ -7,7 +7,6 @@ import 'package:pet_help/view/loadimg.dart';
 import 'package:pet_help/view/login_page.dart';
 import 'package:pet_help/view/proflie.dart';
 
-import 'AddPet.dart';
 import 'HomePage.dart';
 
 class PostSuccessful extends StatelessWidget {
@@ -34,14 +33,33 @@ class PostSuccessful extends StatelessWidget {
               ));
             }),
       ),
-      
+
       body: Container(
-        decoration: BoxDecoration(
-          color: Colors.white,
-          image: DecorationImage(
-            image: AssetImage("src/image/PostSuccessful.png"), // fit: BoxFit.cover,
-    ),
-          ),
+        child: Stack(
+          children: <Widget>[
+            Container(
+              alignment: Alignment.center,
+              child: Image.asset(
+                'src/image/PostSuccessful.png',
+                fit: BoxFit.cover,
+              ),
+            ),
+            Container(
+                alignment: Alignment.bottomCenter,
+                child: Text(
+                  'Your request has been sent to SAR Rescue Center. We will respond to  you as soon as possible.',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(color: Colors.blue, fontWeight: FontWeight.bold, fontSize: 22.0),
+                )),
+          ],
+        ),
+
+    //     decoration: BoxDecoration(
+    //       color: Colors.white,
+    //       image: DecorationImage(
+    //         image: AssetImage("src/image/PostSuccessful.png"), // fit: BoxFit.cover,
+    // ),
+    //       ),
 
 
         // ),
@@ -56,3 +74,4 @@ class PostSuccessful extends StatelessWidget {
     );
   }
 }
+

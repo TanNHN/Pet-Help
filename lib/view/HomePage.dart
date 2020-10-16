@@ -88,7 +88,6 @@ class MyHomePage extends StatelessWidget {
                 // Update the state of the app
                 // ...
                 // Then close the drawer
-
               },
             ),
             ListTile(
