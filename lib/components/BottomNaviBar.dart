@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:pet_help/view/AddPet.dart';
+import 'package:pet_help/view/HomePage.dart';
 
 class BottomNaviBar extends StatelessWidget {
   @override
@@ -14,7 +16,14 @@ class BottomNaviBar extends StatelessWidget {
             Icons.add,
             color: Colors.red,
           ),
-          onPressed: () {},
+          onPressed: () {
+            Navigator.of(context).pushReplacement(MaterialPageRoute(
+              builder: (context) => AddPet(),
+            ));
+            // Update the state of the app
+            // ...
+            // Then close the drawer
+          },
         ),
         bottomNavigationBar: BottomAppBar(
           shape: CircularNotchedRectangle(),
@@ -28,7 +37,14 @@ class BottomNaviBar extends StatelessWidget {
               children: [
                 IconButton(
                   icon: Icon(Icons.home, color: Colors.white),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.of(context).pushReplacement(MaterialPageRoute(
+                      builder: (context) => MyHomePage(),
+                    ));
+                    // Update the state of the app
+                    // ...
+                    // Then close the drawer
+                  },
                 ),
                 IconButton(
                   icon: Icon(Icons.view_list, color: Colors.white),
