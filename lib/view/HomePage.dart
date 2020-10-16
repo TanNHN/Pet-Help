@@ -14,6 +14,7 @@ import 'package:pet_help/view/proflie.dart';
 class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    var bottomNaviBar = BottomNaviBar;
     return Scaffold(
       resizeToAvoidBottomPadding: false,
       appBar: AppBar(
@@ -144,6 +145,7 @@ class MyHomePage extends StatelessWidget {
           children: [
             HeaderList(),
             Expanded(child: ListViewPet()),
+            BottomNaviBar()
           ],
         ),
       ),
