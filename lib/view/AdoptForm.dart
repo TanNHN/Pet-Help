@@ -6,6 +6,8 @@ import 'package:pet_help/view/HomePage.dart';
 import 'package:pet_help/view/PostDetail.dart';
 import 'package:pet_help/view/loadimg.dart';
 import 'loadimg.dart';
+import 'package:address_picker/address_picker.dart';
+
 
 class AdoptForm extends StatefulWidget {
   @override
@@ -121,7 +123,7 @@ class AdoptFormStage extends State<AdoptForm> {
                     obscureText: true,
                     decoration: InputDecoration(
                       border: OutlineInputBorder(),
-                      labelText: 'Địa chỉ',
+                      labelText: 'Số nhà, đường',
                     ),
                   )),
               // Padding(
@@ -133,6 +135,17 @@ class AdoptFormStage extends State<AdoptForm> {
               //         labelText: 'Môi trường sống hiện tại',
               //       ),
               //     )),
+              Container(
+                padding: const EdgeInsets.all(10),
+                child: AddressPicker(
+                  onAddressChanged: (address) {
+                    print(address);
+                  },
+                  buildItem: (text) {
+                    return Text(text, style: TextStyle(color: Colors.blue));
+                  },
+                ),
+              ),
               Row(
                 children: [
                   Padding(
