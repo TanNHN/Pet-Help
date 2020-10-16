@@ -45,12 +45,20 @@ class PostSuccessful extends StatelessWidget {
               ),
             ),
             Container(
-                alignment: Alignment.bottomCenter,
+                alignment: Alignment.topCenter,
                 child: Text(
                   'Your request has been sent to SAR Rescue Center. We will respond to  you as soon as possible.',
                   textAlign: TextAlign.center,
-                  style: TextStyle(color: Colors.blue, fontWeight: FontWeight.bold, fontSize: 22.0),
+                  style: TextStyle(color: Colors.blue, fontSize: 22.0),
                 )),
+            Container(
+                alignment: Alignment.bottomCenter,
+                child: Text(
+                  'Thanks for your kindness !!!',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(color: Color.fromRGBO(253, 158, 121, 1), fontWeight: FontWeight.bold, fontSize: 22.0),
+                )),
+
           ],
         ),
 
