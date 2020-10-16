@@ -8,6 +8,7 @@ import 'package:pet_help/view/login_page.dart';
 import 'package:pet_help/view/proflie.dart';
 
 import 'AddPet.dart';
+import 'HomePage.dart';
 
 class MyPet extends StatelessWidget {
   final String title;
@@ -26,15 +27,13 @@ class MyPet extends StatelessWidget {
         ),
         centerTitle: true,
         backgroundColor: Color.fromRGBO(253, 158, 121, 1),
-        leading: Builder(
-          builder: (BuildContext context) {
-            return IconButton(
-              icon: const Icon(Icons.arrow_back),
-              onPressed: () { Navigator.pop(context); },
-
-            );
-          },
-        ),
+        leading: IconButton(
+            icon: Icon(Icons.arrow_back, color: Colors.white),
+            onPressed: () {
+              Navigator.of(context).pushReplacement(MaterialPageRoute(
+                builder: (context) => MyHomePage(),
+              ));
+            }),
       ),
 
       // drawer: Drawer(

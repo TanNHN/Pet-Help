@@ -8,6 +8,7 @@ import 'package:pet_help/view/login_page.dart';
 import 'package:pet_help/view/proflie.dart';
 
 import 'AddPet.dart';
+import 'HomePage.dart';
 
 class PostSuccessful extends StatelessWidget {
   final String title;
@@ -25,15 +26,13 @@ class PostSuccessful extends StatelessWidget {
         // ),
         centerTitle: true,
         backgroundColor: Color.fromRGBO(253, 158, 121, 1),
-        leading: Builder(
-          builder: (BuildContext context) {
-            return IconButton(
-              icon: const Icon(Icons.arrow_back),
-              onPressed: () { Navigator.pop(context); },
-
-            );
-          },
-        ),
+        leading: IconButton(
+            icon: Icon(Icons.arrow_back, color: Colors.white),
+            onPressed: () {
+              Navigator.of(context).pushReplacement(MaterialPageRoute(
+                builder: (context) => MyHomePage(),
+              ));
+            }),
       ),
 
       // drawer: Drawer(
@@ -67,11 +66,13 @@ class PostSuccessful extends StatelessWidget {
       body: Container(
         // decoration: new BoxDecoration(color: Colors.red),
         decoration: BoxDecoration(
+          
           color: Colors.white,
           image: DecorationImage(
             image: AssetImage("src/image/PostSuccessful.png"), // fit: BoxFit.cover,
     ),
           ),
+
         // ),
         // child: Container(
         //
