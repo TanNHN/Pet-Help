@@ -64,14 +64,13 @@ class PostSuccessful extends StatelessWidget {
       //   // ),
       // ),
       body: Container(
-        // decoration: new BoxDecoration(color: Colors.red),
         decoration: BoxDecoration(
-          
           color: Colors.white,
           image: DecorationImage(
             image: AssetImage("src/image/PostSuccessful.png"), // fit: BoxFit.cover,
     ),
           ),
+
 
         // ),
         // child: Container(
