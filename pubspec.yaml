@@ -23,6 +23,9 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+    address_picker:
+      git:
+        url: git://github.com/vulemicom/address_picker_flutter.git
  
 
 
