@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:pet_help/components/BottomNaviBar.dart';
+import 'package:pet_help/components/BottomNaviBarRescue.dart';
 import 'package:pet_help/components/list_header.dart';
 import 'package:pet_help/components/rescue_home_list.dart';
 import 'package:pet_help/view/AdoptRequestList.dart';
@@ -149,7 +150,11 @@ class RescueHome extends StatelessWidget {
           ),
         ),
         child: Column(
-          children: [HeaderList(), Expanded(child: RescueHomeList())],
+          children: [
+            HeaderList(),
+            Expanded(child: RescueHomeList()),
+            BottomNaviBarRescue()
+          ],
         ),
       ),
     );

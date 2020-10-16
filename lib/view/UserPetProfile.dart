@@ -259,10 +259,13 @@ class ItemInfo extends State<UserPetProfile> {
                             children: [
                               GestureDetector(
                                 onTap: () {
-                                  Navigator.of(context).push(
-                                      new MaterialPageRoute(
-                                          builder: (context) =>
-                                              ViewPetReportList()));
+                                  Navigator.of(context)
+                                      .push(new MaterialPageRoute(
+                                    builder: (context) => ChatScreen(
+                                      name: "User",
+                                      UrlImage: "",
+                                    ),
+                                  ));
                                 },
                                 child: Align(
                                   child: Text("Liên hệ trung tâm",

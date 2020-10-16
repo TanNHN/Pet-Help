@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:pet_help/view/HomePage.dart';
+import 'package:pet_help/view/RescuePetManagement.dart';
 import 'package:pet_help/view/RescuePostManagement.dart';
 import 'package:pet_help/view/UserPetManagement.dart';
 import 'package:pet_help/view/UserPostManagement.dart';
 import 'package:pet_help/view/findRescue.dart';
 
-class BottomNaviBar extends StatelessWidget {
+class BottomNaviBarRescue extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -51,7 +52,7 @@ class BottomNaviBar extends StatelessWidget {
                     ),
                     onPressed: () {
                       Navigator.of(context).pushReplacement(MaterialPageRoute(
-                        builder: (context) => UserPostManagement(),
+                        builder: (context) => MyPost(),
                       ));
                     },
                   ),
@@ -65,7 +66,7 @@ class BottomNaviBar extends StatelessWidget {
                     onPressed: () {
                       Navigator.of(context).pushReplacement(
                         MaterialPageRoute(
-                          builder: (context) => UserPetManagement(),
+                          builder: (context) => RescuePetManagement(),
                         ),
                       );
                     },
