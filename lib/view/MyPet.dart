@@ -28,7 +28,7 @@ class MyPet extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Color.fromRGBO(253, 158, 121, 1),
         leading: IconButton(
-            icon: Icon(Icons.arrow_back, color: Colors.white),
+            icon: Icon(Icons.arrow_back_ios, color: Colors.white),
             onPressed: () {
               Navigator.of(context).pushReplacement(MaterialPageRoute(
                 builder: (context) => MyHomePage(),
