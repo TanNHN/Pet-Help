@@ -1,26 +1,30 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:pet_help/view/AdoptForm.dart';
+import 'package:pet_help/components/app_bar.dart';
+import 'package:pet_help/components/chat.dart';
+import 'package:pet_help/components/item_image.dart';
+import 'package:pet_help/view/Contact.dart';
 import 'package:pet_help/view/HomePage.dart';
+import 'package:pet_help/view/PetHealthReportDetail.dart';
+import 'package:pet_help/view/PetReportForm.dart';
+import 'package:pet_help/view/RescuePetManagement.dart';
+import 'package:pet_help/view/PetHealthReportList.dart';
 
-import '../components/app_bar.dart';
-import '../components/item_image.dart';
-
-class PostDetail extends StatefulWidget {
+class UserPetProfile extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    ItemInfo info = new ItemInfo();
-    return info;
+    ItemInfo itemInfo = new ItemInfo();
+    return itemInfo;
   }
 }
 
-class ItemInfo extends State<PostDetail> {
-  String imgUrl = "src/image/nga.jpg";
+class ItemInfo extends State<UserPetProfile> {
+  String imgUrl = "src/image/pet_4.jpg";
 
   @override
   void initState() {
     super.initState();
-    imgUrl = 'src/image/nga.jpg';
+    imgUrl = 'src/image/pet_4.jpg';
   }
 
   @override
@@ -36,7 +40,7 @@ class ItemInfo extends State<PostDetail> {
             }),
         title: Container(
           child: Text(
-            'Nhận nuôi',
+            'Thú cưng',
             style: TextStyle(color: Colors.white, fontSize: 20),
           ),
         ),
@@ -78,11 +82,11 @@ class ItemInfo extends State<PostDetail> {
                                       GestureDetector(
                                         onTap: () {
                                           setState(() {
-                                            imgUrl = "src/image/nga.jpg";
+                                            imgUrl = "src/image/pet_4.jpg";
                                           });
                                         },
                                         child: Image.asset(
-                                          'src/image/nga.jpg',
+                                          'src/image/pet_4.jpg',
                                         ),
                                       ),
                                       Padding(
@@ -205,171 +209,107 @@ class ItemInfo extends State<PostDetail> {
                         ),
                       ],
                     ),
+                    Row(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.fromLTRB(8, 0, 0, 0),
+                          child: Container(
+                            height: 15,
+                            width: 200,
+                            child: Text(
+                              "Last reported: 20/5/1999",
+                              style:
+                                  TextStyle(color: Colors.grey, fontSize: 15),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
                     Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Row(
                         children: <Widget>[
                           Text(
-                            "Từ: ",
+                            "Nhận nuôi từ: ",
                             style: TextStyle(color: Colors.grey),
                           ),
                           Text(
-                            "Trung tâm Mai Tán ",
+                            "Trung tâm cứu trợ Luân Hồi",
                             style: TextStyle(color: Colors.orange),
                           ),
                         ],
                       ),
                     ),
+                    SizedBox(
+                      height: 38,
+                    ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: <Widget>[
                         Container(
-                          height: 30,
-                          width: 110,
+                          height: 43,
+                          width: 150,
                           alignment: Alignment.center,
-                          padding: EdgeInsets.all(6),
+                          padding: EdgeInsets.all(12),
                           decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(8),
-                              border: Border(
-                                top: BorderSide(width: 1.0, color: Colors.blue),
-                                left:
-                                    BorderSide(width: 1.0, color: Colors.blue),
-                                right:
-                                    BorderSide(width: 1.0, color: Colors.blue),
-                                bottom:
-                                    BorderSide(width: 1.0, color: Colors.blue),
-                              )),
+                            borderRadius: BorderRadius.circular(8),
+                            color: Colors.lightBlueAccent,
+                          ),
                           child: Column(
                             children: [
-                              Align(
-                                child: Text("Đã tiêm phòng",
-                                    style: TextStyle(color: Colors.blueAccent)),
+                              GestureDetector(
+                                onTap: () {
+                                  Navigator.of(context).push(
+                                      new MaterialPageRoute(
+                                          builder: (context) =>
+                                              ViewPetReportList()));
+                                },
+                                child: Align(
+                                  child: Text("Liên hệ trung tâm",
+                                      style: TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 14,
+                                          fontWeight: FontWeight.bold)),
+                                ),
                               )
                             ],
                           ),
                         ),
-                        Container(
-                          height: 30,
-                          width: 110,
-                          alignment: Alignment.center,
-                          padding: EdgeInsets.all(6),
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(8),
-                              border: Border(
-                                top: BorderSide(width: 1.0, color: Colors.blue),
-                                left:
-                                    BorderSide(width: 1.0, color: Colors.blue),
-                                right:
-                                    BorderSide(width: 1.0, color: Colors.blue),
-                                bottom:
-                                    BorderSide(width: 1.0, color: Colors.blue),
-                              )),
-                          child: Column(
-                            children: [
-                              Align(
-                                child: Text("Đã tiệt giun",
-                                    style: TextStyle(color: Colors.blueAccent)),
-                              )
-                            ],
-                          ),
-                        ),
-                        Container(
-                          height: 30,
-                          width: 110,
-                          alignment: Alignment.center,
-                          padding: EdgeInsets.all(6),
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(8),
-                              border: Border(
-                                top: BorderSide(width: 1.0, color: Colors.blue),
-                                left:
-                                    BorderSide(width: 1.0, color: Colors.blue),
-                                right:
-                                    BorderSide(width: 1.0, color: Colors.blue),
-                                bottom:
-                                    BorderSide(width: 1.0, color: Colors.blue),
-                              )),
-                          child: Column(
-                            children: [
-                              Align(
-                                child: Text("Đã được thiến",
-                                    style: TextStyle(color: Colors.blueAccent)),
-                              )
-                            ],
-                          ),
-                        )
+                        GestureDetector(
+                            onTap: () {
+                              Navigator.of(context).push(new MaterialPageRoute(
+                                  builder: (context) => PetReportForm()));
+                            },
+                            child: Container(
+                              height: 43,
+                              width: 200,
+                              alignment: Alignment.center,
+                              padding: EdgeInsets.all(12),
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(8),
+                                color: Colors.orange,
+                              ),
+                              child: Column(
+                                children: [
+                                  Align(
+                                    child: Text("Báo cáo tình trạng",
+                                        style: TextStyle(
+                                            color: Colors.white,
+                                            fontSize: 14,
+                                            fontWeight: FontWeight.bold)),
+                                  )
+                                ],
+                              ),
+                            ))
                       ],
-                    ),
-                    Row(
-                      children: <Widget>[
-                        Container(
-                          padding: EdgeInsets.all(9.0),
-                          height: 80,
-                          width: 350,
-                          alignment: Alignment.center,
-                          child: Text(
-                            "Bum is a Russian cat. He's known for being quiet and sweet. Although Bum tend to be relax and easygoing, Bum also command an air of royalty.",
-                            textAlign: TextAlign.left,
-                            overflow: TextOverflow.ellipsis,
-                            maxLines: 3,
-                          ),
-                        ),
-                      ],
-                    ),
-                    SizedBox(
-                      height: 18,
-                    ),
-                    GestureDetector(
-                      onTap: () {
-                        Navigator.of(context).push(new MaterialPageRoute(
-                            builder: (context) => AdoptForm()));
-                      },
-                      child: Container(
-                        alignment: Alignment(0.6, 1.0),
-                        padding: EdgeInsets.all(6),
-                        height: 30,
-                        width: 250,
-                        decoration: BoxDecoration(
-                          color: Colors.orange,
-                          borderRadius: BorderRadius.circular(8.0),
-                        ),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: <Widget>[
-                            Text(
-                              "Nhận nuôi",
-                              style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 17,
-                                  fontWeight: FontWeight.bold),
-                            ),
-                          ],
-                        ),
-                      ),
                     ),
                   ],
-                ),
+                )
               ],
             ),
           ),
         ),
       ),
-    );
-  }
-
-  // ignore: non_constant_identifier_names
-  Row ShopName({String name}) {
-    return Row(
-      children: <Widget>[
-        Icon(
-          Icons.location_on,
-          color: Colors.grey,
-        ),
-        SizedBox(
-          width: 10,
-        ),
-        Text(name)
-      ],
     );
   }
 }

@@ -1,30 +1,29 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:pet_help/view/login_page.dart';
+import 'package:pet_help/components/BottomNaviBar.dart';
+import 'package:pet_help/components/list_header.dart';
+import 'package:pet_help/components/rescue_home_list.dart';
+import 'package:pet_help/view/AdoptRequestList.dart';
+import 'package:pet_help/view/Contact.dart';
+import 'package:pet_help/view/Login.dart';
+import 'package:pet_help/view/UserPetManagement.dart';
+import 'package:pet_help/view/RescuePostManagement.dart';
+import 'package:pet_help/view/RescuePetManagement.dart';
+import 'package:pet_help/view/proflie.dart';
 
-import 'package:pet_help/view/uploadImages.dart';
-
-// ignore: camel_case_types
-class AddPet extends StatefulWidget {
-  @override
-  State<StatefulWidget> createState() {
-    AddPetStage rescuePageStage = new AddPetStage();
-    return rescuePageStage;
-  }
-}
-
-//https://medium.com/flutterpub/create-beautiful-forms-with-flutter-47075cfe712
-class AddPetStage extends State<AddPet> {
+class RescueHome extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomPadding: false,
       appBar: AppBar(
-        title: Padding(
-          padding: const EdgeInsets.fromLTRB(80, 0, 0, 0),
-          child: Text("Add pet"),
+        title: Text(
+          'Home',
+          style: GoogleFonts.lato(
+              fontStyle: FontStyle.normal, color: Colors.white, fontSize: 30),
         ),
+        centerTitle: true,
         backgroundColor: Color.fromRGBO(253, 158, 121, 1),
       ),
       drawer: Drawer(
@@ -45,8 +44,7 @@ class AddPetStage extends State<AddPet> {
                     child: Container(
                       width: 75,
                       height: 75,
-                      padding: EdgeInsets.all(15),
-                      child: Image.asset('src/icon/cat.png'),
+                      child: Image.asset('src/image/avt.jpg'),
                       decoration: BoxDecoration(
                           color: Colors.white, shape: BoxShape.circle),
                     ),
@@ -54,7 +52,7 @@ class AddPetStage extends State<AddPet> {
                   Padding(
                     padding: const EdgeInsets.fromLTRB(10, 0, 0, 0),
                     child: Text(
-                      'Tom\nUser@gmail.com',
+                      'Cuu Tro Luân Hồi\ncuutro@gmail.com',
                       style: GoogleFonts.lato(
                           fontStyle: FontStyle.normal,
                           color: Colors.black,
@@ -65,39 +63,52 @@ class AddPetStage extends State<AddPet> {
               ),
             ),
             ListTile(
-              title: Text('Profile'),
+              title: Text('Trang cá nhân'),
               leading: new Tab(
                 icon: new Image.asset("src/icon/profile.png"),
               ),
               onTap: () {
+                Navigator.of(context).push(
+                    new MaterialPageRoute(builder: (context) => ProfileApp()));
                 // Update the state of the app
                 // ...
                 // Then close the drawer
-                Navigator.pop(context);
               },
             ),
             ListTile(
-              title: Text('My pet'),
+              title: Text('Thú cưng của tôi'),
               leading: new Tab(
                 icon: new Image.asset("src/icon/pet-house.png"),
               ),
               onTap: () {
-                // Update the state of the app
-                // ...
-                // Then close the drawer
-                Navigator.pop(context);
+                Navigator.of(context).pushReplacement(MaterialPageRoute(
+                  builder: (context) => RescuePetManagement(),
+                ));
               },
             ),
             ListTile(
-              title: Text('My Post'),
+              title: Text('Bài viết của tôi'),
               leading: new Tab(
                 icon: new Image.asset("src/icon/post.png"),
               ),
               onTap: () {
-                // Update the state of the app
-                // ...
-                // Then close the drawer
-                Navigator.pop(context);
+                Navigator.of(context).pushReplacement(MaterialPageRoute(
+                  builder: (context) => MyPost(),
+                ));
+              },
+            ),
+            ListTile(
+              title: Text('Đơn nhận nuôi'),
+              leading: new Tab(
+                icon: new Image.asset(
+                  "src/icon/adopt.png",
+                  width: 40,
+                ),
+              ),
+              onTap: () {
+                Navigator.of(context).pushReplacement(MaterialPageRoute(
+                  builder: (context) => AdoptRequestList(),
+                ));
               },
             ),
             ListTile(
@@ -106,10 +117,9 @@ class AddPetStage extends State<AddPet> {
                 icon: new Image.asset("src/icon/contact.png"),
               ),
               onTap: () {
-                // Update the state of the app
-                // ...
-                // Then close the drawer
-                Navigator.pop(context);
+                Navigator.of(context).pushReplacement(MaterialPageRoute(
+                  builder: (context) => ContactView(),
+                ));
               },
             ),
             ListTile(
@@ -123,7 +133,7 @@ class AddPetStage extends State<AddPet> {
                 // Then close the drawer
                 Navigator.of(context).pushReplacement(
                   MaterialPageRoute(
-                    builder: (context) => LoginScreen(),
+                    builder: (context) => Login(),
                   ),
                 );
               },
@@ -131,7 +141,17 @@ class AddPetStage extends State<AddPet> {
           ],
         ),
       ),
-      body: UploadImages(),
+      body: Container(
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage("src/image/background.jpg"),
+            fit: BoxFit.cover,
+          ),
+        ),
+        child: Column(
+          children: [HeaderList(), Expanded(child: RescueHomeList())],
+        ),
+      ),
     );
   }
 }

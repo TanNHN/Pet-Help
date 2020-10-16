@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:pet_help/view/AdoptRequest.dart';
 import 'package:pet_help/view/HomePage.dart';
 import 'package:pet_help/view/PetHealthReportDetail.dart';
+import 'package:pet_help/view/PetProfile.dart';
 import 'package:pet_help/view/PostDetail.dart';
-import 'package:pet_help/view/RescueHome.dart';
 
-class AdoptRequestList extends StatelessWidget {
+class ViewPetReportList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -14,12 +13,12 @@ class AdoptRequestList extends StatelessWidget {
               icon: Icon(Icons.arrow_back, color: Colors.black),
               onPressed: () {
                 Navigator.of(context).pushReplacement(MaterialPageRoute(
-                  builder: (context) => RescueHome(),
+                  builder: (context) => PetProfile(),
                 ));
               }),
           title: Container(
             child: Text(
-              'Yêu cầu nhận nuôi',
+              'Danh sách báo cáo',
               style: TextStyle(color: Colors.white, fontSize: 20),
             ),
           ),
@@ -41,7 +40,7 @@ class AdoptRequestList extends StatelessWidget {
                     Navigator.push(
                       context,
                       new MaterialPageRoute(
-                          builder: (context) => new AdoptRequest()),
+                          builder: (context) => new PetHealthReportDetail()),
                     );
                   },
                   child: Container(
@@ -63,30 +62,7 @@ class AdoptRequestList extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: <Widget>[
                           Padding(
-                            padding: const EdgeInsets.fromLTRB(8, 8, 8, 8),
-                            child: Row(
-                              children: [
-                                Icon(Icons.pets),
-                                Text(
-                                  "Tên pet: ",
-                                  style: TextStyle(
-                                    fontSize: 15,
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                ),
-                                Text(
-                                  "Lậu",
-                                  style: TextStyle(
-                                    fontSize: 15,
-                                    fontWeight: FontWeight.bold,
-                                    color: Color.fromRGBO(253, 158, 121, 1),
-                                  ),
-                                )
-                              ],
-                            ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.fromLTRB(8, 0, 0, 8),
+                            padding: const EdgeInsets.fromLTRB(8, 10, 0, 8),
                             child: Row(
                               children: [
                                 Icon(Icons.person),
@@ -98,7 +74,7 @@ class AdoptRequestList extends StatelessWidget {
                                   ),
                                 ),
                                 Text(
-                                  "Lê Duẩn",
+                                  "Tan1",
                                   style: TextStyle(
                                     fontSize: 15,
                                     fontWeight: FontWeight.bold,
@@ -133,14 +109,67 @@ class AdoptRequestList extends StatelessWidget {
                             ),
                           ),
                           Padding(
-                            padding: const EdgeInsets.fromLTRB(8, 0, 3, 4),
-                            child: Container(
-                              width: 220,
-                              child: Text(
-                                "Địa chỉ: 658 Lê Văn Luyện, Q9, tp.HCM",
-                                style: TextStyle(
-                                  fontSize: 15,
-                                  fontWeight: FontWeight.bold,
+                            padding: const EdgeInsets.fromLTRB(8, 0, 0, 8),
+                            child: Row(
+                              children: [
+                                Icon(Icons.pets),
+                                Text(
+                                  "Tình trạng sức khỏe: ",
+                                  textAlign: TextAlign.left,
+                                  style: TextStyle(
+                                    fontSize: 15,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                                Text(
+                                  "Ổn định",
+                                  style: TextStyle(
+                                    fontSize: 15,
+                                    fontWeight: FontWeight.bold,
+                                    color: Color.fromRGBO(253, 158, 121, 1),
+                                  ),
+                                )
+                              ],
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.fromLTRB(8, 0, 0, 8),
+                            child: Row(
+                              children: [
+                                Icon(Icons.image),
+                                Text(
+                                  "3 more images",
+                                  style: TextStyle(
+                                    fontSize: 15,
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.grey,
+                                  ),
+                                )
+                              ],
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: SizedBox(
+                              width: 170,
+                              height: 40,
+                              child: RaisedButton(
+                                color: Colors.white,
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(18.0),
+                                    side: BorderSide(
+                                        color:
+                                            Color.fromRGBO(253, 158, 121, 1))),
+                                onPressed: () {
+                                  Navigator.of(context)
+                                      .pushReplacement(MaterialPageRoute(
+                                    builder: (context) => MyHomePage(),
+                                  ));
+                                },
+                                child: Text(
+                                  'Chưa duyệt',
+                                  style: TextStyle(
+                                      color: Colors.red, fontSize: 15),
                                 ),
                               ),
                             ),
@@ -148,7 +177,7 @@ class AdoptRequestList extends StatelessWidget {
                         ],
                       ),
                     ]),
-                    height: 150,
+                    height: 200,
                     decoration: BoxDecoration(
                         color: Colors.white,
                         borderRadius: BorderRadius.circular(15),
@@ -169,7 +198,7 @@ class AdoptRequestList extends StatelessWidget {
                       child: Row(
                         children: <Widget>[
                           Image.asset(
-                            'src/image/avt.jpg',
+                            'src/image/download (1).jpg',
                             width: 90,
                             height: 90,
                           ),
@@ -180,30 +209,7 @@ class AdoptRequestList extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
                         Padding(
-                          padding: const EdgeInsets.fromLTRB(8, 8, 8, 8),
-                          child: Row(
-                            children: [
-                              Icon(Icons.pets),
-                              Text(
-                                "Tên pet: ",
-                                style: TextStyle(
-                                  fontSize: 15,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
-                              Text(
-                                "Lậu",
-                                style: TextStyle(
-                                  fontSize: 15,
-                                  fontWeight: FontWeight.bold,
-                                  color: Color.fromRGBO(253, 158, 121, 1),
-                                ),
-                              )
-                            ],
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.fromLTRB(8, 0, 0, 8),
+                          padding: const EdgeInsets.all(10),
                           child: Row(
                             children: [
                               Icon(Icons.person),
@@ -239,7 +245,7 @@ class AdoptRequestList extends StatelessWidget {
                                 ),
                               ),
                               Text(
-                                "26/9/2020",
+                                "14/9/2020",
                                 style: TextStyle(
                                   fontSize: 15,
                                   fontWeight: FontWeight.bold,
@@ -250,14 +256,66 @@ class AdoptRequestList extends StatelessWidget {
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsets.fromLTRB(8, 0, 3, 4),
-                          child: Container(
-                            width: 220,
-                            child: Text(
-                              "a a a a a a a a a a a a a a a a a a a ",
-                              style: TextStyle(
-                                fontSize: 15,
-                                fontWeight: FontWeight.bold,
+                          padding: const EdgeInsets.fromLTRB(8, 0, 0, 8),
+                          child: Row(
+                            children: [
+                              Icon(Icons.pets),
+                              Text(
+                                "Tình trạng sức khỏe: ",
+                                textAlign: TextAlign.left,
+                                style: TextStyle(
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                              Text(
+                                "Yếu",
+                                style: TextStyle(
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.bold,
+                                  color: Color.fromRGBO(253, 158, 121, 1),
+                                ),
+                              )
+                            ],
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.fromLTRB(8, 0, 0, 8),
+                          child: Row(
+                            children: [
+                              Icon(Icons.image),
+                              Text(
+                                "0 more images",
+                                style: TextStyle(
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.grey,
+                                ),
+                              )
+                            ],
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: SizedBox(
+                            width: 170,
+                            height: 40,
+                            child: RaisedButton(
+                              color: Colors.white,
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(18.0),
+                                  side: BorderSide(
+                                      color: Color.fromRGBO(253, 158, 121, 1))),
+                              onPressed: () {
+                                Navigator.of(context)
+                                    .pushReplacement(MaterialPageRoute(
+                                  builder: (context) => MyHomePage(),
+                                ));
+                              },
+                              child: Text(
+                                'Đã duyệt',
+                                style:
+                                    TextStyle(color: Colors.blue, fontSize: 15),
                               ),
                             ),
                           ),
@@ -265,7 +323,7 @@ class AdoptRequestList extends StatelessWidget {
                       ],
                     ),
                   ]),
-                  height: 150,
+                  height: 200,
                   decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(15),

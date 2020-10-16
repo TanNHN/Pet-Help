@@ -1,30 +1,34 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:pet_help/components/BottomNaviBar.dart';
+import 'package:pet_help/components/listView.dart';
+import 'package:pet_help/components/list_header.dart';
+import 'package:pet_help/view/Contact.dart';
+import 'package:pet_help/view/Login.dart';
+import 'package:pet_help/view/UserPetManagement.dart';
+import 'package:pet_help/view/RescuePostManagement.dart';
 import 'package:pet_help/view/login_page.dart';
+import 'package:pet_help/view/proflie.dart';
 
-import 'package:pet_help/view/uploadImages.dart';
-
-// ignore: camel_case_types
-class AddPet extends StatefulWidget {
-  @override
-  State<StatefulWidget> createState() {
-    AddPetStage rescuePageStage = new AddPetStage();
-    return rescuePageStage;
-  }
-}
-
-//https://medium.com/flutterpub/create-beautiful-forms-with-flutter-47075cfe712
-class AddPetStage extends State<AddPet> {
+class MyHomePageRescue extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomPadding: false,
       appBar: AppBar(
-        title: Padding(
-          padding: const EdgeInsets.fromLTRB(80, 0, 0, 0),
-          child: Text("Add pet"),
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Padding(
+              padding: const EdgeInsets.fromLTRB(0, 0, 130, 40),
+              child: Image.asset(
+                'src/icon/logoCute.png',
+                height: 110,
+              ),
+            ),
+          ],
         ),
+        centerTitle: true,
         backgroundColor: Color.fromRGBO(253, 158, 121, 1),
       ),
       drawer: Drawer(
@@ -70,22 +74,22 @@ class AddPetStage extends State<AddPet> {
                 icon: new Image.asset("src/icon/profile.png"),
               ),
               onTap: () {
+                Navigator.of(context).push(
+                    new MaterialPageRoute(builder: (context) => ProfileApp()));
                 // Update the state of the app
                 // ...
                 // Then close the drawer
-                Navigator.pop(context);
               },
             ),
             ListTile(
-              title: Text('My pet'),
+              title: Text('My pets'),
               leading: new Tab(
                 icon: new Image.asset("src/icon/pet-house.png"),
               ),
               onTap: () {
-                // Update the state of the app
-                // ...
-                // Then close the drawer
-                Navigator.pop(context);
+                Navigator.of(context).pushReplacement(MaterialPageRoute(
+                  builder: (context) => UserPetManagement(),
+                ));
               },
             ),
             ListTile(
@@ -94,10 +98,9 @@ class AddPetStage extends State<AddPet> {
                 icon: new Image.asset("src/icon/post.png"),
               ),
               onTap: () {
-                // Update the state of the app
-                // ...
-                // Then close the drawer
-                Navigator.pop(context);
+                Navigator.of(context).pushReplacement(MaterialPageRoute(
+                  builder: (context) => MyPost(),
+                ));
               },
             ),
             ListTile(
@@ -106,10 +109,9 @@ class AddPetStage extends State<AddPet> {
                 icon: new Image.asset("src/icon/contact.png"),
               ),
               onTap: () {
-                // Update the state of the app
-                // ...
-                // Then close the drawer
-                Navigator.pop(context);
+                Navigator.of(context).pushReplacement(MaterialPageRoute(
+                  builder: (context) => ContactView(),
+                ));
               },
             ),
             ListTile(
@@ -123,7 +125,7 @@ class AddPetStage extends State<AddPet> {
                 // Then close the drawer
                 Navigator.of(context).pushReplacement(
                   MaterialPageRoute(
-                    builder: (context) => LoginScreen(),
+                    builder: (context) => Login(),
                   ),
                 );
               },
@@ -131,7 +133,21 @@ class AddPetStage extends State<AddPet> {
           ],
         ),
       ),
-      body: UploadImages(),
+      body: Container(
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage("src/image/background.jpg"),
+            fit: BoxFit.cover,
+          ),
+        ),
+        child: Column(
+          children: [
+            HeaderList(),
+            Expanded(child: ListViewPet()),
+            BottomNaviBar()
+          ],
+        ),
+      ),
     );
   }
 }
