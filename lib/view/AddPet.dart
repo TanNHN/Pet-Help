@@ -2,6 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:pet_help/view/MyPet.dart';
+import 'package:pet_help/view/MyPost.dart';
 import 'package:pet_help/view/login_page.dart';
 
 import 'package:pet_help/view/uploadImages.dart';
@@ -82,10 +84,12 @@ class AddPetStage extends State<AddPet> {
                 icon: new Image.asset("src/icon/pet-house.png"),
               ),
               onTap: () {
+                Navigator.of(context).pushReplacement(MaterialPageRoute(
+                  builder: (context) => MyPet(),
+                ));
                 // Update the state of the app
                 // ...
                 // Then close the drawer
-                Navigator.pop(context);
               },
             ),
             ListTile(
@@ -94,10 +98,12 @@ class AddPetStage extends State<AddPet> {
                 icon: new Image.asset("src/icon/post.png"),
               ),
               onTap: () {
+                Navigator.of(context).pushReplacement(MaterialPageRoute(
+                  builder: (context) => MyPost(),
+                ));
                 // Update the state of the app
                 // ...
                 // Then close the drawer
-                Navigator.pop(context);
               },
             ),
             ListTile(
