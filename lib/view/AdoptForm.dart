@@ -224,7 +224,7 @@ class AdoptFormStage extends State<AdoptForm> {
                           style: TextStyle(
                               fontSize: 17,
                               // fontWeight: FontWeight.bold,
-                              color: Colors.grey)),
+                              color: Colors.red)),
 
                     ],
                   ),
