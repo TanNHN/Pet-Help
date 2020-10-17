@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_material_color_picker/flutter_material_color_picker.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:pet_help/components/location.dart';
@@ -66,6 +67,7 @@ class _PickState extends State<Pick> {
 
   @override
   Widget build(BuildContext context) {
+    int _value = 1;
     return Scaffold(
       resizeToAvoidBottomPadding: false, // tránh overcross
       resizeToAvoidBottomInset: true, // bàn phím che textfield
@@ -100,16 +102,6 @@ class _PickState extends State<Pick> {
               SizedBox(
                 height: 20,
               ),
-              // Padding(
-              //   padding: const EdgeInsets.all(8.0),
-              //   child: Text(
-              //     'Upload image',
-              //     style: TextStyle(
-              //         fontSize: 25,
-              //         color: Colors.green,
-              //         fontWeight: FontWeight.bold),
-              //   ),
-              // ),
               Center(
                 child: Column(
                   children: [
@@ -121,29 +113,6 @@ class _PickState extends State<Pick> {
                       //   width: 300,
 
                       child: ImgLoad(),
-                      // child: GestureDetector(
-                      //   onTap: () {
-                      //     _showPicker(context);
-                      //   },
-                      //   child: _image != null
-                      //       ? ClipRRect(
-                      //           borderRadius: BorderRadius.circular(50),
-                      //           child: Image.file(
-                      //             _image,
-                      //             width: 300,
-                      //             height: 300,
-                      //             fit: BoxFit.cover,
-                      //           ),
-                      //         )
-                      //       : Container(
-                      //           decoration: BoxDecoration(
-                      //               color: Colors.grey[200],
-                      //               borderRadius: BorderRadius.circular(50)),
-                      //           width: 100,
-                      //           height: 100,
-                      //           child: Icon(Icons.camera_alt),
-                      //         ),
-                      // ),
                     ),
                     // ),
                     Padding(
@@ -153,7 +122,7 @@ class _PickState extends State<Pick> {
                     Padding(
                       padding: const EdgeInsets.all(10.0),
                       child: Container(
-                        width: 340,
+                        width: 400,
                         height: 50,
                         decoration: BoxDecoration(
                             color: Colors.white,
@@ -175,8 +144,8 @@ class _PickState extends State<Pick> {
                               enabledBorder: InputBorder.none,
                               disabledBorder: InputBorder.none,
                               contentPadding: EdgeInsets.all(10),
-                              suffixIcon: Icon(Icons.mode_edit),
-                              hintText: "thêm vị trí chi tiết",
+                              suffixIcon: Icon(Icons.mode_edit, color: Colors.orange,),
+                              hintText: "Thêm vị trí chi tiết",
                               focusColor: Colors.green,
                               hintStyle: TextStyle(
                                   fontSize: 15,
@@ -186,9 +155,145 @@ class _PickState extends State<Pick> {
                       ),
                     ),
                     Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Container(
+                          width: 400,
+                          height: 50,
+                          decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(18),
+                              boxShadow: [
+                                new BoxShadow(
+                                    color: Colors.black54,
+                                    offset: new Offset(1.0, 2.0),
+                                    blurRadius: 3.5),
+                              ]),
+                          child: Row(
+                            children: [
+                              Text(
+                                "   Loại: ",
+                                style: TextStyle(
+                                  fontSize: 17, ),
+                              ),
+                              DropdownButton(
+                                  value: _value,
+                                  items: [
+                                    DropdownMenuItem(
+                                      child: Text(""),
+                                      value: 1,
+                                    ),
+                                    DropdownMenuItem(
+                                      child: Text("Chó"),
+                                      value: 2,
+                                    ),
+                                    DropdownMenuItem(
+                                        child: Text("Mèo"), value: 3),
+                                    DropdownMenuItem(
+                                        child: Text("Hamster"),
+                                        value: 4),
+                                    DropdownMenuItem(
+                                        child: Text("Khác"), value: 5)
+                                  ],
+                                  onChanged: (value) {
+                                    setState(() {
+                                      _value = value;
+                                    });
+                                  }),
+
+                            ],
+                          ),
+                        )
+
+                    ),
+                    Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Container(
+                          width: 400,
+                          height: 220,
+                          decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(18),
+                              boxShadow: [
+                                new BoxShadow(
+                                    color: Colors.black54,
+                                    offset: new Offset(1.0, 2.0),
+                                    blurRadius: 3.5),
+                              ]),
+                          child: Row(
+                            children: [
+                              Text(
+                                "   Màu: ",
+                                style: TextStyle(
+                                  fontSize: 17, ),
+                              ),
+                              MaterialColorPicker(
+                                  allowShades: false, // default true
+                                  onMainColorChange: (ColorSwatch color) {
+                                    // Handle main color changes
+                                  },
+                                  selectedColor: Colors.red
+                              )
+
+                            ],
+                          ),
+                        )
+
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Container(
+                        width: 400,
+                        height: 50,
+                        decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(18),
+                            boxShadow: [
+                              new BoxShadow(
+                                  color: Colors.black54,
+                                  offset: new Offset(1.0, 2.0),
+                                  blurRadius: 3.5),
+                            ]),
+                        child: Row(
+                          children: [
+                            Text(
+                              "   Tình trạng tổng quát: ",
+                              style: TextStyle(
+                                  fontSize: 17, ),
+                            ),
+                            DropdownButton(
+                                value: _value,
+                                items: [
+                                  DropdownMenuItem(
+                                    child: Text(""),
+                                    value: 1,
+                                  ),
+                                  DropdownMenuItem(
+                                    child: Text("Khỏe mạnh"),
+                                    value: 2,
+                                  ),
+                                  DropdownMenuItem(
+                                      child: Text("Ổn định"), value: 3),
+                                  DropdownMenuItem(
+                                      child: Text("Thất thường"),
+                                      value: 4),
+                                  DropdownMenuItem(
+                                      child: Text("Yếu"), value: 5)
+                                ],
+                                onChanged: (value) {
+                                  setState(() {
+                                    _value = value;
+                                  });
+                                }),
+                          ],
+                        ),
+                      )
+
+                    ),
+
+                    Padding(
                       padding: const EdgeInsets.all(10.0),
                       child: Container(
-                        width: 360,
+                        width: 400,
                         height: 130,
                         decoration: BoxDecoration(
                             color: Colors.white,
@@ -202,16 +307,16 @@ class _PickState extends State<Pick> {
                         child: TextFormField(
                           maxLines: 4,
                           decoration: new InputDecoration(
-                              labelText: 'Tình trạng hiện tại',
-                              labelStyle: TextStyle(
-                                  color: Colors.green,
-                                  fontSize: 25,
-                                  fontWeight: FontWeight.bold),
+                            // labelText: 'Tình trạng hiện tại',
+                            // labelStyle: TextStyle(
+                            //     color: Colors.green,
+                            //     fontSize: 25,
+                            //     fontWeight: FontWeight.bold),
                               focusedBorder: InputBorder.none,
                               enabledBorder: InputBorder.none,
                               disabledBorder: InputBorder.none,
                               contentPadding: EdgeInsets.all(30),
-                              suffixIcon: Icon(Icons.mode_edit),
+                              suffixIcon: Icon(Icons.mode_edit, color: Colors.orange,),
                               focusColor: Colors.green,
                               hintText: "Nhập tình trạng của pet",
                               hintStyle: TextStyle(
