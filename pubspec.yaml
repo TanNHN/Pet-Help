@@ -21,11 +21,12 @@ environment:
   sdk: ">=2.7.0 <3.0.0"
 
 dependencies:
+  address_picker:
+    git:
+      url: git://github.com/vulemicom/address_picker_flutter.git
   flutter:
     sdk: flutter
-    address_picker:
-      git:
-        url: git://github.com/vulemicom/address_picker_flutter.git
+
  
 
 
