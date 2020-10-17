@@ -134,7 +134,6 @@ class PetReportFormStage extends State<PetReportForm> {
                     Container(
                       child: ImgLoad(),
                     ),
-
                     Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Row(
