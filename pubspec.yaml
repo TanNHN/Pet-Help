@@ -21,7 +21,7 @@ environment:
   sdk: ">=2.7.0 <3.0.0"
 
 dependencies:
-  flutter_colorpicker: ^0.3.4
+  flutter_material_color_picker: ^1.0.3
   address_picker:
     git:
       url: git://github.com/vulemicom/address_picker_flutter.git
