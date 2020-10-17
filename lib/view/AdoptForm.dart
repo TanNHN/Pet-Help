@@ -96,34 +96,26 @@ class AdoptFormStage extends State<AdoptForm> {
                   child: TextField(
                     decoration: InputDecoration(
                       border: OutlineInputBorder(),
-                      labelText: 'Họ và tên',
+                      labelText: 'Họ và tên (*)',
+                      // helperText: '',
                     ),
-                  )),
-              // Padding(
-              //     padding: const EdgeInsets.all(10),
-              //     // child: Text('Hello World!'),
-              //     // child: TextField(
-              //     //   decoration: InputDecoration(
-              //     //     border: OutlineInputBorder(),
-              //     //     labelText: 'Giới tính',
-              //     //   ),
-              //     // )
-              //   ),
+                  ),
+              ),
               Padding(
                   padding: const EdgeInsets.all(10),
                   child: TextField(
                     decoration: InputDecoration(
                       border: OutlineInputBorder(),
-                      labelText: 'Số điện thoại',
+                      labelText: 'Số điện thoại (*)',
                     ),
                   )),
               Padding(
                   padding: const EdgeInsets.all(10),
                   child: TextField(
-                    obscureText: true,
+                    // obscureText: true,
                     decoration: InputDecoration(
                       border: OutlineInputBorder(),
-                      labelText: 'Số nhà, đường',
+                      labelText: 'Số nhà, đường (*)',
                     ),
                   )),
               // Padding(
@@ -151,7 +143,7 @@ class AdoptFormStage extends State<AdoptForm> {
                   Padding(
                     padding: const EdgeInsets.all(10),
                     child: Text(
-                      "Môi trường sống hiện tại",
+                      "Môi trường sống hiện tại (*)",
                       style: TextStyle(fontSize: 15, color: Colors.black54,),
                     ),
                   ),
@@ -194,6 +186,7 @@ class AdoptFormStage extends State<AdoptForm> {
                       "Giới tính",
                       style: TextStyle(fontSize: 15, color: Colors.black54,),
                     ),
+
                   ),
                   DropdownButton(
                       value: _value,
@@ -207,7 +200,7 @@ class AdoptFormStage extends State<AdoptForm> {
                           value: 2,
                         ),
                         DropdownMenuItem(
-                            child: Text("None"),
+                            child: Text("Other"),
                             value: 3
                         ),
                       ],
@@ -242,13 +235,19 @@ class AdoptFormStage extends State<AdoptForm> {
               Padding(
                   padding: const EdgeInsets.all(10),
                   child: TextField(
-                    obscureText: true,
+                    // obscureText: true,
                     decoration: InputDecoration(
                       border: OutlineInputBorder(),
                       labelText: 'Ghi chú',
+                      counterText: '0 characters',
                     ),
                   )),
-
+              Padding(
+                  padding: const EdgeInsets.all(10),
+                  child: Text('(*) là mục bắt buộc phải điền',
+                    style: TextStyle(fontWeight: FontWeight.bold, fontStyle: FontStyle.italic, color: Colors.red),
+                  ),
+              ),
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: SizedBox(
