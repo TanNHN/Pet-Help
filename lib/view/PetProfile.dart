@@ -156,6 +156,15 @@ class ItemInfo extends State<PetProfile> {
                             children: [
                               Column(
                                 children: [
+                                  Text("Loại",
+                                      style:
+                                      TextStyle(color: Colors.blueAccent)),
+                                  Text("Mèo",
+                                      style: TextStyle(color: Colors.orange)),
+                                ],
+                              ),
+                              Column(
+                                children: [
                                   Text("Tuổi",
                                       style:
                                           TextStyle(color: Colors.blueAccent)),
