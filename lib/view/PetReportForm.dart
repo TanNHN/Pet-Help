@@ -199,6 +199,50 @@ class PetReportFormStage extends State<PetReportForm> {
                     ),
                     Padding(
                       padding: const EdgeInsets.all(8.0),
+                      child: Row(
+                        children: [
+                          Text(
+                            "Cảm xúc: ",
+                            style: TextStyle(
+                                fontSize: 18, fontWeight: FontWeight.bold),
+                          ),
+                          DropdownButton(
+                              value: _value,
+                              items: [
+                                DropdownMenuItem(
+                                  child: Text(""),
+                                  value: 1,
+                                ),
+                                DropdownMenuItem(
+                                  child: Text("Vui vẻ"),
+                                  value: 2,
+                                ),
+                                DropdownMenuItem(
+                                    child: Text("Sợ"),
+                                    value: 3
+                                ),
+                                DropdownMenuItem(
+                                    child: Text("Lãng tránh"),
+                                    value: 4),
+                                DropdownMenuItem(
+                                    child: Text("Thất thường"),
+                                    value: 5
+                                ),
+                                DropdownMenuItem(
+                                    child: Text("Cảm giác cao"),
+                                    value: 6
+                                ),
+                              ],
+                              onChanged: (value) {
+                                setState(() {
+                                  _value = value;
+                                });
+                              }),
+                        ],
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
                       child: SizedBox(
                         width: 200,
                         height: 40,
