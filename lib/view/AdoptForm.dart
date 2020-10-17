@@ -8,7 +8,6 @@ import 'package:pet_help/view/loadimg.dart';
 import 'loadimg.dart';
 import 'package:address_picker/address_picker.dart';
 
-
 class AdoptForm extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
@@ -19,6 +18,7 @@ class AdoptForm extends StatefulWidget {
 
 class AdoptFormStage extends State<AdoptForm> {
   File _image;
+
   _imgFromCamera() async {
     File image = await ImagePicker.pickImage(
         source: ImageSource.camera, imageQuality: 50);
@@ -92,43 +92,59 @@ class AdoptFormStage extends State<AdoptForm> {
           child: Column(
             children: [
               Padding(
-                  padding: const EdgeInsets.all(10),
-                  child: TextField(
-                    decoration: InputDecoration(
-                      border: OutlineInputBorder(),
-                      labelText: 'Họ và tên (*)',
-                      // helperText: '',
+                padding: const EdgeInsets.all(10),
+                child: TextField(
+                  decoration: InputDecoration(
+                    border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(50.0),
+                        borderSide: BorderSide(color: Colors.teal)
                     ),
+                    prefixIcon: const Icon(
+                      Icons.person,
+                      color: Colors.orange,
+                    ),
+                    labelText: 'Họ và tên',
+                    // labelStyle: new TextStyle(color: Colors.red, fontSize: 16.0),
                   ),
+                ),
+              ),
+
+              Padding(
+                padding: const EdgeInsets.all(10),
+                child: TextField(
+                  decoration: InputDecoration(
+                    border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(50.0),
+                        borderSide: BorderSide(color: Colors.teal)
+                    ),
+                    prefixIcon: const Icon(
+                      Icons.call,
+                      color: Colors.orange,
+                    ),
+                    labelText: 'Số điện thoại',
+                    // labelStyle: new TextStyle(color: Colors.red, fontSize: 16.0),
+                  ),
+                ),
               ),
               Padding(
-                  padding: const EdgeInsets.all(10),
-                  child: TextField(
-                    decoration: InputDecoration(
-                      border: OutlineInputBorder(),
-                      labelText: 'Số điện thoại (*)',
-                    ),
-                  )),
-              Padding(
-                  padding: const EdgeInsets.all(10),
-                  child: TextField(
-                    // obscureText: true,
-                    decoration: InputDecoration(
-                      border: OutlineInputBorder(),
-                      labelText: 'Số nhà, đường (*)',
-                    ),
-                  )),
-              // Padding(
-              //     padding: const EdgeInsets.all(10),
-              //     child: TextField(
-              //       obscureText: true,
-              //       decoration: InputDecoration(
-              //         border: OutlineInputBorder(),
-              //         labelText: 'Môi trường sống hiện tại',
-              //       ),
-              //     )),
-              Container(
                 padding: const EdgeInsets.all(10),
+                child: TextField(
+                  decoration: InputDecoration(
+                    border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(50.0),
+                        borderSide: BorderSide(color: Colors.teal)
+                    ),
+                    prefixIcon: const Icon(
+                      Icons.home,
+                      color: Colors.orange,
+                    ),
+                    labelText: 'Số nhà, đường',
+                    // labelStyle: new TextStyle(color: Colors.red, fontSize: 16.0),
+                  ),
+                ),
+              ),
+              Container(
+                padding: const EdgeInsets.all(15),
                 child: AddressPicker(
                   onAddressChanged: (address) {
                     print(address);
@@ -141,10 +157,23 @@ class AdoptFormStage extends State<AdoptForm> {
               Row(
                 children: [
                   Padding(
-                    padding: const EdgeInsets.all(10),
+                    padding: const EdgeInsets.all(15),
                     child: Text(
-                      "Môi trường sống hiện tại (*)",
-                      style: TextStyle(fontSize: 15, color: Colors.black54,),
+                      "Môi trường sống hiện tại",
+                      style: TextStyle(
+                        fontSize: 15,
+                        color: Colors.black54,
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(0),
+                    child: Text(
+                      "(*)  ",
+                      style: TextStyle(
+                        fontSize: 15,
+                        color: Colors.red,
+                      ),
                     ),
                   ),
                   DropdownButton(
@@ -158,18 +187,8 @@ class AdoptFormStage extends State<AdoptForm> {
                           child: Text("Chung cư"),
                           value: 2,
                         ),
-                        DropdownMenuItem(
-                            child: Text("Trọ"),
-                            value: 3
-                        ),
-                        DropdownMenuItem(
-                            child: Text("Ký túc xá"),
-                            value: 4
-                        ),
-                        // DropdownMenuItem(
-                        //     child: Text("Yếu"),
-                        //     value: 5
-                        // ),
+                        DropdownMenuItem(child: Text("Trọ"), value: 3),
+                        DropdownMenuItem(child: Text("Ký túc xá"), value: 4),
                       ],
                       onChanged: (value) {
                         setState(() {
@@ -181,12 +200,14 @@ class AdoptFormStage extends State<AdoptForm> {
               Row(
                 children: [
                   Padding(
-                    padding: const EdgeInsets.all(10),
+                    padding: const EdgeInsets.all(15),
                     child: Text(
                       "Giới tính",
-                      style: TextStyle(fontSize: 15, color: Colors.black54,),
+                      style: TextStyle(
+                        fontSize: 15,
+                        color: Colors.black54,
+                      ),
                     ),
-
                   ),
                   DropdownButton(
                       value: _value,
@@ -199,10 +220,7 @@ class AdoptFormStage extends State<AdoptForm> {
                           child: Text("Nữ"),
                           value: 2,
                         ),
-                        DropdownMenuItem(
-                            child: Text("Other"),
-                            value: 3
-                        ),
+                        DropdownMenuItem(child: Text("Other"), value: 3),
                       ],
                       onChanged: (value) {
                         setState(() {
@@ -225,7 +243,6 @@ class AdoptFormStage extends State<AdoptForm> {
                               fontSize: 17,
                               // fontWeight: FontWeight.bold,
                               color: Colors.red)),
-
                     ],
                   ),
                 ),
@@ -234,20 +251,31 @@ class AdoptFormStage extends State<AdoptForm> {
                 child: ImgLoad(),
               ),
               Padding(
-                  padding: const EdgeInsets.all(10),
-                  child: TextField(
-                    // obscureText: true,
-                    decoration: InputDecoration(
-                      border: OutlineInputBorder(),
-                      labelText: 'Ghi chú',
-                      counterText: '0 characters',
+                padding: const EdgeInsets.all(10),
+                child: TextField(
+                  decoration: InputDecoration(
+                    border: OutlineInputBorder(
+                        // borderRadius: BorderRadius.circular(50.0),
+                        // borderSide: BorderSide(color: Colors.teal)
                     ),
-                  )),
-              Padding(
-                  padding: const EdgeInsets.all(10),
-                  child: Text('(*) là mục bắt buộc phải điền',
-                    style: TextStyle(fontWeight: FontWeight.bold, fontStyle: FontStyle.italic, color: Colors.red),
+                    prefixIcon: const Icon(
+                      Icons.border_color,
+                      color: Colors.orange,
+                    ),
+                    labelText: 'Ghi chú',
+                    // labelStyle: new TextStyle(color: Colors.red, fontSize: 16.0),
                   ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(10),
+                child: Text(
+                  '(*) là mục bắt buộc phải điền',
+                  style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontStyle: FontStyle.italic,
+                      color: Colors.red),
+                ),
               ),
               Padding(
                 padding: const EdgeInsets.all(8.0),
