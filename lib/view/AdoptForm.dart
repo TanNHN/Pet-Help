@@ -217,14 +217,15 @@ class AdoptFormStage extends State<AdoptForm> {
                     /*defining default style is optional */
                     children: <TextSpan>[
                       TextSpan(
-                          text: '*',
-                          style: TextStyle(
-                              fontSize: 25,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.red)),
-                      TextSpan(
-                          text: 'Ảnh CMND mặt trước và mặt sau',
+                          text: 'Ảnh CMND mặt trước và mặt sau ',
                           style: TextStyle(fontSize: 16, color: Colors.grey)),
+                      TextSpan(
+                          text: '(*)',
+                          style: TextStyle(
+                              fontSize: 17,
+                              // fontWeight: FontWeight.bold,
+                              color: Colors.grey)),
+
                     ],
                   ),
                 ),
