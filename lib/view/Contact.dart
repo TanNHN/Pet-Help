@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pet_help/components/listMessenger.dart';
 import 'package:pet_help/view/HomePage.dart';
+import 'package:pet_help/view/RescueHome.dart';
 
 class ContactView extends StatefulWidget {
   @override
@@ -13,13 +14,13 @@ class _ContactViewState extends State<ContactView> {
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
-            icon: Icon(Icons.arrow_back, color: Colors.black),
+            icon: Icon(Icons.arrow_back),
             onPressed: () {
               Navigator.of(context).pushReplacement(MaterialPageRoute(
-                builder: (context) => MyHomePage(),
+                builder: (context) => RescueHome(),
               ));
             }),
-        title: Text('Contact'),
+        title: Text('Liên Lạc'),
         centerTitle: true,
         backgroundColor: Color.fromRGBO(253, 158, 121, 1),
       ),

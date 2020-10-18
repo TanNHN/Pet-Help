@@ -11,7 +11,7 @@ class AdoptRequestList extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(
           leading: IconButton(
-              icon: Icon(Icons.arrow_back, color: Colors.black),
+              icon: Icon(Icons.arrow_back),
               onPressed: () {
                 Navigator.of(context).pushReplacement(MaterialPageRoute(
                   builder: (context) => RescueHome(),

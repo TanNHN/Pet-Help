@@ -7,6 +7,7 @@ import 'package:pet_help/view/UserPostDetail.dart';
 class RescueHomeList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     return Scaffold(
         body: SingleChildScrollView(
       child: Padding(
@@ -29,6 +30,7 @@ class RescueHomeList extends StatelessWidget {
               },
               child: Container(
                 width: double.infinity,
+
                 child: Row(children: <Widget>[
                   Padding(
                     padding: const EdgeInsets.all(8.0),
@@ -36,8 +38,8 @@ class RescueHomeList extends StatelessWidget {
                       children: <Widget>[
                         Image.asset(
                           'src/image/rescue_cat3.jpg',
-                          width: 140,
-                          height: 240,
+                          width: size.width *0.35,
+                          height: size.height* 0.44,
                         ),
                       ],
                     ),
@@ -48,9 +50,9 @@ class RescueHomeList extends StatelessWidget {
                       Padding(
                         padding: const EdgeInsets.fromLTRB(8, 19, 8, 8),
                         child: Container(
-                          width: 220,
+                          width: size.width * 0.53,
                           child: Container(
-                            width: 180,
+
                             child: (Text(
                               "Mèo què cần được vớt...",
                               style: TextStyle(
@@ -62,31 +64,54 @@ class RescueHomeList extends StatelessWidget {
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.fromLTRB(8, 23, 0, 8),
+                        padding: const EdgeInsets.fromLTRB(1, 23, 0, 8),
                         child: Row(
                           children: [
-                            Text(
-                              "Được đăng bởi ",
-                              style: TextStyle(
-                                fontSize: 17,
-                                fontWeight: FontWeight.bold,
+                            Container(
+                              width: size.width * 0.2,
+                              child:
+                              Column(
+                                children: [
+                                  Text(
+                                    "Được đăng bởi ",
+                                    style: TextStyle(
+                                      fontSize: 17,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+
+                                ],
+
                               ),
+
                             ),
-                            Text(
-                              "Dũng Xạo",
-                              style: TextStyle(
-                                fontSize: 17,
-                                fontWeight: FontWeight.bold,
-                                color: Color.fromRGBO(253, 158, 121, 1),
+                            Container(
+                              width: size.width * 0.2,
+                              child:
+                              Column(
+                                children: [
+                                  Text(
+                                    "Dũng Xạo",
+                                    style: TextStyle(
+                                      fontSize: 17,
+                                      fontWeight: FontWeight.bold,
+                                      color: Color.fromRGBO(253, 158, 121, 1),
+                                    ),
+                                  ),
+
+                                ],
+
                               ),
-                            )
+
+                            ),
+
                           ],
                         ),
                       ),
                       Padding(
                         padding: const EdgeInsets.fromLTRB(8, 8, 8, 0),
                         child: Container(
-                          width: 220,
+                          width: size.width * 0.5,
                           child: (Text(
                             "25 phút trước",
                             style: TextStyle(
@@ -100,7 +125,7 @@ class RescueHomeList extends StatelessWidget {
                       Padding(
                         padding: const EdgeInsets.fromLTRB(8, 18, 3, 4),
                         child: Container(
-                          width: 220,
+                          width: size.width * 0.4,
                           child: (Text(
                             "Địa chỉ: 658 Lê Văn Luyện, Q9, tp.HCM",
                             style: TextStyle(
@@ -113,7 +138,7 @@ class RescueHomeList extends StatelessWidget {
                     ],
                   ),
                 ]),
-                height: 200,
+                height: size.height * 0.33,
                 decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(15),

@@ -37,7 +37,7 @@ class RescueHome extends StatelessWidget {
           children: <Widget>[
             Container(
               color: Color.fromRGBO(253, 158, 121, 1),
-              height: 200,
+              height:200,
               child: Row(
                 children: <Widget>[
                   Padding(
@@ -54,7 +54,7 @@ class RescueHome extends StatelessWidget {
                     padding: const EdgeInsets.fromLTRB(10, 0, 0, 0),
                     child: Text(
                       'Cuu Tro Luân Hồi\ncuutro@gmail.com',
-                      style: GoogleFonts.lato(
+                      style: TextStyle(
                           fontStyle: FontStyle.normal,
                           color: Colors.black,
                           fontSize: 20),
@@ -113,7 +113,7 @@ class RescueHome extends StatelessWidget {
               },
             ),
             ListTile(
-              title: Text('Contact'),
+              title: Text('Liên Lạc'),
               leading: new Tab(
                 icon: new Image.asset("src/icon/contact.png"),
               ),
@@ -124,7 +124,7 @@ class RescueHome extends StatelessWidget {
               },
             ),
             ListTile(
-              title: Text('Log out'),
+              title: Text('Đăng xuất'),
               leading: new Tab(
                 icon: new Image.asset("src/icon/logout.png"),
               ),

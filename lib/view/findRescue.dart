@@ -6,6 +6,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:pet_help/components/location.dart';
 import 'package:pet_help/view/HomePage.dart';
+import 'package:pet_help/view/RescueHome.dart';
 
 import 'loadimg.dart';
 
@@ -71,10 +72,10 @@ class _PickState extends State<Pick> {
       resizeToAvoidBottomInset: true, // bàn phím che textfield
       appBar: AppBar(
         leading: IconButton(
-            icon: Icon(Icons.arrow_back, color: Colors.black),
+            icon: Icon(Icons.arrow_back, ),
             onPressed: () {
               Navigator.of(context).pushReplacement(MaterialPageRoute(
-                builder: (context) => MyHomePage(),
+                builder: (context) => RescueHome(),
               ));
             }),
         title: Container(

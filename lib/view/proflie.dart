@@ -11,7 +11,8 @@ class ProfileApp extends StatelessWidget {
                   gradient: LinearGradient(
                       begin: Alignment.topCenter,
                       end: Alignment.bottomCenter,
-                      colors: [Colors.red, Colors.pinkAccent, Colors.orange]),
+                      colors: [Colors.red, Colors.pinkAccent, Colors.orange]
+          ),
                   image: DecorationImage(
                       image: NetworkImage(
                           "https://previews.123rf.com/images/mousemd/mousemd1602/mousemd160200121/53122766-colorful-pet-seamless-pattern-on-a-white-background-vector-illustration.jpg"),
@@ -96,7 +97,8 @@ class ProfileApp extends StatelessWidget {
                     gradient: LinearGradient(
                         begin: Alignment.centerRight,
                         end: Alignment.centerLeft,
-                        colors: [Colors.redAccent, Colors.pinkAccent]),
+                        colors: [Colors.redAccent, Colors.pinkAccent]
+                    ),
                     borderRadius: BorderRadius.circular(30.0),
                   ),
                   child: Container(

@@ -30,7 +30,7 @@ class ItemInfo extends State<PetProfile> {
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
-            icon: Icon(Icons.arrow_back, color: Colors.black),
+            icon: Icon(Icons.arrow_back),
             onPressed: () {
               Navigator.of(context).pushReplacement(MaterialPageRoute(
                 builder: (context) => RescuePetManagement(),
@@ -154,6 +154,15 @@ class ItemInfo extends State<PetProfile> {
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
+                              Column(
+                                children: [
+                                  Text("Loại",
+                                      style:
+                                      TextStyle(color: Colors.blueAccent)),
+                                  Text("Mèo",
+                                      style: TextStyle(color: Colors.orange)),
+                                ],
+                              ),
                               Column(
                                 children: [
                                   Text("Tuổi",

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:pet_help/view/HomePage.dart';
 import 'package:pet_help/view/RescueHome.dart';
 import 'package:pet_help/view/zHomePageRescue.dart';
+import 'package:responsive_grid/responsive_grid.dart';
 
 class Login extends StatefulWidget {
   @override
@@ -74,27 +75,40 @@ class LoginState extends State<Login> {
                   ),
                 ),
               ),
-              Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: <Widget>[
-                  Padding(
-                    padding: const EdgeInsets.fromLTRB(16, 8, 8, 8),
-                    child: Text(
+              ResponsiveGridRow(
+
+
+                children: [
+                  ResponsiveGridCol(
+
+                    child: Container(
+                      alignment: Alignment.topLeft,
+                      child:
+                      Text(
                       "Quên mật khẩu",
                       style: TextStyle(fontSize: 16, color: Colors.blue),
                     ),
+
                   ),
-                  Padding(
-                    padding: const EdgeInsets.fromLTRB(130, 8, 8, 8),
-                    child: Text(
-                      "Đăng kí",
-                      style: TextStyle(
-                          fontSize: 19,
-                          color: Colors.blue,
-                          fontWeight: FontWeight.bold),
-                      textAlign: TextAlign.right,
-                    ),
-                  )
+                  ),
+                  ResponsiveGridCol(
+                    //padding: const EdgeInsets.fromLTRB(130, 8, 8, 8),
+
+
+                    child:
+                      Container(
+                        alignment: Alignment.topRight,
+                        child: Text(
+                          "Đăng kí",
+                          style: TextStyle(
+                              fontSize: 19,
+                              color: Colors.blue,
+                              fontWeight: FontWeight.bold),
+                          textAlign: TextAlign.left,
+                        ),
+                      ),
+
+                  ),
                 ],
               )
             ],

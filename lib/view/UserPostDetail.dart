@@ -56,7 +56,7 @@ class UserPostDetailState extends State<UserPostDetail> {
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
-            icon: Icon(Icons.arrow_back, color: Colors.black),
+            icon: Icon(Icons.arrow_back,),
             onPressed: () {
               Navigator.of(context).pushReplacement(MaterialPageRoute(
                 builder: (context) => RescueHome(),
@@ -293,64 +293,64 @@ class UserPostDetailState extends State<UserPostDetail> {
                         ],
                       ),
                     ),
-                    new GestureDetector(
-                      onTap: () {
-                        showDialog(
-                            context: context,
-                            builder: (BuildContext context) {
-                              return AlertDialog(
-                                content: Stack(
-                                  overflow: Overflow.visible,
-                                  children: <Widget>[
-                                    Positioned(
-                                      right: -40.0,
-                                      top: -40.0,
-                                      child: InkResponse(
-                                        onTap: () {
-                                          Navigator.of(context).pop();
-                                        },
-                                        child: CircleAvatar(
-                                          child: Icon(Icons.close),
-                                          backgroundColor: Colors.red,
-                                        ),
-                                      ),
-                                    ),
-                                    Container(
-                                      child: GMap2(),
-                                    ),
-                                  ],
-                                ),
-                              );
-                            });
-                      },
-                      child: Container(
-                        width: 170,
-                        child: Row(children: <Widget>[
-                          Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Row(
-                              children: <Widget>[
-                                Icon(Icons.location_on_rounded),
-                                Text(
-                                  "Tìm đường ngay",
-                                  style: TextStyle(fontSize: 17),
-                                )
-                              ],
-                            ),
-                          ),
-                        ]),
-                        height: 50,
-                        decoration: BoxDecoration(
-                            color: Colors.yellow,
-                            borderRadius: BorderRadius.circular(15),
-                            boxShadow: [
-                              new BoxShadow(
-                                  color: Colors.black54,
-                                  offset: new Offset(1.0, 2.0),
-                                  blurRadius: 3.5),
-                            ]),
-                      ),
-                    ),
+                    // new GestureDetector(
+                    //   onTap: () {
+                    //     showDialog(
+                    //         context: context,
+                    //         builder: (BuildContext context) {
+                    //           return AlertDialog(
+                    //             content: Stack(
+                    //               overflow: Overflow.visible,
+                    //               children: <Widget>[
+                    //                 Positioned(
+                    //                   right: -40.0,
+                    //                   top: -40.0,
+                    //                   child: InkResponse(
+                    //                     onTap: () {
+                    //                       Navigator.of(context).pop();
+                    //                     },
+                    //                     child: CircleAvatar(
+                    //                       child: Icon(Icons.close),
+                    //                       backgroundColor: Colors.red,
+                    //                     ),
+                    //                   ),
+                    //                 ),
+                    //                 Container(
+                    //                   child: GMap2(),
+                    //                 ),
+                    //               ],
+                    //             ),
+                    //           );
+                    //         });
+                    //   },
+                    //   child: Container(
+                    //     width: 170,
+                    //     child: Row(children: <Widget>[
+                    //       Padding(
+                    //         padding: const EdgeInsets.all(8.0),
+                    //         child: Row(
+                    //           children: <Widget>[
+                    //             Icon(Icons.location_on_rounded),
+                    //             Text(
+                    //               "Tìm đường ngay",
+                    //               style: TextStyle(fontSize: 17),
+                    //             )
+                    //           ],
+                    //         ),
+                    //       ),
+                    //     ]),
+                    //     height: 50,
+                    //     decoration: BoxDecoration(
+                    //         color: Colors.yellow,
+                    //         borderRadius: BorderRadius.circular(15),
+                    //         boxShadow: [
+                    //           new BoxShadow(
+                    //               color: Colors.black54,
+                    //               offset: new Offset(1.0, 2.0),
+                    //               blurRadius: 3.5),
+                    //         ]),
+                    //   ),
+                    // ),
                     SizedBox(
                       height: 38,
                     ),
@@ -373,7 +373,7 @@ class UserPostDetailState extends State<UserPostDetail> {
                                   Navigator.of(context).push(
                                       new MaterialPageRoute(
                                           builder: (context) =>
-                                              ViewPetReportList()));
+                                              ChatScreen(name: 'Luan San',UrlImage: 'image/cat4.jpg',)));
                                 },
                                 child: Align(
                                   child: Text("Liên lạc",

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pet_help/components/chat.dart';
 import 'package:pet_help/view/AdoptRequestList.dart';
 import 'package:pet_help/view/HomePage.dart';
 import 'package:pet_help/view/PetHealthReportDetail.dart';
@@ -10,7 +11,7 @@ class AdoptRequest extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(
           leading: IconButton(
-              icon: Icon(Icons.arrow_back, color: Colors.black),
+              icon: Icon(Icons.arrow_back),
               onPressed: () {
                 Navigator.of(context).pushReplacement(MaterialPageRoute(
                   builder: (context) => AdoptRequestList(),
@@ -345,7 +346,7 @@ class AdoptRequest extends StatelessWidget {
                               onPressed: () {
                                 Navigator.of(context)
                                     .pushReplacement(MaterialPageRoute(
-                                  builder: (context) => MyHomePage(),
+                                  builder: (context) => ChatScreen(name: 'Luan San',UrlImage: 'image/cat4.jpg',),
                                 ));
                               },
                               child: Text(
