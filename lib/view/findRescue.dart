@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_material_color_picker/flutter_material_color_picker.dart';
+import 'package:flutter_xlider/flutter_xlider.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:pet_help/components/location.dart';
@@ -16,6 +17,10 @@ class Pick extends StatefulWidget {
 }
 
 class _PickState extends State<Pick> {
+  double _lowerValue = 50;
+  double _upperValue = 180;
+  final number = TextEditingController();
+
   // File _image;
   // _imgFromCamera() async {
   // File image = await ImagePicker.pickImage(
@@ -291,7 +296,6 @@ class _PickState extends State<Pick> {
                             ],
                           ),
                         )
-
                     ),
                     Padding(
                       padding: const EdgeInsets.all(8.0),
@@ -374,6 +378,64 @@ class _PickState extends State<Pick> {
                       ),
                     ),
                     Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Container(
+                            width: 400,
+                            height: 50,
+                          decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(18),
+                              boxShadow: [
+                                new BoxShadow(
+                                    color: Colors.black54,
+                                    offset: new Offset(1.0, 2.0),
+                                    blurRadius: 3.5),
+                              ]),
+                            child: Row(
+                              children: <Widget>[
+                                Expanded(
+                                  flex: 1,
+                                  child: Container(
+                                    child: Text(
+                                      "   Phần trăm bị thương: ",
+                                      style: TextStyle(
+                                        fontSize: 17, ),
+                                    ),
+                                  ),
+                                ),
+                                // Container(
+                                //   color: Colors.orange,
+                                //   height: 100,
+                                //   width: 50,
+                                // ),
+                                Expanded(
+                                  flex: 1,
+                                  child: Container(
+                                      // width: 10.0,
+                                      child: TextField(
+                                        controller: number,
+                                        autocorrect: true,
+                                        keyboardType: TextInputType.number,
+                                        decoration: InputDecoration(hintText: '0'),
+                                      )
+                                  ),
+                                ),
+                                Expanded(
+                                  flex: 0,
+                                  child: Container(
+                                    width: 50.0,
+                                    child: Text("%",
+                                      style: TextStyle(
+                                        fontSize: 17, color: Colors.black),
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            )
+                        )
+
+                    ),
+                    Padding(
                       padding: const EdgeInsets.all(10.0),
                       child: Container(
                         width: 400,
@@ -401,7 +463,7 @@ class _PickState extends State<Pick> {
                               contentPadding: EdgeInsets.all(30),
                               suffixIcon: Icon(Icons.mode_edit, color: Colors.orange,),
                               focusColor: Colors.green,
-                              hintText: "Nhập tình trạng của pet",
+                              hintText: "Ghi chú",
                               hintStyle: TextStyle(
                                   fontSize: 15,
                                   color: Colors.grey,
