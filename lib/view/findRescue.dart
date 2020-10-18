@@ -233,7 +233,61 @@ class _PickState extends State<Pick> {
                                   },
                                   selectedColor: Colors.red
                               )
+                            ],
+                          ),
+                        )
 
+
+                    ),
+                    Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Container(
+                          width: 400,
+                          height: 50,
+                          decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(18),
+                              boxShadow: [
+                                new BoxShadow(
+                                    color: Colors.black54,
+                                    offset: new Offset(1.0, 2.0),
+                                    blurRadius: 3.5),
+                              ]),
+                          child: Row(
+                            children: [
+                              Text(
+                                "   Tình trạng tổng quát: ",
+                                style: TextStyle(
+                                  fontSize: 17, ),
+                              ),
+                              DropdownButton(
+                                  value: _value,
+                                  items: [
+                                    DropdownMenuItem(
+                                      child: Text(""),
+                                      value: 1,
+                                    ),
+                                    DropdownMenuItem(
+                                      child: Text("Vui vẻ"),
+                                      value: 2,
+                                    ),
+                                    DropdownMenuItem(
+                                        child: Text("Dè chừng"), value: 3),
+                                    DropdownMenuItem(
+                                        child: Text("Sợ"),
+                                        value: 4),
+                                    DropdownMenuItem(
+                                        child: Text("Lảng tránh"), value: 5),
+                                    DropdownMenuItem(
+                                        child: Text("Thất thường"), value: 6),
+                                    DropdownMenuItem(
+                                        child: Text("Cảnh giác cao"), value: 6),
+                                  ],
+                                  onChanged: (value) {
+                                    setState(() {
+                                      _value = value;
+                                    });
+                                  }),
                             ],
                           ),
                         )
@@ -256,7 +310,7 @@ class _PickState extends State<Pick> {
                         child: Row(
                           children: [
                             Text(
-                              "   Tình trạng tổng quát: ",
+                              "   Bị thương: ",
                               style: TextStyle(
                                   fontSize: 17, ),
                             ),
@@ -268,16 +322,11 @@ class _PickState extends State<Pick> {
                                     value: 1,
                                   ),
                                   DropdownMenuItem(
-                                    child: Text("Khỏe mạnh"),
+                                    child: Text("Có"),
                                     value: 2,
                                   ),
                                   DropdownMenuItem(
-                                      child: Text("Ổn định"), value: 3),
-                                  DropdownMenuItem(
-                                      child: Text("Thất thường"),
-                                      value: 4),
-                                  DropdownMenuItem(
-                                      child: Text("Yếu"), value: 5)
+                                      child: Text("Không"), value: 3),
                                 ],
                                 onChanged: (value) {
                                   setState(() {
@@ -287,9 +336,43 @@ class _PickState extends State<Pick> {
                           ],
                         ),
                       )
-
                     ),
-
+                    Padding(
+                      padding: const EdgeInsets.all(10.0),
+                      child: Container(
+                        width: 400,
+                        height: 50,
+                        decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(18),
+                            boxShadow: [
+                              new BoxShadow(
+                                  color: Colors.black54,
+                                  offset: new Offset(1.0, 2.0),
+                                  blurRadius: 3.5),
+                            ]),
+                        child: TextFormField(
+                          maxLines: 4,
+                          decoration: new InputDecoration(
+                            // labelText: 'Tình trạng hiện tại',
+                            // labelStyle: TextStyle(
+                            //     color: Colors.green,
+                            //     fontSize: 25,
+                            //     fontWeight: FontWeight.bold),
+                              focusedBorder: InputBorder.none,
+                              enabledBorder: InputBorder.none,
+                              disabledBorder: InputBorder.none,
+                              contentPadding: EdgeInsets.all(30),
+                              suffixIcon: Icon(Icons.mode_edit, color: Colors.orange,),
+                              focusColor: Colors.green,
+                              hintText: "Vị trí bị thương",
+                              hintStyle: TextStyle(
+                                  fontSize: 15,
+                                  color: Colors.grey,
+                                  fontStyle: FontStyle.italic)),
+                        ),
+                      ),
+                    ),
                     Padding(
                       padding: const EdgeInsets.all(10.0),
                       child: Container(
