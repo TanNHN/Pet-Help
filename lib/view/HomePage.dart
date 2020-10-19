@@ -144,7 +144,7 @@ class MyHomePage extends StatelessWidget {
         child: Column(
           children: [
             HeaderList(),
-            //Expanded(child: ListViewPet()),
+            Expanded(child: ListViewPet()),
             BottomNaviBar()
           ],
         ),
