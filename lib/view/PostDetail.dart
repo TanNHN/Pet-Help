@@ -188,6 +188,15 @@ class ItemInfo extends State<PostDetail> {
                                       style: TextStyle(color: Colors.orange)),
                                 ],
                               ),
+                              Column(
+                                children: [
+                                  Text("Cân nặng",
+                                      style:
+                                      TextStyle(color: Colors.blueAccent)),
+                                  Text("4Kg",
+                                      style: TextStyle(color: Colors.orange)),
+                                ],
+                              ),
                             ],
                           ),
                         ),
@@ -223,7 +232,7 @@ class ItemInfo extends State<PostDetail> {
                             style: TextStyle(color: Colors.grey),
                           ),
                           Text(
-                            "Trung tâm Mai Tán ",
+                            "Trung tâm SAR",
                             style: TextStyle(color: Colors.orange),
                           ),
                         ],
