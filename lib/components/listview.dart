@@ -39,6 +39,7 @@ class _ListViewPetState extends State<ListViewPet> {
         itemBuilder: (BuildContext context, int index) {
           return Container(
             height: 200,
+            width: double.infinity,
             decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(15),
@@ -82,7 +83,8 @@ class _ListViewPetState extends State<ListViewPet> {
                       child: Column(
                         children: <Widget>[
                           Container(
-                            width: 170,
+                            padding: const EdgeInsets.only(left:40.0, right: 40.0,),
+                            width: 180,
                             height: 60,
                             child: Row(
                               children: [
@@ -135,7 +137,7 @@ class _ListViewPetState extends State<ListViewPet> {
                               ],
                             ),
                           ),
-                          Row(
+                          Column(
                             children: [
                               Icon(Icons.person),
                               Text(
