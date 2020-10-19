@@ -260,6 +260,7 @@ class _UploadImagesState extends State<UploadImages> {
 
 
                           
+
                             allowShades: false, // default true
                             onMainColorChange: (ColorSwatch color) {
                               // Handle main color changes
