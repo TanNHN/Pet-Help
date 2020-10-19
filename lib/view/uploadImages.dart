@@ -259,7 +259,7 @@ class _UploadImagesState extends State<UploadImages> {
                         MaterialColorPicker(
 
 
-                          
+
 
                             allowShades: false, // default true
                             onMainColorChange: (ColorSwatch color) {
