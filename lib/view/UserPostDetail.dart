@@ -56,7 +56,9 @@ class UserPostDetailState extends State<UserPostDetail> {
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
-            icon: Icon(Icons.arrow_back,),
+
+            icon: Icon(Icons.arrow_back_ios, color: Colors.white),
+
             onPressed: () {
               Navigator.of(context).pushReplacement(MaterialPageRoute(
                 builder: (context) => RescueHome(),
@@ -189,31 +191,7 @@ class UserPostDetailState extends State<UserPostDetail> {
                         ],
                       ),
                     ),
-                    Padding(
-                      padding: const EdgeInsets.fromLTRB(8, 0, 3, 8),
-                      child: Row(
-                        children: [
-                          Icon(Icons.pets),
-                          Text(
-                            "Giống: ",
-                            textAlign: TextAlign.left,
-                            style: TextStyle(
-                              fontSize: 20,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
-                          Container(
-                            width: 220,
-                            child: Text(
-                              " Mèo",
-                              style: TextStyle(
-                                fontSize: 17,
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
+
                     Padding(
                       padding: const EdgeInsets.fromLTRB(8, 0, 0, 8),
                       child: Row(
@@ -245,7 +223,7 @@ class UserPostDetailState extends State<UserPostDetail> {
                         children: [
                           Icon(Icons.location_on),
                           Text(
-                            "Địa điểm: ",
+                            "Vị trí: ",
                             textAlign: TextAlign.left,
                             style: TextStyle(
                               fontSize: 20,
@@ -255,7 +233,7 @@ class UserPostDetailState extends State<UserPostDetail> {
                           Container(
                             width: 220,
                             child: Text(
-                              " 658 Lê Văn Luyện, Q9, tp.HCM",
+                              "120 Võ Văn Ngân, Q9, tp.HCM",
                               style: TextStyle(
                                 fontSize: 17,
                               ),
@@ -272,27 +250,195 @@ class UserPostDetailState extends State<UserPostDetail> {
                           Row(
                             children: [
                               Text(
-                                "Địa điểm chi tiêt: ",
+                                "Đặc điểm nhận dạng:  ",
                                 textAlign: TextAlign.left,
                                 style: TextStyle(
-                                  fontSize: 17,
+                                  fontSize: 20,
                                   fontWeight: FontWeight.bold,
                                 ),
                               ),
                             ],
                           ),
-                          Container(
-                            width: 220,
-                            child: Text(
-                              " Con mèo nằm ở trước cửa hàng di động, cửa hàng di động nằm dối diện cây xăng, cây xăng nằm gần cuối dường Lê Văn Việt ",
-                              style: TextStyle(
-                                fontSize: 15,
-                              ),
+                          Padding(
+                            padding: const EdgeInsets.fromLTRB(8, 8, 0, 8),
+                            child:
+                            Row(
+                              children: [
+
+                                Text(
+                                  "Loại: ",
+                                  textAlign: TextAlign.left,
+                                  style: TextStyle(
+                                    fontSize: 17,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                                Container(
+                                  width: 230,
+                                  child: Text(
+                                    "Mèo",
+                                    style: TextStyle(
+                                      fontSize: 17,
+                                    ),
+                                  ),
+                                )
+                              ],
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.fromLTRB(8, 0, 0, 8),
+                            child:
+                            Row(
+                              children: [
+
+                                Text(
+                                  "Màu sắc: ",
+                                  textAlign: TextAlign.left,
+                                  style: TextStyle(
+                                    fontSize: 17,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                                Container(
+                                  width: 230,
+                                  child: Text(
+                                    "Cam",
+                                    style: TextStyle(
+                                      fontSize: 17,
+                                    ),
+                                  ),
+                                )
+                              ],
                             ),
                           ),
                         ],
                       ),
                     ),
+                    Padding(
+                      padding: const EdgeInsets.fromLTRB(8, 10, 3, 4),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.stretch,
+                        children: [
+                          Row(
+                            children: [
+                              Text(
+                                "Tình trạng hiện tại: ",
+                                textAlign: TextAlign.left,
+                                style: TextStyle(
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                            ],
+                          ),
+                        Padding(
+                          padding: const EdgeInsets.fromLTRB(8, 8, 0, 8),
+                          child:
+                          Row(
+                          children: [
+
+                          Text(
+                          "Tổng quát: ",
+                          textAlign: TextAlign.left,
+                          style: TextStyle(
+                          fontSize: 17,
+                          fontWeight: FontWeight.bold,
+                          ),
+                          ),
+                            Container(
+                            width: 230,
+                              child: Text(
+                            "Cảnh giác cao",
+                              style: TextStyle(
+                              fontSize: 17,
+                              ),
+                              ),
+                              )
+                                ],
+                                ),
+                                ),
+                          Padding(
+                            padding: const EdgeInsets.fromLTRB(8, 0, 0, 8),
+                            child:
+                            Row(
+                              children: [
+
+                                Text(
+                                  "Bị thương: ",
+                                  textAlign: TextAlign.left,
+                                  style: TextStyle(
+                                    fontSize: 17,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                                Container(
+                                  width: 230,
+                                  child: Text(
+                                    "Có",
+                                    style: TextStyle(
+                                      fontSize: 17,
+                                    ),
+                                  ),
+                                )
+                              ],
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.fromLTRB(8, 0, 0, 8),
+                            child:
+                            Row(
+                              children: [
+
+                                Text(
+                                  "Vị trí vết thương: ",
+                                  textAlign: TextAlign.left,
+                                  style: TextStyle(
+                                    fontSize: 17,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                                Container(
+                                  width: 230,
+                                  child: Text(
+                                    "Miệng",
+                                    style: TextStyle(
+                                      fontSize: 17,
+                                    ),
+                                  ),
+                                )
+                              ],
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.fromLTRB(8, 0, 0, 8),
+                            child:
+                            Row(
+                              children: [
+
+                                Text(
+                                  "Phần trăm vết thương: ",
+                                  textAlign: TextAlign.left,
+                                  style: TextStyle(
+                                    fontSize: 17,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                                Container(
+                                  width: 200,
+                                  child: Text(
+                                    "20%",
+                                    style: TextStyle(
+                                      fontSize: 17,
+                                    ),
+                                  ),
+                                )
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+
                     // new GestureDetector(
                     //   onTap: () {
                     //     showDialog(
@@ -373,7 +519,7 @@ class UserPostDetailState extends State<UserPostDetail> {
                                   Navigator.of(context).push(
                                       new MaterialPageRoute(
                                           builder: (context) =>
-                                              ChatScreen(name: 'Luan San',UrlImage: 'image/cat4.jpg',)));
+                                              ChatScreen(name: 'Dũng Xạo',UrlImage: 'image/cat4.jpg',)));
                                 },
                                 child: Align(
                                   child: Text("Liên lạc",

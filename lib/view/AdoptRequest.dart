@@ -11,7 +11,9 @@ class AdoptRequest extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(
           leading: IconButton(
-              icon: Icon(Icons.arrow_back),
+
+              icon: Icon(Icons.arrow_back_ios, color: Colors.white),
+
               onPressed: () {
                 Navigator.of(context).pushReplacement(MaterialPageRoute(
                   builder: (context) => AdoptRequestList(),
@@ -57,7 +59,7 @@ class AdoptRequest extends StatelessWidget {
                                 ),
                               ),
                               Text(
-                                " Lê Duẩn",
+                                " Nguyễn Văn Du",
                                 textAlign: TextAlign.left,
                                 style: TextStyle(
                                   fontSize: 20,
@@ -93,7 +95,7 @@ class AdoptRequest extends StatelessWidget {
                             children: [
                               Container(
                                 child: Text(
-                                  "Địa chị: ",
+                                  "Địa chỉ: ",
                                   textAlign: TextAlign.left,
                                   style: TextStyle(
                                     fontSize: 20,
@@ -107,7 +109,7 @@ class AdoptRequest extends StatelessWidget {
                                   padding:
                                       const EdgeInsets.fromLTRB(7, 12, 8, 8),
                                   child: Text(
-                                    "Cuối hẻm 365 Lê Văn Luyện, Q9, tp.HCM",
+                                    " 365 Lê Văn Việt, Q9, tp.HCM",
                                     textAlign: TextAlign.left,
                                     style: TextStyle(
                                       fontSize: 20,
@@ -210,7 +212,7 @@ class AdoptRequest extends StatelessWidget {
                                               ),
                                             ),
                                             Text(
-                                              "Chó ghe?",
+                                              "Lậu",
                                               style: TextStyle(
                                                 fontSize: 15,
                                                 fontWeight: FontWeight.bold,

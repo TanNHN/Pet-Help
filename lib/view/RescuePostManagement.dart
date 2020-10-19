@@ -19,6 +19,7 @@ class MyPost extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     return Scaffold(
       resizeToAvoidBottomPadding: false,
       appBar: AppBar(
@@ -30,7 +31,7 @@ class MyPost extends StatelessWidget {
         leading: Builder(
           builder: (BuildContext context) {
             return IconButton(
-              icon: const Icon(Icons.arrow_back),
+              icon: const Icon(Icons.arrow_back_ios),
               onPressed: () {
                 Navigator.of(context).pushReplacement(MaterialPageRoute(
                   builder: (context) => RescueHome(),
@@ -80,6 +81,7 @@ class MyPost extends StatelessWidget {
                 children: <Widget>[
                   Container(
                     width: double.infinity,
+
                     child: Row(children: <Widget>[
                       Padding(
                         padding: const EdgeInsets.all(8.0),
@@ -87,8 +89,8 @@ class MyPost extends StatelessWidget {
                           children: <Widget>[
                             Image.asset(
                               'src/image/cat3.jpg',
-                              width: 140,
-                              height: 240,
+                              width: size.width *0.45,
+                              height: size.height* 0.44,
                             ),
                           ],
                         ),
@@ -99,11 +101,11 @@ class MyPost extends StatelessWidget {
                           Padding(
                             padding: const EdgeInsets.fromLTRB(8, 19, 8, 8),
                             child: Container(
-                              width: 220,
+                              width: size.width * 0.35,
                               child: Container(
-                                width: 180,
+
                                 child: (Text(
-                                  "Bủh",
+                                  "Bủn",
                                   style: TextStyle(
                                     fontSize: 20,
                                     fontWeight: FontWeight.bold,
@@ -113,60 +115,103 @@ class MyPost extends StatelessWidget {
                             ),
                           ),
                           Padding(
-                            padding: const EdgeInsets.fromLTRB(8, 23, 0, 8),
+                            padding: const EdgeInsets.fromLTRB(1, 23, 0, 8),
                             child: Row(
                               children: [
-                                Icon(Icons.location_on),
-                                Text(
-                                  "333 Hàng Tiger, Hà Nội",
-                                  style: TextStyle(
-                                    fontSize: 17,
-                                    fontWeight: FontWeight.bold,
+                                Container(
+                                  width: size.width * 0.2,
+                                  child:
+                                  Column(
+                                    children: [
+                                      Text("Đăng bởi: "),
+
+                                    ],
+
                                   ),
+
                                 ),
+                                Container(
+                                  width: size.width * 0.25,
+                                  child:
+                                  Column(
+                                    children: [
+
+                                      Text(
+                                        "Bệnh viện Thú Y Pet Pro",
+                                        style: TextStyle(
+                                          fontSize: 17,
+                                          fontWeight: FontWeight.bold,
+                                          color: Color.fromRGBO(253, 158, 121, 1),
+                                        ),
+                                      ),
+
+                                    ],
+
+                                  ),
+
+                                ),
+
                               ],
                             ),
                           ),
                           Padding(
                             padding: const EdgeInsets.fromLTRB(8, 8, 8, 0),
-                            child: Row(
-                              children: [
-                                Text(
-                                  "Đăng bởi: ",
-                                  style: TextStyle(
-                                    color: Colors.grey,
-                                    fontSize: 15,
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                ),
-                                Text(
-                                  "Trung tâm Luân Hồi ",
-                                  style: TextStyle(
-                                    color: Color.fromRGBO(253, 158, 121, 1),
-                                    fontSize: 15,
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.fromLTRB(8, 18, 3, 4),
                             child: Container(
-                              width: 220,
+                              width: size.width * 0.4,
                               child: (Text(
-                                "Địa chỉ: 658 Lê Văn Luyện, Q9, tp.HCM",
+                                "25 phút trước",
                                 style: TextStyle(
+                                  color: Colors.grey,
                                   fontSize: 15,
                                   fontWeight: FontWeight.bold,
                                 ),
                               )),
                             ),
                           ),
+                          Padding(
+                            padding: const EdgeInsets.fromLTRB(1, 23, 0, 8),
+                            child: Row(
+                              children: [
+                                Container(
+                                  width: size.width * 0.1,
+                                  child:
+                                  Column(
+                                    children: [
+                                      Icon(Icons.location_on),
+
+                                    ],
+
+                                  ),
+
+                                ),
+                                Container(
+                                  width: size.width * 0.33,
+                                  child:
+                                  Column(
+                                    children: [
+
+                                      Text(
+                                        "111 Trường Chinh, Phường 12, Tân Bình,, tp.HCM",
+                                        style: TextStyle(
+                                          fontSize: 14,
+                                          fontWeight: FontWeight.bold,
+
+                                        ),
+                                      ),
+
+                                    ],
+
+                                  ),
+
+                                ),
+
+                              ],
+                            ),
+                          ),
                         ],
                       ),
                     ]),
-                    height: 200,
+                    height: size.height * 0.45,
                     decoration: BoxDecoration(
                         color: Colors.white,
                         borderRadius: BorderRadius.circular(15),

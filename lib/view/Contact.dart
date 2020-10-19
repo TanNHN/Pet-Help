@@ -14,7 +14,8 @@ class _ContactViewState extends State<ContactView> {
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
-            icon: Icon(Icons.arrow_back),
+
+            icon: Icon(Icons.arrow_back_ios, color: Colors.white),
             onPressed: () {
               Navigator.of(context).pushReplacement(MaterialPageRoute(
                 builder: (context) => RescueHome(),

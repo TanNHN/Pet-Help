@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_number_picker/flutter_number_picker.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:pet_help/view/HomePage.dart';
 import 'package:flutter/material.dart';
@@ -78,7 +79,7 @@ class PetReportFormStage extends State<PetReportForm> {
       resizeToAvoidBottomInset: true, // bàn phím che textfield
       appBar: AppBar(
         leading: IconButton(
-            icon: Icon(Icons.arrow_back, color: Colors.black),
+            icon: Icon(Icons.arrow_back_ios, color: Colors.white),
             onPressed: () {
               Navigator.of(context).pushReplacement(MaterialPageRoute(
                 builder: (context) => UserPetProfile(),
@@ -106,7 +107,7 @@ class PetReportFormStage extends State<PetReportForm> {
                     Padding(
                       padding: const EdgeInsets.all(10),
                       child: Text(
-                        "Báo cáo sức khỏe của Bum",
+                        "Báo cáo sức khỏe của BUM",
                         style: TextStyle(
                             fontSize: 30, fontWeight: FontWeight.bold),
                       ),
@@ -116,14 +117,15 @@ class PetReportFormStage extends State<PetReportForm> {
                       child: Row(
                         children: [
                           Text(
-                            "Ngày:  ",
+                            "Ngày: ",
                             style: TextStyle(
-                                fontSize: 20, fontWeight: FontWeight.bold),
+                                fontSize: 15,fontStyle: FontStyle.italic, color: Colors.black54,
+                            ),
                           ),
                           Text(
                             "16/10/2020",
                             style: TextStyle(
-                              fontSize: 17,
+                              fontSize: 15, fontStyle: FontStyle.italic, color: Colors.black54,
                             ),
                           ),
                         ],
@@ -133,82 +135,109 @@ class PetReportFormStage extends State<PetReportForm> {
                       child: ImgLoad(),
                     ),
                     Padding(
-                      padding: const EdgeInsets.all(10.0),
-                      child: Container(
-                        width: 360,
-                        height: 250,
-                        decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(18),
-                            boxShadow: [
-                              new BoxShadow(
-                                  color: Colors.black54,
-                                  offset: new Offset(1.0, 2.0),
-                                  blurRadius: 3.5),
-                            ]),
-                        child: SingleChildScrollView(
-                          child: Container(
-                            child: Column(
-                              children: [
-                                Row(
-                                  children: [
-                                    Padding(
-                                      padding: const EdgeInsets.all(8.0),
-                                      child: Text(
-                                        "Tình trạng tổng quát:  ",
-                                        style: TextStyle(fontSize: 20),
-                                      ),
-                                    ),
-                                    DropdownButton(
-                                        value: _value,
-                                        items: [
-                                          DropdownMenuItem(
-                                            child: Text("Tình trạng"),
-                                            value: 1,
-                                          ),
-                                          DropdownMenuItem(
-                                            child: Text("Khỏe mạnh"),
-                                            value: 2,
-                                          ),
-                                          DropdownMenuItem(
-                                              child: Text("Ổn định"), value: 3),
-                                          DropdownMenuItem(
-                                              child: Text("Thất thường"),
-                                              value: 4),
-                                          DropdownMenuItem(
-                                              child: Text("Yếu"), value: 5)
-                                        ],
-                                        onChanged: (value) {
-                                          setState(() {
-                                            _value = value;
-                                          });
-                                        }),
-                                  ],
+                      padding: const EdgeInsets.all(8.0),
+                      child: Row(
+                        children: [
+                          Text(
+                            "Tình trạng tổng quát: ",
+                            style: TextStyle(
+                                fontSize: 18, fontWeight: FontWeight.bold),
+                          ),
+                          DropdownButton(
+                              value: _value,
+                              items: [
+                                DropdownMenuItem(
+                                  child: Text(""),
+                                  value: 1,
                                 ),
-                                TextFormField(
-                                  maxLines: 4,
-                                  decoration: new InputDecoration(
-                                      labelText: 'Báo cáo chi tiết',
-                                      labelStyle: TextStyle(
-                                          color: Colors.green,
-                                          fontSize: 25,
-                                          fontWeight: FontWeight.bold),
-                                      focusedBorder: InputBorder.none,
-                                      enabledBorder: InputBorder.none,
-                                      disabledBorder: InputBorder.none,
-                                      contentPadding: EdgeInsets.all(30),
-                                      suffixIcon: Icon(Icons.mode_edit),
-                                      focusColor: Colors.green,
-                                      hintText: "Tình trạng chi tiết",
-                                      hintStyle: TextStyle(
-                                          fontSize: 15,
-                                          color: Colors.grey,
-                                          fontStyle: FontStyle.italic)),
+                                DropdownMenuItem(
+                                  child: Text("Khỏe mạnh"),
+                                  value: 2,
+                                ),
+                                DropdownMenuItem(
+                                    child: Text("Ổn định"), value: 3),
+                                DropdownMenuItem(
+                                    child: Text("Thất thường"),
+                                    value: 4),
+                                DropdownMenuItem(
+                                    child: Text("Yếu"), value: 5)
+                              ],
+                              onChanged: (value) {
+                                setState(() {
+                                  _value = value;
+                                });
+                              }),
+                        ],
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Row(
+                        children: [
+                          Text(
+                            "Cân nặng: ",
+                            style: TextStyle(
+                                fontSize: 18, fontWeight: FontWeight.bold),
+                          ),
+                          CustomNumberPicker(
+                            initialValue: 1,
+                            maxValue: 150,
+                            minValue: 0,
+                            step: 1,
+                            onValue: (value) {
+                              print(value.toString());
+                            },
+                          ),
+                          Text(
+                            " Kg",
+                            style: TextStyle(
+                                fontSize: 16, ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Row(
+                        children: [
+                          Text(
+                            "Cảm xúc: ",
+                            style: TextStyle(
+                                fontSize: 18, fontWeight: FontWeight.bold),
+                          ),
+                          DropdownButton(
+                              value: _value,
+                              items: [
+                                DropdownMenuItem(
+                                  child: Text(""),
+                                  value: 1,
+                                ),
+                                DropdownMenuItem(
+                                  child: Text("Vui vẻ"),
+                                  value: 2,
+                                ),
+                                DropdownMenuItem(
+                                    child: Text("Sợ"),
+                                    value: 3
+                                ),
+                                DropdownMenuItem(
+                                    child: Text("Lãng tránh"),
+                                    value: 4),
+                                DropdownMenuItem(
+                                    child: Text("Thất thường"),
+                                    value: 5
+                                ),
+                                DropdownMenuItem(
+                                    child: Text("Cảm giác cao"),
+                                    value: 6
                                 ),
                               ],
-                            ),
-                          ),
-                        ),
+                              onChanged: (value) {
+                                setState(() {
+                                  _value = value;
+                                });
+                              }),
+                        ],
                       ),
                     ),
                     Padding(

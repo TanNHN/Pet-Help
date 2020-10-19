@@ -38,7 +38,7 @@ class RescueHomeList extends StatelessWidget {
                       children: <Widget>[
                         Image.asset(
                           'src/image/rescue_cat3.jpg',
-                          width: size.width *0.35,
+                          width: size.width *0.45,
                           height: size.height* 0.44,
                         ),
                       ],
@@ -50,11 +50,11 @@ class RescueHomeList extends StatelessWidget {
                       Padding(
                         padding: const EdgeInsets.fromLTRB(8, 19, 8, 8),
                         child: Container(
-                          width: size.width * 0.53,
+                          width: size.width * 0.35,
                           child: Container(
 
                             child: (Text(
-                              "Mèo què cần được vớt...",
+                              "Một con mèo bị thương ngay miệng",
                               style: TextStyle(
                                 fontSize: 20,
                                 fontWeight: FontWeight.bold,
@@ -68,17 +68,11 @@ class RescueHomeList extends StatelessWidget {
                         child: Row(
                           children: [
                             Container(
-                              width: size.width * 0.2,
+                              width: size.width * 0.1,
                               child:
                               Column(
                                 children: [
-                                  Text(
-                                    "Được đăng bởi ",
-                                    style: TextStyle(
-                                      fontSize: 17,
-                                      fontWeight: FontWeight.bold,
-                                    ),
-                                  ),
+                                  Icon(Icons.account_circle_outlined),
 
                                 ],
 
@@ -86,10 +80,11 @@ class RescueHomeList extends StatelessWidget {
 
                             ),
                             Container(
-                              width: size.width * 0.2,
+                              width: size.width * 0.3,
                               child:
                               Column(
                                 children: [
+
                                   Text(
                                     "Dũng Xạo",
                                     style: TextStyle(
@@ -111,7 +106,7 @@ class RescueHomeList extends StatelessWidget {
                       Padding(
                         padding: const EdgeInsets.fromLTRB(8, 8, 8, 0),
                         child: Container(
-                          width: size.width * 0.5,
+                          width: size.width * 0.4,
                           child: (Text(
                             "25 phút trước",
                             style: TextStyle(
@@ -123,22 +118,49 @@ class RescueHomeList extends StatelessWidget {
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.fromLTRB(8, 18, 3, 4),
-                        child: Container(
-                          width: size.width * 0.4,
-                          child: (Text(
-                            "Địa chỉ: 658 Lê Văn Luyện, Q9, tp.HCM",
-                            style: TextStyle(
-                              fontSize: 15,
-                              fontWeight: FontWeight.bold,
+                        padding: const EdgeInsets.fromLTRB(1, 23, 0, 8),
+                        child: Row(
+                          children: [
+                            Container(
+                              width: size.width * 0.1,
+                              child:
+                              Column(
+                                children: [
+                                  Icon(Icons.location_on),
+
+                                ],
+
+                              ),
+
                             ),
-                          )),
+                            Container(
+                              width: size.width * 0.33,
+                              child:
+                              Column(
+                                children: [
+
+                                  Text(
+                                    "120 Võ Văn Ngân, Q9, tp.HCM",
+                                    style: TextStyle(
+                                      fontSize: 14,
+                                      fontWeight: FontWeight.bold,
+
+                                    ),
+                                  ),
+
+                                ],
+
+                              ),
+
+                            ),
+
+                          ],
                         ),
                       ),
                     ],
                   ),
                 ]),
-                height: size.height * 0.33,
+                height: size.height * 0.55,
                 decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(15),
@@ -162,6 +184,7 @@ class RescueHomeList extends StatelessWidget {
               },
               child: Container(
                 width: double.infinity,
+
                 child: Row(children: <Widget>[
                   Padding(
                     padding: const EdgeInsets.all(8.0),
@@ -169,8 +192,8 @@ class RescueHomeList extends StatelessWidget {
                       children: <Widget>[
                         Image.asset(
                           'src/image/pet_6.jpg',
-                          width: 140,
-                          height: 240,
+                          width: size.width *0.45,
+                          height: size.height* 0.44,
                         ),
                       ],
                     ),
@@ -181,11 +204,11 @@ class RescueHomeList extends StatelessWidget {
                       Padding(
                         padding: const EdgeInsets.fromLTRB(8, 19, 8, 8),
                         child: Container(
-                          width: 220,
+                          width: size.width * 0.35,
                           child: Container(
-                            width: 180,
+
                             child: (Text(
-                              "Thấy chú chó bị thương",
+                              "Thấy chú chó bị thương ở lưỡi",
                               style: TextStyle(
                                 fontSize: 20,
                                 fontWeight: FontWeight.bold,
@@ -195,31 +218,49 @@ class RescueHomeList extends StatelessWidget {
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.fromLTRB(8, 23, 0, 8),
+                        padding: const EdgeInsets.fromLTRB(1, 23, 0, 8),
                         child: Row(
                           children: [
-                            Text(
-                              "Được đăng bởi ",
-                              style: TextStyle(
-                                fontSize: 17,
-                                fontWeight: FontWeight.bold,
+                            Container(
+                              width: size.width * 0.1,
+                              child:
+                              Column(
+                                children: [
+                                  Icon(Icons.account_circle_outlined),
+
+                                ],
+
                               ),
+
                             ),
-                            Text(
-                              "Hậu Đậu",
-                              style: TextStyle(
-                                fontSize: 17,
-                                fontWeight: FontWeight.bold,
-                                color: Color.fromRGBO(253, 158, 121, 1),
+                            Container(
+                              width: size.width * 0.3,
+                              child:
+                              Column(
+                                children: [
+
+                                  Text(
+                                    "Hậu Đậu",
+                                    style: TextStyle(
+                                      fontSize: 17,
+                                      fontWeight: FontWeight.bold,
+                                      color: Color.fromRGBO(253, 158, 121, 1),
+                                    ),
+                                  ),
+
+                                ],
+
                               ),
-                            )
+
+                            ),
+
                           ],
                         ),
                       ),
                       Padding(
                         padding: const EdgeInsets.fromLTRB(8, 8, 8, 0),
                         child: Container(
-                          width: 220,
+                          width: size.width * 0.4,
                           child: (Text(
                             "15 phút trước",
                             style: TextStyle(
@@ -231,22 +272,49 @@ class RescueHomeList extends StatelessWidget {
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.fromLTRB(8, 18, 3, 4),
-                        child: Container(
-                          width: 220,
-                          child: (Text(
-                            "Địa chỉ: 658 Lê Văn Kiệt, Q9, tp.HCM",
-                            style: TextStyle(
-                              fontSize: 15,
-                              fontWeight: FontWeight.bold,
+                        padding: const EdgeInsets.fromLTRB(1, 23, 0, 8),
+                        child: Row(
+                          children: [
+                            Container(
+                              width: size.width * 0.1,
+                              child:
+                              Column(
+                                children: [
+                                  Icon(Icons.location_on),
+
+                                ],
+
+                              ),
+
                             ),
-                          )),
+                            Container(
+                              width: size.width * 0.33,
+                              child:
+                              Column(
+                                children: [
+
+                                  Text(
+                                    "658 Quang Trung, Q12, tp.HCM",
+                                    style: TextStyle(
+                                      fontSize: 14,
+                                      fontWeight: FontWeight.bold,
+
+                                    ),
+                                  ),
+
+                                ],
+
+                              ),
+
+                            ),
+
+                          ],
                         ),
                       ),
                     ],
                   ),
                 ]),
-                height: 200,
+                height: size.height * 0.55,
                 decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(15),
@@ -270,6 +338,7 @@ class RescueHomeList extends StatelessWidget {
               },
               child: Container(
                 width: double.infinity,
+
                 child: Row(children: <Widget>[
                   Padding(
                     padding: const EdgeInsets.all(8.0),
@@ -277,8 +346,8 @@ class RescueHomeList extends StatelessWidget {
                       children: <Widget>[
                         Image.asset(
                           'src/image/pet_4.jpg',
-                          width: 140,
-                          height: 240,
+                          width: size.width *0.45,
+                          height: size.height* 0.44,
                         ),
                       ],
                     ),
@@ -289,11 +358,11 @@ class RescueHomeList extends StatelessWidget {
                       Padding(
                         padding: const EdgeInsets.fromLTRB(8, 19, 8, 8),
                         child: Container(
-                          width: 220,
+                          width: size.width * 0.35,
                           child: Container(
-                            width: 180,
+
                             child: (Text(
-                              "Mèo què cần được vớt...",
+                              "Một chú mèo bị thương ở chân ",
                               style: TextStyle(
                                 fontSize: 20,
                                 fontWeight: FontWeight.bold,
@@ -303,31 +372,49 @@ class RescueHomeList extends StatelessWidget {
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.fromLTRB(8, 23, 0, 8),
+                        padding: const EdgeInsets.fromLTRB(1, 23, 0, 8),
                         child: Row(
                           children: [
-                            Text(
-                              "Được đăng bởi ",
-                              style: TextStyle(
-                                fontSize: 17,
-                                fontWeight: FontWeight.bold,
+                            Container(
+                              width: size.width * 0.1,
+                              child:
+                              Column(
+                                children: [
+                                  Icon(Icons.account_circle_outlined),
+
+                                ],
+
                               ),
+
                             ),
-                            Text(
-                              "Luân Lù",
-                              style: TextStyle(
-                                fontSize: 17,
-                                fontWeight: FontWeight.bold,
-                                color: Color.fromRGBO(253, 158, 121, 1),
+                            Container(
+                              width: size.width * 0.3,
+                              child:
+                              Column(
+                                children: [
+
+                                  Text(
+                                    "Luân Lù",
+                                    style: TextStyle(
+                                      fontSize: 17,
+                                      fontWeight: FontWeight.bold,
+                                      color: Color.fromRGBO(253, 158, 121, 1),
+                                    ),
+                                  ),
+
+                                ],
+
                               ),
-                            )
+
+                            ),
+
                           ],
                         ),
                       ),
                       Padding(
                         padding: const EdgeInsets.fromLTRB(8, 8, 8, 0),
                         child: Container(
-                          width: 220,
+                          width: size.width * 0.4,
                           child: (Text(
                             "5 phút trước",
                             style: TextStyle(
@@ -339,22 +426,49 @@ class RescueHomeList extends StatelessWidget {
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.fromLTRB(8, 18, 3, 4),
-                        child: Container(
-                          width: 220,
-                          child: (Text(
-                            "Địa chỉ: 658 Lê Văn Luyện, Q9, tp.HCM",
-                            style: TextStyle(
-                              fontSize: 15,
-                              fontWeight: FontWeight.bold,
+                        padding: const EdgeInsets.fromLTRB(1, 23, 0, 8),
+                        child: Row(
+                          children: [
+                            Container(
+                              width: size.width * 0.1,
+                              child:
+                              Column(
+                                children: [
+                                  Icon(Icons.location_on),
+
+                                ],
+
+                              ),
+
                             ),
-                          )),
+                            Container(
+                              width: size.width * 0.33,
+                              child:
+                              Column(
+                                children: [
+
+                                  Text(
+                                    "250 CMT8, Q10, tp.HCM",
+                                    style: TextStyle(
+                                      fontSize: 14,
+                                      fontWeight: FontWeight.bold,
+
+                                    ),
+                                  ),
+
+                                ],
+
+                              ),
+
+                            ),
+
+                          ],
                         ),
                       ),
                     ],
                   ),
                 ]),
-                height: 200,
+                height: size.height * 0.55,
                 decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(15),

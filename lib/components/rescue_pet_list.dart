@@ -19,7 +19,7 @@ class RescuePetListState extends State<RescuePetList> {
 
   @override
   Widget build(BuildContext context) {
-    SizeConfig().init(context);
+    Size size = MediaQuery.of(context).size;
     return Scaffold(
         body: SingleChildScrollView(
 
@@ -94,75 +94,77 @@ class RescuePetListState extends State<RescuePetList> {
                     child: Row(
                       children: <Widget>[
                         Image.asset(
-                          'src/image/cat_5.jpg',
+                          'src/image/meo1.jpg',
                           width: 140,
                           height: 240,
                         ),
                       ],
                     ),
                   ),
-                  Expanded(
-                      child:Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: <Widget>[
-                          Padding(
-                            padding: const EdgeInsets.fromLTRB(8, 23, 8, 8),
-                            child: GestureDetector(
-                              onTap: () {
-                                Navigator.of(context).push(new MaterialPageRoute(
-                                    builder: (context) => PetProfile()));
-                              },
-                              child: Container(
-                                width:SizeConfig.safeBlockVertical * 30,
-                                child: Row(
-                                  children: <Widget>[
-                                    Column(
-                                      children: [
-                                        
-                                        Padding(
-                                          padding: const EdgeInsets.all(8.0),
-                                          child: SizedBox(
-                                            width: 170,
-                                            height: 40,
-                                            child: RaisedButton(
-                                              color: Colors.white,
-                                              shape: RoundedRectangleBorder(
-                                                  borderRadius:
-                                                  BorderRadius.circular(18.0),
-                                                  side: BorderSide(
-                                                      color: Color.fromRGBO(
-                                                          253, 158, 121, 1))),
-                                              onPressed: () {
-                                                Navigator.of(context)
-                                                    .pushReplacement(
-                                                    MaterialPageRoute(
-                                                      builder: (context) =>
-                                                          MyHomePage(),
-                                                    ));
-                                              },
-                                              child: Text(
-                                                'Đã có người nuôi',
-                                                style: TextStyle(
-                                                    color: Colors.green,
-                                                    fontSize: 15),
-                                              ),
-                                            ),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: <Widget>[
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(1, 15, 1, 10),
+                        child: GestureDetector(
+                          onTap: () {
+                            Navigator.of(context).push(new MaterialPageRoute(
+                                builder: (context) => PetProfile()));
+                          },
+                          child: Container(
+                            width: size.width * 0.4,
+                            child: Row(
+                              children: <Widget>[
+                                Column(
+                                  children: [
+                                    Text(
+                                      "Bum",
+                                      style: TextStyle(
+                                        fontSize: 30,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.all(3.0),
+                                      child: SizedBox(
+                                        width: size.width * 0.38,
+                                        height: 40,
+                                        child: RaisedButton(
+                                          color: Colors.white,
+                                          shape: RoundedRectangleBorder(
+                                              borderRadius:
+                                              BorderRadius.circular(18.0),
+                                              side: BorderSide(
+                                                  color: Color.fromRGBO(
+                                                      253, 158, 121, 1))),
+                                          onPressed: () {
+                                            Navigator.of(context)
+                                                .pushReplacement(
+                                                MaterialPageRoute(
+                                                  builder: (context) =>
+                                                      MyHomePage(),
+                                                ));
+                                          },
+                                          child: Text(
+                                            'Đã có người nuôi',
+                                            style: TextStyle(
+                                                color: Colors.green,
+                                                fontSize: 15),
                                           ),
                                         ),
-                                      ],
+                                      ),
                                     ),
                                   ],
                                 ),
-                              ),
+                              ],
                             ),
                           ),
-                        ],
+                        ),
                       ),
-
+                    ],
                   ),
-
                 ]),
-                height: SizeConfig.safeBlockVertical * 25,
+                height: 200,
                 decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(15),
@@ -208,7 +210,7 @@ class RescuePetListState extends State<RescuePetList> {
                                 builder: (context) => PetProfile()));
                           },
                           child: Container(
-                            width: 220,
+                            width: size.width * 0.4,
                             child: Row(
                               children: <Widget>[
                                 Column(
@@ -221,9 +223,9 @@ class RescuePetListState extends State<RescuePetList> {
                                       ),
                                     ),
                                     Padding(
-                                      padding: const EdgeInsets.all(8.0),
+                                      padding: const EdgeInsets.all(3.0),
                                       child: SizedBox(
-                                        width: 170,
+                                        width: size.width * 0.38,
                                         height: 40,
                                         child: RaisedButton(
                                           color: Colors.white,
@@ -301,7 +303,7 @@ class RescuePetListState extends State<RescuePetList> {
                       Padding(
                         padding: const EdgeInsets.fromLTRB(8, 23, 8, 8),
                         child: Container(
-                          width: 220,
+                          width: size.width * 0.4,
                           child: Row(
                             children: <Widget>[
                               Column(
@@ -314,9 +316,9 @@ class RescuePetListState extends State<RescuePetList> {
                                     ),
                                   ),
                                   Padding(
-                                    padding: const EdgeInsets.all(8.0),
+                                    padding: const EdgeInsets.all(3.0),
                                     child: SizedBox(
-                                      width: 170,
+                                      width: size.width * 0.38,
                                       height: 40,
                                       child: RaisedButton(
                                         color: Colors.white,

@@ -28,7 +28,7 @@ class ItemInfo extends State<PostDetail> {
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
-            icon: Icon(Icons.arrow_back, color: Colors.black),
+            icon: Icon(Icons.arrow_back_ios, color: Colors.white),
             onPressed: () {
               Navigator.of(context).pushReplacement(MaterialPageRoute(
                 builder: (context) => MyHomePage(),
@@ -152,6 +152,15 @@ class ItemInfo extends State<PostDetail> {
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
+                              Column(
+                                children: [
+                                  Text("Loại",
+                                      style:
+                                      TextStyle(color: Colors.blueAccent)),
+                                  Text("Mèo",
+                                      style: TextStyle(color: Colors.orange)),
+                                ],
+                              ),
                               Column(
                                 children: [
                                   Text("Tuổi",
@@ -308,7 +317,7 @@ class ItemInfo extends State<PostDetail> {
                           width: 350,
                           alignment: Alignment.center,
                           child: Text(
-                            "Bum is a Russian cat. He's known for being quiet and sweet. Although Bum tend to be relax and easygoing, Bum also command an air of royalty.",
+                            "Bum là một con mèo Nga. Nó được biết đến với tính cách trầm lặng và ngọt ngào. Mặc dù Bum có xu hướng thư giãn và dễ tính, Bum cũng có khí chất của hoàng tộc.",
                             textAlign: TextAlign.left,
                             overflow: TextOverflow.ellipsis,
                             maxLines: 3,

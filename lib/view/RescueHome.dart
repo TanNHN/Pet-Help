@@ -53,7 +53,7 @@ class RescueHome extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.fromLTRB(10, 0, 0, 0),
                     child: Text(
-                      'Cuu Tro Luân Hồi\ncuutro@gmail.com',
+                      'Cuu Tro FPT\ncuutro@gmail.com',
                       style: TextStyle(
                           fontStyle: FontStyle.normal,
                           color: Colors.black,

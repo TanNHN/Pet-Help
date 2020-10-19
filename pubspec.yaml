@@ -21,8 +21,17 @@ environment:
   sdk: ">=2.7.0 <3.0.0"
 
 dependencies:
+  flutter_xlider: ^3.4.0
+  sticky_headers: "^0.1.8"
+  flutter_material_color_picker: ^1.0.3
+  address_picker:
+    git:
+      url: git://github.com/vulemicom/address_picker_flutter.git
   flutter:
     sdk: flutter
+  flutter_number_picker:
+      git: https://github.com/phuongtinhbien/flutter_number_picker.git
+
  
 
 
