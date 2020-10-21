@@ -81,7 +81,11 @@ class _PickState extends State<Pick> {
             icon: Icon(Icons.arrow_back_ios, color: Colors.white),
             onPressed: () {
               Navigator.of(context).pushReplacement(MaterialPageRoute(
+<<<<<<< Updated upstream
                 builder: (context) => MyHomePage(),
+=======
+                builder: (context) => RescueHome(), 
+>>>>>>> Stashed changes
               ));
             }),
         title: Container(
