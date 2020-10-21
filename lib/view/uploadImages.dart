@@ -256,17 +256,21 @@ class _UploadImagesState extends State<UploadImages> {
                           style: TextStyle(
                             fontSize: 17, ),
                         ),
-                        MaterialColorPicker(
+
+                        Container(
+                          width: 320,
+                          child: MaterialColorPicker(
 
 
 
 
-                            allowShades: false, // default true
-                            onMainColorChange: (ColorSwatch color) {
-                              // Handle main color changes
-                            },
-                            selectedColor: Colors.red
-                        )
+                              allowShades: false, // default true
+                              onMainColorChange: (ColorSwatch color) {
+                                // Handle main color changes
+                              },
+                              selectedColor: Colors.red
+                          ),
+                        ),
                       ],
                     ),
                   )
