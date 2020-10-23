@@ -82,9 +82,9 @@ class UserPostManagement extends StatelessWidget {
                 child: Column(
                   children: [
                     SizedBox(height: 10),
-                    SizedBox(
-                      height: 20,
-                    ),
+                    // SizedBox(
+                    //   height: 20,
+                    // ),
                     new GestureDetector(
                       onTap: () {
                         Navigator.push(
@@ -118,10 +118,11 @@ class UserPostManagement extends StatelessWidget {
                                   child: Container(
                                     width: 180,
                                     child: (Text(
-                                      "Mèo què cần được vớt...",
+                                      "MÈO QUÈ",
                                       style: TextStyle(
                                         fontSize: 20,
                                         fontWeight: FontWeight.bold,
+                                        color: Colors.blue,
                                       ),
                                     )),
                                   ),
@@ -159,7 +160,7 @@ class UserPostManagement extends StatelessWidget {
                                       style: TextStyle(
                                         color: Colors.grey,
                                         fontSize: 15,
-                                        fontWeight: FontWeight.bold,
+                                        fontStyle: FontStyle.italic,
                                       ),
                                     )
                                   ],
@@ -171,7 +172,7 @@ class UserPostManagement extends StatelessWidget {
                                   children: [
                                     Icon(Icons.add_location),
                                     Text(
-                                      " 658 Lã Xuân Oai, Q.9, TP.HCM",
+                                      " 658 Lã Xuân Oai, Q.9, HCM",
                                       style: TextStyle(
                                         fontSize: 15,
                                         fontWeight: FontWeight.bold,
@@ -249,6 +250,7 @@ class UserPostManagement extends StatelessWidget {
                                       style: TextStyle(
                                         fontSize: 20,
                                         fontWeight: FontWeight.bold,
+                                        color: Colors.blue,
                                       ),
                                     )),
                                   ),
@@ -286,7 +288,7 @@ class UserPostManagement extends StatelessWidget {
                                       style: TextStyle(
                                         color: Colors.grey,
                                         fontSize: 15,
-                                        fontWeight: FontWeight.bold,
+                                        fontStyle: FontStyle.italic,
                                       ),
                                     )
                                   ],
@@ -298,7 +300,7 @@ class UserPostManagement extends StatelessWidget {
                                   children: [
                                     Icon(Icons.add_location),
                                     Text(
-                                      " 658 Lã Xuân Oai, Q.9, TP.HCM",
+                                      " 658 Lã Xuân Oai, Q.9, HCM",
                                         style: TextStyle(
                                           fontSize: 15,
                                           fontWeight: FontWeight.bold,
