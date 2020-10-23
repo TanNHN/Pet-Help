@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_material_color_picker/flutter_material_color_picker.dart';
 import 'package:google_fonts/google_fonts.dart';
 // import 'package:pet_help/components/BottomNaviBar.dart';
 import 'package:pet_help/components/listView.dart';
@@ -102,7 +103,7 @@ class UserPostManagement extends StatelessWidget {
                                 Image.asset(
                                   'src/image/rescue_cat3.jpg',
                                   width: 140,
-                                  height: 240,
+                                  height: 280,
                                 ),
                               ],
                             ),
@@ -149,36 +150,56 @@ class UserPostManagement extends StatelessWidget {
                                 ),
                               ),
                               Padding(
-                                padding: const EdgeInsets.fromLTRB(8, 8, 8, 0),
-                                child: Container(
-                                  width: 220,
-                                  child: (Text(
-                                    "25 phút trước",
-                                    style: TextStyle(
-                                      color: Colors.grey,
-                                      fontSize: 15,
-                                      fontWeight: FontWeight.bold,
-                                    ),
-                                  )),
+                                padding: const EdgeInsets.fromLTRB(8, 18, 3, 4),
+                                child: Row(
+                                  children: [
+                                    Icon(Icons.access_time,color: Colors.grey,),
+                                    Text(
+                                      " 25 phút trước",
+                                      style: TextStyle(
+                                        color: Colors.grey,
+                                        fontSize: 15,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    )
+                                  ],
                                 ),
                               ),
                               Padding(
                                 padding: const EdgeInsets.fromLTRB(8, 18, 3, 4),
-                                child: Container(
-                                  // width: 220,
-                                  child: (Text(
-                                    "Địa chỉ: 658 Lã Xuân Oai, Q9, TP.HCM",
-                                    style: TextStyle(
-                                      fontSize: 15,
-                                      fontWeight: FontWeight.bold,
+                                child: Row(
+                                  children: [
+                                    Icon(Icons.add_location),
+                                    Text(
+                                      " 658 Lã Xuân Oai, Q.9, TP.HCM",
+                                      style: TextStyle(
+                                        fontSize: 15,
+                                        fontWeight: FontWeight.bold,
+                                      ),
                                     ),
-                                  )),
+                                  ],
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.fromLTRB(8, 18, 3, 4),
+                                child: Row(
+                                  children: [
+                                    Icon(Icons.wb_incandescent_rounded,color: Colors.red,),
+                                    Text(
+                                      " CHƯA ĐƯỢC CỨU",
+                                      style: TextStyle(
+                                        color: Colors.red,
+                                        fontSize: 15,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    )
+                                  ],
                                 ),
                               ),
                             ],
                           ),
                         ]),
-                        height: 200,
+                        height: 250,
                         decoration: BoxDecoration(
                             color: Colors.white,
                             borderRadius: BorderRadius.circular(15),
@@ -256,50 +277,56 @@ class UserPostManagement extends StatelessWidget {
                                 ),
                               ),
                               Padding(
-                                padding: const EdgeInsets.fromLTRB(8, 8, 8, 0),
-                                child: Container(
-                                  width: 220,
-                                  child: (Text(
-                                    "1 ngày trước",
-                                    style: TextStyle(
-                                      color: Colors.grey,
-                                      fontSize: 15,
-                                      fontWeight: FontWeight.bold,
-                                    ),
-                                  )),
+                                padding: const EdgeInsets.fromLTRB(8, 18, 3, 4),
+                                child: Row(
+                                  children: [
+                                    Icon(Icons.access_time,color: Colors.grey,),
+                                    Text(
+                                      " 1 ngày trước",
+                                      style: TextStyle(
+                                        color: Colors.grey,
+                                        fontSize: 15,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    )
+                                  ],
                                 ),
                               ),
                               Padding(
                                 padding: const EdgeInsets.fromLTRB(8, 18, 3, 4),
-                                child: Container(
-                                  // width: 220,
-                                  child: (Text(
-                                    "Địa chỉ: 658 Lã Xuân Oai, Q9, TP.HCM",
-                                    style: TextStyle(
-                                      fontSize: 15,
-                                      fontWeight: FontWeight.bold,
+                                child: Row(
+                                  children: [
+                                    Icon(Icons.add_location),
+                                    Text(
+                                      " 658 Lã Xuân Oai, Q.9, TP.HCM",
+                                        style: TextStyle(
+                                          fontSize: 15,
+                                          fontWeight: FontWeight.bold,
+                                        ),
                                     ),
-                                  )),
+                                  ],
                                 ),
                               ),
                               Padding(
-                                padding: const EdgeInsets.fromLTRB(8, 8, 8, 0),
-                                child: Container(
-                                  width: 220,
-                                  child: (Text(
-                                    "Cách vị trị hiện tại 15km",
-                                    style: TextStyle(
-                                      color: Colors.red,
-                                      fontSize: 15,
-                                      fontWeight: FontWeight.bold,
-                                    ),
-                                  )),
+                                padding: const EdgeInsets.fromLTRB(8, 18, 3, 4),
+                                child: Row(
+                                  children: [
+                                    Icon(Icons.wb_incandescent_rounded,color: Colors.green,),
+                                    Text(
+                                      " ĐÃ ĐƯỢC CỨU",
+                                      style: TextStyle(
+                                        color: Colors.green,
+                                        fontSize: 15,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    )
+                                  ],
                                 ),
                               ),
                             ],
                           ),
                         ]),
-                        height: 200,
+                        height: 250,
                         decoration: BoxDecoration(
                             color: Colors.white,
                             borderRadius: BorderRadius.circular(15),
