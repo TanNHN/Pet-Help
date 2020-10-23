@@ -165,9 +165,9 @@ class UserPostManagement extends StatelessWidget {
                               Padding(
                                 padding: const EdgeInsets.fromLTRB(8, 18, 3, 4),
                                 child: Container(
-                                  width: 220,
+                                  // width: 220,
                                   child: (Text(
-                                    "Địa chỉ: 658 Lê Văn Luyện, Q9, tp.HCM",
+                                    "Địa chỉ: 658 Lã Xuân Oai, Q9, TP.HCM",
                                     style: TextStyle(
                                       fontSize: 15,
                                       fontWeight: FontWeight.bold,
@@ -207,7 +207,7 @@ class UserPostManagement extends StatelessWidget {
                             child: Row(
                               children: <Widget>[
                                 Image.asset(
-                                  'src/image/rescue_cat3.jpg',
+                                  'src/image/cat_5.jpg',
                                   width: 140,
                                   height: 240,
                                 ),
@@ -224,7 +224,7 @@ class UserPostManagement extends StatelessWidget {
                                   child: Container(
                                     width: 180,
                                     child: (Text(
-                                      "Mèo què cần được vớt...",
+                                      "Mèo bị bỏ rơi...",
                                       style: TextStyle(
                                         fontSize: 20,
                                         fontWeight: FontWeight.bold,
@@ -260,7 +260,7 @@ class UserPostManagement extends StatelessWidget {
                                 child: Container(
                                   width: 220,
                                   child: (Text(
-                                    "25 phút trước",
+                                    "1 ngày trước",
                                     style: TextStyle(
                                       color: Colors.grey,
                                       fontSize: 15,
@@ -272,10 +272,24 @@ class UserPostManagement extends StatelessWidget {
                               Padding(
                                 padding: const EdgeInsets.fromLTRB(8, 18, 3, 4),
                                 child: Container(
+                                  // width: 220,
+                                  child: (Text(
+                                    "Địa chỉ: 658 Lã Xuân Oai, Q9, TP.HCM",
+                                    style: TextStyle(
+                                      fontSize: 15,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  )),
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.fromLTRB(8, 8, 8, 0),
+                                child: Container(
                                   width: 220,
                                   child: (Text(
-                                    "Địa chỉ: 658 Lê Văn Luyện, Q9, tp.HCM",
+                                    "Cách vị trị hiện tại 15km",
                                     style: TextStyle(
+                                      color: Colors.red,
                                       fontSize: 15,
                                       fontWeight: FontWeight.bold,
                                     ),
