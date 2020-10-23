@@ -262,7 +262,7 @@ class ItemInfo extends State<UserPetProfile> {
                                   Navigator.of(context)
                                       .push(new MaterialPageRoute(
                                     builder: (context) => ChatScreen(
-                                      name: "User",
+                                      name: "Trung tâm cứu trợ SAR",
                                       UrlImage: "",
                                     ),
                                   ));

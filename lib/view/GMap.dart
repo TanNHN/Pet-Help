@@ -3,6 +3,8 @@ import 'dart:collection';
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
+import 'RescueHome.dart';
+
 class GMap extends StatefulWidget {
   GMap({Key key}) : super(key: key);
 
@@ -45,6 +47,7 @@ class _GMapState extends State<GMap> {
     }
   }
 
+
   void _setPolygons() {
     List<LatLng> polygonLatLongs = List<LatLng>();
     polygonLatLongs.add(LatLng(37.78493, -122.42932));
@@ -83,10 +86,11 @@ class _GMapState extends State<GMap> {
     _circles.add(
       Circle(
           circleId: CircleId("0"),
-          center: LatLng(37.76493, -122.42432),
-          radius: 1000,
-          strokeWidth: 2,
-          fillColor: Color.fromRGBO(102, 51, 153, .5)),
+          center: LatLng(10.841867, 106.809328),
+          radius: 20,
+          strokeWidth: 1,
+          fillColor: Color.fromRGBO(241, 147, 115, 200),
+    ),
     );
   }
 
@@ -97,7 +101,7 @@ class _GMapState extends State<GMap> {
       _markers.add(
         Marker(
             markerId: MarkerId("0"),
-            position: LatLng(37.77483, -122.41942),
+            position: LatLng(10.841867, 106.809328),
             infoWindow: InfoWindow(
               title: "San Francsico",
               snippet: "An Interesting city",
@@ -116,8 +120,8 @@ class _GMapState extends State<GMap> {
           GoogleMap(
             onMapCreated: _onMapCreated,
             initialCameraPosition: CameraPosition(
-              target: LatLng(37.77483, -122.41942),
-              zoom: 12,
+              target: LatLng(10.841867, 106.809328),
+              zoom: 20,
             ),
             markers: _markers,
             polygons: _polygons,
@@ -135,13 +139,9 @@ class _GMapState extends State<GMap> {
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       floatingActionButton: FloatingActionButton(
         tooltip: 'Increment',
-        child: Icon(Icons.map),
+        child: Icon(Icons.done),
         onPressed: () {
-          setState(() {
-            _showMapStyle = !_showMapStyle;
-          });
-
-          _toggleMapStyle();
+          Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => RescueHome()));
         },
       ),
     );

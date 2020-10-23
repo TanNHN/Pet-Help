@@ -11,6 +11,8 @@ import 'package:pet_help/view/UserPostManagement.dart';
 import 'package:pet_help/view/login_page.dart';
 import 'package:pet_help/view/proflie.dart';
 
+import 'ContactUser.dart';
+
 class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -111,7 +113,7 @@ class MyHomePage extends StatelessWidget {
               ),
               onTap: () {
                 Navigator.of(context).pushReplacement(MaterialPageRoute(
-                  builder: (context) => ContactView(),
+                  builder: (context) => ContactViewUser(),
                 ));
               },
             ),

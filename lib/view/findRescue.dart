@@ -129,7 +129,7 @@ class _PickState extends State<Pick> {
                     Padding(
                       padding: const EdgeInsets.all(10.0),
                       child: Container(
-                        width: 400,
+                        width: 440,
                         height: 50,
                         decoration: BoxDecoration(
                             color: Colors.white,
@@ -164,7 +164,7 @@ class _PickState extends State<Pick> {
                     Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Container(
-                          width: 400,
+                          width: 440,
                           height: 50,
                           decoration: BoxDecoration(
                               color: Colors.white,
@@ -215,7 +215,7 @@ class _PickState extends State<Pick> {
                     Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Container(
-                          width: 400,
+                          width: 440,
                           height: 220,
                           decoration: BoxDecoration(
                               color: Colors.white,
@@ -249,7 +249,7 @@ class _PickState extends State<Pick> {
                     Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Container(
-                          width: 400,
+                          width: 440,
                           height: 50,
                           decoration: BoxDecoration(
                               color: Colors.white,
@@ -302,7 +302,7 @@ class _PickState extends State<Pick> {
                     Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Container(
-                        width: 400,
+                        width: 440,
                         height: 50,
                         decoration: BoxDecoration(
                             color: Colors.white,
@@ -346,7 +346,7 @@ class _PickState extends State<Pick> {
                     Padding(
                       padding: const EdgeInsets.all(10.0),
                       child: Container(
-                        width: 400,
+                        width: 440,
                         height: 50,
                         decoration: BoxDecoration(
                             color: Colors.white,
@@ -382,7 +382,7 @@ class _PickState extends State<Pick> {
                     Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Container(
-                            width: 400,
+                            width: 440,
                             height: 50,
                           decoration: BoxDecoration(
                               color: Colors.white,
@@ -440,7 +440,7 @@ class _PickState extends State<Pick> {
                     Padding(
                       padding: const EdgeInsets.all(10.0),
                       child: Container(
-                        width: 400,
+                        width: 440,
                         height: 130,
                         decoration: BoxDecoration(
                             color: Colors.white,

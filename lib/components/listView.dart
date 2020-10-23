@@ -70,7 +70,7 @@ class _ListViewPetState extends State<ListViewPet> {
                     child: Image.network(
                       data[index]['pathImg'],
                       height: 200,
-                      width: 150,
+                      width: 160,
                       fit: BoxFit.fitHeight,
                     ),
                   ),
@@ -84,7 +84,7 @@ class _ListViewPetState extends State<ListViewPet> {
                           Container(
                             width: 170,
                             height: 60,
-                            child: Row(
+                            child: Column(
                               children: [
                                 Flexible(
                                   child: Text(
@@ -93,7 +93,7 @@ class _ListViewPetState extends State<ListViewPet> {
                                         .toUpperCase(),
                                     overflow: TextOverflow.clip,
                                     style: TextStyle(
-                                        fontSize: 15,
+                                        fontSize: 18,
                                         fontWeight: FontWeight.bold,
                                         color: Colors.green),
                                   ),
@@ -135,7 +135,7 @@ class _ListViewPetState extends State<ListViewPet> {
                               ],
                             ),
                           ),
-                          Row(
+                          Column(
                             children: [
                               Icon(Icons.person),
                               Text(
