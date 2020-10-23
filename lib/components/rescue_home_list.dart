@@ -30,7 +30,6 @@ class RescueHomeList extends StatelessWidget {
               },
               child: Container(
                 width: double.infinity,
-
                 child: Row(children: <Widget>[
                   Padding(
                     padding: const EdgeInsets.all(8.0),
@@ -52,7 +51,6 @@ class RescueHomeList extends StatelessWidget {
                         child: Container(
                           width: size.width * 0.35,
                           child: Container(
-
                             child: (Text(
                               "Một con mèo bị thương ngay miệng",
                               style: TextStyle(
@@ -73,18 +71,14 @@ class RescueHomeList extends StatelessWidget {
                               Column(
                                 children: [
                                   Icon(Icons.account_circle_outlined),
-
                                 ],
-
                               ),
-
                             ),
                             Container(
                               width: size.width * 0.3,
                               child:
                               Column(
                                 children: [
-
                                   Text(
                                     "Dũng Xạo",
                                     style: TextStyle(
@@ -93,13 +87,9 @@ class RescueHomeList extends StatelessWidget {
                                       color: Color.fromRGBO(253, 158, 121, 1),
                                     ),
                                   ),
-
                                 ],
-
                               ),
-
                             ),
-
                           ],
                         ),
                       ),
@@ -127,11 +117,8 @@ class RescueHomeList extends StatelessWidget {
                               Column(
                                 children: [
                                   Icon(Icons.location_on),
-
                                 ],
-
                               ),
-
                             ),
                             Container(
                               width: size.width * 0.33,
@@ -144,16 +131,11 @@ class RescueHomeList extends StatelessWidget {
                                     style: TextStyle(
                                       fontSize: 14,
                                       fontWeight: FontWeight.bold,
-
                                     ),
                                   ),
-
                                 ],
-
                               ),
-
                             ),
-
                           ],
                         ),
                       ),
@@ -184,7 +166,6 @@ class RescueHomeList extends StatelessWidget {
               },
               child: Container(
                 width: double.infinity,
-
                 child: Row(children: <Widget>[
                   Padding(
                     padding: const EdgeInsets.all(8.0),
@@ -206,7 +187,6 @@ class RescueHomeList extends StatelessWidget {
                         child: Container(
                           width: size.width * 0.35,
                           child: Container(
-
                             child: (Text(
                               "Thấy chú chó bị thương ở lưỡi",
                               style: TextStyle(
