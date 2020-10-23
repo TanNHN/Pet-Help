@@ -232,7 +232,7 @@ class MyPostDetailState extends State<MyPostDetail> {
                           Container(
                             // width: 220,
                             child: Text(
-                              "120 Võ Văn Ngân, Q9, TP.HCM",
+                              "658 Lã Xuân Oai, Q.9, TP.HCM",
                               style: TextStyle(
                                 fontSize: 17,
                               ),
