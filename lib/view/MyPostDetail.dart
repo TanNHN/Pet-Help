@@ -57,9 +57,7 @@ class MyPostDetailState extends State<MyPostDetail> {
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
-
             icon: Icon(Icons.arrow_back_ios, color: Colors.white),
-
             onPressed: () {
               Navigator.of(context).pushReplacement(MaterialPageRoute(
                 builder: (context) => UserPostManagement(),
@@ -183,7 +181,7 @@ class MyPostDetailState extends State<MyPostDetail> {
                             ),
                           ),
                           Text(
-                            "Dũng Xạo",
+                            "Tom",
                             style: TextStyle(
                               fontSize: 20,
                               color: Color.fromRGBO(253, 158, 121, 1),
@@ -232,9 +230,9 @@ class MyPostDetailState extends State<MyPostDetail> {
                             ),
                           ),
                           Container(
-                            width: 220,
+                            // width: 220,
                             child: Text(
-                              "120 Võ Văn Ngân, Q9, tp.HCM",
+                              "120 Võ Văn Ngân, Q9, TP.HCM",
                               style: TextStyle(
                                 fontSize: 17,
                               ),
@@ -262,10 +260,8 @@ class MyPostDetailState extends State<MyPostDetail> {
                           ),
                           Padding(
                             padding: const EdgeInsets.fromLTRB(8, 8, 0, 8),
-                            child:
-                            Row(
+                            child: Row(
                               children: [
-
                                 Text(
                                   "Loại: ",
                                   textAlign: TextAlign.left,
@@ -288,10 +284,8 @@ class MyPostDetailState extends State<MyPostDetail> {
                           ),
                           Padding(
                             padding: const EdgeInsets.fromLTRB(8, 0, 0, 8),
-                            child:
-                            Row(
+                            child: Row(
                               children: [
-
                                 Text(
                                   "Màu sắc: ",
                                   textAlign: TextAlign.left,
@@ -332,38 +326,34 @@ class MyPostDetailState extends State<MyPostDetail> {
                               ),
                             ],
                           ),
-                        Padding(
-                          padding: const EdgeInsets.fromLTRB(8, 8, 0, 8),
-                          child:
-                          Row(
-                          children: [
-
-                          Text(
-                          "Tổng quát: ",
-                          textAlign: TextAlign.left,
-                          style: TextStyle(
-                          fontSize: 17,
-                          fontWeight: FontWeight.bold,
-                          ),
-                          ),
-                            Container(
-                            width: 230,
-                              child: Text(
-                            "Cảnh giác cao",
-                              style: TextStyle(
-                              fontSize: 17,
-                              ),
-                              ),
-                              )
-                                ],
+                          Padding(
+                            padding: const EdgeInsets.fromLTRB(8, 8, 0, 8),
+                            child: Row(
+                              children: [
+                                Text(
+                                  "Tổng quát: ",
+                                  textAlign: TextAlign.left,
+                                  style: TextStyle(
+                                    fontSize: 17,
+                                    fontWeight: FontWeight.bold,
+                                  ),
                                 ),
-                                ),
+                                Container(
+                                  width: 230,
+                                  child: Text(
+                                    "Cảnh giác cao",
+                                    style: TextStyle(
+                                      fontSize: 17,
+                                    ),
+                                  ),
+                                )
+                              ],
+                            ),
+                          ),
                           Padding(
                             padding: const EdgeInsets.fromLTRB(8, 0, 0, 8),
-                            child:
-                            Row(
+                            child: Row(
                               children: [
-
                                 Text(
                                   "Bị thương: ",
                                   textAlign: TextAlign.left,
@@ -386,10 +376,8 @@ class MyPostDetailState extends State<MyPostDetail> {
                           ),
                           Padding(
                             padding: const EdgeInsets.fromLTRB(8, 0, 0, 8),
-                            child:
-                            Row(
+                            child: Row(
                               children: [
-
                                 Text(
                                   "Vị trí vết thương: ",
                                   textAlign: TextAlign.left,
@@ -412,10 +400,8 @@ class MyPostDetailState extends State<MyPostDetail> {
                           ),
                           Padding(
                             padding: const EdgeInsets.fromLTRB(8, 0, 0, 8),
-                            child:
-                            Row(
+                            child: Row(
                               children: [
-
                                 Text(
                                   "Phần trăm vết thương: ",
                                   textAlign: TextAlign.left,
@@ -517,10 +503,12 @@ class MyPostDetailState extends State<MyPostDetail> {
                             children: [
                               GestureDetector(
                                 onTap: () {
-                                  Navigator.of(context).push(
-                                      new MaterialPageRoute(
-                                          builder: (context) =>
-                                              ChatScreen(name: 'Dũng Xạo',UrlImage: 'image/cat4.jpg',)));
+                                  Navigator.of(context)
+                                      .push(new MaterialPageRoute(
+                                          builder: (context) => ChatScreen(
+                                                name: 'Dũng Xạo',
+                                                UrlImage: 'image/cat4.jpg',
+                                              )));
                                 },
                                 child: Align(
                                   child: Text("Liên lạc",
@@ -533,32 +521,32 @@ class MyPostDetailState extends State<MyPostDetail> {
                             ],
                           ),
                         ),
-                        GestureDetector(
-                            onTap: () {
-                              Navigator.of(context).push(new MaterialPageRoute(
-                                  builder: (context) => GMap()));
-                            },
-                            child: Container(
-                              height: 43,
-                              width: 200,
-                              alignment: Alignment.center,
-                              padding: EdgeInsets.all(12),
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(8),
-                                color: Colors.orange,
-                              ),
-                              child: Column(
-                                children: [
-                                  Align(
-                                    child: Text("Chấp nhận cứu trợ",
-                                        style: TextStyle(
-                                            color: Colors.white,
-                                            fontSize: 16,
-                                            fontWeight: FontWeight.bold)),
-                                  )
-                                ],
-                              ),
-                            ))
+                        // GestureDetector(
+                        //     onTap: () {
+                        //       Navigator.of(context).push(new MaterialPageRoute(
+                        //           builder: (context) => GMap()));
+                        //     },
+                        //     child: Container(
+                        //       height: 43,
+                        //       width: 200,
+                        //       alignment: Alignment.center,
+                        //       padding: EdgeInsets.all(12),
+                        //       decoration: BoxDecoration(
+                        //         borderRadius: BorderRadius.circular(8),
+                        //         color: Colors.orange,
+                        //       ),
+                        //       child: Column(
+                        //         children: [
+                        //           Align(
+                        //             child: Text("Chấp nhận cứu trợ",
+                        //                 style: TextStyle(
+                        //                     color: Colors.white,
+                        //                     fontSize: 16,
+                        //                     fontWeight: FontWeight.bold)),
+                        //           )
+                        //         ],
+                        //       ),
+                        //     ))
                       ],
                     ),
                   ],
