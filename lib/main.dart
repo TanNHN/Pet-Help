@@ -19,8 +19,10 @@ import 'package:pet_help/view/PetHealthReportList.dart';
 import 'package:pet_help/view/PetProfile.dart';
 import 'package:pet_help/view/RescueHome.dart';
 import 'package:pet_help/view/RescuePetManagement.dart';
+import 'package:pet_help/view/findAdopter.dart';
 
 import 'package:pet_help/view/findRescue.dart';
+import 'package:pet_help/view/loadimg.dart';
 import 'package:pet_help/view/splash_screen.dart';
 
 void main() {
@@ -31,8 +33,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+
         home: Login(
             // title: 'Post',
             ));
+
   }
 }

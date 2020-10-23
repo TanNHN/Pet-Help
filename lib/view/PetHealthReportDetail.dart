@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pet_help/components/chat.dart';
 import 'package:pet_help/view/PetHealthReportList.dart';
 
 class PetHealthReportDetail extends StatelessWidget {
@@ -7,7 +8,9 @@ class PetHealthReportDetail extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(
           leading: IconButton(
+
               icon: Icon(Icons.arrow_back_ios, color: Colors.white),
+
               onPressed: () {
                 Navigator.of(context).pushReplacement(MaterialPageRoute(
                   builder: (context) => ViewPetReportList(),
@@ -189,8 +192,8 @@ class PetHealthReportDetail extends StatelessWidget {
                                   onPressed: () {
                                     Navigator.of(context)
                                         .pushReplacement(MaterialPageRoute(
-                                      builder: (context) => ViewPetReportList(),
-                                    ));
+                                      builder: (context) => ChatScreen(name: 'Tan1',UrlImage: 'image/cat4.jpg',)));
+
                                   },
                                   child: Padding(
                                     padding: const EdgeInsets.all(8.0),

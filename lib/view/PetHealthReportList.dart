@@ -10,7 +10,9 @@ class ViewPetReportList extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(
           leading: IconButton(
+
               icon: Icon(Icons.arrow_back_ios, color: Colors.white),
+
               onPressed: () {
                 Navigator.of(context).pushReplacement(MaterialPageRoute(
                   builder: (context) => PetProfile(),
@@ -163,7 +165,7 @@ class ViewPetReportList extends StatelessWidget {
                                 onPressed: () {
                                   Navigator.of(context)
                                       .pushReplacement(MaterialPageRoute(
-                                    builder: (context) => MyHomePage(),
+                                    builder: (context) => PetHealthReportDetail(),
                                   ));
                                 },
                                 child: Text(

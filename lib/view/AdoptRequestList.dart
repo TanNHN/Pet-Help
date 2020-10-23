@@ -8,10 +8,13 @@ import 'package:pet_help/view/RescueHome.dart';
 class AdoptRequestList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     return Scaffold(
         appBar: AppBar(
           leading: IconButton(
+
               icon: Icon(Icons.arrow_back_ios, color: Colors.white),
+
               onPressed: () {
                 Navigator.of(context).pushReplacement(MaterialPageRoute(
                   builder: (context) => RescueHome(),
@@ -28,7 +31,7 @@ class AdoptRequestList extends StatelessWidget {
         ),
         body: SingleChildScrollView(
           child: Padding(
-            padding: const EdgeInsets.all(8.0),
+            padding: const EdgeInsets.all(3.0),
             child: Column(
               children: [
                 // Text(
@@ -98,7 +101,7 @@ class AdoptRequestList extends StatelessWidget {
                                   ),
                                 ),
                                 Text(
-                                  "Lê Duẩn",
+                                  "Nguyễn Văn Du",
                                   style: TextStyle(
                                     fontSize: 15,
                                     fontWeight: FontWeight.bold,
@@ -192,7 +195,7 @@ class AdoptRequestList extends StatelessWidget {
                                 ),
                               ),
                               Text(
-                                "Lậu",
+                                "Bụt",
                                 style: TextStyle(
                                   fontSize: 15,
                                   fontWeight: FontWeight.bold,

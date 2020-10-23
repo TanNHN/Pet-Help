@@ -3,12 +3,12 @@ import 'package:pet_help/components/listMessenger.dart';
 import 'package:pet_help/view/HomePage.dart';
 import 'package:pet_help/view/RescueHome.dart';
 
-class ContactView extends StatefulWidget {
+class ContactViewUser extends StatefulWidget {
   @override
   _ContactViewState createState() => _ContactViewState();
 }
 
-class _ContactViewState extends State<ContactView> {
+class _ContactViewState extends State<ContactViewUser> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,7 +18,7 @@ class _ContactViewState extends State<ContactView> {
             icon: Icon(Icons.arrow_back_ios, color: Colors.white),
             onPressed: () {
               Navigator.of(context).pushReplacement(MaterialPageRoute(
-                builder: (context) => RescueHome(),
+                builder: (context) => MyHomePage(),
               ));
             }),
         title: Text('Liên Lạc'),

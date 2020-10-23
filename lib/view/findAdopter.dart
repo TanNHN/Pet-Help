@@ -1,5 +1,3 @@
-import 'dart:io';
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_material_color_picker/flutter_material_color_picker.dart';
@@ -11,70 +9,21 @@ import 'package:pet_help/view/HomePage.dart';
 import 'package:pet_help/view/RescueHome.dart';
 
 import 'loadimg.dart';
+import 'dart:io';
 
-class Pick extends StatefulWidget {
+class PickAdopter extends StatefulWidget {
   @override
-  _PickState createState() => _PickState();
+  _PickAdopterState createState() => _PickAdopterState();
 }
 
-class _PickState extends State<Pick> {
+class _PickAdopterState extends State<PickAdopter> {
   double _lowerValue = 50;
   double _upperValue = 180;
   final number = TextEditingController();
-
-  // File _image;
-  // _imgFromCamera() async {
-  // File image = await ImagePicker.pickImage(
-  //     source: ImageSource.camera, imageQuality: 50);
-
-  // setState(() {
-  //   _image = image;
-  // });
-  // }
-
-  // _imgFromGallery() async {
-  //   File image = await ImagePicker.pickImage(
-  //       source: ImageSource.gallery, imageQuality: 50);
-
-  // setState(() {
-  //   _image = image;
-  // });
-  // }
-
-  // void _showPicker(context) {
-  //   showModalBottomSheet(
-  //       context: context,
-  //       builder: (BuildContext bc) {
-  //         return SafeArea(
-  //           child: Container(
-  //             child: new Wrap(
-  //               children: <Widget>[
-  //                 new ListTile(
-  //                     leading: new Icon(Icons.photo_library),
-  //                     title: new Text('Bộ sưu tập'),
-  //                     onTap: () {
-  //                       _imgFromGallery();
-  //                       Navigator.of(context).pop();
-  //                     }),
-  //                 new ListTile(
-  //                   leading: new Icon(Icons.photo_camera),
-  //                   title: new Text('Camera'),
-  //                   onTap: () {
-  //                     _imgFromCamera();
-  //                     Navigator.of(context).pop();
-  //                   },
-  //                 ),
-  //               ],
-  //             ),
-  //           ),
-  //         );
-  //       });
-  // }
-
   @override
   Widget build(BuildContext context) {
     int _value = 1;
-    return Scaffold(
+    return  Scaffold(
       resizeToAvoidBottomPadding: false, // tránh overcross
       resizeToAvoidBottomInset: true, // bàn phím che textfield
       appBar: AppBar(
@@ -83,7 +32,7 @@ class _PickState extends State<Pick> {
             icon: Icon(Icons.arrow_back_ios, color: Colors.white),
             onPressed: () {
               Navigator.of(context).pushReplacement(MaterialPageRoute(
-                builder: (context) => MyHomePage(),
+                builder: (context) => RescueHome(),
               ));
             }),
         title: Container(
@@ -122,14 +71,11 @@ class _PickState extends State<Pick> {
                       child: ImgLoad(),
                     ),
                     // ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: DashboardScreen(),
-                    ),
+
                     Padding(
                       padding: const EdgeInsets.all(10.0),
                       child: Container(
-                        width: 440,
+                        width: 400,
                         height: 50,
                         decoration: BoxDecoration(
                             color: Colors.white,
@@ -152,10 +98,10 @@ class _PickState extends State<Pick> {
                               disabledBorder: InputBorder.none,
                               // contentPadding: EdgeInsets.all(10),
                               suffixIcon: Icon(Icons.mode_edit, color: Colors.orange,),
-                              hintText: "   Thêm vị trí chi tiết",
+                              hintText: "   Điền tên",
                               focusColor: Colors.green,
                               hintStyle: TextStyle(
-                                  fontSize: 15,
+                                  fontSize: 20,
                                   color: Colors.grey,
                                   fontStyle: FontStyle.italic)),
                         ),
@@ -164,7 +110,7 @@ class _PickState extends State<Pick> {
                     Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Container(
-                          width: 440,
+                          width: 400,
                           height: 50,
                           decoration: BoxDecoration(
                               color: Colors.white,
@@ -215,7 +161,7 @@ class _PickState extends State<Pick> {
                     Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Container(
-                          width: 440,
+                          width: 400,
                           height: 220,
                           decoration: BoxDecoration(
                               color: Colors.white,
@@ -249,7 +195,7 @@ class _PickState extends State<Pick> {
                     Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Container(
-                          width: 440,
+                          width: 400,
                           height: 50,
                           decoration: BoxDecoration(
                               color: Colors.white,
@@ -300,53 +246,53 @@ class _PickState extends State<Pick> {
                         )
                     ),
                     Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Container(
-                        width: 440,
-                        height: 50,
-                        decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(18),
-                            boxShadow: [
-                              new BoxShadow(
-                                  color: Colors.black54,
-                                  offset: new Offset(1.0, 2.0),
-                                  blurRadius: 3.5),
-                            ]),
-                        child: Row(
-                          children: [
-                            Text(
-                              "   Bị thương: ",
-                              style: TextStyle(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Container(
+                          width: 400,
+                          height: 50,
+                          decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(18),
+                              boxShadow: [
+                                new BoxShadow(
+                                    color: Colors.black54,
+                                    offset: new Offset(1.0, 2.0),
+                                    blurRadius: 3.5),
+                              ]),
+                          child: Row(
+                            children: [
+                              Text(
+                                "   Bị thương: ",
+                                style: TextStyle(
                                   fontSize: 17, ),
-                            ),
-                            DropdownButton(
-                                value: _value,
-                                items: [
-                                  DropdownMenuItem(
-                                    child: Text(""),
-                                    value: 1,
-                                  ),
-                                  DropdownMenuItem(
-                                    child: Text("Có"),
-                                    value: 2,
-                                  ),
-                                  DropdownMenuItem(
-                                      child: Text("Không"), value: 3),
-                                ],
-                                onChanged: (value) {
-                                  setState(() {
-                                    _value = value;
-                                  });
-                                }),
-                          ],
-                        ),
-                      )
+                              ),
+                              DropdownButton(
+                                  value: _value,
+                                  items: [
+                                    DropdownMenuItem(
+                                      child: Text(""),
+                                      value: 1,
+                                    ),
+                                    DropdownMenuItem(
+                                      child: Text("Có"),
+                                      value: 2,
+                                    ),
+                                    DropdownMenuItem(
+                                        child: Text("Không"), value: 3),
+                                  ],
+                                  onChanged: (value) {
+                                    setState(() {
+                                      _value = value;
+                                    });
+                                  }),
+                            ],
+                          ),
+                        )
                     ),
                     Padding(
                       padding: const EdgeInsets.all(10.0),
                       child: Container(
-                        width: 440,
+                        width: 400,
                         height: 50,
                         decoration: BoxDecoration(
                             color: Colors.white,
@@ -382,17 +328,17 @@ class _PickState extends State<Pick> {
                     Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Container(
-                            width: 440,
+                            width: 400,
                             height: 50,
-                          decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.circular(18),
-                              boxShadow: [
-                                new BoxShadow(
-                                    color: Colors.black54,
-                                    offset: new Offset(1.0, 2.0),
-                                    blurRadius: 3.5),
-                              ]),
+                            decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.circular(18),
+                                boxShadow: [
+                                  new BoxShadow(
+                                      color: Colors.black54,
+                                      offset: new Offset(1.0, 2.0),
+                                      blurRadius: 3.5),
+                                ]),
                             child: Row(
                               children: <Widget>[
                                 Expanded(
@@ -413,7 +359,7 @@ class _PickState extends State<Pick> {
                                 Expanded(
                                   flex: 1,
                                   child: Container(
-                                      // width: 10.0,
+                                    // width: 10.0,
                                       child: TextField(
                                         controller: number,
                                         autocorrect: true,
@@ -428,7 +374,7 @@ class _PickState extends State<Pick> {
                                     width: 50.0,
                                     child: Text("%",
                                       style: TextStyle(
-                                        fontSize: 17, color: Colors.black),
+                                          fontSize: 17, color: Colors.black),
                                     ),
                                   ),
                                 ),
@@ -440,7 +386,7 @@ class _PickState extends State<Pick> {
                     Padding(
                       padding: const EdgeInsets.all(10.0),
                       child: Container(
-                        width: 440,
+                        width: 400,
                         height: 130,
                         decoration: BoxDecoration(
                             color: Colors.white,

@@ -30,7 +30,9 @@ class ItemInfo extends State<PetProfile> {
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
+
             icon: Icon(Icons.arrow_back_ios, color: Colors.white),
+
             onPressed: () {
               Navigator.of(context).pushReplacement(MaterialPageRoute(
                 builder: (context) => RescuePetManagement(),
@@ -146,7 +148,7 @@ class ItemInfo extends State<PetProfile> {
                         Container(
                           padding: EdgeInsets.all(15),
                           height: 70,
-                          width: 350,
+                          width: 300,
                           decoration: BoxDecoration(
                             color: Colors.white,
                             borderRadius: BorderRadius.circular(8),
@@ -269,7 +271,7 @@ class ItemInfo extends State<PetProfile> {
                                   Navigator.of(context).push(
                                       new MaterialPageRoute(
                                           builder: (context) =>
-                                              ViewPetReportList()));
+                                              ChatScreen(name: 'Nguyen',UrlImage: 'image/cat4.jpg',)));
                                 },
                                 child: Align(
                                   child: Text("Liên hệ",
@@ -289,7 +291,7 @@ class ItemInfo extends State<PetProfile> {
                             },
                             child: Container(
                               height: 43,
-                              width: 200,
+                              width: 160,
                               alignment: Alignment.center,
                               padding: EdgeInsets.all(12),
                               decoration: BoxDecoration(

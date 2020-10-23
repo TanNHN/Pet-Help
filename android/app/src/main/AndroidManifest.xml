@@ -13,7 +13,7 @@
         android:label="Pet Help"
         android:icon="@mipmap/ic_launcher">
           <meta-data android:name="com.google.android.geo.API_KEY"
-android:value="AIzaSyDESO3vjzSzNRbzG7P0UmNJtXx1g4NQ8yQ"/>
+android:value="AIzaSyAiuVgX5FFMjkc0igLbINQkYO2KPkwg-Oc"/>
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"
