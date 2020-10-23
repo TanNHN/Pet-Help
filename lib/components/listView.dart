@@ -70,7 +70,7 @@ class _ListViewPetState extends State<ListViewPet> {
                     child: Image.network(
                       data[index]['pathImg'],
                       height: 200,
-                      width: 200,
+                      width: 160,
                       fit: BoxFit.fitHeight,
                     ),
                   ),
