@@ -2,6 +2,7 @@ import 'dart:collection';
 
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
+import 'package:pet_help/view/AddPetAfterRes.dart';
 
 import 'RescueHome.dart';
 
@@ -141,7 +142,7 @@ class _GMapState extends State<GMap> {
         tooltip: 'Increment',
         child: Icon(Icons.done),
         onPressed: () {
-          Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => RescueHome()));
+          Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => AddPetAfterRes()));
         },
       ),
     );

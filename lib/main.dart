@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:pet_help/components/listview.dart';
 
 import 'package:pet_help/view/AddPet.dart';
+import 'package:pet_help/view/AddPetAfterRes.dart';
 import 'package:pet_help/view/AdoptForm.dart';
 import 'package:pet_help/view/AdoptRequest.dart';
 import 'package:pet_help/view/AdoptRequestList.dart';
@@ -34,7 +35,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
 
-        home: Login(
+        home: AddPetAfterRes(
             // title: 'Post',
             ));
 
