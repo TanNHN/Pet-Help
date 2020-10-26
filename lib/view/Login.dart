@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pet_help/view/HomePage.dart';
 import 'package:pet_help/view/RescueHome.dart';
+import 'package:pet_help/view/signUp.dart';
 import 'package:pet_help/view/zHomePageRescue.dart';
 import 'package:responsive_grid/responsive_grid.dart';
 
@@ -73,7 +74,7 @@ class LoginState extends State<Login> {
                   style: TextStyle(fontSize: 18, color: Colors.black),
                   decoration: InputDecoration(
                       labelText: 'Tên đăng nhập',
-                      hintText: 'user/cuutro',
+                      // hintText: 'user/cuutro',
                       errorText: userInvalid ? "Tên tài khoảng trống" : null),
                 ),
               ),
@@ -85,7 +86,7 @@ class LoginState extends State<Login> {
                   obscureText: true,
                   decoration: InputDecoration(
                       labelText: 'Mật khẩu',
-                      hintText: '123',
+                      // hintText: '123',
                       errorText: passInvalid ? "Mật khẩu trống" : null),
                 ),
               ),
@@ -108,31 +109,10 @@ class LoginState extends State<Login> {
                   ),
                 ),
               ),
-              _signInButton(),
-              // Padding(
-              //   padding: const EdgeInsets.fromLTRB(0, 10, 0, 10),
-              //   child: Row(
-              //     mainAxisSize: MainAxisSize.min,
-              //     mainAxisAlignment: MainAxisAlignment.center,
-              //     children: <Widget>[
-              //       Image(image: AssetImage("src/icon/google_logo.png"), height: 35.0),
-              //       Padding(
-              //         padding: const EdgeInsets.only(left: 10),
-              //         child: Text(
-              //           'Sign in with Google',
-              //           style: TextStyle(
-              //             fontSize: 20,
-              //             color: Colors.grey,
-              //           ),
-              //         ),
-              //       )
-              //     ],
-              //   ),
-              // ),
 
-              ResponsiveGridRow(
-                children: [
-                  ResponsiveGridCol(
+              _signInButton(),
+
+              ResponsiveGridCol(
                     child: Container(
                       alignment: Alignment.topCenter,
                       child:
@@ -142,24 +122,55 @@ class LoginState extends State<Login> {
                     ),
                   ),
                   ),
-                  ResponsiveGridCol(
-                    //padding: const EdgeInsets.fromLTRB(130, 8, 8, 8),
-                    child:
-                      Container(
-                        alignment: Alignment.topCenter,
-                        child: Text(
-                          "\nĐăng kí",
-                          style: TextStyle(
-                              fontSize: 19,
-                              color: Colors.blue,
-                              fontWeight: FontWeight.bold),
-                          textAlign: TextAlign.left,
-                        ),
-                      ),
-
+              Padding(
+                padding: const EdgeInsets.fromLTRB(0, 10, 0, 0),
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (ctx) => SignUp()));
+                  },
+                  child: Text("Đăng kí", style: TextStyle(
+                            fontSize: 19,
+                            color: Colors.blue,
+                            fontWeight: FontWeight.bold),
                   ),
-                ],
+                ),
+              ),
+
+
+              Padding(
+                padding: const EdgeInsets.all(12),
+                  child: GestureDetector(
+                      // onTap: () {
+                      //   Navigator.push(context,
+                      //       MaterialPageRoute(builder: (ctx) => SignUp()));
+                      // },
+                      child: Text(
+                        'Sign up',
+                        style: TextStyle(
+                            decoration: TextDecoration.underline,
+                            fontWeight: FontWeight.w500,
+                            color: Colors.white),
+                      ),
+                    ),
+
+
               )
+
+                      // Container(
+                      //   alignment: Alignment.topCenter,
+                      //   child: Text(
+                      //     "\nĐăng kí",
+                      //     style: TextStyle(
+                      //         fontSize: 19,
+                      //         color: Colors.blue,
+                      //         fontWeight: FontWeight.bold),
+                      //     textAlign: TextAlign.left,
+                      //   ),
+                      // ),
+
+
+
+
             ],
           ),
         ),
