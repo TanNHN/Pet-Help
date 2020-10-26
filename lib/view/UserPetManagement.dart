@@ -158,7 +158,7 @@ class UserPetManagement extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  new MaterialPageRoute(builder: (context) => new PetProfile()),
+                  new MaterialPageRoute(builder: (context) => new UserPetProfile()),
                 );
               },
               child: Container(

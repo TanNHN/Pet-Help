@@ -9,6 +9,7 @@ import 'package:pet_help/view/PetHealthReportDetail.dart';
 import 'package:pet_help/view/PetReportForm.dart';
 import 'package:pet_help/view/RescuePetManagement.dart';
 import 'package:pet_help/view/PetHealthReportList.dart';
+import 'package:pet_help/view/UserPetManagement.dart';
 
 class UserPetProfile extends StatefulWidget {
   @override
@@ -35,7 +36,7 @@ class ItemInfo extends State<UserPetProfile> {
             icon: Icon(Icons.arrow_back_ios, color: Colors.white),
             onPressed: () {
               Navigator.of(context).pushReplacement(MaterialPageRoute(
-                builder: (context) => MyHomePage(),
+                builder: (context) => UserPetManagement(),
               ));
             }),
         title: Container(
@@ -158,27 +159,54 @@ class ItemInfo extends State<UserPetProfile> {
                             children: [
                               Column(
                                 children: [
-                                  Text("Tuổi",
+                                  Text(" Loại ",
                                       style:
-                                          TextStyle(color: Colors.blueAccent)),
-                                  Text("1 Tuổi",
+                                      TextStyle(fontWeight: FontWeight.bold, color: Colors.blueAccent)),
+                                  Text("Mèo",
                                       style: TextStyle(color: Colors.orange)),
                                 ],
                               ),
                               Column(
                                 children: [
-                                  Text("Giới tính",
+                                  Text(" Cân nặng ",
                                       style:
-                                          TextStyle(color: Colors.blueAccent)),
+                                      TextStyle(fontWeight: FontWeight.bold, color: Colors.blueAccent)),
+                                  Text("4Kg",
+                                      style: TextStyle(color: Colors.orange)),
+                                ],
+                              ),
+                              Column(
+                                children: [
+                                  Text(" Màu ",
+                                      style:
+                                      TextStyle(fontWeight: FontWeight.bold, color: Colors.blueAccent)),
+                                  Text("Cam",
+                                      style: TextStyle(color: Colors.orange)),
+                                ],
+                              ),
+                              Column(
+                                children: [
+                                  Text(" Tuổi ",
+                                      style:
+                                          TextStyle(fontWeight: FontWeight.bold, color: Colors.blueAccent)),
+                                  Text("1",
+                                      style: TextStyle(color: Colors.orange)),
+                                ],
+                              ),
+                              Column(
+                                children: [
+                                  Text(" Giới tính ",
+                                      style:
+                                          TextStyle(fontWeight: FontWeight.bold, color: Colors.blueAccent)),
                                   Text("Đực",
                                       style: TextStyle(color: Colors.orange)),
                                 ],
                               ),
                               Column(
                                 children: [
-                                  Text("Thuộc giống",
+                                  Text(" Thuộc giống ",
                                       style:
-                                          TextStyle(color: Colors.blueAccent)),
+                                          TextStyle(fontWeight: FontWeight.bold, color: Colors.blueAccent)),
                                   Text("Nga",
                                       style: TextStyle(color: Colors.orange)),
                                 ],
@@ -200,7 +228,7 @@ class ItemInfo extends State<UserPetProfile> {
                           width: 110,
                           alignment: Alignment(0.1, 1.0),
                           child: Text(
-                            "Bum",
+                            "BUM",
                             style: TextStyle(
                                 color: Colors.brown,
                                 fontWeight: FontWeight.bold,
@@ -209,21 +237,36 @@ class ItemInfo extends State<UserPetProfile> {
                         ),
                       ],
                     ),
-                    Row(
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.fromLTRB(8, 0, 0, 0),
-                          child: Container(
-                            height: 15,
-                            width: 200,
-                            child: Text(
-                              "Last reported: 20/5/1999",
-                              style:
-                                  TextStyle(color: Colors.grey, fontSize: 15),
-                            ),
+                    // Row(
+                    //   children: [
+                    //     Padding(
+                    //       padding: const EdgeInsets.fromLTRB(8, 0, 0, 0),
+                    //       child: Container(
+                    //         height: 15,
+                    //         width: 200,
+                    //         child: Text(
+                    //           "Last reported: 20/5/1999",
+                    //           style:
+                    //               TextStyle(color: Colors.grey, fontSize: 15),
+                    //         ),
+                    //       ),
+                    //     ),
+                    //   ],
+                    // ),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Row(
+                        children: <Widget>[
+                          Text(
+                            "Last reported: ",
+                            style: TextStyle(fontWeight: FontWeight.bold, color: Colors.black),
                           ),
-                        ),
-                      ],
+                          Text(
+                            " 20/5/1999",
+                            style: TextStyle(fontStyle: FontStyle.italic, color: Colors.grey, fontSize: 15),
+                          ),
+                        ],
+                      ),
                     ),
                     Padding(
                       padding: const EdgeInsets.all(8.0),
@@ -231,10 +274,10 @@ class ItemInfo extends State<UserPetProfile> {
                         children: <Widget>[
                           Text(
                             "Nhận nuôi từ: ",
-                            style: TextStyle(color: Colors.grey),
+                            style: TextStyle(fontWeight: FontWeight.bold, color: Colors.black),
                           ),
                           Text(
-                            "Trung tâm cứu trợ Luân Hồi",
+                            "Trung tâm cứu trợ SAR",
                             style: TextStyle(color: Colors.orange),
                           ),
                         ],
