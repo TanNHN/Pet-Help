@@ -20,7 +20,7 @@ class SignUp extends StatelessWidget {
         child: Center(
           child: Column(
             children: <Widget>[
-              SizedBox(height: 180,),
+              SizedBox(height: 80,),
               Row(
                 children: <Widget>[
                   SizedBox(
@@ -37,7 +37,7 @@ class SignUp extends StatelessWidget {
                 ],
               ),
               SizedBox(
-                height: 110,
+                height: 20,
               ),
               CustomTextField(
                 hint: '    Nhập tên của bạn',
