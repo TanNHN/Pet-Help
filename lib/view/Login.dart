@@ -79,11 +79,11 @@ class LoginState extends State<Login> {
                 children: [
                   ResponsiveGridCol(
                     child: Container(
-                      alignment: Alignment.topLeft,
+                      alignment: Alignment.topCenter,
                       child:
                       Text(
                       "Quên mật khẩu",
-                      style: TextStyle(fontSize: 16, color: Colors.blue),
+                      style: TextStyle(fontSize: 19, color: Colors.blue, fontWeight: FontWeight.bold),
                     ),
                   ),
                   ),
@@ -91,9 +91,9 @@ class LoginState extends State<Login> {
                     //padding: const EdgeInsets.fromLTRB(130, 8, 8, 8),
                     child:
                       Container(
-                        alignment: Alignment.topRight,
+                        alignment: Alignment.topCenter,
                         child: Text(
-                          "Đăng kí",
+                          "\nĐăng kí",
                           style: TextStyle(
                               fontSize: 19,
                               color: Colors.blue,
