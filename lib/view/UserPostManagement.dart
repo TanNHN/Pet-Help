@@ -7,6 +7,7 @@ import 'package:pet_help/components/list_header.dart';
 import 'package:pet_help/components/rescue_home_list.dart';
 import 'package:pet_help/view/HomePage.dart';
 import 'package:pet_help/view/MyPostDetail.dart';
+import 'package:pet_help/view/MyPostDetail2.dart';
 import 'package:pet_help/view/RescueHome.dart';
 import 'package:pet_help/view/loadimg.dart';
 import 'package:pet_help/view/login_page.dart';
@@ -218,7 +219,7 @@ class UserPostManagement extends StatelessWidget {
                         Navigator.push(
                           context,
                           new MaterialPageRoute(
-                              builder: (context) => new MyPostDetail()),
+                              builder: (context) => new MyPostDetail2()),
                         );
                       },
                       child: Container(

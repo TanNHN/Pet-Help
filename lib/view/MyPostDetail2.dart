@@ -18,15 +18,15 @@ import 'package:flutter/material.dart';
 import 'package:location/location.dart';
 import 'package:pet_help/view/UserPostManagement.dart';
 
-class MyPostDetail extends StatefulWidget {
+class MyPostDetail2 extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    MyPostDetailState itemInfo = new MyPostDetailState();
+    MyPostDetail2State itemInfo = new MyPostDetail2State();
     return itemInfo;
   }
 }
 
-class MyPostDetailState extends State<MyPostDetail> {
+class MyPostDetail2State extends State<MyPostDetail2> {
   String imgUrl = "src/image/rescue_cat3.jpg";
 
   @override
@@ -65,7 +65,7 @@ class MyPostDetailState extends State<MyPostDetail> {
             }),
         title: Container(
           child: Text(
-            'MÈO QUÈ',
+            'Mèo bị bỏ rơi...',
             style: TextStyle(color: Colors.white, fontSize: 20),
           ),
         ),
@@ -207,7 +207,7 @@ class MyPostDetailState extends State<MyPostDetail> {
                           Container(
                             width: 230,
                             child: Text(
-                              "Thứ 6, 16/10/2020 14:02:45",
+                              "Thứ 6, 16/10/2020 - 14:02:45",
                               style: TextStyle(
                                 fontSize: 17,
                               ),
@@ -487,68 +487,68 @@ class MyPostDetailState extends State<MyPostDetail> {
                     SizedBox(
                       height: 38,
                     ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: <Widget>[
-                        Container(
-                          height: 43,
-                          width: 150,
-                          alignment: Alignment.center,
-                          padding: EdgeInsets.all(12),
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(8),
-                            color: Colors.lightBlueAccent,
-                          ),
-                          child: Column(
-                            children: [
-                              GestureDetector(
-                                onTap: () {
-                                  Navigator.of(context)
-                                      .push(new MaterialPageRoute(
-                                          builder: (context) => ChatScreen(
-                                                name: 'Dũng Xạo',
-                                                UrlImage: 'image/cat4.jpg',
-                                              )));
-                                },
-                                child: Align(
-                                  child: Text("Liên lạc",
-                                      style: TextStyle(
-                                          color: Colors.white,
-                                          fontSize: 16,
-                                          fontWeight: FontWeight.bold)),
-                                ),
-                              )
-                            ],
-                          ),
-                        ),
-                        // GestureDetector(
-                        //     onTap: () {
-                        //       Navigator.of(context).push(new MaterialPageRoute(
-                        //           builder: (context) => GMap()));
-                        //     },
-                        //     child: Container(
-                        //       height: 43,
-                        //       width: 200,
-                        //       alignment: Alignment.center,
-                        //       padding: EdgeInsets.all(12),
-                        //       decoration: BoxDecoration(
-                        //         borderRadius: BorderRadius.circular(8),
-                        //         color: Colors.orange,
-                        //       ),
-                        //       child: Column(
-                        //         children: [
-                        //           Align(
-                        //             child: Text("Chấp nhận cứu trợ",
-                        //                 style: TextStyle(
-                        //                     color: Colors.white,
-                        //                     fontSize: 16,
-                        //                     fontWeight: FontWeight.bold)),
-                        //           )
-                        //         ],
-                        //       ),
-                        //     ))
-                      ],
-                    ),
+                    // Row(
+                    //   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    //   children: <Widget>[
+                    //     Container(
+                    //       height: 43,
+                    //       width: 150,
+                    //       alignment: Alignment.center,
+                    //       padding: EdgeInsets.all(12),
+                    //       decoration: BoxDecoration(
+                    //         borderRadius: BorderRadius.circular(8),
+                    //         color: Colors.lightBlueAccent,
+                    //       ),
+                    //       child: Column(
+                    //         children: [
+                    //           // GestureDetector(
+                    //           //   onTap: () {
+                    //           //     Navigator.of(context)
+                    //           //         .push(new MaterialPageRoute(
+                    //           //             builder: (context) => ChatScreen(
+                    //           //                   name: 'Dũng Xạo',
+                    //           //                   UrlImage: 'image/cat4.jpg',
+                    //           //                 )));
+                    //           //   },
+                    //           //   // child: Align(
+                    //           //   //   child: Text("Liên lạc",
+                    //           //   //       style: TextStyle(
+                    //           //   //           color: Colors.white,
+                    //           //   //           fontSize: 16,
+                    //           //   //           fontWeight: FontWeight.bold)),
+                    //           //   // ),
+                    //           // )
+                    //         ],
+                    //       ),
+                    //     ),
+                    //     // GestureDetector(
+                    //     //     onTap: () {
+                    //     //       Navigator.of(context).push(new MaterialPageRoute(
+                    //     //           builder: (context) => GMap()));
+                    //     //     },
+                    //     //     child: Container(
+                    //     //       height: 43,
+                    //     //       width: 200,
+                    //     //       alignment: Alignment.center,
+                    //     //       padding: EdgeInsets.all(12),
+                    //     //       decoration: BoxDecoration(
+                    //     //         borderRadius: BorderRadius.circular(8),
+                    //     //         color: Colors.orange,
+                    //     //       ),
+                    //     //       child: Column(
+                    //     //         children: [
+                    //     //           Align(
+                    //     //             child: Text("Chấp nhận cứu trợ",
+                    //     //                 style: TextStyle(
+                    //     //                     color: Colors.white,
+                    //     //                     fontSize: 16,
+                    //     //                     fontWeight: FontWeight.bold)),
+                    //     //           )
+                    //     //         ],
+                    //     //       ),
+                    //     //     ))
+                    //   ],
+                    // ),
                   ],
                 )
               ],
