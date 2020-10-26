@@ -82,7 +82,7 @@ class LoginState extends State<Login> {
                       alignment: Alignment.topCenter,
                       child:
                       Text(
-                      "Quên mật khẩu",
+                      "\nQuên mật khẩu",
                       style: TextStyle(fontSize: 19, color: Colors.blue, fontWeight: FontWeight.bold),
                     ),
                   ),
