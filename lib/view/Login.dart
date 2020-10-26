@@ -67,17 +67,17 @@ class LoginState extends State<Login> {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.fromLTRB(12, 0, 12, 0),
+                padding: const EdgeInsets.fromLTRB(26, 0, 26, 0),
                 child: TextField(
                   controller: userController,
                   style: TextStyle(fontSize: 18, color: Colors.black),
                   decoration: InputDecoration(
-                      labelText: 'Tên tài khoản',
+                      labelText: 'Tên đăng nhập',
                       errorText: userInvalid ? "Tên tài khoảng trống" : null),
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.all(12),
+                padding: const EdgeInsets.fromLTRB(26, 0, 26, 15),
                 child: TextField(
                   controller: passController,
                   style: TextStyle(fontSize: 18, color: Colors.black),
