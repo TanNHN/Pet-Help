@@ -124,7 +124,7 @@ class UserPetManagement extends StatelessWidget {
                             ),
                             Container(
                               alignment: Alignment.center,
-                              width: 170,
+                              // width: 170,
                               child: Text(
                                 "Bệnh viện Pet PRO",
                                 maxLines: 2,
@@ -234,7 +234,7 @@ class UserPetManagement extends StatelessWidget {
                             ),
                             Container(
                               alignment: Alignment.center,
-                              width: 170,
+                              // width: 170,
                               child: Text(
                                 "Bệnh viện New Pet Hospital",
                                 maxLines: 2,

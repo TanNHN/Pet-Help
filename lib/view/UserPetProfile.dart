@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:pet_help/components/app_bar.dart';
 import 'package:pet_help/components/chat.dart';
+import 'package:pet_help/components/chatUser.dart';
 import 'package:pet_help/components/item_image.dart';
 import 'package:pet_help/view/Contact.dart';
 import 'package:pet_help/view/HomePage.dart';
@@ -304,7 +305,7 @@ class ItemInfo extends State<UserPetProfile> {
                                 onTap: () {
                                   Navigator.of(context)
                                       .push(new MaterialPageRoute(
-                                    builder: (context) => ChatScreen(
+                                    builder: (context) => ChatUserScreen(
                                       name: "Trung tâm cứu trợ SAR",
                                       UrlImage: "",
                                     ),

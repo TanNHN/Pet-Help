@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:pet_help/view/Contact.dart';
+import 'package:pet_help/view/UserPetProfile.dart';
 
-class ChatScreen extends StatelessWidget {
+class ChatUserScreen extends StatelessWidget {
   final String name;
   final String UrlImage;
 
   // In the constructor, require a Todo.
-  ChatScreen({Key key, @required this.name, this.UrlImage}) : super(key: key);
+  ChatUserScreen({Key key, @required this.name, this.UrlImage}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +19,7 @@ class ChatScreen extends StatelessWidget {
             icon: Icon(Icons.arrow_back_ios, color: Colors.white),
             onPressed: () {
               Navigator.of(context).pushReplacement(MaterialPageRoute(
-                builder: (context) => ContactView(),
+                builder: (context) => UserPetProfile(),
               ));
             }),
         backgroundColor: Color.fromRGBO(253, 158, 121, 1),

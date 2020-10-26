@@ -76,11 +76,8 @@ class LoginState extends State<Login> {
                 ),
               ),
               ResponsiveGridRow(
-
-
                 children: [
                   ResponsiveGridCol(
-
                     child: Container(
                       alignment: Alignment.topLeft,
                       child:
@@ -88,13 +85,10 @@ class LoginState extends State<Login> {
                       "Quên mật khẩu",
                       style: TextStyle(fontSize: 16, color: Colors.blue),
                     ),
-
                   ),
                   ),
                   ResponsiveGridCol(
                     //padding: const EdgeInsets.fromLTRB(130, 8, 8, 8),
-
-
                     child:
                       Container(
                         alignment: Alignment.topRight,
