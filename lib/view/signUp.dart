@@ -27,7 +27,7 @@ class SignUp extends StatelessWidget {
                     width: 40,
                   ),
                   Text(
-                    'Create Account',
+                    'Đăng kí tài khoản',
                     style: TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.bold,
@@ -39,28 +39,28 @@ class SignUp extends StatelessWidget {
                 height: 110,
               ),
               CustomTextField(
-                hint: '    Enter your name',
+                hint: '    Nhập tên của bạn',
                 issecured: false,
               ),
               SizedBox(
                 height: 15,
               ),
               CustomTextField(
-                hint: '    Enter your Email',
+                hint: '     Nhập Email của bạn',
                 issecured: false,
               ),
               SizedBox(
                 height: 15,
               ),
               CustomTextField(
-                hint: '    Enter your Phone',
+                hint: '    Nhập số điện thoại của bạn',
                 issecured: false,
               ),
               SizedBox(
                 height: 15,
               ),
               CustomTextField(
-                hint: '    Enter your Password',
+                hint: '    Nhập mật khẩu của bạn',
                 issecured: true,
               ),
               SizedBox(
