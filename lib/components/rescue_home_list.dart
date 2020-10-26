@@ -61,6 +61,7 @@ class RescueHomeList extends StatelessWidget {
                           ),
                         ),
                       ),
+
                       Padding(
                         padding: const EdgeInsets.fromLTRB(1, 23, 0, 8),
                         child: Row(
@@ -93,6 +94,7 @@ class RescueHomeList extends StatelessWidget {
                           ],
                         ),
                       ),
+
                       Padding(
                         padding: const EdgeInsets.fromLTRB(8, 8, 8, 0),
                         child: Container(
@@ -101,6 +103,20 @@ class RescueHomeList extends StatelessWidget {
                             "25 phút trước",
                             style: TextStyle(
                               color: Colors.grey,
+                              fontSize: 15,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          )),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(8, 8, 8, 0),
+                        child: Container(
+                          width: size.width * 0.4,
+                          child: (Text(
+                            "Còn cách nhau 4.5 km",
+                            style: TextStyle(
+                              color: Colors.black54,
                               fontSize: 15,
                               fontWeight: FontWeight.bold,
                             ),
@@ -142,7 +158,7 @@ class RescueHomeList extends StatelessWidget {
                     ],
                   ),
                 ]),
-                height: size.height * 0.3,
+                height: size.height * 0.4,
                 decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(15),
@@ -252,6 +268,20 @@ class RescueHomeList extends StatelessWidget {
                         ),
                       ),
                       Padding(
+                        padding: const EdgeInsets.fromLTRB(8, 8, 8, 0),
+                        child: Container(
+                          width: size.width * 0.4,
+                          child: (Text(
+                            "Còn cách nhau 5 km",
+                            style: TextStyle(
+                              color: Colors.black54,
+                              fontSize: 15,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          )),
+                        ),
+                      ),
+                      Padding(
                         padding: const EdgeInsets.fromLTRB(1, 23, 0, 8),
                         child: Row(
                           children: [
@@ -294,7 +324,7 @@ class RescueHomeList extends StatelessWidget {
                     ],
                   ),
                 ]),
-                height: size.height * 0.3,
+                height: size.height * 0.4,
                 decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(15),
@@ -406,6 +436,20 @@ class RescueHomeList extends StatelessWidget {
                         ),
                       ),
                       Padding(
+                        padding: const EdgeInsets.fromLTRB(8, 8, 8, 0),
+                        child: Container(
+                          width: size.width * 0.4,
+                          child: (Text(
+                            "Còn cách nhau 9 km",
+                            style: TextStyle(
+                              color: Colors.black54,
+                              fontSize: 15,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          )),
+                        ),
+                      ),
+                      Padding(
                         padding: const EdgeInsets.fromLTRB(1, 23, 0, 8),
                         child: Row(
                           children: [
@@ -448,7 +492,7 @@ class RescueHomeList extends StatelessWidget {
                     ],
                   ),
                 ]),
-                height: size.height * 0.3,
+                height: size.height * 0.4,
                 decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(15),
