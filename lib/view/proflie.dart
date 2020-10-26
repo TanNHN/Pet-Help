@@ -27,7 +27,8 @@ class ProfileApp extends StatelessWidget {
                     children: <Widget>[
                       CircleAvatar(
                         backgroundImage: NetworkImage(
-                          "https://sohanews.sohacdn.com/160588918557773824/2020/10/5/photo-1-1601889002966448421364.jpg",
+                          // "https://sohanews.sohacdn.com/160588918557773824/2020/10/5/photo-1-1601889002966448421364.jpg",
+                            "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
                         ),
                         radius: 50.0,
                       ),
@@ -35,7 +36,7 @@ class ProfileApp extends StatelessWidget {
                         height: 10.0,
                       ),
                       Text(
-                        "Cô em gái",
+                        "Tom",
                         style: TextStyle(
                           fontSize: 22.0,
                           color: Colors.black,
@@ -56,19 +57,18 @@ class ProfileApp extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
-                  Text(
-                    "Tú:",
-                    style: TextStyle(
-                        color: Colors.redAccent,
-                        fontStyle: FontStyle.normal,
-                        fontSize: 28.0),
-                  ),
+                  // Text(
+                  //   "Tú:",
+                  //   style: TextStyle(
+                  //       color: Colors.redAccent,
+                  //       fontStyle: FontStyle.normal,
+                  //       fontSize: 28.0),
+                  // ),
                   SizedBox(
                     height: 10.0,
                   ),
                   Text(
-                    'Yêu động vật và anh.\n'
-                    'hihi',
+                    'Yêu động vật và anh',
                     style: TextStyle(
                       fontSize: 22.0,
                       fontStyle: FontStyle.italic,
