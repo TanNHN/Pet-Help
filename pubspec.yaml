@@ -108,6 +108,7 @@ flutter:
     - src/icon/post.png
     - src/icon/logout.png
     - src/icon/logoCute.png
+    - src/icon/google_logo.png
     - src/data/pet.json
     - src/data/contact.json
 
