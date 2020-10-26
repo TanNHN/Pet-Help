@@ -49,6 +49,21 @@ class ProfileApp extends StatelessWidget {
                   ),
                 ),
               )),
+          SizedBox(
+            height: 20.0,
+          ),
+          Container(
+            child: Text(
+              'User@gmail.com',
+              style: TextStyle(
+                fontSize: 19.0,
+                fontStyle: FontStyle.italic,
+                // fontWeight: FontWeight.w300,
+                color: Colors.redAccent,
+                // letterSpacing: 2.0,
+              ),
+            ),
+          ),
           Container(
             child: Padding(
               padding:
@@ -67,6 +82,10 @@ class ProfileApp extends StatelessWidget {
                   SizedBox(
                     height: 10.0,
                   ),
+
+                  // SizedBox(
+                  //   height: 10.0,
+                  // ),
                   Text(
                     'Yêu động vật và anh',
                     style: TextStyle(
