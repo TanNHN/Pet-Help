@@ -35,7 +35,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
 
-        home: AddPetAfterRes(
+        home: Login(
             // title: 'Post',
             ));
 
