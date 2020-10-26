@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_material_color_picker/flutter_material_color_picker.dart';
 import 'package:flutter_number_picker/flutter_number_picker.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:pet_help/view/HomePage.dart';
@@ -23,6 +24,7 @@ class PetReportForm extends StatefulWidget {
 
 class PetReportFormStage extends State<PetReportForm> {
   File _image;
+
   _imgFromCamera() async {
     File image = await ImagePicker.pickImage(
         source: ImageSource.camera, imageQuality: 50);
@@ -109,7 +111,7 @@ class PetReportFormStage extends State<PetReportForm> {
                       child: Text(
                         "BUM",
                         style: TextStyle(
-                            fontSize: 30, fontWeight: FontWeight.bold),
+                            color: Colors.brown, fontSize: 30, fontWeight: FontWeight.bold),
                       ),
                     ),
                     Padding(
@@ -119,13 +121,17 @@ class PetReportFormStage extends State<PetReportForm> {
                           Text(
                             "Ngày: ",
                             style: TextStyle(
-                                fontSize: 15,fontStyle: FontStyle.italic, color: Colors.black54,
+                              fontSize: 15,
+                              fontStyle: FontStyle.italic,
+                              color: Colors.black54,
                             ),
                           ),
                           Text(
                             "16/10/2020",
                             style: TextStyle(
-                              fontSize: 15, fontStyle: FontStyle.italic, color: Colors.black54,
+                              fontSize: 15,
+                              fontStyle: FontStyle.italic,
+                              color: Colors.black54,
                             ),
                           ),
                         ],
@@ -136,162 +142,287 @@ class PetReportFormStage extends State<PetReportForm> {
                     ),
                     Padding(
                       padding: const EdgeInsets.all(8.0),
-                      child: Row(
-                        children: [
-                          Text(
-                            "Tình trạng tổng quát: ",
-                            style: TextStyle(
-                                fontSize: 18, fontWeight: FontWeight.bold),
-                          ),
-                          DropdownButton(
-                              value: _value,
-                              items: [
-                                DropdownMenuItem(
-                                  child: Text(""),
-                                  value: 1,
-                                ),
-                                DropdownMenuItem(
-                                  child: Text("Khỏe mạnh"),
-                                  value: 2,
-                                ),
-                                DropdownMenuItem(
-                                    child: Text("Ổn định"), value: 3),
-                                DropdownMenuItem(
-                                    child: Text("Thất thường"),
-                                    value: 4),
-                                DropdownMenuItem(
-                                    child: Text("Yếu"), value: 5)
-                              ],
-                              onChanged: (value) {
-                                setState(() {
-                                  _value = value;
-                                });
-                              }),
-                        ],
+                      child: Container(
+                        width: 440,
+                        height: 50,
+                        decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(18),
+                            boxShadow: [
+                              new BoxShadow(
+                                  color: Colors.black54,
+                                  offset: new Offset(1.0, 2.0),
+                                  blurRadius: 3.5),
+                            ]),
+                        child: Row(
+                          children: [
+                            Text(
+                              "  Tình trạng tổng quát: ",
+                              style: TextStyle(
+                                  fontSize: 18, fontWeight: FontWeight.bold),
+                            ),
+                            DropdownButton(
+                                value: _value,
+                                items: [
+                                  DropdownMenuItem(
+                                    child: Text(""),
+                                    value: 1,
+                                  ),
+                                  DropdownMenuItem(
+                                    child: Text("Khỏe mạnh"),
+                                    value: 2,
+                                  ),
+                                  DropdownMenuItem(
+                                      child: Text("Ổn định"), value: 3),
+                                  DropdownMenuItem(
+                                      child: Text("Thất thường"), value: 4),
+                                  DropdownMenuItem(child: Text("Yếu"), value: 5)
+                                ],
+                                onChanged: (value) {
+                                  setState(() {
+                                    _value = value;
+                                  });
+                                }),
+                          ],
+                        ),
                       ),
                     ),
                     Padding(
                       padding: const EdgeInsets.all(8.0),
-                      child: Row(
-                        children: [
-                          Text(
-                            "Cân nặng: ",
-                            style: TextStyle(
-                                fontSize: 18, fontWeight: FontWeight.bold),
-                          ),
-                          CustomNumberPicker(
-                            initialValue: 1,
-                            maxValue: 150,
-                            minValue: 0,
-                            step: 1,
-                            onValue: (value) {
-                              print(value.toString());
-                            },
-                          ),
-                          Text(
-                            " Kg",
-                            style: TextStyle(
-                                fontSize: 16, ),
-                          ),
-                        ],
+                      child: Container(
+                        width: 440,
+                        height: 50,
+                        decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(18),
+                            boxShadow: [
+                              new BoxShadow(
+                                  color: Colors.black54,
+                                  offset: new Offset(1.0, 2.0),
+                                  blurRadius: 3.5),
+                            ]),
+                        child: Row(
+                          children: [
+                            Text(
+                              "  Cân nặng: ",
+                              style: TextStyle(
+                                  fontSize: 18, fontWeight: FontWeight.bold),
+                            ),
+                            CustomNumberPicker(
+                              initialValue: 1,
+                              maxValue: 150,
+                              minValue: 0,
+                              step: 1,
+                              onValue: (value) {
+                                print(value.toString());
+                              },
+                            ),
+                            Text(
+                              " Kg",
+                              style: TextStyle(
+                                fontSize: 16,
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                     Padding(
                       padding: const EdgeInsets.all(8.0),
-                      child: Row(
-                        children: [
-                          Text(
-                            "Tuổi: ",
-                            style: TextStyle(
-                                fontSize: 18, fontWeight: FontWeight.bold),
-                          ),
-                          CustomNumberPicker(
-                            initialValue: 1,
-                            maxValue: 150,
-                            minValue: 0,
-                            step: 1,
-                            onValue: (value) {
-                              print(value.toString());
-                            },
-                          ),
-                        ],
+                      child: Container(
+                        width: 440,
+                        height: 50,
+                        decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(18),
+                            boxShadow: [
+                              new BoxShadow(
+                                  color: Colors.black54,
+                                  offset: new Offset(1.0, 2.0),
+                                  blurRadius: 3.5),
+                            ]),
+                        child: Row(
+                          children: [
+                            Text(
+                              "  Tuổi: ",
+                              style: TextStyle(
+                                  fontSize: 18, fontWeight: FontWeight.bold),
+                            ),
+                            CustomNumberPicker(
+                              initialValue: 1,
+                              maxValue: 150,
+                              minValue: 0,
+                              step: 1,
+                              onValue: (value) {
+                                print(value.toString());
+                              },
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                     Padding(
                       padding: const EdgeInsets.all(8.0),
-                      child: Row(
-                        children: [
-                          Text(
-                            "Giới tính: ",
-                            style: TextStyle(
-                                fontSize: 18, fontWeight: FontWeight.bold),
-                          ),
-                          DropdownButton(
-                              value: _value,
-                              items: [
-                                DropdownMenuItem(
-                                  child: Text(""),
-                                  value: 1,
-                                ),
-                                DropdownMenuItem(
-                                  child: Text("Đực"),
-                                  value: 2,
-                                ),
-                                DropdownMenuItem(
-                                    child: Text("Cái"),
-                                    value: 3
-                                ),
-                              ],
-                              onChanged: (value) {
-                                setState(() {
-                                  _value = value;
-                                });
-                              }),
-                        ],
+                      child: Container(
+                        width: 440,
+                        height: 50,
+                        decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(18),
+                            boxShadow: [
+                              new BoxShadow(
+                                  color: Colors.black54,
+                                  offset: new Offset(1.0, 2.0),
+                                  blurRadius: 3.5),
+                            ]),
+                        child: Row(
+                          children: [
+                            Text(
+                              "  Chiều dài: ",
+                              style: TextStyle(
+                                  fontSize: 18, fontWeight: FontWeight.bold),
+                            ),
+                            CustomNumberPicker(
+                              initialValue: 1,
+                              maxValue: 150,
+                              minValue: 0,
+                              step: 1,
+                              onValue: (value) {
+                                print(value.toString());
+                              },
+                            ),
+                            Text(
+                              " Cm",
+                              style: TextStyle(
+                                fontSize: 16,
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                     Padding(
                       padding: const EdgeInsets.all(8.0),
-                      child: Row(
-                        children: [
-                          Text(
-                            "Cảm xúc: ",
-                            style: TextStyle(
-                                fontSize: 18, fontWeight: FontWeight.bold),
-                          ),
-                          DropdownButton(
-                              value: _value,
-                              items: [
-                                DropdownMenuItem(
-                                  child: Text(""),
-                                  value: 1,
-                                ),
-                                DropdownMenuItem(
-                                  child: Text("Vui vẻ"),
-                                  value: 2,
-                                ),
-                                DropdownMenuItem(
-                                    child: Text("Sợ"),
-                                    value: 3
-                                ),
-                                DropdownMenuItem(
-                                    child: Text("Lãng tránh"),
-                                    value: 4),
-                                DropdownMenuItem(
-                                    child: Text("Thất thường"),
-                                    value: 5
-                                ),
-                                DropdownMenuItem(
-                                    child: Text("Cảm giác cao"),
-                                    value: 6
-                                ),
-                              ],
-                              onChanged: (value) {
-                                setState(() {
-                                  _value = value;
-                                });
-                              }),
-                        ],
+                      child: Container(
+                        width: 440,
+                        height: 50,
+                        decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(18),
+                            boxShadow: [
+                              new BoxShadow(
+                                  color: Colors.black54,
+                                  offset: new Offset(1.0, 2.0),
+                                  blurRadius: 3.5),
+                            ]),
+                        child: Row(
+                          children: [
+                            Text(
+                              "  Giới tính: ",
+                              style: TextStyle(
+                                  fontSize: 18, fontWeight: FontWeight.bold),
+                            ),
+                            DropdownButton(
+                                value: _value,
+                                items: [
+                                  DropdownMenuItem(
+                                    child: Text(""),
+                                    value: 1,
+                                  ),
+                                  DropdownMenuItem(
+                                    child: Text("Đực"),
+                                    value: 2,
+                                  ),
+                                  DropdownMenuItem(
+                                      child: Text("Cái"), value: 3),
+                                ],
+                                onChanged: (value) {
+                                  setState(() {
+                                    _value = value;
+                                  });
+                                }),
+                          ],
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Container(
+                        width: 440,
+                        height: 180,
+                        decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(18),
+                            boxShadow: [
+                              new BoxShadow(
+                                  color: Colors.black54,
+                                  offset: new Offset(1.0, 2.0),
+                                  blurRadius: 3.5),
+                            ]),
+                        child: Row(
+                          children: [
+                            Text(
+                              "  Màu: ",
+                              style: TextStyle(
+                                  fontSize: 18, fontWeight: FontWeight.bold),
+                            ),
+                            MaterialColorPicker(
+                                allowShades: false, // default true
+                                onMainColorChange: (ColorSwatch color) {
+                                  // Handle main color changes
+                                },
+                                selectedColor: Colors.red),
+                          ],
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Container(
+                        width: 440,
+                        height: 50,
+                        decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(18),
+                            boxShadow: [
+                              new BoxShadow(
+                                  color: Colors.black54,
+                                  offset: new Offset(1.0, 2.0),
+                                  blurRadius: 3.5),
+                            ]),
+                        child: Row(
+                          children: [
+                            Text(
+                              "  Cảm xúc: ",
+                              style: TextStyle(
+                                  fontSize: 18, fontWeight: FontWeight.bold),
+                            ),
+                            DropdownButton(
+                                value: _value,
+                                items: [
+                                  DropdownMenuItem(
+                                    child: Text(""),
+                                    value: 1,
+                                  ),
+                                  DropdownMenuItem(
+                                    child: Text("Vui vẻ"),
+                                    value: 2,
+                                  ),
+                                  DropdownMenuItem(child: Text("Sợ"), value: 3),
+                                  DropdownMenuItem(
+                                      child: Text("Lãng tránh"), value: 4),
+                                  DropdownMenuItem(
+                                      child: Text("Thất thường"), value: 5),
+                                  DropdownMenuItem(
+                                      child: Text("Cảm giác cao"), value: 6),
+                                ],
+                                onChanged: (value) {
+                                  setState(() {
+                                    _value = value;
+                                  });
+                                }),
+                          ],
+                        ),
                       ),
                     ),
                     Padding(

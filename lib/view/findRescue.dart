@@ -243,8 +243,6 @@ class _PickState extends State<Pick> {
                             ],
                           ),
                         )
-
-
                     ),
                     Padding(
                         padding: const EdgeInsets.all(8.0),

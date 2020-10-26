@@ -61,7 +61,8 @@ class MyHomePage extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.fromLTRB(10, 0, 0, 0),
                     child: Text(
-                      'Tom\nUser@gmail.com',
+                      'Tom\n'
+                          'User@gmail.com',
                       style: GoogleFonts.lato(
                           fontStyle: FontStyle.normal,
                           color: Colors.black,
