@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pet_help/view/HomePage.dart';
 import 'package:pet_help/view/RescueHome.dart';
+import 'package:flutter_auth_buttons/flutter_auth_buttons.dart';
 import 'package:pet_help/view/signUp.dart';
 import 'package:pet_help/view/zHomePageRescue.dart';
 import 'package:responsive_grid/responsive_grid.dart';
@@ -110,7 +111,32 @@ class LoginState extends State<Login> {
                 ),
               ),
 
-              _signInButton(),
+              // _signInButton(),
+
+              GoogleSignInButton(
+                onPressed: () {/* ... */},
+                darkMode: true, // default: false
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              FacebookSignInButton(onPressed: () {
+          // call authentication logic
+          }),
+              SizedBox(
+                height: 10,
+              ),
+              // TwitterSignInButton(
+              //   onPressed: () {},
+              //   centered: true,
+              // ),
+              // SizedBox(
+              //   height: 10,
+              // ),
+              // MicrosoftSignInButton(
+              //   onPressed: () {},
+              //   centered: true,
+              // ),
 
               ResponsiveGridCol(
                     child: Container(

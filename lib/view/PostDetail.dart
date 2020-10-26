@@ -156,7 +156,7 @@ class ItemInfo extends State<PostDetail> {
                                 children: [
                                   Text("Loại",
                                       style:
-                                      TextStyle(color: Colors.blueAccent)),
+                                      TextStyle(color: Colors.blueAccent, fontWeight: FontWeight.bold,)),
                                   Text("Mèo",
                                       style: TextStyle(color: Colors.orange)),
                                 ],
@@ -165,7 +165,7 @@ class ItemInfo extends State<PostDetail> {
                                 children: [
                                   Text("Tuổi",
                                       style:
-                                          TextStyle(color: Colors.blueAccent)),
+                                          TextStyle(color: Colors.blueAccent, fontWeight: FontWeight.bold,)),
                                   Text("1 Tuổi",
                                       style: TextStyle(color: Colors.orange)),
                                 ],
@@ -174,7 +174,7 @@ class ItemInfo extends State<PostDetail> {
                                 children: [
                                   Text("Giới tính",
                                       style:
-                                          TextStyle(color: Colors.blueAccent)),
+                                          TextStyle(color: Colors.blueAccent, fontWeight: FontWeight.bold,)),
                                   Text("Đực",
                                       style: TextStyle(color: Colors.orange)),
                                 ],
@@ -183,7 +183,7 @@ class ItemInfo extends State<PostDetail> {
                                 children: [
                                   Text("Thuộc giống",
                                       style:
-                                          TextStyle(color: Colors.blueAccent)),
+                                          TextStyle(color: Colors.blueAccent, fontWeight: FontWeight.bold,)),
                                   Text("Nga",
                                       style: TextStyle(color: Colors.orange)),
                                 ],
@@ -192,7 +192,7 @@ class ItemInfo extends State<PostDetail> {
                                 children: [
                                   Text("Cân nặng",
                                       style:
-                                      TextStyle(color: Colors.blueAccent)),
+                                      TextStyle(color: Colors.blueAccent, fontWeight: FontWeight.bold,)),
                                   Text("4Kg",
                                       style: TextStyle(color: Colors.orange)),
                                 ],
@@ -214,7 +214,7 @@ class ItemInfo extends State<PostDetail> {
                           width: 110,
                           alignment: Alignment(0.1, 1.0),
                           child: Text(
-                            "Bum",
+                            "BUM",
                             style: TextStyle(
                                 color: Colors.brown,
                                 fontWeight: FontWeight.bold,
@@ -243,9 +243,9 @@ class ItemInfo extends State<PostDetail> {
                       children: <Widget>[
                         Container(
                           height: 30,
-                          width: 110,
+                          width: 140,
                           alignment: Alignment.center,
-                          padding: EdgeInsets.all(6),
+                          padding: EdgeInsets.all(5),
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(8),
                               border: Border(
@@ -270,7 +270,7 @@ class ItemInfo extends State<PostDetail> {
                           height: 30,
                           width: 110,
                           alignment: Alignment.center,
-                          padding: EdgeInsets.all(6),
+                          padding: EdgeInsets.all(5),
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(8),
                               border: Border(
@@ -295,7 +295,7 @@ class ItemInfo extends State<PostDetail> {
                           height: 30,
                           width: 110,
                           alignment: Alignment.center,
-                          padding: EdgeInsets.all(6),
+                          padding: EdgeInsets.all(5),
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(8),
                               border: Border(
@@ -321,15 +321,16 @@ class ItemInfo extends State<PostDetail> {
                     Row(
                       children: <Widget>[
                         Container(
-                          padding: EdgeInsets.all(9.0),
-                          height: 80,
+                          // padding: EdgeInsets.all(14.0),
+                          padding: const EdgeInsets.fromLTRB(50, 20, 0, 10),
+                          // height: 80,
                           width: 350,
                           alignment: Alignment.center,
                           child: Text(
                             "Bum là một con mèo Nga. Nó được biết đến với tính cách trầm lặng và ngọt ngào. Mặc dù Bum có xu hướng thư giãn và dễ tính, Bum cũng có khí chất của hoàng tộc.",
-                            textAlign: TextAlign.left,
-                            overflow: TextOverflow.ellipsis,
-                            maxLines: 3,
+                            // textAlign: TextAlign.left,
+                            // overflow: TextOverflow.ellipsis,
+                            // maxLines: 3,
                           ),
                         ),
                       ],
@@ -343,13 +344,13 @@ class ItemInfo extends State<PostDetail> {
                             builder: (context) => AdoptForm()));
                       },
                       child: Container(
-                        alignment: Alignment(0.6, 1.0),
+                        alignment: Alignment(1.0, 1.0),
                         padding: EdgeInsets.all(6),
-                        height: 30,
-                        width: 250,
+                        height: 40,
+                        width: 220,
                         decoration: BoxDecoration(
-                          color: Colors.orange,
-                          borderRadius: BorderRadius.circular(8.0),
+                          color: Color.fromRGBO(253, 158, 121, 1),
+                          borderRadius: BorderRadius.circular(10.0),
                         ),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
