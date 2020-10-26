@@ -107,7 +107,7 @@ class PetReportFormStage extends State<PetReportForm> {
                     Padding(
                       padding: const EdgeInsets.all(10),
                       child: Text(
-                        "Báo cáo sức khỏe của BUM",
+                        "BUM",
                         style: TextStyle(
                             fontSize: 30, fontWeight: FontWeight.bold),
                       ),
@@ -193,6 +193,60 @@ class PetReportFormStage extends State<PetReportForm> {
                             style: TextStyle(
                                 fontSize: 16, ),
                           ),
+                        ],
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Row(
+                        children: [
+                          Text(
+                            "Tuổi: ",
+                            style: TextStyle(
+                                fontSize: 18, fontWeight: FontWeight.bold),
+                          ),
+                          CustomNumberPicker(
+                            initialValue: 1,
+                            maxValue: 150,
+                            minValue: 0,
+                            step: 1,
+                            onValue: (value) {
+                              print(value.toString());
+                            },
+                          ),
+                        ],
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Row(
+                        children: [
+                          Text(
+                            "Giới tính: ",
+                            style: TextStyle(
+                                fontSize: 18, fontWeight: FontWeight.bold),
+                          ),
+                          DropdownButton(
+                              value: _value,
+                              items: [
+                                DropdownMenuItem(
+                                  child: Text(""),
+                                  value: 1,
+                                ),
+                                DropdownMenuItem(
+                                  child: Text("Đực"),
+                                  value: 2,
+                                ),
+                                DropdownMenuItem(
+                                    child: Text("Cái"),
+                                    value: 3
+                                ),
+                              ],
+                              onChanged: (value) {
+                                setState(() {
+                                  _value = value;
+                                });
+                              }),
                         ],
                       ),
                     ),
