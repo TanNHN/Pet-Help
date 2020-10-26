@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:pet_help/components/app_bar.dart';
 import 'package:pet_help/components/chat.dart';
+import 'package:pet_help/components/chatMyPost.dart';
 import 'package:pet_help/components/item_image.dart';
 import 'package:pet_help/view/AdoptRequest.dart';
 import 'package:pet_help/view/Contact.dart';
@@ -505,7 +506,7 @@ class MyPostDetailState extends State<MyPostDetail> {
                                 onTap: () {
                                   Navigator.of(context)
                                       .push(new MaterialPageRoute(
-                                          builder: (context) => ChatScreen(
+                                          builder: (context) => ChatMyPostScreen(
                                                 name: 'Dũng Xạo',
                                                 UrlImage: 'image/cat4.jpg',
                                               )));
