@@ -11,8 +11,8 @@ class CustomTextField extends StatelessWidget {
     return Padding(
         padding: const EdgeInsets.only(left: 25, right: 25),
         child: TextField(obscureText: issecured,
-          cursorColor: Colors.white,
-          style: TextStyle(color: Colors.white),
+          cursorColor: Colors.black,
+          style: TextStyle(color: Colors.black),
           decoration: InputDecoration(
               disabledBorder: OutlineInputBorder(
                 borderSide: BorderSide(color: Colors.transparent),
@@ -22,18 +22,19 @@ class CustomTextField extends StatelessWidget {
               hintStyle: TextStyle(
                   fontSize: 18,
                   letterSpacing: 1.5,
-                  color: Colors.white70,
-                  fontWeight: FontWeight.w900),
+                  color: Colors.grey,
+                  fontWeight: FontWeight.w900
+              ),
               filled: true,
               hoverColor: Colors.transparent,
               focusColor: Colors.transparent,
               fillColor: Colors.white.withOpacity(.3),
               border: OutlineInputBorder(
-                borderSide: BorderSide(color: Colors.transparent),
+                borderSide: BorderSide(color: Colors.black),
                 borderRadius: BorderRadius.circular(25),
               ),
               enabledBorder: OutlineInputBorder(
-                borderSide: BorderSide(color: Colors.transparent),
+                borderSide: BorderSide(color: Colors.black),
                 borderRadius: BorderRadius.circular(25),
               )),
         ));

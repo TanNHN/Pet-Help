@@ -11,11 +11,11 @@ class SignUp extends StatelessWidget {
       body: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
-              image: AssetImage('src/image/1.png'), fit: BoxFit.cover),
-          gradient: LinearGradient(
-              colors: [Colors.blue[400], Colors.blue],
-              begin: Alignment.bottomCenter,
-              end: Alignment.topCenter),
+              image: AssetImage('src/image/background.jpg'), fit: BoxFit.cover),
+          // gradient: LinearGradient(
+          //     colors: [Colors.blue[400], Colors.blue],
+          //     begin: Alignment.bottomCenter,
+          //     end: Alignment.topCenter),
         ),
         child: Center(
           child: Column(
@@ -29,7 +29,8 @@ class SignUp extends StatelessWidget {
                   Text(
                     'Đăng kí tài khoản',
                     style: TextStyle(
-                        color: Colors.white,
+                        // color: Colors.blue,
+                        color: Color.fromRGBO(253, 158, 121, 1),
                         fontWeight: FontWeight.bold,
                         fontSize: 35),
                   ),
@@ -65,20 +66,22 @@ class SignUp extends StatelessWidget {
               ),
               SizedBox(
                 height: 25,
-              ),  Padding(
+              ),
+              Padding(
                 padding: const EdgeInsets.only(left: 25, right: 25),
                 child: ButtonTheme(
-                    buttonColor: Colors.white,
-                    minWidth: MediaQuery.of(context).size.width,
+                    buttonColor: Color.fromRGBO(253, 158, 121, 1),
+                    // minWidth: MediaQuery.of(context).size.width,
+                    minWidth: 270,
                     height: 55,
                     child: RaisedButton(
                       onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (ctx) => Login()));},
                       child: Text(
-                        'Create',
-                        style: TextStyle(color: Colors.grey, fontSize: 22),
+                        'Tạo tài khoản',
+                        style: TextStyle(fontSize: 24, color: Colors.white,),
                       ),
                       shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(25)),
+                          borderRadius: BorderRadius.circular(40)),
                     )),
               ),
             ],

@@ -135,42 +135,9 @@ class LoginState extends State<Login> {
                   ),
                 ),
               ),
-
-
-              Padding(
-                padding: const EdgeInsets.all(12),
-                  child: GestureDetector(
-                      // onTap: () {
-                      //   Navigator.push(context,
-                      //       MaterialPageRoute(builder: (ctx) => SignUp()));
-                      // },
-                      child: Text(
-                        'Sign up',
-                        style: TextStyle(
-                            decoration: TextDecoration.underline,
-                            fontWeight: FontWeight.w500,
-                            color: Colors.white),
-                      ),
-                    ),
-
-
-              )
-
-                      // Container(
-                      //   alignment: Alignment.topCenter,
-                      //   child: Text(
-                      //     "\nĐăng kí",
-                      //     style: TextStyle(
-                      //         fontSize: 19,
-                      //         color: Colors.blue,
-                      //         fontWeight: FontWeight.bold),
-                      //     textAlign: TextAlign.left,
-                      //   ),
-                      // ),
-
-
-
-
+              SizedBox(
+                height: 25,
+              ),
             ],
           ),
         ),
