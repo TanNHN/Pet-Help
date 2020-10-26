@@ -73,6 +73,7 @@ class LoginState extends State<Login> {
                   style: TextStyle(fontSize: 18, color: Colors.black),
                   decoration: InputDecoration(
                       labelText: 'Tên đăng nhập',
+                      hintText: 'user/cuutro',
                       errorText: userInvalid ? "Tên tài khoảng trống" : null),
                 ),
               ),
@@ -84,6 +85,7 @@ class LoginState extends State<Login> {
                   obscureText: true,
                   decoration: InputDecoration(
                       labelText: 'Mật khẩu',
+                      hintText: '123',
                       errorText: passInvalid ? "Mật khẩu trống" : null),
                 ),
               ),
