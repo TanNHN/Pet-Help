@@ -90,12 +90,13 @@ class LoginState extends State<Login> {
               Padding(
                 padding: const EdgeInsets.all(12),
                 child: SizedBox(
-                  width: double.infinity,
-                  height: 45,
+                  // width: double.infinity,
+                  width: 270,
+                  height: 55,
                   child: RaisedButton(
                     color: Color.fromRGBO(253, 158, 121, 1),
                     shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.all(Radius.circular(8))),
+                        borderRadius: BorderRadius.all(Radius.circular(40))),
                     onPressed: onSignInClick,
                     child: Text("Đăng nhập",
                         style: TextStyle(
