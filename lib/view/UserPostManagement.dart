@@ -91,7 +91,7 @@ class UserPostManagement extends StatelessWidget {
                         Navigator.push(
                           context,
                           new MaterialPageRoute(
-                              builder: (context) => new MyPostDetail()),
+                              builder: (context) => new MyPostDetail2()),
                         );
                       },
                       child: Container(
@@ -219,7 +219,7 @@ class UserPostManagement extends StatelessWidget {
                         Navigator.push(
                           context,
                           new MaterialPageRoute(
-                              builder: (context) => new MyPostDetail2()),
+                              builder: (context) => new MyPostDetail()),
                         );
                       },
                       child: Container(

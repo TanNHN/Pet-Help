@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:pet_help/customwidget/customtextfield.dart';
+import 'package:pet_help/view/ConfirmEmailSent.dart';
 import 'package:pet_help/view/HomePage.dart';
 import 'package:pet_help/view/Login.dart';
 
-class SignUp extends StatelessWidget {
+class ForgotPassEmail extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,9 +28,9 @@ class SignUp extends StatelessWidget {
                     width: 40,
                   ),
                   Text(
-                    'Đăng kí tài khoản',
+                    'Quên mật khẩu',
                     style: TextStyle(
-                        // color: Colors.blue,
+                      // color: Colors.blue,
                         color: Color.fromRGBO(253, 158, 121, 1),
                         fontWeight: FontWeight.bold,
                         fontSize: 35),
@@ -39,36 +40,9 @@ class SignUp extends StatelessWidget {
               SizedBox(
                 height: 20,
               ),
+
               CustomTextField(
-                hint: '   Nhập Tên đăng nhập',
-                issecured: false,
-              ),
-              SizedBox(
-                height: 15,
-              ),
-              CustomTextField(
-                hint: '     Nhập Email của bạn',
-                issecured: false,
-              ),
-              SizedBox(
-                height: 15,
-              ),
-              CustomTextField(
-                hint: '    Nhập số điện thoại của bạn',
-                issecured: false,
-              ),
-              SizedBox(
-                height: 15,
-              ),
-              CustomTextField(
-                hint: '    Nhập mật khẩu của bạn',
-                issecured: true,
-              ),
-              SizedBox(
-                height: 15,
-              ),
-              CustomTextField(
-                hint: '    Nhập lại mật khẩu của bạn',
+                hint: '    Vui lòng nhập Tên đăng nhập',
                 issecured: true,
               ),
               SizedBox(
@@ -82,9 +56,9 @@ class SignUp extends StatelessWidget {
                     minWidth: 270,
                     height: 55,
                     child: RaisedButton(
-                      onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (ctx) => Login()));},
+                      onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (ctx) => ConfirmEmailSent()));},
                       child: Text(
-                        'Tạo tài khoản',
+                        'Tiếp tục',
                         style: TextStyle(fontSize: 24, color: Colors.white,),
                       ),
                       shape: RoundedRectangleBorder(

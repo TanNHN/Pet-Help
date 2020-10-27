@@ -142,7 +142,7 @@ class RescuePetListState extends State<RescuePetList> {
                                                 .pushReplacement(
                                                 MaterialPageRoute(
                                                   builder: (context) =>
-                                                      MyHomePage(),
+                                                      PetProfile(),
                                                 ));
                                           },
                                           child: Text(
@@ -240,7 +240,7 @@ class RescuePetListState extends State<RescuePetList> {
                                                 .pushReplacement(
                                                     MaterialPageRoute(
                                               builder: (context) =>
-                                                  MyHomePage(),
+                                                  PetProfile(),
                                             ));
                                           },
                                           child: Text(

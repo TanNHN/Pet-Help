@@ -507,7 +507,7 @@ class MyPostDetailState extends State<MyPostDetail> {
                                   Navigator.of(context)
                                       .push(new MaterialPageRoute(
                                           builder: (context) => ChatMyPostScreen(
-                                                name: 'Dũng Xạo',
+                                                name: 'Tom',
                                                 UrlImage: 'image/cat4.jpg',
                                               )));
                                 },

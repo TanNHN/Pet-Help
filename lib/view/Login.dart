@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pet_help/view/ForgetPasswordEmail.dart';
 import 'package:pet_help/view/HomePage.dart';
 import 'package:pet_help/view/RescueHome.dart';
 import 'package:flutter_auth_buttons/flutter_auth_buttons.dart';
@@ -139,14 +140,22 @@ class LoginState extends State<Login> {
               // ),
 
               ResponsiveGridCol(
-                    child: Container(
-                      alignment: Alignment.topCenter,
-                      child:
-                      Text(
-                      "\nQuên mật khẩu",
-                      style: TextStyle(fontSize: 19, color: Colors.blue, fontWeight: FontWeight.bold),
+
+                    child:
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(context, MaterialPageRoute(builder: (ctx) => ForgotPassEmail()));
+                      },
+                      child: Container(
+                        alignment: Alignment.topCenter,
+                        child:
+                        Text(
+                          "\nQuên mật khẩu",
+                          style: TextStyle(fontSize: 19, color: Colors.blue, fontWeight: FontWeight.bold),
+                        ),
+                      ),
                     ),
-                  ),
+
                   ),
               Padding(
                 padding: const EdgeInsets.fromLTRB(0, 10, 0, 0),
