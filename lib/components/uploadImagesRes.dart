@@ -9,8 +9,6 @@ import 'package:pet_help/view/UserPetManagement.dart';
 import 'package:pet_help/view/loadimg.dart';
 import 'package:pet_help/view/utils.dart';
 
-
-
 class UploadImagesRes extends StatefulWidget {
   final GlobalKey<ScaffoldState> globalKey;
   const UploadImagesRes({Key key, this.globalKey}) : super(key: key);
@@ -158,201 +156,196 @@ class _UploadImagesResState extends State<UploadImagesRes> {
           new Column(
             children: <Widget>[
               new ListTile(
-                title: new TextField(
-                  decoration: new InputDecoration(
-                    hintText: "Tên",
-                  ),
+                title: new Text(
+                  "Đến: Dũng Xạo",
+                  style: TextStyle(color: Colors.grey),
                 ),
-              ),
-
-              Row(
-                children: [
-                  Text(
-                    "   Giới tính: ",
-                    style: TextStyle(
-                        fontSize: 17, color: Colors.black54 ),
-                  ),
-                  DropdownButton(
-                      value: _value,
-                      items: [
-                        DropdownMenuItem(
-                          child: Text(""),
-                          value: 1,
-                        ),
-                        DropdownMenuItem(
-                          child: Text("Đực"),
-                          value: 2,
-                        ),
-                        DropdownMenuItem(
-                            child: Text("Cái"), value: 3),
-
-                      ],
-                      onChanged: (value) {
-                        setState(() {
-                          _value = value;
-                        });
-                      }),
-                  Text(
-                    "   Loại: ",
-                    style: TextStyle(
-                        fontSize: 17, color: Colors.black54 ),
-                  ),
-                  DropdownButton(
-                      value: _value,
-                      items: [
-                        DropdownMenuItem(
-                          child: Text(""),
-                          value: 1,
-                        ),
-                        DropdownMenuItem(
-                          child: Text("Chó"),
-                          value: 2,
-                        ),
-                        DropdownMenuItem(
-                            child: Text("Mèo"), value: 3),
-                        DropdownMenuItem(
-                            child: Text("Hamster"),
-                            value: 4),
-                        DropdownMenuItem(
-                            child: Text("Khác"), value: 5)
-                      ],
-                      onChanged: (value) {
-                        setState(() {
-                          _value = value;
-                        });
-                      }),
-                ],
-              ),
-              Column(
-                children: [
-
-                ],
-              ),
-
-              new ListTile(
-                title: new TextField(
-                  decoration: new InputDecoration(
-                    hintText: "Thuộc giống",
-                  ),
-                ),
-              ),
-              Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Container(
-                    width: 400,
-                    height: 220,
-                    decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(18),
-                        boxShadow: [
-                          new BoxShadow(
-                              color: Colors.black54,
-                              offset: new Offset(1.0, 2.0),
-                              blurRadius: 3.5),
-                        ]),
-                    child: Row(
-                      children: [
-                        Text(
-                          "   Màu: ",
-                          style: TextStyle(
-                            fontSize: 17, ),
-                        ),
-
-                        Container(
-                          width: 320,
-                          child: MaterialColorPicker(
-
-
-
-
-                              allowShades: false, // default true
-                              onMainColorChange: (ColorSwatch color) {
-                                // Handle main color changes
-                              },
-                              selectedColor: Colors.red
-                          ),
-                        ),
-                      ],
-                    ),
-                  )
-
-
-              ),
-              new ListTile(
-                title: new TextField(
-                  decoration: new InputDecoration(
-                    hintText: "Cân nặng",
-                  ),
-                ),
-              ),
-              Row(
-                children: [
-                  Text(
-                    "   Tình trạng hiện tại: ",
-                    style: TextStyle(
-                        fontSize: 17, color: Colors.black54 ),
-                  ),
-                  DropdownButton(
-                      value: _value,
-                      items: [
-                        DropdownMenuItem(
-                          child: Text(""),
-                          value: 1,
-                        ),
-                        DropdownMenuItem(
-                          child: Text("Khoẻ mạnh"),
-                          value: 2,
-                        ),
-                        DropdownMenuItem(
-                            child: Text("Bị thương"), value: 3),
-
-                      ],
-                      onChanged: (value) {
-                        setState(() {
-                          _value = value;
-                        });
-                      }),
-
-                ],
-              ),
-              SizedBox(height: 10,),
-              Row(
-                children: [
-                  Text(
-                    "   Mức độ vết thương: ",
-                    style: TextStyle(
-                        fontSize: 17, color: Colors.black54 ),
-                  ),
-                  DropdownButton(
-                      value: _value,
-                      items: [
-                        DropdownMenuItem(
-                          child: Text(""),
-                          value: 1,
-                        ),
-                        DropdownMenuItem(
-                          child: Text("Nhẹ"),
-                          value: 2,
-                        ),
-                        DropdownMenuItem(
-                            child: Text("Trung bình"), value: 3),
-                        DropdownMenuItem(
-                            child: Text("Nặng"), value: 3),
-
-                      ],
-                      onChanged: (value) {
-                        setState(() {
-                          _value = value;
-                        });
-                      }),
-
-                ],
-              ),
-              SizedBox(height: 20,),
-              const Divider(
-                height: 1.0,
               ),
             ],
+            //     Row(
+            //       children: [
+            //         Text(
+            //           "   Giới tính: ",
+            //           style: TextStyle(
+            //               fontSize: 17, color: Colors.black54 ),
+            //         ),
+            //         DropdownButton(
+            //             value: _value,
+            //             items: [
+            //               DropdownMenuItem(
+            //                 child: Text(""),
+            //                 value: 1,
+            //               ),
+            //               DropdownMenuItem(
+            //                 child: Text("Đực"),
+            //                 value: 2,
+            //               ),
+            //               DropdownMenuItem(
+            //                   child: Text("Cái"), value: 3),
+
+            //             ],
+            //             onChanged: (value) {
+            //               setState(() {
+            //                 _value = value;
+            //               });
+            //             }),
+            //         Text(
+            //           "   Loại: ",
+            //           style: TextStyle(
+            //               fontSize: 17, color: Colors.black54 ),
+            //         ),
+            //         DropdownButton(
+            //             value: _value,
+            //             items: [
+            //               DropdownMenuItem(
+            //                 child: Text(""),
+            //                 value: 1,
+            //               ),
+            //               DropdownMenuItem(
+            //                 child: Text("Chó"),
+            //                 value: 2,
+            //               ),
+            //               DropdownMenuItem(
+            //                   child: Text("Mèo"), value: 3),
+            //               DropdownMenuItem(
+            //                   child: Text("Hamster"),
+            //                   value: 4),
+            //               DropdownMenuItem(
+            //                   child: Text("Khác"), value: 5)
+            //             ],
+            //             onChanged: (value) {
+            //               setState(() {
+            //                 _value = value;
+            //               });
+            //             }),
+            //       ],
+            //     ),
+            //     Column(
+            //       children: [
+
+            //       ],
+            //     ),
+
+            //     new ListTile(
+            //       title: new TextField(
+            //         decoration: new InputDecoration(
+            //           hintText: "Thuộc giống",
+            //         ),
+            //       ),
+            //     ),
+            //     Padding(
+            //         padding: const EdgeInsets.all(8.0),
+            //         child: Container(
+            //           width: 400,
+            //           height: 220,
+            //           decoration: BoxDecoration(
+            //               color: Colors.white,
+            //               borderRadius: BorderRadius.circular(18),
+            //               boxShadow: [
+            //                 new BoxShadow(
+            //                     color: Colors.black54,
+            //                     offset: new Offset(1.0, 2.0),
+            //                     blurRadius: 3.5),
+            //               ]),
+            //           child: Row(
+            //             children: [
+            //               Text(
+            //                 "   Màu: ",
+            //                 style: TextStyle(
+            //                   fontSize: 17, ),
+            //               ),
+
+            //               Container(
+            //                 width: 320,
+            //                 child: MaterialColorPicker(
+
+            //                     allowShades: false, // default true
+            //                     onMainColorChange: (ColorSwatch color) {
+            //                       // Handle main color changes
+            //                     },
+            //                     selectedColor: Colors.red
+            //                 ),
+            //               ),
+            //             ],
+            //           ),
+            //         )
+
+            //     ),
+            //     new ListTile(
+            //       title: new TextField(
+            //         decoration: new InputDecoration(
+            //           hintText: "Cân nặng",
+            //         ),
+            //       ),
+            //     ),
+            //     Row(
+            //       children: [
+            //         Text(
+            //           "   Tình trạng hiện tại: ",
+            //           style: TextStyle(
+            //               fontSize: 17, color: Colors.black54 ),
+            //         ),
+            //         DropdownButton(
+            //             value: _value,
+            //             items: [
+            //               DropdownMenuItem(
+            //                 child: Text(""),
+            //                 value: 1,
+            //               ),
+            //               DropdownMenuItem(
+            //                 child: Text("Khoẻ mạnh"),
+            //                 value: 2,
+            //               ),
+            //               DropdownMenuItem(
+            //                   child: Text("Bị thương"), value: 3),
+
+            //             ],
+            //             onChanged: (value) {
+            //               setState(() {
+            //                 _value = value;
+            //               });
+            //             }),
+
+            //       ],
+            //     ),
+            //     SizedBox(height: 10,),
+            //     Row(
+            //       children: [
+            //         Text(
+            //           "   Mức độ vết thương: ",
+            //           style: TextStyle(
+            //               fontSize: 17, color: Colors.black54 ),
+            //         ),
+            //         DropdownButton(
+            //             value: _value,
+            //             items: [
+            //               DropdownMenuItem(
+            //                 child: Text(""),
+            //                 value: 1,
+            //               ),
+            //               DropdownMenuItem(
+            //                 child: Text("Nhẹ"),
+            //                 value: 2,
+            //               ),
+            //               DropdownMenuItem(
+            //                   child: Text("Trung bình"), value: 3),
+            //               DropdownMenuItem(
+            //                   child: Text("Nặng"), value: 3),
+
+            //             ],
+            //             onChanged: (value) {
+            //               setState(() {
+            //                 _value = value;
+            //               });
+            //             }),
+
+            //       ],
+            //     ),
+            //     SizedBox(height: 20,),
+            //     const Divider(
+            //       height: 1.0,
+            //     ),
+            //   ],
           ),
           Padding(
             padding: const EdgeInsets.all(12),
@@ -368,7 +361,7 @@ class _UploadImagesResState extends State<UploadImagesRes> {
                     builder: (context) => RescueHome(),
                   ));
                 },
-                child: Text("Tạo thú cưng ",
+                child: Text("Đã cứu trợ",
                     style: TextStyle(
                       fontSize: 24,
                       color: Colors.white,
@@ -393,7 +386,7 @@ class _UploadImagesResState extends State<UploadImagesRes> {
               .document(documnetID)
               .setData({'urls': imageUrls}).then((_) {
             SnackBar snackbar =
-            SnackBar(content: Text('Uploaded Successfully'));
+                SnackBar(content: Text('Uploaded Successfully'));
             widget.globalKey.currentState.showSnackBar(snackbar);
             setState(() {
               images = [];
@@ -442,7 +435,7 @@ class _UploadImagesResState extends State<UploadImagesRes> {
     String fileName = DateTime.now().millisecondsSinceEpoch.toString();
     StorageReference reference = FirebaseStorage.instance.ref().child(fileName);
     StorageUploadTask uploadTask =
-    reference.putData((await imageFile.getByteData()).buffer.asUint8List());
+        reference.putData((await imageFile.getByteData()).buffer.asUint8List());
     StorageTaskSnapshot storageTaskSnapshot = await uploadTask.onComplete;
     print(storageTaskSnapshot.ref.getDownloadURL());
     return storageTaskSnapshot.ref.getDownloadURL();
