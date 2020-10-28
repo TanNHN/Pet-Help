@@ -140,7 +140,6 @@ class LoginState extends State<Login> {
               // ),
 
               ResponsiveGridCol(
-
                     child:
                     GestureDetector(
                       onTap: () {
