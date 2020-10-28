@@ -1,3 +1,5 @@
+import 'dart:js';
+
 import 'package:flutter/material.dart';
 import 'package:pet_help/customwidget/customtextfield.dart';
 import 'package:pet_help/view/HomePage.dart';
@@ -82,7 +84,7 @@ class SignUp extends StatelessWidget {
                     minWidth: 270,
                     height: 55,
                     child: RaisedButton(
-                      onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (ctx) => Login()));},
+                      onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (ctx) => MyHomePage()));},
                       child: Text(
                         'Tạo tài khoản',
                         style: TextStyle(fontSize: 24, color: Colors.white,),
