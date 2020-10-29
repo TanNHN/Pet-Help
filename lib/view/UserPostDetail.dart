@@ -9,6 +9,7 @@ import 'package:pet_help/view/Contact.dart';
 import 'package:pet_help/view/GMap.dart';
 import 'package:pet_help/view/GMap2.dart';
 import 'package:pet_help/view/HomePage.dart';
+import 'package:pet_help/view/MapPic.dart';
 import 'package:pet_help/view/RescueHome.dart';
 import 'package:pet_help/view/RescuePetManagement.dart';
 import 'package:pet_help/view/PetHealthReportList.dart';
@@ -523,7 +524,7 @@ class UserPostDetailState extends State<UserPostDetail> {
                         GestureDetector(
                             onTap: () {
                               Navigator.of(context).push(new MaterialPageRoute(
-                                  builder: (context) => GMap()));
+                                  builder: (context) => MapPic()));
                             },
                             child: Container(
                               height: 43,

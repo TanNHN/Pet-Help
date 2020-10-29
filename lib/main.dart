@@ -4,7 +4,7 @@ import 'package:pet_help/view/MapPic.dart';
 
 void main() {
   runApp(MaterialApp(
-   home: MapPic(),
+   home: Login(),
    debugShowCheckedModeBanner: false,
   ));
 }
