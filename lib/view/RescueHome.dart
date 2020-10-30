@@ -8,6 +8,7 @@ import 'package:pet_help/components/rescue_home_list.dart';
 import 'package:pet_help/view/AdoptRequestList.dart';
 import 'package:pet_help/view/Contact.dart';
 import 'package:pet_help/view/Login.dart';
+import 'package:pet_help/view/ProfileRescue.dart';
 import 'package:pet_help/view/UserPetManagement.dart';
 import 'package:pet_help/view/RescuePostManagement.dart';
 import 'package:pet_help/view/RescuePetManagement.dart';
@@ -79,7 +80,7 @@ class RescueHome extends StatelessWidget {
               ),
               onTap: () {
                 Navigator.of(context).push(
-                    new MaterialPageRoute(builder: (context) => ProfileApp()));
+                    new MaterialPageRoute(builder: (context) => ProfileRescueApp()));
                 // Update the state of the app
                 // ...
                 // Then close the drawer

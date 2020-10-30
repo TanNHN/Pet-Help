@@ -65,7 +65,7 @@ class MyHomePage extends StatelessWidget {
                           'User@gmail.com',
                       style: GoogleFonts.lato(
                           fontStyle: FontStyle.normal,
-                          color: Colors.black,
+                          color: Colors.white,
                           fontSize: 20),
                     ),
                   ),

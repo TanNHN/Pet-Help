@@ -78,7 +78,7 @@ class UserPetManagement extends StatelessWidget {
                               Column(
                                 children: [
                                   Text(
-                                    "BUM",
+                                    "Bum",
                                     style: TextStyle(
                                       fontSize: 30,
                                       fontWeight: FontWeight.bold,
