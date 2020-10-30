@@ -349,7 +349,7 @@ class PetReportFormStage extends State<PetReportForm> {
                       padding: const EdgeInsets.all(8.0),
                       child: Container(
                         width: 440,
-                        height: 180,
+                        height: 215,
                         decoration: BoxDecoration(
                             color: Colors.white,
                             borderRadius: BorderRadius.circular(18),
