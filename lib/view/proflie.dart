@@ -50,7 +50,7 @@ class ProfileApp extends StatelessWidget {
                 ),
               )),
           SizedBox(
-            height: 20.0,
+            height: 10.0,
           ),
           Container(
             child: Text(
@@ -63,6 +63,7 @@ class ProfileApp extends StatelessWidget {
                 // letterSpacing: 2.0,
               ),
             ),
+
           ),
           Container(
             child: Padding(
@@ -79,13 +80,26 @@ class ProfileApp extends StatelessWidget {
                   //       fontStyle: FontStyle.normal,
                   //       fontSize: 28.0),
                   // ),
-                  SizedBox(
-                    height: 10.0,
-                  ),
-
                   // SizedBox(
                   //   height: 10.0,
                   // ),
+                  Text(
+                    '            0123456789',
+                    style: TextStyle(
+                      fontSize: 19.0,
+                      // fontStyle: FontStyle.italic,
+                      // fontWeight: FontWeight.w300,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.green,
+                      // letterSpacing: 2.0,
+                    ),
+                  ),
+                  // SizedBox(
+                  //   height: 10.0,
+                  // ),
+                  SizedBox(
+                    height: 20.0,
+                  ),
                   Text(
                     'Yêu động vật và anh',
                     style: TextStyle(
