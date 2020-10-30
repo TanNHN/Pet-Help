@@ -23,7 +23,7 @@ class AddPetStage extends State<AddPet> {
       appBar: AppBar(
         title: Padding(
           padding: const EdgeInsets.fromLTRB(80, 0, 0, 0),
-          child: Text("Add pet"),
+          child: Text("Thêm Thú Cưng"),
         ),
         backgroundColor: Color.fromRGBO(253, 158, 121, 1),
       ),
