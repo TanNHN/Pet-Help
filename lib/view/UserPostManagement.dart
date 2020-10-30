@@ -143,7 +143,7 @@ class UserPostManagement extends StatelessWidget {
                                 padding: const EdgeInsets.fromLTRB(8, 18, 3, 4),
                                 child: Row(
                                   children: [
-                                    Icon(Icons.add_location),
+                                    Icon(Icons.location_on),
                                     Text(
                                       " 658 Lã Xuân Oai, Q.9, HCM",
                                       style: TextStyle(
@@ -158,7 +158,7 @@ class UserPostManagement extends StatelessWidget {
                                 padding: const EdgeInsets.fromLTRB(8, 18, 3, 4),
                                 child: Row(
                                   children: [
-                                    Icon(Icons.wb_incandescent_rounded,color: Colors.red,),
+                                    Icon(Icons.warning_outlined,color: Colors.red,),
                                     Text(
                                       " CHƯA ĐƯỢC CỨU",
                                       style: TextStyle(
@@ -272,7 +272,7 @@ class UserPostManagement extends StatelessWidget {
                                 padding: const EdgeInsets.fromLTRB(8, 18, 3, 4),
                                 child: Row(
                                   children: [
-                                    Icon(Icons.add_location),
+                                    Icon(Icons.location_on),
                                     Text(
                                       " 658 Lã Xuân Oai, Q.9, HCM",
                                         style: TextStyle(
@@ -287,7 +287,7 @@ class UserPostManagement extends StatelessWidget {
                                 padding: const EdgeInsets.fromLTRB(8, 18, 3, 4),
                                 child: Row(
                                   children: [
-                                    Icon(Icons.wb_incandescent_rounded,color: Colors.green,),
+                                    Icon(Icons.check_box,color: Colors.green,),
                                     Text(
                                       " ĐÃ ĐƯỢC CỨU",
                                       style: TextStyle(
