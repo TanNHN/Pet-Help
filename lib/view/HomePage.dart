@@ -62,10 +62,10 @@ class MyHomePage extends StatelessWidget {
                     padding: const EdgeInsets.fromLTRB(10, 0, 0, 0),
                     child: Text(
                       'Tom\n'
-                          'User@gmail.com',
+                          'user@gmail.com',
                       style: GoogleFonts.lato(
                           fontStyle: FontStyle.normal,
-                          color: Colors.black,
+                          color: Colors.white,
                           fontSize: 20),
                     ),
                   ),
@@ -73,7 +73,7 @@ class MyHomePage extends StatelessWidget {
               ),
             ),
             ListTile(
-              title: Text('Profile'),
+              title: Text('Thông tin của tôi'),
               leading: new Tab(
                 icon: new Image.asset("src/icon/profile.png"),
               ),
@@ -86,7 +86,7 @@ class MyHomePage extends StatelessWidget {
               },
             ),
             ListTile(
-              title: Text('My pets'),
+              title: Text('Thú cưng của tôi'),
               leading: new Tab(
                 icon: new Image.asset("src/icon/pet-house.png"),
               ),
@@ -97,7 +97,7 @@ class MyHomePage extends StatelessWidget {
               },
             ),
             ListTile(
-              title: Text('My Post'),
+              title: Text('Bài Post của tôi'),
               leading: new Tab(
                 icon: new Image.asset("src/icon/post.png"),
               ),
@@ -108,7 +108,7 @@ class MyHomePage extends StatelessWidget {
               },
             ),
             ListTile(
-              title: Text('Contact'),
+              title: Text('Liên hệ'),
               leading: new Tab(
                 icon: new Image.asset("src/icon/contact.png"),
               ),
@@ -119,7 +119,7 @@ class MyHomePage extends StatelessWidget {
               },
             ),
             ListTile(
-              title: Text('Log out'),
+              title: Text('Đăng xuất'),
               leading: new Tab(
                 icon: new Image.asset("src/icon/logout.png"),
               ),
