@@ -37,23 +37,14 @@ class RescuePetListState extends State<RescuePetList> {
               width: 210,
               decoration: BoxDecoration(
                 border: Border.all(color: Color.fromRGBO(253, 158, 121, 1),),
-
-
                 borderRadius: BorderRadius.circular(15),
               ),
               child: DropdownButtonFormField(
                   decoration:  InputDecoration(
-
                     border:  OutlineInputBorder(
-
                       borderRadius: BorderRadius.circular(15),
-
-
                     ),
-
-
                   ),
-
                   value: _value,
                   items: [
                     DropdownMenuItem(
@@ -74,8 +65,6 @@ class RescuePetListState extends State<RescuePetList> {
                     });
                   }),
             ),
-
-
             SizedBox(
               height: 20,
             ),
@@ -368,8 +357,7 @@ class RescuePetListState extends State<RescuePetList> {
       ),
     ));
   }
-
-
+  
 }
 class SizeConfig {
   static MediaQueryData _mediaQueryData;
