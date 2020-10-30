@@ -178,14 +178,16 @@ class MyPostDetailState extends State<MyPostDetail> {
                             " Người đăng: ",
                             style: TextStyle(
                               fontSize: 20,
-                              fontWeight: FontWeight.bold,
+                              fontWeight: FontWeight.w500,
                             ),
                           ),
                           Text(
-                            "Tom",
+                            "Dũng",
                             style: TextStyle(
                               fontSize: 20,
                               color: Color.fromRGBO(253, 158, 121, 1),
+                              fontStyle: FontStyle.italic,
+                              fontWeight: FontWeight.w300,
                             ),
                           )
                         ],
@@ -202,15 +204,16 @@ class MyPostDetailState extends State<MyPostDetail> {
                             textAlign: TextAlign.left,
                             style: TextStyle(
                               fontSize: 20,
-                              fontWeight: FontWeight.bold,
+                              fontWeight: FontWeight.w500,
                             ),
                           ),
                           Container(
                             width: 230,
                             child: Text(
-                              "16/10/2020 14:02:45",
+                              "16/10/2020 - 14:02:45",
                               style: TextStyle(
                                 fontSize: 17,
+                                fontWeight: FontWeight.w300,
                               ),
                             ),
                           )
@@ -227,15 +230,16 @@ class MyPostDetailState extends State<MyPostDetail> {
                             textAlign: TextAlign.left,
                             style: TextStyle(
                               fontSize: 20,
-                              fontWeight: FontWeight.bold,
+                              fontWeight: FontWeight.w500,
                             ),
                           ),
                           Container(
-                            // width: 220,
+                            width: 270,
                             child: Text(
-                              "658 Lã Xuân Oai, Q.9, TP.HCM",
+                              "120 Võ Văn Ngân, Q9, TP.HCM",
                               style: TextStyle(
                                 fontSize: 17,
+                                fontWeight: FontWeight.w300,
                               ),
                             ),
                           ),
@@ -268,7 +272,7 @@ class MyPostDetailState extends State<MyPostDetail> {
                                   textAlign: TextAlign.left,
                                   style: TextStyle(
                                     fontSize: 17,
-                                    fontWeight: FontWeight.bold,
+                                    fontWeight: FontWeight.w500,
                                   ),
                                 ),
                                 Container(
@@ -277,6 +281,7 @@ class MyPostDetailState extends State<MyPostDetail> {
                                     "Mèo",
                                     style: TextStyle(
                                       fontSize: 17,
+                                      fontWeight: FontWeight.w300,
                                     ),
                                   ),
                                 )
@@ -292,7 +297,7 @@ class MyPostDetailState extends State<MyPostDetail> {
                                   textAlign: TextAlign.left,
                                   style: TextStyle(
                                     fontSize: 17,
-                                    fontWeight: FontWeight.bold,
+                                    fontWeight: FontWeight.w500,
                                   ),
                                 ),
                                 Container(
@@ -301,6 +306,7 @@ class MyPostDetailState extends State<MyPostDetail> {
                                     "Cam",
                                     style: TextStyle(
                                       fontSize: 17,
+                                      fontWeight: FontWeight.w300,
                                     ),
                                   ),
                                 )
@@ -332,49 +338,50 @@ class MyPostDetailState extends State<MyPostDetail> {
                             child: Row(
                               children: [
                                 Text(
-                                  "Tổng quát: ",
+                                  "Hiện trạng: ",
                                   textAlign: TextAlign.left,
                                   style: TextStyle(
                                     fontSize: 17,
-                                    fontWeight: FontWeight.bold,
+                                    fontWeight: FontWeight.w500,
                                   ),
                                 ),
                                 Container(
                                   width: 230,
                                   child: Text(
-                                    "Cảnh giác cao",
+                                    "Bị thương",
                                     style: TextStyle(
                                       fontSize: 17,
+                                      fontWeight: FontWeight.w300,
                                     ),
                                   ),
                                 )
                               ],
                             ),
                           ),
-                          Padding(
-                            padding: const EdgeInsets.fromLTRB(8, 0, 0, 8),
-                            child: Row(
-                              children: [
-                                Text(
-                                  "Bị thương: ",
-                                  textAlign: TextAlign.left,
-                                  style: TextStyle(
-                                    fontSize: 17,
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                ),
-                                Container(
-                                  width: 230,
-                                  child: Text(
-                                    "Có",
-                                    style: TextStyle(
-                                      fontSize: 17,
-                                    ),
-                                  ),
-                                )
-                              ],
-                            ),
-                          ),
+                          // Padding(
+                          //   padding: const EdgeInsets.fromLTRB(8, 0, 0, 8),
+                          //   child: Row(
+                          //     children: [
+                          //       Text(
+                          //         "Bị thương: ",
+                          //         textAlign: TextAlign.left,
+                          //         style: TextStyle(
+                          //           fontSize: 17,
+                          //           fontWeight: FontWeight.bold,
+                          //         ),
+                          //       ),
+                          //       // Container(
+                          //       //   width: 230,
+                          //       //   child: Text(
+                          //       //     "Có",
+                          //       //     style: TextStyle(
+                          //       //       fontSize: 17,
+                          //       //     ),
+                          //       //   ),
+                          //       // )
+                          //     ],
+                          //   ),
+                          // ),
                           Padding(
                             padding: const EdgeInsets.fromLTRB(8, 0, 0, 8),
                             child: Row(
@@ -384,7 +391,7 @@ class MyPostDetailState extends State<MyPostDetail> {
                                   textAlign: TextAlign.left,
                                   style: TextStyle(
                                     fontSize: 17,
-                                    fontWeight: FontWeight.bold,
+                                    fontWeight: FontWeight.w500,
                                   ),
                                 ),
                                 Container(
@@ -393,6 +400,7 @@ class MyPostDetailState extends State<MyPostDetail> {
                                     "Miệng",
                                     style: TextStyle(
                                       fontSize: 17,
+                                      fontWeight: FontWeight.w300,
                                     ),
                                   ),
                                 )
@@ -404,19 +412,20 @@ class MyPostDetailState extends State<MyPostDetail> {
                             child: Row(
                               children: [
                                 Text(
-                                  "Phần trăm vết thương: ",
+                                  "Mức độ: ",
                                   textAlign: TextAlign.left,
                                   style: TextStyle(
                                     fontSize: 17,
-                                    fontWeight: FontWeight.bold,
+                                    fontWeight: FontWeight.w500,
                                   ),
                                 ),
                                 Container(
                                   width: 200,
                                   child: Text(
-                                    "20%",
+                                    "Nặng",
                                     style: TextStyle(
                                       fontSize: 17,
+                                      fontWeight: FontWeight.w300,
                                     ),
                                   ),
                                 )
@@ -426,65 +435,6 @@ class MyPostDetailState extends State<MyPostDetail> {
                         ],
                       ),
                     ),
-
-                    // new GestureDetector(
-                    //   onTap: () {
-                    //     showDialog(
-                    //         context: context,
-                    //         builder: (BuildContext context) {
-                    //           return AlertDialog(
-                    //             content: Stack(
-                    //               overflow: Overflow.visible,
-                    //               children: <Widget>[
-                    //                 Positioned(
-                    //                   right: -40.0,
-                    //                   top: -40.0,
-                    //                   child: InkResponse(
-                    //                     onTap: () {
-                    //                       Navigator.of(context).pop();
-                    //                     },
-                    //                     child: CircleAvatar(
-                    //                       child: Icon(Icons.close),
-                    //                       backgroundColor: Colors.red,
-                    //                     ),
-                    //                   ),
-                    //                 ),
-                    //                 Container(
-                    //                   child: GMap2(),
-                    //                 ),
-                    //               ],
-                    //             ),
-                    //           );
-                    //         });
-                    //   },
-                    //   child: Container(
-                    //     width: 170,
-                    //     child: Row(children: <Widget>[
-                    //       Padding(
-                    //         padding: const EdgeInsets.all(8.0),
-                    //         child: Row(
-                    //           children: <Widget>[
-                    //             Icon(Icons.location_on_rounded),
-                    //             Text(
-                    //               "Tìm đường ngay",
-                    //               style: TextStyle(fontSize: 17),
-                    //             )
-                    //           ],
-                    //         ),
-                    //       ),
-                    //     ]),
-                    //     height: 50,
-                    //     decoration: BoxDecoration(
-                    //         color: Colors.yellow,
-                    //         borderRadius: BorderRadius.circular(15),
-                    //         boxShadow: [
-                    //           new BoxShadow(
-                    //               color: Colors.black54,
-                    //               offset: new Offset(1.0, 2.0),
-                    //               blurRadius: 3.5),
-                    //         ]),
-                    //   ),
-                    // ),
                     SizedBox(
                       height: 38,
                     ),
@@ -506,10 +456,10 @@ class MyPostDetailState extends State<MyPostDetail> {
                                 onTap: () {
                                   Navigator.of(context)
                                       .push(new MaterialPageRoute(
-                                          builder: (context) => ChatMyPostScreen(
-                                                name: 'Tom',
-                                                UrlImage: 'image/cat4.jpg',
-                                              )));
+                                      builder: (context) => ChatMyPostScreen(
+                                        name: 'Cứu trợ SAR',
+                                        UrlImage: 'image/cat4.jpg',
+                                      )));
                                 },
                                 child: Align(
                                   child: Text("Liên lạc",
@@ -522,32 +472,6 @@ class MyPostDetailState extends State<MyPostDetail> {
                             ],
                           ),
                         ),
-                        // GestureDetector(
-                        //     onTap: () {
-                        //       Navigator.of(context).push(new MaterialPageRoute(
-                        //           builder: (context) => GMap()));
-                        //     },
-                        //     child: Container(
-                        //       height: 43,
-                        //       width: 200,
-                        //       alignment: Alignment.center,
-                        //       padding: EdgeInsets.all(12),
-                        //       decoration: BoxDecoration(
-                        //         borderRadius: BorderRadius.circular(8),
-                        //         color: Colors.orange,
-                        //       ),
-                        //       child: Column(
-                        //         children: [
-                        //           Align(
-                        //             child: Text("Chấp nhận cứu trợ",
-                        //                 style: TextStyle(
-                        //                     color: Colors.white,
-                        //                     fontSize: 16,
-                        //                     fontWeight: FontWeight.bold)),
-                        //           )
-                        //         ],
-                        //       ),
-                        //     ))
                       ],
                     ),
                   ],
