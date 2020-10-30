@@ -491,7 +491,7 @@ class UserPostDetailState extends State<UserPostDetail> {
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: <Widget>[
                         Container(
-                          height: 43,
+                          height: 47,
                           width: 150,
                           alignment: Alignment.center,
                           padding: EdgeInsets.all(12),
@@ -527,7 +527,7 @@ class UserPostDetailState extends State<UserPostDetail> {
                                   builder: (context) => MapPic()));
                             },
                             child: Container(
-                              height: 43,
+                              height: 47,
                               width: 200,
                               alignment: Alignment.center,
                               padding: EdgeInsets.all(12),
