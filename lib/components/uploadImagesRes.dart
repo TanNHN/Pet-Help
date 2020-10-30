@@ -62,7 +62,11 @@ class _UploadImagesResState extends State<UploadImagesRes> {
     return SingleChildScrollView(
       child: Column(
         children: <Widget>[
+          SizedBox(
+            height: 20,
+          ),
           Container(
+
             //   child: Column(
             //     children: <Widget>[
             //       SizedBox(
@@ -148,7 +152,9 @@ class _UploadImagesResState extends State<UploadImagesRes> {
             //       ),
             //     ],
             //   ),
+
             child: ImgLoad(),
+
           ),
           SizedBox(
             height: 20,
@@ -158,7 +164,7 @@ class _UploadImagesResState extends State<UploadImagesRes> {
               new ListTile(
                 title: new Text(
                   "Đến: Dũng Xạo",
-                  style: TextStyle(color: Colors.grey),
+                  style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold, fontSize: 18,),
                 ),
               ),
             ],
