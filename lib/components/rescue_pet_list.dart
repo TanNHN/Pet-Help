@@ -22,7 +22,6 @@ class RescuePetListState extends State<RescuePetList> {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
         body: SingleChildScrollView(
-
       child: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Column(
@@ -36,12 +35,14 @@ class RescuePetListState extends State<RescuePetList> {
               height: 65,
               width: 210,
               decoration: BoxDecoration(
-                border: Border.all(color: Color.fromRGBO(253, 158, 121, 1),),
+                border: Border.all(
+                  color: Color.fromRGBO(253, 158, 121, 1),
+                ),
                 borderRadius: BorderRadius.circular(15),
               ),
               child: DropdownButtonFormField(
-                  decoration:  InputDecoration(
-                    border:  OutlineInputBorder(
+                  decoration: InputDecoration(
+                    border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(15),
                     ),
                   ),
@@ -107,11 +108,12 @@ class RescuePetListState extends State<RescuePetList> {
                                 Column(
                                   children: [
                                     Text(
-                                      "Bum\n",
+                                      "BUM\n",
                                       style: TextStyle(
-                                        fontSize: 30,
-                                        fontWeight: FontWeight.bold,
-                                      ),
+                                          fontSize: 30,
+                                          fontWeight: FontWeight.bold,
+                                          color:
+                                              Color.fromRGBO(253, 158, 121, 1)),
                                     ),
                                     Padding(
                                       padding: const EdgeInsets.all(3.0),
@@ -122,23 +124,25 @@ class RescuePetListState extends State<RescuePetList> {
                                           color: Colors.white,
                                           shape: RoundedRectangleBorder(
                                               borderRadius:
-                                              BorderRadius.circular(18.0),
+                                                  BorderRadius.circular(18.0),
                                               side: BorderSide(
                                                   color: Color.fromRGBO(
                                                       253, 158, 121, 1))),
                                           onPressed: () {
                                             Navigator.of(context)
                                                 .pushReplacement(
-                                                MaterialPageRoute(
-                                                  builder: (context) =>
-                                                      PetProfile(),
-                                                ));
+                                                    MaterialPageRoute(
+                                              builder: (context) =>
+                                                  PetProfile(),
+                                            ));
                                           },
                                           child: Text(
                                             'Đã có người nuôi',
                                             style: TextStyle(
-                                                color: Colors.green,
-                                                fontSize: 15),
+                                              color: Colors.green,
+                                              fontSize: 15,
+                                              fontWeight: FontWeight.bold,
+                                            ),
                                           ),
                                         ),
                                       ),
@@ -205,10 +209,11 @@ class RescuePetListState extends State<RescuePetList> {
                                 Column(
                                   children: [
                                     Text(
-                                      "Nga\n",
+                                      "NGA\n",
                                       style: TextStyle(
                                         fontSize: 30,
                                         fontWeight: FontWeight.bold,
+                                        color: Color.fromRGBO(253, 158, 121, 1),
                                       ),
                                     ),
                                     Padding(
@@ -298,10 +303,11 @@ class RescuePetListState extends State<RescuePetList> {
                               Column(
                                 children: [
                                   Text(
-                                    "Bê\n",
+                                    "BÊ\n",
                                     style: TextStyle(
                                       fontSize: 30,
                                       fontWeight: FontWeight.bold,
+                                      color: Color.fromRGBO(253, 158, 121, 1),
                                     ),
                                   ),
                                   Padding(
@@ -357,8 +363,8 @@ class RescuePetListState extends State<RescuePetList> {
       ),
     ));
   }
-  
 }
+
 class SizeConfig {
   static MediaQueryData _mediaQueryData;
   static double screenWidth;
@@ -370,17 +376,17 @@ class SizeConfig {
   static double safeBlockHorizontal;
   static double safeBlockVertical;
 
-  void init(BuildContext context){
+  void init(BuildContext context) {
     _mediaQueryData = MediaQuery.of(context);
     screenWidth = _mediaQueryData.size.width;
     screenHeight = _mediaQueryData.size.height;
-    blockSizeHorizontal = screenWidth/100;
-    blockSizeVertical = screenHeight/100;
-    _safeAreaHorizontal = _mediaQueryData.padding.left +
-        _mediaQueryData.padding.right;
-    _safeAreaVertical = _mediaQueryData.padding.top +
-        _mediaQueryData.padding.bottom;
-    safeBlockHorizontal = (screenWidth - _safeAreaHorizontal)/100;
-    safeBlockVertical = (screenHeight - _safeAreaVertical)/100;
+    blockSizeHorizontal = screenWidth / 100;
+    blockSizeVertical = screenHeight / 100;
+    _safeAreaHorizontal =
+        _mediaQueryData.padding.left + _mediaQueryData.padding.right;
+    _safeAreaVertical =
+        _mediaQueryData.padding.top + _mediaQueryData.padding.bottom;
+    safeBlockHorizontal = (screenWidth - _safeAreaHorizontal) / 100;
+    safeBlockVertical = (screenHeight - _safeAreaVertical) / 100;
   }
 }
