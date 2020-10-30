@@ -151,7 +151,7 @@ class RescueHomeList extends StatelessWidget {
                     ],
                   ),
                 ]),
-                height: size.height * 0.4,
+                height: size.height * 0.35,
                 decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(15),
@@ -296,7 +296,7 @@ class RescueHomeList extends StatelessWidget {
                     ],
                   ),
                 ]),
-                height: size.height * 0.4,
+                height: size.height * 0.35,
                 decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(15),
@@ -441,7 +441,7 @@ class RescueHomeList extends StatelessWidget {
                     ],
                   ),
                 ]),
-                height: size.height * 0.4,
+                  height: size.height * 0.35,
                 decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(15),
@@ -586,7 +586,7 @@ class RescueHomeList extends StatelessWidget {
                     ],
                   ),
                 ]),
-                height: size.height * 0.4,
+                height: size.height * 0.35  ,
                 decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(15),
