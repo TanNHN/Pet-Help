@@ -63,7 +63,7 @@ class _UploadImagesResState extends State<UploadImagesRes> {
       child: Column(
         children: <Widget>[
           SizedBox(
-            height: 20,
+            height: 30,
           ),
           Container(
 
