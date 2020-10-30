@@ -91,7 +91,6 @@ class MyPost extends StatelessWidget {
                     },
                     child: Container(
                       width: double.infinity,
-
                       child: Row(children: <Widget>[
                         Padding(
                           padding: const EdgeInsets.all(8.0),
@@ -115,10 +114,11 @@ class MyPost extends StatelessWidget {
                                 child: Container(
 
                                   child: (Text(
-                                    "Bủn",
+                                    "BỦN",
                                     style: TextStyle(
                                       fontSize: 20,
                                       fontWeight: FontWeight.bold,
+                                      color: Color.fromRGBO(253, 158, 121, 1),
                                     ),
                                   )),
                                 ),
@@ -134,33 +134,26 @@ class MyPost extends StatelessWidget {
                                     Column(
                                       children: [
                                         Text("Đăng bởi: "),
-
                                       ],
-
                                     ),
-
                                   ),
                                   Container(
                                     width: size.width * 0.25,
                                     child:
                                     Column(
                                       children: [
-
                                         Text(
                                           "Bệnh viện Thú Y Pet Pro",
                                           style: TextStyle(
                                             fontSize: 17,
                                             fontWeight: FontWeight.bold,
-                                            color: Color.fromRGBO(253, 158, 121, 1),
+                                            color: Color.fromRGBO(253, 158, 121, 50),
                                           ),
                                         ),
 
                                       ],
-
                                     ),
-
                                   ),
-
                                 ],
                               ),
                             ),
@@ -201,7 +194,7 @@ class MyPost extends StatelessWidget {
                                       children: [
 
                                         Text(
-                                          "111 Trường Chinh, Phường 12, Tân Bình,, tp.HCM",
+                                          "111 Trường Chinh, Phường 12, Tân Bình, TP.HCM",
                                           style: TextStyle(
                                             fontSize: 14,
                                             fontWeight: FontWeight.bold,
