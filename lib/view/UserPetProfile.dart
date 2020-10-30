@@ -150,7 +150,7 @@ class ItemInfo extends State<UserPetProfile> {
                         Container(
                           padding: EdgeInsets.all(15),
                           height: 70,
-                          width: 350,
+                          // width: 400,
                           decoration: BoxDecoration(
                             color: Colors.white,
                             borderRadius: BorderRadius.circular(8),
@@ -263,7 +263,7 @@ class ItemInfo extends State<UserPetProfile> {
                             style: TextStyle(fontWeight: FontWeight.bold, color: Colors.black),
                           ),
                           Text(
-                            " 20/5/1999",
+                            " 20/05/1999 - 10:10:07",
                             style: TextStyle(fontStyle: FontStyle.italic, color: Colors.grey, fontSize: 15),
                           ),
                         ],
