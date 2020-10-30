@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import 'package:pet_help/view/HomePage.dart';
@@ -47,7 +48,7 @@ class RescueHomeList extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       Padding(
-                        padding: const EdgeInsets.fromLTRB(8, 19, 8, 8),
+                        padding: const EdgeInsets.fromLTRB(8, 19, 8, 0),
                         child: Container(
                           width: size.width * 0.35,
                           child: Container(
@@ -56,20 +57,21 @@ class RescueHomeList extends StatelessWidget {
                               style: TextStyle(
                                 fontSize: 20,
                                 fontWeight: FontWeight.bold,
+                                color: Color.fromRGBO(253, 158, 121, 1),
                               ),
                             )),
                           ),
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.fromLTRB(1, 23, 0, 8),
+                        padding: const EdgeInsets.fromLTRB(1, 12, 0, 8),
                         child: Row(
                           children: [
                             Container(
                               width: size.width * 0.1,
                               child: Column(
                                 children: [
-                                  Icon(Icons.account_circle_outlined),
+                                  Icon(Icons.account_circle_outlined, ),
                                 ],
                               ),
                             ),
@@ -81,8 +83,7 @@ class RescueHomeList extends StatelessWidget {
                                     "Dũng",
                                     style: TextStyle(
                                       fontSize: 17,
-                                      fontWeight: FontWeight.bold,
-                                      color: Color.fromRGBO(253, 158, 121, 1),
+                                      fontWeight: FontWeight.w300,
                                     ),
                                   ),
                                 ],
@@ -92,17 +93,32 @@ class RescueHomeList extends StatelessWidget {
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.fromLTRB(8, 8, 8, 0),
-                        child: Container(
-                          width: size.width * 0.4,
-                          child: (Text(
-                            "25 phút trước",
-                            style: TextStyle(
-                              color: Colors.grey,
-                              fontSize: 15,
-                              fontWeight: FontWeight.bold,
+                        padding: const EdgeInsets.fromLTRB(1, 0, 0, 8),
+                        child: Row(
+                          children: [
+                            Container(
+                              width: size.width * 0.1,
+                              child: Column(
+                                children: [
+                                  Icon(Icons.access_time_rounded,),
+                                ],
+                              ),
                             ),
-                          )),
+                            Container(
+                              // width: size.width * 0.3,
+                              child: Column(
+                                children: [
+                                  Text(
+                                    "25 phút trước",
+                                    style: TextStyle(
+                                      fontSize: 15,
+                                      fontWeight: FontWeight.w300,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ],
                         ),
                       ),
                       Padding(
@@ -125,7 +141,9 @@ class RescueHomeList extends StatelessWidget {
                                     "120 Võ Văn Ngân, Q9, TP.HCM",
                                     style: TextStyle(
                                       fontSize: 14,
-                                      fontWeight: FontWeight.bold,
+                                      // fontWeight: FontWeight.bold,
+                                      color: Colors.black,
+                                      fontWeight: FontWeight.w300,
                                     ),
                                   ),
                                 ],
@@ -142,7 +160,7 @@ class RescueHomeList extends StatelessWidget {
                               width: size.width * 0.1,
                               child: Column(
                                 children: [
-                                  Icon(Icons.article),
+                                  Icon(Icons.article, color: Colors.red,),
                                 ],
                               ),
                             ),
@@ -151,11 +169,11 @@ class RescueHomeList extends StatelessWidget {
                               child: Column(
                                 children: [
                                   Text(
-                                    "Nhẹ",
+                                    "Nặng",
                                     style: TextStyle(
                                       fontSize: 17,
                                       fontWeight: FontWeight.bold,
-                                      // color: Color.fromRGBO(253, 158, 121, 1),
+                                      color: Colors.red,
                                     ),
                                   ),
                                 ],
@@ -171,14 +189,13 @@ class RescueHomeList extends StatelessWidget {
                           child: (Text(
                             "Khoảng cách 4.5 km",
                             style: TextStyle(
-                              color: Colors.red,
                               fontSize: 15,
-                              fontWeight: FontWeight.bold,
+                              fontWeight: FontWeight.w300,
+                              fontStyle: FontStyle.italic,
                             ),
                           )),
                         ),
                       ),
-
                     ],
                   ),
                 ]),
@@ -223,7 +240,7 @@ class RescueHomeList extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       Padding(
-                        padding: const EdgeInsets.fromLTRB(8, 19, 8, 8),
+                        padding: const EdgeInsets.fromLTRB(8, 19, 8, 0),
                         child: Container(
                           width: size.width * 0.35,
                           child: Container(
@@ -232,20 +249,21 @@ class RescueHomeList extends StatelessWidget {
                               style: TextStyle(
                                 fontSize: 20,
                                 fontWeight: FontWeight.bold,
+                                color: Color.fromRGBO(253, 158, 121, 1),
                               ),
                             )),
                           ),
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.fromLTRB(1, 23, 0, 8),
+                        padding: const EdgeInsets.fromLTRB(1, 12, 0, 8),
                         child: Row(
                           children: [
                             Container(
                               width: size.width * 0.1,
                               child: Column(
                                 children: [
-                                  Icon(Icons.account_circle_outlined),
+                                  Icon(Icons.account_circle_outlined, ),
                                 ],
                               ),
                             ),
@@ -257,8 +275,7 @@ class RescueHomeList extends StatelessWidget {
                                     "Hậu",
                                     style: TextStyle(
                                       fontSize: 17,
-                                      fontWeight: FontWeight.bold,
-                                      color: Color.fromRGBO(253, 158, 121, 1),
+                                      fontWeight: FontWeight.w300,
                                     ),
                                   ),
                                 ],
@@ -268,21 +285,36 @@ class RescueHomeList extends StatelessWidget {
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.fromLTRB(8, 8, 8, 0),
-                        child: Container(
-                          width: size.width * 0.4,
-                          child: (Text(
-                            "15 phút trước",
-                            style: TextStyle(
-                              color: Colors.grey,
-                              fontSize: 15,
-                              fontWeight: FontWeight.bold,
+                        padding: const EdgeInsets.fromLTRB(1, 0, 0, 8),
+                        child: Row(
+                          children: [
+                            Container(
+                              width: size.width * 0.1,
+                              child: Column(
+                                children: [
+                                  Icon(Icons.access_time_rounded,),
+                                ],
+                              ),
                             ),
-                          )),
+                            Container(
+                              // width: size.width * 0.3,
+                              child: Column(
+                                children: [
+                                  Text(
+                                    "15 phút trước",
+                                    style: TextStyle(
+                                      fontSize: 15,
+                                      fontWeight: FontWeight.w300,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ],
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.fromLTRB(1, 23, 0, 8),
+                        padding: const EdgeInsets.fromLTRB(1, 0, 0, 8),
                         child: Row(
                           children: [
                             Container(
@@ -301,7 +333,39 @@ class RescueHomeList extends StatelessWidget {
                                     "658 Quang Trung, Q12, TP.HCM",
                                     style: TextStyle(
                                       fontSize: 14,
+                                      // fontWeight: FontWeight.bold,
+                                      color: Colors.black,
+                                      fontWeight: FontWeight.w300,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(1, 0, 0, 0),
+                        child: Row(
+                          children: [
+                            Container(
+                              width: size.width * 0.1,
+                              child: Column(
+                                children: [
+                                  Icon(Icons.article, color: Colors.green,),
+                                ],
+                              ),
+                            ),
+                            Container(
+                              // width: size.width * 0.3,
+                              child: Column(
+                                children: [
+                                  Text(
+                                    "Nhẹ",
+                                    style: TextStyle(
+                                      fontSize: 17,
                                       fontWeight: FontWeight.bold,
+                                      color: Colors.green,
                                     ),
                                   ),
                                 ],
@@ -315,11 +379,11 @@ class RescueHomeList extends StatelessWidget {
                         child: Container(
                           width: size.width * 0.4,
                           child: (Text(
-                            "Còn cách nhau 5 km",
+                            "Khoảng cách 5 km",
                             style: TextStyle(
-                              color: Colors.red,
                               fontSize: 15,
-                              fontWeight: FontWeight.bold,
+                              fontWeight: FontWeight.w300,
+                              fontStyle: FontStyle.italic,
                             ),
                           )),
                         ),
@@ -368,29 +432,30 @@ class RescueHomeList extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       Padding(
-                        padding: const EdgeInsets.fromLTRB(8, 19, 8, 8),
+                        padding: const EdgeInsets.fromLTRB(8, 19, 8, 0),
                         child: Container(
                           width: size.width * 0.35,
                           child: Container(
                             child: (Text(
-                              "Một chú mèo bị thương ở chân ",
+                              "Một chú mèo bị thương ở chân",
                               style: TextStyle(
                                 fontSize: 20,
                                 fontWeight: FontWeight.bold,
+                                color: Color.fromRGBO(253, 158, 121, 1),
                               ),
                             )),
                           ),
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.fromLTRB(1, 23, 0, 8),
+                        padding: const EdgeInsets.fromLTRB(1, 12, 0, 8),
                         child: Row(
                           children: [
                             Container(
                               width: size.width * 0.1,
                               child: Column(
                                 children: [
-                                  Icon(Icons.account_circle_outlined),
+                                  Icon(Icons.account_circle_outlined, ),
                                 ],
                               ),
                             ),
@@ -399,11 +464,10 @@ class RescueHomeList extends StatelessWidget {
                               child: Column(
                                 children: [
                                   Text(
-                                    "Luân Lù",
+                                    "Luân",
                                     style: TextStyle(
                                       fontSize: 17,
-                                      fontWeight: FontWeight.bold,
-                                      color: Color.fromRGBO(253, 158, 121, 1),
+                                      fontWeight: FontWeight.w300,
                                     ),
                                   ),
                                 ],
@@ -413,21 +477,36 @@ class RescueHomeList extends StatelessWidget {
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.fromLTRB(8, 8, 8, 0),
-                        child: Container(
-                          width: size.width * 0.4,
-                          child: (Text(
-                            "5 phút trước",
-                            style: TextStyle(
-                              color: Colors.grey,
-                              fontSize: 15,
-                              fontWeight: FontWeight.bold,
+                        padding: const EdgeInsets.fromLTRB(1, 0, 0, 8),
+                        child: Row(
+                          children: [
+                            Container(
+                              width: size.width * 0.1,
+                              child: Column(
+                                children: [
+                                  Icon(Icons.access_time_rounded,),
+                                ],
+                              ),
                             ),
-                          )),
+                            Container(
+                              // width: size.width * 0.3,
+                              child: Column(
+                                children: [
+                                  Text(
+                                    "5 phút trước",
+                                    style: TextStyle(
+                                      fontSize: 15,
+                                      fontWeight: FontWeight.w300,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ],
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.fromLTRB(1, 23, 0, 8),
+                        padding: const EdgeInsets.fromLTRB(1, 0, 0, 8),
                         child: Row(
                           children: [
                             Container(
@@ -446,7 +525,39 @@ class RescueHomeList extends StatelessWidget {
                                     "250 CMT8, Q10, TP.HCM",
                                     style: TextStyle(
                                       fontSize: 14,
+                                      // fontWeight: FontWeight.bold,
+                                      color: Colors.black,
+                                      fontWeight: FontWeight.w300,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(1, 0, 0, 0),
+                        child: Row(
+                          children: [
+                            Container(
+                              width: size.width * 0.1,
+                              child: Column(
+                                children: [
+                                  Icon(Icons.article, color: Colors.grey,),
+                                ],
+                              ),
+                            ),
+                            Container(
+                              // width: size.width * 0.3,
+                              child: Column(
+                                children: [
+                                  Text(
+                                    "Bình thường",
+                                    style: TextStyle(
+                                      fontSize: 17,
                                       fontWeight: FontWeight.bold,
+                                      color: Colors.grey,
                                     ),
                                   ),
                                 ],
@@ -460,11 +571,11 @@ class RescueHomeList extends StatelessWidget {
                         child: Container(
                           width: size.width * 0.4,
                           child: (Text(
-                            "Còn cách nhau 9 km",
+                            "Khoảng cách 9 km",
                             style: TextStyle(
-                              color: Colors.red,
                               fontSize: 15,
-                              fontWeight: FontWeight.bold,
+                              fontWeight: FontWeight.w300,
+                              fontStyle: FontStyle.italic,
                             ),
                           )),
                         ),
@@ -513,7 +624,7 @@ class RescueHomeList extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       Padding(
-                        padding: const EdgeInsets.fromLTRB(8, 19, 8, 8),
+                        padding: const EdgeInsets.fromLTRB(8, 19, 8, 0),
                         child: Container(
                           width: size.width * 0.35,
                           child: Container(
@@ -522,20 +633,21 @@ class RescueHomeList extends StatelessWidget {
                               style: TextStyle(
                                 fontSize: 20,
                                 fontWeight: FontWeight.bold,
+                                color: Color.fromRGBO(253, 158, 121, 1),
                               ),
                             )),
                           ),
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.fromLTRB(1, 23, 0, 8),
+                        padding: const EdgeInsets.fromLTRB(1, 12, 0, 8),
                         child: Row(
                           children: [
                             Container(
                               width: size.width * 0.1,
                               child: Column(
                                 children: [
-                                  Icon(Icons.account_circle_outlined),
+                                  Icon(Icons.account_circle_outlined, ),
                                 ],
                               ),
                             ),
@@ -544,11 +656,10 @@ class RescueHomeList extends StatelessWidget {
                               child: Column(
                                 children: [
                                   Text(
-                                    "Nguyen",
+                                    "Nguyên",
                                     style: TextStyle(
                                       fontSize: 17,
-                                      fontWeight: FontWeight.bold,
-                                      color: Color.fromRGBO(253, 158, 121, 1),
+                                      fontWeight: FontWeight.w300,
                                     ),
                                   ),
                                 ],
@@ -558,21 +669,36 @@ class RescueHomeList extends StatelessWidget {
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.fromLTRB(8, 8, 8, 0),
-                        child: Container(
-                          width: size.width * 0.4,
-                          child: (Text(
-                            "15 ngày trước",
-                            style: TextStyle(
-                              color: Colors.grey,
-                              fontSize: 15,
-                              fontWeight: FontWeight.bold,
+                        padding: const EdgeInsets.fromLTRB(1, 0, 0, 8),
+                        child: Row(
+                          children: [
+                            Container(
+                              width: size.width * 0.1,
+                              child: Column(
+                                children: [
+                                  Icon(Icons.access_time_rounded,),
+                                ],
+                              ),
                             ),
-                          )),
+                            Container(
+                              // width: size.width * 0.3,
+                              child: Column(
+                                children: [
+                                  Text(
+                                    "15 ngày trước",
+                                    style: TextStyle(
+                                      fontSize: 15,
+                                      fontWeight: FontWeight.w300,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ],
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.fromLTRB(1, 23, 0, 8),
+                        padding: const EdgeInsets.fromLTRB(1, 0, 0, 8),
                         child: Row(
                           children: [
                             Container(
@@ -591,7 +717,39 @@ class RescueHomeList extends StatelessWidget {
                                     "658 Quang Trung, Q12, TP.HCM",
                                     style: TextStyle(
                                       fontSize: 14,
+                                      // fontWeight: FontWeight.bold,
+                                      color: Colors.black,
+                                      fontWeight: FontWeight.w300,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(1, 0, 0, 0),
+                        child: Row(
+                          children: [
+                            Container(
+                              width: size.width * 0.1,
+                              child: Column(
+                                children: [
+                                  Icon(Icons.article, color: Colors.grey,),
+                                ],
+                              ),
+                            ),
+                            Container(
+                              // width: size.width * 0.3,
+                              child: Column(
+                                children: [
+                                  Text(
+                                    "Bình thường",
+                                    style: TextStyle(
+                                      fontSize: 17,
                                       fontWeight: FontWeight.bold,
+                                      color: Colors.grey,
                                     ),
                                   ),
                                 ],
@@ -605,11 +763,11 @@ class RescueHomeList extends StatelessWidget {
                         child: Container(
                           width: size.width * 0.4,
                           child: (Text(
-                            "Còn cách nhau 20 km",
+                            "Khoảng cách 20 km",
                             style: TextStyle(
-                              color: Colors.red,
                               fontSize: 15,
-                              fontWeight: FontWeight.bold,
+                              fontWeight: FontWeight.w300,
+                              fontStyle: FontStyle.italic,
                             ),
                           )),
                         ),
