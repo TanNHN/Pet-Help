@@ -492,7 +492,7 @@ class MyPostDetailState extends State<MyPostDetail> {
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: <Widget>[
                         Container(
-                          height: 43,
+                          height: 47,
                           width: 150,
                           alignment: Alignment.center,
                           padding: EdgeInsets.all(12),
