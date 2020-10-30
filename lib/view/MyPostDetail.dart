@@ -175,7 +175,7 @@ class MyPostDetailState extends State<MyPostDetail> {
                         children: [
                           Icon(Icons.person),
                           Text(
-                            "Người đăng: ",
+                            " Người đăng: ",
                             style: TextStyle(
                               fontSize: 20,
                               fontWeight: FontWeight.bold,
@@ -198,7 +198,7 @@ class MyPostDetailState extends State<MyPostDetail> {
                         children: [
                           Icon(Icons.timer),
                           Text(
-                            "Thời gian: ",
+                            " Thời gian: ",
                             textAlign: TextAlign.left,
                             style: TextStyle(
                               fontSize: 20,
@@ -208,7 +208,7 @@ class MyPostDetailState extends State<MyPostDetail> {
                           Container(
                             width: 230,
                             child: Text(
-                              "Thứ 6, 16/10/2020 14:02:45",
+                              "16/10/2020 14:02:45",
                               style: TextStyle(
                                 fontSize: 17,
                               ),
@@ -223,7 +223,7 @@ class MyPostDetailState extends State<MyPostDetail> {
                         children: [
                           Icon(Icons.location_on),
                           Text(
-                            "Vị trí: ",
+                            " Vị trí: ",
                             textAlign: TextAlign.left,
                             style: TextStyle(
                               fontSize: 20,
