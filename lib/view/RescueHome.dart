@@ -20,9 +20,9 @@ class RescueHome extends StatelessWidget {
       resizeToAvoidBottomPadding: false,
       appBar: AppBar(
         title: Text(
-          'Home',
+          'Trang chủ',
           style: GoogleFonts.lato(
-              fontStyle: FontStyle.normal, color: Colors.white, fontSize: 30),
+              fontStyle: FontStyle.normal, color: Colors.white, fontSize: 24),
         ),
         centerTitle: true,
         backgroundColor: Color.fromRGBO(253, 158, 121, 1),
