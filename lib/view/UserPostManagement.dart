@@ -44,35 +44,6 @@ class UserPostManagement extends StatelessWidget {
           },
         ),
       ),
-
-      // drawer: Drawer(
-      //   // Add a ListView to the drawer. This ensures the user can scroll
-      //   // through the options in the drawer if there isn't enough vertical
-      //   // space to fit everything.
-      //   // child: ListView(
-      //   //   // Important: Remove any padding from the ListView.
-      //   //   padding: EdgeInsets.zero,
-      //   //   children: <Widget>[
-      //   //     // Container(
-      //   //     //   color: Color.fromRGBO(253, 158, 121, 1),
-      //   //     //   height: 200,
-      //   //     //   child: Row(
-      //   //     //     children: <Widget>[
-      //   //     //       Padding(
-      //   //     //         padding: const EdgeInsets.all(8.0),
-      //   //     //         child: Container(
-      //   //     //           width: 75,
-      //   //     //           height: 75,
-      //   //     //           padding: EdgeInsets.all(15),
-      //   //     //         ),
-      //   //     //       ),
-      //   //     //
-      //   //     //     ],
-      //   //     //   ),
-      //   //     // ),
-      //   //   ],
-      //   // ),
-      // ),
       body: Container(
         decoration: BoxDecoration(),
         child: Column(
@@ -96,6 +67,7 @@ class UserPostManagement extends StatelessWidget {
                       },
                       child: Container(
                         width: double.infinity,
+                        // width: 400,
                         child: Row(children: <Widget>[
                           Padding(
                             padding: const EdgeInsets.all(8.0),
@@ -224,6 +196,7 @@ class UserPostManagement extends StatelessWidget {
                       },
                       child: Container(
                         width: double.infinity,
+                        // width: 400,
                         child: Row(children: <Widget>[
                           Padding(
                             padding: const EdgeInsets.all(8.0),

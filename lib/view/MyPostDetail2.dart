@@ -358,30 +358,6 @@ class MyPostDetail2State extends State<MyPostDetail2> {
                               ],
                             ),
                           ),
-                          // Padding(
-                          //   padding: const EdgeInsets.fromLTRB(8, 0, 0, 8),
-                          //   child: Row(
-                          //     children: [
-                          //       Text(
-                          //         "Bị thương: ",
-                          //         textAlign: TextAlign.left,
-                          //         style: TextStyle(
-                          //           fontSize: 17,
-                          //           fontWeight: FontWeight.bold,
-                          //         ),
-                          //       ),
-                          //       // Container(
-                          //       //   width: 230,
-                          //       //   child: Text(
-                          //       //     "Có",
-                          //       //     style: TextStyle(
-                          //       //       fontSize: 17,
-                          //       //     ),
-                          //       //   ),
-                          //       // )
-                          //     ],
-                          //   ),
-                          // ),
                           Padding(
                             padding: const EdgeInsets.fromLTRB(8, 0, 0, 8),
                             child: Row(
