@@ -177,15 +177,16 @@ class UserPostDetailState extends State<UserPostDetail> {
                             " Người đăng: ",
                             style: TextStyle(
                               fontSize: 20,
-                              fontWeight: FontWeight.bold,
+                              fontWeight: FontWeight.w500,
                             ),
                           ),
                           Text(
-                            "Dũng Xạo",
+                            "Dũng",
                             style: TextStyle(
                               fontSize: 20,
                               color: Color.fromRGBO(253, 158, 121, 1),
                               fontStyle: FontStyle.italic,
+                              fontWeight: FontWeight.w300,
                             ),
                           )
                         ],
@@ -202,7 +203,7 @@ class UserPostDetailState extends State<UserPostDetail> {
                             textAlign: TextAlign.left,
                             style: TextStyle(
                               fontSize: 20,
-                              fontWeight: FontWeight.bold,
+                              fontWeight: FontWeight.w500,
                             ),
                           ),
                           Container(
@@ -211,6 +212,7 @@ class UserPostDetailState extends State<UserPostDetail> {
                               "16/10/2020 - 14:02:45",
                               style: TextStyle(
                                 fontSize: 17,
+                                fontWeight: FontWeight.w300,
                               ),
                             ),
                           )
@@ -227,7 +229,7 @@ class UserPostDetailState extends State<UserPostDetail> {
                             textAlign: TextAlign.left,
                             style: TextStyle(
                               fontSize: 20,
-                              fontWeight: FontWeight.bold,
+                              fontWeight: FontWeight.w500,
                             ),
                           ),
                           Container(
@@ -236,6 +238,7 @@ class UserPostDetailState extends State<UserPostDetail> {
                               "120 Võ Văn Ngân, Q9, TP.HCM",
                               style: TextStyle(
                                 fontSize: 17,
+                                fontWeight: FontWeight.w300,
                               ),
                             ),
                           ),
@@ -268,7 +271,7 @@ class UserPostDetailState extends State<UserPostDetail> {
                                   textAlign: TextAlign.left,
                                   style: TextStyle(
                                     fontSize: 17,
-                                    fontWeight: FontWeight.bold,
+                                    fontWeight: FontWeight.w500,
                                   ),
                                 ),
                                 Container(
@@ -277,6 +280,7 @@ class UserPostDetailState extends State<UserPostDetail> {
                                     "Mèo",
                                     style: TextStyle(
                                       fontSize: 17,
+                                      fontWeight: FontWeight.w300,
                                     ),
                                   ),
                                 )
@@ -292,7 +296,7 @@ class UserPostDetailState extends State<UserPostDetail> {
                                   textAlign: TextAlign.left,
                                   style: TextStyle(
                                     fontSize: 17,
-                                    fontWeight: FontWeight.bold,
+                                    fontWeight: FontWeight.w500,
                                   ),
                                 ),
                                 Container(
@@ -301,6 +305,7 @@ class UserPostDetailState extends State<UserPostDetail> {
                                     "Cam",
                                     style: TextStyle(
                                       fontSize: 17,
+                                      fontWeight: FontWeight.w300,
                                     ),
                                   ),
                                 )
@@ -332,49 +337,50 @@ class UserPostDetailState extends State<UserPostDetail> {
                             child: Row(
                               children: [
                                 Text(
-                                  "Tổng quát: ",
+                                  "Hiện trạng: ",
                                   textAlign: TextAlign.left,
                                   style: TextStyle(
                                     fontSize: 17,
-                                    fontWeight: FontWeight.bold,
+                                    fontWeight: FontWeight.w500,
                                   ),
                                 ),
                                 Container(
                                   width: 230,
                                   child: Text(
-                                    "Cảnh giác cao",
+                                    "Bị thương",
                                     style: TextStyle(
                                       fontSize: 17,
+                                      fontWeight: FontWeight.w300,
                                     ),
                                   ),
                                 )
                               ],
                             ),
                           ),
-                          Padding(
-                            padding: const EdgeInsets.fromLTRB(8, 0, 0, 8),
-                            child: Row(
-                              children: [
-                                Text(
-                                  "Bị thương: ",
-                                  textAlign: TextAlign.left,
-                                  style: TextStyle(
-                                    fontSize: 17,
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                ),
-                                Container(
-                                  width: 230,
-                                  child: Text(
-                                    "Có",
-                                    style: TextStyle(
-                                      fontSize: 17,
-                                    ),
-                                  ),
-                                )
-                              ],
-                            ),
-                          ),
+                          // Padding(
+                          //   padding: const EdgeInsets.fromLTRB(8, 0, 0, 8),
+                          //   child: Row(
+                          //     children: [
+                          //       Text(
+                          //         "Bị thương: ",
+                          //         textAlign: TextAlign.left,
+                          //         style: TextStyle(
+                          //           fontSize: 17,
+                          //           fontWeight: FontWeight.bold,
+                          //         ),
+                          //       ),
+                          //       // Container(
+                          //       //   width: 230,
+                          //       //   child: Text(
+                          //       //     "Có",
+                          //       //     style: TextStyle(
+                          //       //       fontSize: 17,
+                          //       //     ),
+                          //       //   ),
+                          //       // )
+                          //     ],
+                          //   ),
+                          // ),
                           Padding(
                             padding: const EdgeInsets.fromLTRB(8, 0, 0, 8),
                             child: Row(
@@ -384,7 +390,7 @@ class UserPostDetailState extends State<UserPostDetail> {
                                   textAlign: TextAlign.left,
                                   style: TextStyle(
                                     fontSize: 17,
-                                    fontWeight: FontWeight.bold,
+                                    fontWeight: FontWeight.w500,
                                   ),
                                 ),
                                 Container(
@@ -393,6 +399,7 @@ class UserPostDetailState extends State<UserPostDetail> {
                                     "Miệng",
                                     style: TextStyle(
                                       fontSize: 17,
+                                      fontWeight: FontWeight.w300,
                                     ),
                                   ),
                                 )
@@ -404,19 +411,20 @@ class UserPostDetailState extends State<UserPostDetail> {
                             child: Row(
                               children: [
                                 Text(
-                                  "Phần trăm vết thương: ",
+                                  "Mức độ: ",
                                   textAlign: TextAlign.left,
                                   style: TextStyle(
                                     fontSize: 17,
-                                    fontWeight: FontWeight.bold,
+                                    fontWeight: FontWeight.w500,
                                   ),
                                 ),
                                 Container(
                                   width: 200,
                                   child: Text(
-                                    "20%",
+                                    "Nặng",
                                     style: TextStyle(
                                       fontSize: 17,
+                                      fontWeight: FontWeight.w300,
                                     ),
                                   ),
                                 )
@@ -507,7 +515,7 @@ class UserPostDetailState extends State<UserPostDetail> {
                                   Navigator.of(context)
                                       .push(new MaterialPageRoute(
                                           builder: (context) => ChatScreen(
-                                                name: 'Dũng Xạo',
+                                                name: 'Dũng',
                                                 UrlImage: 'image/cat4.jpg',
                                               )));
                                 },
