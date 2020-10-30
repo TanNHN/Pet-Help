@@ -105,7 +105,7 @@ class RescuePetListState extends State<RescuePetList> {
                                 builder: (context) => PetProfile()));
                           },
                           child: Container(
-                            width: size.width * 0.4,
+                            // width: size.width * 0.4,
                             child: Row(
                               children: <Widget>[
                                 Column(
@@ -119,7 +119,7 @@ class RescuePetListState extends State<RescuePetList> {
                                               Color.fromRGBO(253, 158, 121, 1)),
                                     ),
                                     Padding(
-                                      padding: const EdgeInsets.all(3.0),
+                                      padding: EdgeInsets.fromLTRB(40, 0, 0, 0),
                                       child: SizedBox(
                                         width: size.width * 0.38,
                                         height: 40,
@@ -206,7 +206,7 @@ class RescuePetListState extends State<RescuePetList> {
                                 builder: (context) => PetProfile()));
                           },
                           child: Container(
-                            width: size.width * 0.4,
+                            // width: size.width * 0.4,
                             child: Row(
                               children: <Widget>[
                                 Column(
@@ -220,7 +220,7 @@ class RescuePetListState extends State<RescuePetList> {
                                       ),
                                     ),
                                     Padding(
-                                      padding: const EdgeInsets.all(3.0),
+                                      padding: EdgeInsets.fromLTRB(40, 0, 0, 0),
                                       child: SizedBox(
                                         width: size.width * 0.38,
                                         height: 40,
@@ -244,7 +244,8 @@ class RescuePetListState extends State<RescuePetList> {
                                             'Đang tìm người nuôi',
                                             style: TextStyle(
                                                 color: Colors.blue,
-                                                fontSize: 15),
+                                                fontSize: 15,
+                                            fontWeight: FontWeight.bold,),
                                           ),
                                         ),
                                       ),
@@ -300,7 +301,7 @@ class RescuePetListState extends State<RescuePetList> {
                       Padding(
                         padding: const EdgeInsets.fromLTRB(8, 23, 8, 8),
                         child: Container(
-                          width: size.width * 0.4,
+                          // width: size.width * 0.4,
                           child: Row(
                             children: <Widget>[
                               Column(
@@ -314,7 +315,7 @@ class RescuePetListState extends State<RescuePetList> {
                                     ),
                                   ),
                                   Padding(
-                                    padding: const EdgeInsets.all(3.0),
+                                    padding: EdgeInsets.fromLTRB(40, 0, 0, 0),
                                     child: SizedBox(
                                       width: size.width * 0.38,
                                       height: 40,
@@ -335,7 +336,7 @@ class RescuePetListState extends State<RescuePetList> {
                                         child: Text(
                                           'Đang được chăm sóc',
                                           style: TextStyle(
-                                              color: Colors.red, fontSize: 13),
+                                              color: Colors.red, fontSize: 13, fontWeight: FontWeight.bold,),
                                         ),
                                       ),
                                     ),
