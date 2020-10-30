@@ -96,6 +96,7 @@ flutter:
     - src/image/cat3.jpg
     - src/image/cat4.jpg
     - src/image/cat_5.jpg
+    - src/image/cat6.jpg
     - src/image/download.jpg
     - src/image/download (1).jpg
     - src/image/rescue_cat1.jpg
