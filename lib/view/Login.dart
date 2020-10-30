@@ -164,9 +164,12 @@ class LoginState extends State<Login> {
                     Navigator.push(context, MaterialPageRoute(builder: (ctx) => SignUp()));
                   },
                   child: Text("Đăng kí", style: TextStyle(
-                            fontSize: 19,
+                            fontSize: 15,
                             color: Colors.blue,
-                            fontWeight: FontWeight.bold),
+                            fontWeight: FontWeight.bold,
+                    fontStyle: FontStyle.italic,
+                    decoration: TextDecoration.underline,
+                  ),
                   ),
                 ),
               ),
