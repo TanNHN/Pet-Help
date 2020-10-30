@@ -34,12 +34,12 @@ class RescuePetListState extends State<RescuePetList> {
             Container(
               height: 65,
               width: 210,
-              decoration: BoxDecoration(
-                border: Border.all(
-                  color: Color.fromRGBO(253, 158, 121, 1),
-                ),
-                borderRadius: BorderRadius.circular(15),
-              ),
+              // decoration: BoxDecoration(
+              //   border: Border.all(
+              //     color: Color.fromRGBO(253, 158, 121, 1),
+              //   ),
+              //   borderRadius: BorderRadius.circular(25),
+              // ),
               child: DropdownButtonFormField(
                   decoration: InputDecoration(
                     border: OutlineInputBorder(
@@ -58,7 +58,10 @@ class RescuePetListState extends State<RescuePetList> {
                     ),
                     DropdownMenuItem(
                         child: Text("Đang tìm người nuôi"), value: 3),
-                    DropdownMenuItem(child: Text("Đã được nhận nuôi"), value: 4)
+                    DropdownMenuItem(
+                        child: Text("Đã được nhận nuôi"), value: 4),
+                    DropdownMenuItem(
+                        child: Text(""), value: 5),
                   ],
                   onChanged: (value) {
                     setState(() {
