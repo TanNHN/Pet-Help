@@ -199,8 +199,7 @@ class LoginState extends State<Login> {
       } else if (userController.text == "admin" && passController.text == "123") {
         Navigator.of(context)
             .push(new MaterialPageRoute(builder: (context) => RescueHome()));
-      }
-      else if (userController.text == "user" &&
+      } else if (userController.text == "user" &&
           passController.text == "123") {
         Navigator.of(context)
             .push(new MaterialPageRoute(builder: (context) => MyHomePage()));
