@@ -73,7 +73,7 @@ class MyHomePage extends StatelessWidget {
               ),
             ),
             ListTile(
-              title: Text('Profile'),
+              title: Text('Trang Cá Nhân'),
               leading: new Tab(
                 icon: new Image.asset("src/icon/profile.png"),
               ),
@@ -86,7 +86,7 @@ class MyHomePage extends StatelessWidget {
               },
             ),
             ListTile(
-              title: Text('My pets'),
+              title: Text('Thú Cưng Của Tôi'),
               leading: new Tab(
                 icon: new Image.asset("src/icon/pet-house.png"),
               ),
@@ -97,7 +97,7 @@ class MyHomePage extends StatelessWidget {
               },
             ),
             ListTile(
-              title: Text('My Post'),
+              title: Text('Bài Viết Của Tôi'),
               leading: new Tab(
                 icon: new Image.asset("src/icon/post.png"),
               ),
@@ -108,7 +108,7 @@ class MyHomePage extends StatelessWidget {
               },
             ),
             ListTile(
-              title: Text('Contact'),
+              title: Text('Liên Lạc'),
               leading: new Tab(
                 icon: new Image.asset("src/icon/contact.png"),
               ),
@@ -119,7 +119,7 @@ class MyHomePage extends StatelessWidget {
               },
             ),
             ListTile(
-              title: Text('Log out'),
+              title: Text('Đăng Xuất'),
               leading: new Tab(
                 icon: new Image.asset("src/icon/logout.png"),
               ),
