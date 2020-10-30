@@ -34,7 +34,7 @@ class RescuePetListState extends State<RescuePetList> {
             SizedBox(height: 10),
             Container(
               height: 65,
-              width: 200,
+              width: 210,
               decoration: BoxDecoration(
                 border: Border.all(color: Color.fromRGBO(253, 158, 121, 1),),
 
@@ -118,7 +118,7 @@ class RescuePetListState extends State<RescuePetList> {
                                 Column(
                                   children: [
                                     Text(
-                                      "Bum",
+                                      "Bum\n",
                                       style: TextStyle(
                                         fontSize: 30,
                                         fontWeight: FontWeight.bold,
@@ -216,7 +216,7 @@ class RescuePetListState extends State<RescuePetList> {
                                 Column(
                                   children: [
                                     Text(
-                                      "Nga",
+                                      "Nga\n",
                                       style: TextStyle(
                                         fontSize: 30,
                                         fontWeight: FontWeight.bold,
@@ -309,7 +309,7 @@ class RescuePetListState extends State<RescuePetList> {
                               Column(
                                 children: [
                                   Text(
-                                    "Bê",
+                                    "Bê\n",
                                     style: TextStyle(
                                       fontSize: 30,
                                       fontWeight: FontWeight.bold,
