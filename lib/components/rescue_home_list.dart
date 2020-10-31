@@ -37,7 +37,7 @@ class RescueHomeList extends StatelessWidget {
                     child: Row(
                       children: <Widget>[
                         Image.asset(
-                          'src/image/rescue_cat3.jpg',
+                          'src/image/cat_mouth1.jpg',
                           width: size.width * 0.45,
                           height: size.height * 0.44,
                         ),
@@ -53,7 +53,7 @@ class RescueHomeList extends StatelessWidget {
                           width: size.width * 0.35,
                           child: Container(
                             child: (Text(
-                              "Một con mèo bị thương ngay miệng",
+                              "Một con mèo bị phỏng ngay miệng",
                               style: TextStyle(
                                 fontSize: 20,
                                 fontWeight: FontWeight.bold,
@@ -80,10 +80,10 @@ class RescueHomeList extends StatelessWidget {
                               child: Column(
                                 children: [
                                   Text(
-                                    "Dũng",
+                                    "Dũng Phạm",
                                     style: TextStyle(
                                       fontSize: 17,
-                                      fontWeight: FontWeight.w300,
+                                      fontWeight: FontWeight.w500,
                                     ),
                                   ),
                                 ],
@@ -229,7 +229,7 @@ class RescueHomeList extends StatelessWidget {
                     child: Row(
                       children: <Widget>[
                         Image.asset(
-                          'src/image/pet_6.jpg',
+                          'src/image/dog_attack.jpg',
                           width: size.width * 0.45,
                           height: size.height * 0.44,
                         ),
@@ -245,7 +245,7 @@ class RescueHomeList extends StatelessWidget {
                           width: size.width * 0.35,
                           child: Container(
                             child: (Text(
-                              "Thấy chú chó bị thương ở lưỡi",
+                              "Cứu chú chó bị đánh đập",
                               style: TextStyle(
                                 fontSize: 20,
                                 fontWeight: FontWeight.bold,
@@ -272,10 +272,10 @@ class RescueHomeList extends StatelessWidget {
                               child: Column(
                                 children: [
                                   Text(
-                                    "Hậu",
+                                    "Hậu Phạm",
                                     style: TextStyle(
                                       fontSize: 17,
-                                      fontWeight: FontWeight.w300,
+                                      fontWeight: FontWeight.w500,
                                     ),
                                   ),
                                 ],
@@ -352,7 +352,7 @@ class RescueHomeList extends StatelessWidget {
                               width: size.width * 0.1,
                               child: Column(
                                 children: [
-                                  Icon(Icons.article, color: Colors.green,),
+                                  Icon(Icons.article, color: Colors.orangeAccent,),
                                 ],
                               ),
                             ),
@@ -361,11 +361,11 @@ class RescueHomeList extends StatelessWidget {
                               child: Column(
                                 children: [
                                   Text(
-                                    "Nhẹ",
+                                    "Trung bình",
                                     style: TextStyle(
                                       fontSize: 17,
                                       fontWeight: FontWeight.bold,
-                                      color: Colors.green,
+                                      color: Colors.orangeAccent,
                                     ),
                                   ),
                                 ],
@@ -421,7 +421,7 @@ class RescueHomeList extends StatelessWidget {
                     child: Row(
                       children: <Widget>[
                         Image.asset(
-                          'src/image/pet_4.jpg',
+                          'src/image/lost_kitty.jpg',
                           width: size.width * 0.45,
                           height: size.height * 0.44,
                         ),
@@ -437,7 +437,7 @@ class RescueHomeList extends StatelessWidget {
                           width: size.width * 0.35,
                           child: Container(
                             child: (Text(
-                              "Một chú mèo bị thương ở chân",
+                              "Một chú mèo con bị lạc",
                               style: TextStyle(
                                 fontSize: 20,
                                 fontWeight: FontWeight.bold,
@@ -464,10 +464,10 @@ class RescueHomeList extends StatelessWidget {
                               child: Column(
                                 children: [
                                   Text(
-                                    "Luân",
+                                    "Luân Phạm",
                                     style: TextStyle(
                                       fontSize: 17,
-                                      fontWeight: FontWeight.w300,
+                                      fontWeight: FontWeight.w500,
                                     ),
                                   ),
                                 ],
@@ -544,7 +544,7 @@ class RescueHomeList extends StatelessWidget {
                               width: size.width * 0.1,
                               child: Column(
                                 children: [
-                                  Icon(Icons.article, color: Colors.grey,),
+                                  Icon(Icons.article, color: Colors.green,),
                                 ],
                               ),
                             ),
@@ -553,11 +553,11 @@ class RescueHomeList extends StatelessWidget {
                               child: Column(
                                 children: [
                                   Text(
-                                    "Bình thường",
+                                    "Nhẹ",
                                     style: TextStyle(
                                       fontSize: 17,
                                       fontWeight: FontWeight.bold,
-                                      color: Colors.grey,
+                                      color: Colors.green,
                                     ),
                                   ),
                                 ],
@@ -613,7 +613,7 @@ class RescueHomeList extends StatelessWidget {
                     child: Row(
                       children: <Widget>[
                         Image.asset(
-                          'src/image/rescue_cat2.jpg',
+                          'src/image/lost_puppyjpg.jpg',
                           width: size.width * 0.45,
                           height: size.height * 0.44,
                         ),
@@ -629,7 +629,7 @@ class RescueHomeList extends StatelessWidget {
                           width: size.width * 0.35,
                           child: Container(
                             child: (Text(
-                              "Chú mèo bị bỏ rơi",
+                              "Cứu chú chó con bị bỏ rơi",
                               style: TextStyle(
                                 fontSize: 20,
                                 fontWeight: FontWeight.bold,
@@ -656,10 +656,10 @@ class RescueHomeList extends StatelessWidget {
                               child: Column(
                                 children: [
                                   Text(
-                                    "Nguyên",
+                                    "Nguyên Phạm",
                                     style: TextStyle(
                                       fontSize: 17,
-                                      fontWeight: FontWeight.w300,
+                                      fontWeight: FontWeight.w500,
                                     ),
                                   ),
                                 ],
@@ -736,7 +736,7 @@ class RescueHomeList extends StatelessWidget {
                               width: size.width * 0.1,
                               child: Column(
                                 children: [
-                                  Icon(Icons.article, color: Colors.grey,),
+                                  Icon(Icons.article, color: Colors.green,),
                                 ],
                               ),
                             ),
@@ -745,11 +745,11 @@ class RescueHomeList extends StatelessWidget {
                               child: Column(
                                 children: [
                                   Text(
-                                    "Bình thường",
+                                    "Nhẹ",
                                     style: TextStyle(
                                       fontSize: 17,
                                       fontWeight: FontWeight.bold,
-                                      color: Colors.grey,
+                                      color: Colors.green,
                                     ),
                                   ),
                                 ],

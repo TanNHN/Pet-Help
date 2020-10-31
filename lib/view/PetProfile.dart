@@ -148,7 +148,7 @@ class ItemInfo extends State<PetProfile> {
                         Container(
                           padding: EdgeInsets.all(15),
                           height: 70,
-                          width: 300,
+                          // width: 400,
                           decoration: BoxDecoration(
                             color: Colors.white,
                             borderRadius: BorderRadius.circular(8),
@@ -158,36 +158,54 @@ class ItemInfo extends State<PetProfile> {
                             children: [
                               Column(
                                 children: [
-                                  Text("Loại",
+                                  Text(" Loại ",
                                       style:
-                                      TextStyle(color: Colors.blueAccent)),
+                                      TextStyle(fontWeight: FontWeight.bold, color: Colors.blueAccent)),
                                   Text("Mèo",
                                       style: TextStyle(color: Colors.orange)),
                                 ],
                               ),
                               Column(
                                 children: [
-                                  Text("Tuổi",
+                                  Text(" Cân nặng ",
                                       style:
-                                          TextStyle(color: Colors.blueAccent)),
-                                  Text("1 Tuổi",
+                                      TextStyle(fontWeight: FontWeight.bold, color: Colors.blueAccent)),
+                                  Text("4Kg",
                                       style: TextStyle(color: Colors.orange)),
                                 ],
                               ),
                               Column(
                                 children: [
-                                  Text("Giới tính",
+                                  Text(" Màu ",
                                       style:
-                                          TextStyle(color: Colors.blueAccent)),
+                                      TextStyle(fontWeight: FontWeight.bold, color: Colors.blueAccent)),
+                                  Text("Cam",
+                                      style: TextStyle(color: Colors.orange)),
+                                ],
+                              ),
+                              Column(
+                                children: [
+                                  Text(" Tuổi ",
+                                      style:
+                                      TextStyle(fontWeight: FontWeight.bold, color: Colors.blueAccent)),
+                                  Text("1",
+                                      style: TextStyle(color: Colors.orange)),
+                                ],
+                              ),
+                              Column(
+                                children: [
+                                  Text(" Giới tính ",
+                                      style:
+                                      TextStyle(fontWeight: FontWeight.bold, color: Colors.blueAccent)),
                                   Text("Đực",
                                       style: TextStyle(color: Colors.orange)),
                                 ],
                               ),
                               Column(
                                 children: [
-                                  Text("Thuộc giống",
+                                  Text(" Thuộc giống ",
                                       style:
-                                          TextStyle(color: Colors.blueAccent)),
+                                      TextStyle(fontWeight: FontWeight.bold, color: Colors.blueAccent)),
                                   Text("Nga",
                                       style: TextStyle(color: Colors.orange)),
                                 ],

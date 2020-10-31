@@ -27,12 +27,12 @@ class UserPostDetail extends StatefulWidget {
 }
 
 class UserPostDetailState extends State<UserPostDetail> {
-  String imgUrl = "src/image/rescue_cat3.jpg";
+  String imgUrl = "src/image/cat_mouth1.jpg";
 
   @override
   void initState() {
     super.initState();
-    imgUrl = 'src/image/rescue_cat3.jpg';
+    imgUrl = 'src/image/cat_mouth1.jpg';
     _getLocationPermission();
   }
 
@@ -108,11 +108,11 @@ class UserPostDetailState extends State<UserPostDetail> {
                                         onTap: () {
                                           setState(() {
                                             imgUrl =
-                                                "src/image/rescue_cat3.jpg";
+                                                "src/image/cat_mouth1.jpg";
                                           });
                                         },
                                         child: Image.asset(
-                                          'src/image/rescue_cat3.jpg',
+                                          'src/image/cat_mouth1.jpg',
                                         ),
                                       ),
                                       Padding(
@@ -121,11 +121,11 @@ class UserPostDetailState extends State<UserPostDetail> {
                                         child: GestureDetector(
                                           onTap: () {
                                             setState(() {
-                                              imgUrl = "src/image/cat2.jpg";
+                                              imgUrl = "src/image/cat_mouth2.jpg";
                                             });
                                           },
                                           child: Image.asset(
-                                            'src/image/cat2.jpg',
+                                            'src/image/cat_mouth2.jpg',
                                           ),
                                         ),
                                       ),
@@ -135,24 +135,15 @@ class UserPostDetailState extends State<UserPostDetail> {
                                         child: GestureDetector(
                                           onTap: () {
                                             setState(() {
-                                              imgUrl = "src/image/cat3.jpg";
+                                              imgUrl = "src/image/cat_mouth3.jpg";
                                             });
                                           },
                                           child: Image.asset(
-                                            'src/image/cat3.jpg',
+                                            'src/image/cat_mouth3.jpg',
                                           ),
                                         ),
                                       ),
-                                      GestureDetector(
-                                        onTap: () {
-                                          setState(() {
-                                            imgUrl = "src/image/cat4.jpg";
-                                          });
-                                        },
-                                        child: Image.asset(
-                                          'src/image/cat4.jpg',
-                                        ),
-                                      ),
+
                                     ]),
                               ),
                             ))
@@ -181,12 +172,12 @@ class UserPostDetailState extends State<UserPostDetail> {
                             ),
                           ),
                           Text(
-                            "Dũng",
+                            "Dũng Phạm",
                             style: TextStyle(
                               fontSize: 20,
                               color: Color.fromRGBO(253, 158, 121, 1),
                               fontStyle: FontStyle.italic,
-                              fontWeight: FontWeight.w300,
+                              fontWeight: FontWeight.w500,
                             ),
                           )
                         ],

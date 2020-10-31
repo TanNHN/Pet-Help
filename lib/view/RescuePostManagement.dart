@@ -80,7 +80,7 @@ class MyPost extends StatelessWidget {
                 child: SingleChildScrollView(
               child: Column(
                 children: [
-                  SizedBox(height: 10,),
+                  SizedBox(height: 20,),
                   new GestureDetector(
                     onTap: () {
                       Navigator.push(
@@ -125,32 +125,29 @@ class MyPost extends StatelessWidget {
                               ),
                             ),
                             Padding(
-                              padding: const EdgeInsets.fromLTRB(1, 23, 0, 8),
+                              padding: const EdgeInsets.fromLTRB(1, 10, 0, 8),
                               child: Row(
                                 children: [
                                   Container(
-                                    width: size.width * 0.2,
-                                    child:
-                                    Column(
+                                    width: size.width * 0.1,
+                                    child: Column(
                                       children: [
-                                        Text("Đăng bởi: "),
+                                        Icon(Icons.account_circle_outlined, ),
                                       ],
                                     ),
                                   ),
                                   Container(
-                                    width: size.width * 0.25,
-                                    child:
-                                    Column(
+                                     width: size.width * 0.2,
+                                    child: Column(
                                       children: [
                                         Text(
-                                          "Bệnh viện Thú Y Pet Pro",
+                                          "Cứu Trợ FPT",
                                           style: TextStyle(
                                             fontSize: 17,
-                                            fontWeight: FontWeight.bold,
-                                            color: Color.fromRGBO(253, 158, 121, 50),
+                                            fontWeight: FontWeight.w500,
+                                            color: Color.fromRGBO(253, 158, 121, 1),
                                           ),
                                         ),
-
                                       ],
                                     ),
                                   ),
@@ -158,21 +155,36 @@ class MyPost extends StatelessWidget {
                               ),
                             ),
                             Padding(
-                              padding: const EdgeInsets.fromLTRB(8, 8, 8, 0),
-                              child: Container(
-                                width: size.width * 0.4,
-                                child: (Text(
-                                  "25 phút trước",
-                                  style: TextStyle(
-                                    color: Colors.grey,
-                                    fontSize: 15,
-                                    fontWeight: FontWeight.bold,
+                              padding: const EdgeInsets.fromLTRB(1, 10, 0, 8),
+                              child: Row(
+                                children: [
+                                  Container(
+                                    width: size.width * 0.1,
+                                    child: Column(
+                                      children: [
+                                        Icon(Icons.access_time_rounded,),
+                                      ],
+                                    ),
                                   ),
-                                )),
+                                  Container(
+                                    // width: size.width * 0.3,
+                                    child: Column(
+                                      children: [
+                                        Text(
+                                          "25 phút trước",
+                                          style: TextStyle(
+                                            fontSize: 15,
+                                            fontWeight: FontWeight.w300,
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ],
                               ),
                             ),
                             Padding(
-                              padding: const EdgeInsets.fromLTRB(1, 23, 0, 8),
+                              padding: const EdgeInsets.fromLTRB(1, 10, 0, 8),
                               child: Row(
                                 children: [
                                   Container(
@@ -212,7 +224,7 @@ class MyPost extends StatelessWidget {
                               ),
                             ),
                             Padding(
-                              padding: const EdgeInsets.fromLTRB(8, 18, 3, 4),
+                              padding: const EdgeInsets.fromLTRB(10, 10, 0, 8),
                               child: Row(
                                 children: [
                                   Icon(Icons.wb_incandescent_rounded,color: Colors.green,),
@@ -230,7 +242,181 @@ class MyPost extends StatelessWidget {
                           ],
                         ),
                       ]),
-                      height: size.height * 0.45,
+                      height: size.height * 0.32,
+                      decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(15),
+                          boxShadow: [
+                            new BoxShadow(
+                                color: Colors.black54,
+                                offset: new Offset(1.0, 2.0),
+                                blurRadius: 3.5),
+                          ]),
+                    ),
+                  ),
+                  SizedBox(height: 20,),
+                  new GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        new MaterialPageRoute(
+                            builder: (context) => new PostDetailRescue()),
+                      );
+                    },
+                    child: Container(
+                      width: double.infinity,
+                      child: Row(children: <Widget>[
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Row(
+                            children: <Widget>[
+                              Image.asset(
+                                'src/image/samoyed.jpg',
+                                width: size.width *0.45,
+                                height: size.height* 0.44,
+                              ),
+                            ],
+                          ),
+                        ),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: <Widget>[
+                            Padding(
+                              padding: const EdgeInsets.fromLTRB(8, 19, 8, 8),
+                              child: Container(
+                                width: size.width * 0.35,
+                                child: Container(
+
+                                  child: (Text(
+                                    "SAM",
+                                    style: TextStyle(
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.bold,
+                                      color: Color.fromRGBO(253, 158, 121, 1),
+                                    ),
+                                  )),
+                                ),
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.fromLTRB(1, 10, 0, 8),
+                              child: Row(
+                                children: [
+                                  Container(
+                                    width: size.width * 0.1,
+                                    child: Column(
+                                      children: [
+                                        Icon(Icons.account_circle_outlined, ),
+                                      ],
+                                    ),
+                                  ),
+                                  Container(
+                                    width: size.width * 0.2,
+                                    child: Column(
+                                      children: [
+                                        Text(
+                                          "Cứu Trợ FPT",
+                                          style: TextStyle(
+                                            fontSize: 17,
+                                            fontWeight: FontWeight.w500,
+                                            color: Color.fromRGBO(253, 158, 121, 1),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.fromLTRB(1, 10, 0, 8),
+                              child: Row(
+                                children: [
+                                  Container(
+                                    width: size.width * 0.1,
+                                    child: Column(
+                                      children: [
+                                        Icon(Icons.access_time_rounded,),
+                                      ],
+                                    ),
+                                  ),
+                                  Container(
+                                    // width: size.width * 0.3,
+                                    child: Column(
+                                      children: [
+                                        Text(
+                                          "3 ngày trước",
+                                          style: TextStyle(
+                                            fontSize: 15,
+                                            fontWeight: FontWeight.w300,
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.fromLTRB(1, 10, 0, 8),
+                              child: Row(
+                                children: [
+                                  Container(
+                                    width: size.width * 0.1,
+                                    child:
+                                    Column(
+                                      children: [
+                                        Icon(Icons.location_on),
+
+                                      ],
+
+                                    ),
+
+                                  ),
+                                  Container(
+                                    width: size.width * 0.33,
+                                    child:
+                                    Column(
+                                      children: [
+
+                                        Text(
+                                          "111 Trường Chinh, Phường 12, Tân Bình, TP.HCM",
+                                          style: TextStyle(
+                                            fontSize: 14,
+                                            fontWeight: FontWeight.bold,
+
+                                          ),
+                                        ),
+
+                                      ],
+
+                                    ),
+
+                                  ),
+
+                                ],
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.fromLTRB(10, 10, 0, 8),
+                              child: Row(
+                                children: [
+                                  Icon(Icons.wb_incandescent_rounded,color: Colors.orangeAccent,),
+                                  Text(
+                                    " CHƯA ĐƯỢC NHẬN NUÔI",
+                                    style: TextStyle(
+                                      color: Colors.orangeAccent,
+                                      fontSize: 15,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  )
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                      ]),
+                      height: size.height * 0.32,
                       decoration: BoxDecoration(
                           color: Colors.white,
                           borderRadius: BorderRadius.circular(15),
