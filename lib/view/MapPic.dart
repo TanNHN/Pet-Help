@@ -42,13 +42,13 @@ class MapPic extends StatelessWidget {
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
         floatingActionButton: Container(
           height: 145.0,
-          width: 145.0,
+          width: 200.0,
 
           child: FittedBox(
 
             child: FloatingActionButton.extended(
               backgroundColor: Color.fromRGBO(253, 158, 121, 1),
-                label: Text('done'),
+                label: Text('Chấp nhận cứu trợ', style: TextStyle(fontSize: 20,)),
                 icon: Icon(Icons.done),
                 onPressed: () {
                   Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => AddPetAfterRes()));

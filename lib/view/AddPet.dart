@@ -22,7 +22,7 @@ class AddPetStage extends State<AddPet> {
     return Scaffold(
       appBar: AppBar(
         title: Padding(
-          padding: const EdgeInsets.fromLTRB(80, 0, 0, 0),
+          padding: const EdgeInsets.fromLTRB(45, 0, 0, 0),
           child: Text("Thêm Thú Cưng"),
         ),
         backgroundColor: Color.fromRGBO(253, 158, 121, 1),
