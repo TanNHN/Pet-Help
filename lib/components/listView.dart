@@ -59,197 +59,178 @@ class _ListViewPetState extends State<ListViewPet> {
                       builder: (context) => new PostDetail()),
                 );
               },
-            child:  Row(
-              children: [
-                Container(
-
-                  height: size.height * 0.25,
-                  decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(15),
-                      boxShadow: [
-                        new BoxShadow(
-                            color: Colors.black54,
-                            offset: new Offset(1.0, 2.0),
-                            blurRadius: 3.5),
-                      ]),
-                  child:
-                     Image.network(
-                      data[index]['pathImg'],
-                       height: size.height * 0.20,
-                      width: 150,
-                      fit: BoxFit.fitHeight,
+              child: Container(
+                width: double.infinity,
+                child: Row(children: <Widget>[
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Row(
+                      children: <Widget>[
+                      Image.network(
+                                data[index]['pathImg'],
+                                 height: size.height * 0.20,
+                                width: 150,
+                                fit: BoxFit.fitHeight,
+                              ),
+                      ],
                     ),
-
-                ),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Container(
-                      padding: const EdgeInsets.fromLTRB(1, 12, 0, 8),
-                      alignment: Alignment.centerLeft,
-                      child: Column(
-                        children: <Widget>[
-                          Container(
-                            width: 170,
-                            height: 40,
-                            child: Column(
-                              children: [
-                                Flexible(
-                                  child: Text(
-                                    data[index]['name']
-                                        .toString()
-                                        .toUpperCase(),
-                                    overflow: TextOverflow.clip,
-                                    style: TextStyle(
-                                        fontSize: 18,
-                                        fontWeight: FontWeight.bold,
-                                        color: Colors.green),
-                                  ),
-                                ),
-                              ],
-                            ),
+                  ),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: <Widget>[
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(8, 14, 8, 0),
+                        child: Container(
+                          width: size.width * 0.35,
+                          child: Container(
+                            child: (Text(
+                              data[index]['name'].toString().toUpperCase(),
+                              overflow: TextOverflow.clip,
+                              style: TextStyle(
+                                fontSize: 23,
+                                fontWeight: FontWeight.bold,
+                                color: Color.fromRGBO(253, 158, 121, 1),
+                              ),
+                              textAlign: TextAlign.center,
+                            )),
                           ),
-                          // SizedBox(
-                          //   width: 100,
-                          //   height: 20,
-                          //   child: RaisedButton(
-                          //     color: Color.fromRGBO(253, 158, 121, 1),
-                          //     shape: RoundedRectangleBorder(
-                          //       borderRadius: BorderRadius.circular(18.0),
-                          //     ),
-                          //     onPressed: () {
-                          //       Navigator.of(context)
-                          //           .pushReplacement(MaterialPageRoute(
-                          //         builder: (context) => PostDetail(),
-                          //       ));
-                          //     },
-                          //     child: Text(
-                          //       'Xem'.toUpperCase(),
-                          //       style: TextStyle(color: Colors.white),
-                          //     ),
-                          //   ),
-                          // ),
-
-                          // Column(
-                          //   children: [
-                          //     Icon(Icons.person),
-                          //     Text(
-                          //       "Đăng bởi",
-                          //       style: TextStyle(
-                          //           fontSize: 13, fontWeight: FontWeight.bold),
-                          //     ),
-                          //     Text(
-                          //       data[index]['user'],
-                          //       style: TextStyle(
-                          //           fontSize: 13, fontStyle: FontStyle.italic),
-                          //     ),
-                          //
-                          //   ],
-                          // ),
-                          Padding(
-                            padding: const EdgeInsets.fromLTRB(1, 12, 0, 8),
-                            child: Row(
-                              children: [
-                                Container(
-                                  padding: EdgeInsets.only(right: 5),
-                                  child: Column(
-                                    children: [
-                                      Icon(Icons.account_circle_outlined, ),
-                                    ],
-                                  ),
-                                ),
-                                Container(
-                                  // width: size.width * 0.3,
-                                  child: Column(
-                                    children: [
-                                      Text(
-                                        data[index]['user'],
-                                        style: TextStyle(
-                                          fontSize: 17,
-                                          fontWeight: FontWeight.w500,
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ],
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(1, 20, 0, 8),
+                        child: Row(
+                          children: [
+                            Container(
+                              width: size.width * 0.1,
+                              child: Column(
+                                children: [
+                                  Icon(Icons.person),
+                                ],
+                              ),
                             ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.fromLTRB(1, 12, 0, 8),
-                            child: Row(
-                              children: [
-                                // Icon(Icons.location_on),
-                                Text("Loại: ",
-                                  style: TextStyle(
-                                      fontSize: 17,
-                                      fontWeight: FontWeight.bold),),
+                            Container(
+                              // width: size.width * 0.3,
+                              child: Column(
+                                children: [
                                 Text(
-                                  data[index]['title'],
+                                  data[index]['user'],
                                   style: TextStyle(
                                     fontSize: 17,
                                     fontWeight: FontWeight.w300,
-                                  ),
-                                ),
-                              ],
+                                  ),)
+                                ],
+                              ),
                             ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.fromLTRB(1, 12, 0, 8),
-                            child: Row(
-                              children: [
-                                Container(
-                                  padding: EdgeInsets.only(right: 5),
-                                  child: Column(
-                                    children: [
-                                      Icon(Icons.location_on),
-                                    ],
-                                  ),
-                                ),
-                                Container(
-                                  child: Column(
-                                    children: [
-                                      Text(
-                                        data[index]['address'],
-                                        style: TextStyle(
-                                          fontSize: 17,
-                                          // fontWeight: FontWeight.bold,
-                                          color: Colors.black,
-                                          fontWeight: FontWeight.w300,
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ],
+                          ],
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(1, 4, 0, 8),
+                        child: Row(
+                          children: [
+                            Container(
+                              width: size.width * 0.1,
+                              child: Column(
+                                children: [
+                                  Icon(Icons.pets),
+                                ],
+                              ),
                             ),
-                          ),
-
-                          Padding(
-                            padding: const EdgeInsets.fromLTRB(1, 12, 0, 8),
-                            child: Row(
-                              children: [
-                                // Icon(Icons.location_on),
-                                Text("Khoảng cách: "),
+                            Container(
+                              // width: size.width * 0.3,
+                              child: Column(
+                                children: [
+                                  Text(
+                                    data[index]['title'],
+                                    style: TextStyle(
+                                      fontSize: 17,
+                                      fontWeight: FontWeight.w300,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(1, 4, 0, 8),
+                        child: Row(
+                          children: [
+                            Container(
+                              width: size.width * 0.1,
+                              child: Column(
+                                children: [
+                                  Icon(Icons.location_on),
+                                ],
+                              ),
+                            ),
+                            Container(
+                              // width: size.width * 0.33,
+                              child: Column(
+                                children: [
+                                  Text(
+                                    data[index]['address'],
+                                    style: TextStyle(
+                                      fontSize: 17,
+                                      // fontWeight: FontWeight.bold,
+                                      color: Colors.black,
+                                      fontWeight: FontWeight.w300,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(18, 4, 0, 0),
+                        child: Row(
+                          children: [
+                            Container(
+                              // width: size.width * 0.1,
+                              child: Column(
+                                children: [
+                                  Text("Khoảng cách ",
+                                    style: TextStyle(fontSize: 17, color: Colors.black, fontWeight: FontWeight.w300, fontStyle: FontStyle.italic,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                            Container(
+                              // width: size.width * 0.3,
+                              child: Column(
+                                children: [
                                 Text(
                                   data[index]['distance'],
                                   style:  TextStyle(
-                                    fontSize: 15,
+                                    fontSize: 17,
                                     fontWeight: FontWeight.w300,
                                     fontStyle: FontStyle.italic,
                                   ),
                                 ),
-                              ],
+                                ],
+                              ),
                             ),
-                          ),
-                        ],
+                          ],
+                        ),
                       ),
-                    ),
-                  ],
-                ),
-              ],
-            ),
+                    ],
+                  ),
+                ]),
+                height: size.height * 0.33,
+                decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(15),
+                    boxShadow: [
+                      new BoxShadow(
+                          color: Colors.black54,
+                          offset: new Offset(1.0, 2.0),
+                          blurRadius: 3.5),
+                    ]),
+              ),
             ),
           );
         });
