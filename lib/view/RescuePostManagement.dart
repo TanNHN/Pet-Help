@@ -108,15 +108,15 @@ class MyPost extends StatelessWidget {
                                     ),
                                   ),
                                   Container(
-                                     width: size.width * 0.2,
+                                     // width: size.width * 0.2,
                                     child: Column(
                                       children: [
                                         Text(
                                           "Cứu Trợ FPT",
                                           style: TextStyle(
-                                            fontSize: 17,
-                                            fontWeight: FontWeight.w500,
-                                            color: Color.fromRGBO(253, 158, 121, 1),
+                                            fontSize: 15,
+                                            fontWeight: FontWeight.w300,
+                                            // color: Color.fromRGBO(253, 158, 121, 1),
                                           ),
                                         ),
                                       ],
@@ -126,7 +126,7 @@ class MyPost extends StatelessWidget {
                               ),
                             ),
                             Padding(
-                              padding: const EdgeInsets.fromLTRB(1, 10, 0, 8),
+                              padding: const EdgeInsets.fromLTRB(1, 0, 0, 8),
                               child: Row(
                                 children: [
                                   Container(
@@ -155,7 +155,7 @@ class MyPost extends StatelessWidget {
                               ),
                             ),
                             Padding(
-                              padding: const EdgeInsets.fromLTRB(1, 10, 0, 8),
+                              padding: const EdgeInsets.fromLTRB(1, 0, 0, 8),
                               child: Row(
                                 children: [
                                   Container(
@@ -179,23 +179,18 @@ class MyPost extends StatelessWidget {
                                         Text(
                                           "111 Trường Chinh, Phường 12, Tân Bình, TP.HCM",
                                           style: TextStyle(
-                                            fontSize: 14,
-                                            fontWeight: FontWeight.bold,
-
+                                            fontSize: 15,
+                                            fontWeight: FontWeight.w300,
                                           ),
                                         ),
-
                                       ],
-
                                     ),
-
                                   ),
-
                                 ],
                               ),
                             ),
                             Padding(
-                              padding: const EdgeInsets.fromLTRB(10, 10, 0, 8),
+                              padding: const EdgeInsets.fromLTRB(10, 0, 0, 0),
                               child: Row(
                                 children: [
                                   Icon(Icons.wb_incandescent_rounded,color: Colors.green,),
@@ -270,7 +265,7 @@ class MyPost extends StatelessWidget {
                               ),
                             ),
                             Padding(
-                              padding: const EdgeInsets.fromLTRB(1, 10, 0, 8),
+                              padding: const EdgeInsets.fromLTRB(1, 10, 0, 0),
                               child: Row(
                                 children: [
                                   Container(
@@ -282,15 +277,15 @@ class MyPost extends StatelessWidget {
                                     ),
                                   ),
                                   Container(
-                                    width: size.width * 0.2,
+                                    // width: size.width * 0.2,
                                     child: Column(
                                       children: [
                                         Text(
                                           "Cứu Trợ FPT",
                                           style: TextStyle(
-                                            fontSize: 17,
-                                            fontWeight: FontWeight.w500,
-                                            color: Color.fromRGBO(253, 158, 121, 1),
+                                            fontSize: 15,
+                                            fontWeight: FontWeight.w300,
+                                            // color: Color.fromRGBO(253, 158, 121, 1),
                                           ),
                                         ),
                                       ],
@@ -300,7 +295,7 @@ class MyPost extends StatelessWidget {
                               ),
                             ),
                             Padding(
-                              padding: const EdgeInsets.fromLTRB(1, 10, 0, 8),
+                              padding: const EdgeInsets.fromLTRB(1, 10, 0, 0),
                               child: Row(
                                 children: [
                                   Container(
@@ -338,24 +333,19 @@ class MyPost extends StatelessWidget {
                                     Column(
                                       children: [
                                         Icon(Icons.location_on),
-
                                       ],
-
                                     ),
-
                                   ),
                                   Container(
                                     width: size.width * 0.33,
                                     child:
                                     Column(
                                       children: [
-
                                         Text(
                                           "111 Trường Chinh, Phường 12, Tân Bình, TP.HCM",
                                           style: TextStyle(
-                                            fontSize: 14,
-                                            fontWeight: FontWeight.bold,
-
+                                            fontSize: 15,
+                                            fontWeight: FontWeight.w300,
                                           ),
                                         ),
 
@@ -369,7 +359,7 @@ class MyPost extends StatelessWidget {
                               ),
                             ),
                             Padding(
-                              padding: const EdgeInsets.fromLTRB(10, 10, 0, 0),
+                              padding: const EdgeInsets.fromLTRB(10, 0, 0, 0),
                               child: Row(
                                 children: [
                                   Icon(Icons.wb_incandescent_rounded,color: Colors.orangeAccent,),
