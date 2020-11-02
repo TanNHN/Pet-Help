@@ -177,9 +177,7 @@ class _ListViewPetState extends State<ListViewPet> {
                             ),
                           ),
                           Padding(
-
                             padding: const EdgeInsets.fromLTRB(1, 12, 0, 8),
-
                             child: Row(
                               children: [
                                 // Icon(Icons.location_on),
