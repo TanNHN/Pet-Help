@@ -3,30 +3,35 @@
     "title": "Bum",
     "user": "Trung tâm SAR",
     "address": "25 Lê Văn Việt, Q9",
-    "pathImg" : "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Gillie_granting_an_audience_to_his_loyal_subjects_%284043308142%29.jpg/1200px-Gillie_granting_an_audience_to_his_loyal_subjects_%284043308142%29.jpg"
+    "pathImg" : "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Gillie_granting_an_audience_to_his_loyal_subjects_%284043308142%29.jpg/1200px-Gillie_granting_an_audience_to_his_loyal_subjects_%284043308142%29.jpg",
+    "distance": "2km"
   },
   {
     "title": "Corgi",
     "user": "Trung tâm Pet Pro",
     "address": "Khu 2 hoàng cương",
-    "pathImg" : "https://sansangduhoc.vn/wp-content/uploads/2017/04/ssdhhaihuoc-e1492263979267.jpg"
+    "pathImg" : "https://sansangduhoc.vn/wp-content/uploads/2017/04/ssdhhaihuoc-e1492263979267.jpg",
+    "distance": "12km"
   },
   {
     "title": "Vàng",
     "user": "Cứu Trợ FPT",
     "address": "16 Võ Văn Ngân, Q9",
-    "pathImg" : "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Cat03.jpg/1200px-Cat03.jpg"
+    "pathImg" : "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Cat03.jpg/1200px-Cat03.jpg",
+    "distance": "1km"
   },
   {
     "title": "Doge",
     "user": "Trung Tâm SAR",
     "address": "25 Võ Chí Công, Q9",
-    "pathImg" : "https://i.pinimg.com/564x/a7/71/26/a77126ed93bff8d24aaa4aa44c77a9b8.jpg"
+    "pathImg" : "https://i.pinimg.com/564x/a7/71/26/a77126ed93bff8d24aaa4aa44c77a9b8.jpg",
+    "distance": "5km"
   },
   {
     "title": "Cate",
     "user": "Tân 1 cú",
     "address": "Khu 2 hoàng cương",
-    "pathImg" : "https://i.pinimg.com/originals/bf/1f/dd/bf1fdd4cd4115708daeeac09aa2ad581.jpg"
+    "pathImg" : "https://i.pinimg.com/originals/bf/1f/dd/bf1fdd4cd4115708daeeac09aa2ad581.jpg",
+    "distance": "3km"
   }
 ]
