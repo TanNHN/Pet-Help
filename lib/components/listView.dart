@@ -65,7 +65,12 @@ class _ListViewPetState extends State<ListViewPet> {
                       ]),
                   child: GestureDetector(
                     onTap: () {
-                      print('f');
+                      // print('f');
+                      Navigator.push(
+                        context,
+                        new MaterialPageRoute(
+                            builder: (context) => new PostDetail()),
+                      );
                     },
                     child: Image.network(
                       data[index]['pathImg'],
@@ -122,7 +127,7 @@ class _ListViewPetState extends State<ListViewPet> {
                           //   ),
                           // ),
                           Padding(
-                            padding: const EdgeInsets.fromLTRB(0, 20, 0, 0),
+                            padding: const EdgeInsets.fromLTRB(0, 2, 0, 0),
                             child: Row(
                               children: [
                                 // Icon(Icons.location_on),
@@ -137,7 +142,7 @@ class _ListViewPetState extends State<ListViewPet> {
                             ),
                           ),
                           Padding(
-                            padding: const EdgeInsets.fromLTRB(0, 20, 0, 0),
+                            padding: const EdgeInsets.fromLTRB(0, 2, 0, 0),
                             child: Row(
                               children: [
                                 Icon(Icons.location_on),
