@@ -148,12 +148,9 @@ class _ListViewPetState extends State<ListViewPet> {
                           //   ],
                           // ),
                           Padding(
-
                             padding: const EdgeInsets.fromLTRB(1, 12, 0, 8),
                             child: Row(
-
                               children: [
-
                                 Container(
                                   padding: EdgeInsets.only(right: 5),
                                   child: Column(
@@ -213,7 +210,6 @@ class _ListViewPetState extends State<ListViewPet> {
                                   ),
                                 ),
                                 Container(
-
                                   child: Column(
                                     children: [
                                       Text(
