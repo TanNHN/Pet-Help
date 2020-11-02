@@ -83,7 +83,7 @@ class _ListViewPetState extends State<ListViewPet> {
                         children: <Widget>[
                           Container(
                             width: 170,
-                            height: 60,
+                            height: 40,
                             child: Column(
                               children: [
                                 Flexible(
@@ -101,26 +101,26 @@ class _ListViewPetState extends State<ListViewPet> {
                               ],
                             ),
                           ),
-                          SizedBox(
-                            width: 100,
-                            height: 20,
-                            child: RaisedButton(
-                              color: Color.fromRGBO(253, 158, 121, 1),
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(18.0),
-                              ),
-                              onPressed: () {
-                                Navigator.of(context)
-                                    .pushReplacement(MaterialPageRoute(
-                                  builder: (context) => PostDetail(),
-                                ));
-                              },
-                              child: Text(
-                                'Xem'.toUpperCase(),
-                                style: TextStyle(color: Colors.white),
-                              ),
-                            ),
-                          ),
+                          // SizedBox(
+                          //   width: 100,
+                          //   height: 20,
+                          //   child: RaisedButton(
+                          //     color: Color.fromRGBO(253, 158, 121, 1),
+                          //     shape: RoundedRectangleBorder(
+                          //       borderRadius: BorderRadius.circular(18.0),
+                          //     ),
+                          //     onPressed: () {
+                          //       Navigator.of(context)
+                          //           .pushReplacement(MaterialPageRoute(
+                          //         builder: (context) => PostDetail(),
+                          //       ));
+                          //     },
+                          //     child: Text(
+                          //       'Xem'.toUpperCase(),
+                          //       style: TextStyle(color: Colors.white),
+                          //     ),
+                          //   ),
+                          // ),
                           Padding(
                             padding: const EdgeInsets.fromLTRB(0, 20, 0, 0),
                             child: Row(
@@ -147,6 +147,21 @@ class _ListViewPetState extends State<ListViewPet> {
                                 data[index]['user'],
                                 style: TextStyle(
                                     fontSize: 13, fontStyle: FontStyle.italic),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.fromLTRB(0, 20, 0, 0),
+                                child: Row(
+                                  children: [
+                                    // Icon(Icons.location_on),
+                                    Text("Khoảng cách: "),
+                                    Text(
+                                      data[index]['distance'],
+                                      style: TextStyle(
+                                          fontSize: 13,
+                                          fontWeight: FontWeight.bold),
+                                    ),
+                                  ],
+                                ),
                               ),
                             ],
                           ),
