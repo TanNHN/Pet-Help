@@ -88,7 +88,7 @@ class _ListViewPetState extends State<ListViewPet> {
                               children: [
                                 Flexible(
                                   child: Text(
-                                    data[index]['title']
+                                    data[index]['name']
                                         .toString()
                                         .toUpperCase(),
                                     overflow: TextOverflow.clip,
@@ -121,6 +121,21 @@ class _ListViewPetState extends State<ListViewPet> {
                           //     ),
                           //   ),
                           // ),
+                          Padding(
+                            padding: const EdgeInsets.fromLTRB(0, 20, 0, 0),
+                            child: Row(
+                              children: [
+                                // Icon(Icons.location_on),
+                                Text("Loại: "),
+                                Text(
+                                  data[index]['title'],
+                                  style: TextStyle(
+                                      fontSize: 13,
+                                      fontWeight: FontWeight.bold),
+                                ),
+                              ],
+                            ),
+                          ),
                           Padding(
                             padding: const EdgeInsets.fromLTRB(0, 20, 0, 0),
                             child: Row(
