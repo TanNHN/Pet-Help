@@ -21,7 +21,7 @@ class _ListViewPetState extends State<ListViewPet> {
       data = json.decode(response);
     });
 
-    print(data[1]["title"]);
+    print(data[1]["name"]);
 
     return "Success!";
   }
@@ -39,6 +39,7 @@ class _ListViewPetState extends State<ListViewPet> {
         itemCount: data == null ? 0 : data.length,
         itemBuilder: (BuildContext context, int index) {
           return Container(
+            width: 500,
             height: size.height * 0.25,
             decoration: BoxDecoration(
                 color: Colors.white,
@@ -49,7 +50,8 @@ class _ListViewPetState extends State<ListViewPet> {
                       offset: new Offset(1.0, 2.0),
                       blurRadius: 3.5),
                 ]),
-            margin: EdgeInsets.only(top: 10, left: 20, right: 20, bottom: 10),
+            // margin: EdgeInsets.only(top: 10, left: 20, right: 20, bottom: 10),
+            margin: EdgeInsets.only(top: 8, left: 5, right: 5, bottom: 8),
             child:GestureDetector(
               onTap: () {
                 // print('f');
@@ -60,7 +62,8 @@ class _ListViewPetState extends State<ListViewPet> {
                 );
               },
               child: Container(
-                width: double.infinity,
+                // width: double.infinity,
+                width: 200,
                 child: Row(children: <Widget>[
                   Padding(
                     padding: const EdgeInsets.all(8.0),
