@@ -33,12 +33,13 @@ class _ListViewPetState extends State<ListViewPet> {
 
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     return ListView.builder(
         padding: const EdgeInsets.all(8),
         itemCount: data == null ? 0 : data.length,
         itemBuilder: (BuildContext context, int index) {
           return Container(
-            height: 200,
+            height: size.height * 0.25,
             decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(15),
@@ -49,11 +50,20 @@ class _ListViewPetState extends State<ListViewPet> {
                       blurRadius: 3.5),
                 ]),
             margin: EdgeInsets.only(top: 10, left: 20, right: 20, bottom: 10),
-            child: Row(
+            child:GestureDetector(
+              onTap: () {
+                // print('f');
+                Navigator.push(
+                  context,
+                  new MaterialPageRoute(
+                      builder: (context) => new PostDetail()),
+                );
+              },
+            child:  Row(
               children: [
                 Container(
-                  alignment: Alignment.topLeft,
-                  height: 300,
+
+                  height: size.height * 0.25,
                   decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(15),
@@ -63,27 +73,21 @@ class _ListViewPetState extends State<ListViewPet> {
                             offset: new Offset(1.0, 2.0),
                             blurRadius: 3.5),
                       ]),
-                  child: GestureDetector(
-                    onTap: () {
-                      // print('f');
-                      Navigator.push(
-                        context,
-                        new MaterialPageRoute(
-                            builder: (context) => new PostDetail()),
-                      );
-                    },
-                    child: Image.network(
+                  child:
+                     Image.network(
                       data[index]['pathImg'],
-                      height: 200,
+                       height: size.height * 0.20,
                       width: 150,
                       fit: BoxFit.fitHeight,
                     ),
-                  ),
+
                 ),
                 Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Container(
-                      padding: const EdgeInsets.all(8),
+                      padding: const EdgeInsets.fromLTRB(1, 12, 0, 8),
+                      alignment: Alignment.centerLeft,
                       child: Column(
                         children: <Widget>[
                           Container(
@@ -126,64 +130,124 @@ class _ListViewPetState extends State<ListViewPet> {
                           //     ),
                           //   ),
                           // ),
+
+                          // Column(
+                          //   children: [
+                          //     Icon(Icons.person),
+                          //     Text(
+                          //       "Đăng bởi",
+                          //       style: TextStyle(
+                          //           fontSize: 13, fontWeight: FontWeight.bold),
+                          //     ),
+                          //     Text(
+                          //       data[index]['user'],
+                          //       style: TextStyle(
+                          //           fontSize: 13, fontStyle: FontStyle.italic),
+                          //     ),
+                          //
+                          //   ],
+                          // ),
                           Padding(
-                            padding: const EdgeInsets.fromLTRB(0, 2, 0, 0),
+
+                            padding: const EdgeInsets.fromLTRB(1, 12, 0, 8),
+                            child: Row(
+
+                              children: [
+
+                                Container(
+                                  padding: EdgeInsets.only(right: 5),
+                                  child: Column(
+                                    children: [
+                                      Icon(Icons.account_circle_outlined, ),
+                                    ],
+                                  ),
+                                ),
+                                Container(
+                                  // width: size.width * 0.3,
+                                  child: Column(
+                                    children: [
+                                      Text(
+                                        data[index]['user'],
+                                        style: TextStyle(
+                                          fontSize: 17,
+                                          fontWeight: FontWeight.w500,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          Padding(
+
+                            padding: const EdgeInsets.fromLTRB(1, 12, 0, 8),
+
                             child: Row(
                               children: [
                                 // Icon(Icons.location_on),
-                                Text("Loại: "),
+                                Text("Loại: ",
+                                  style: TextStyle(
+                                      fontSize: 17,
+                                      fontWeight: FontWeight.bold),),
                                 Text(
                                   data[index]['title'],
                                   style: TextStyle(
-                                      fontSize: 13,
-                                      fontWeight: FontWeight.bold),
+                                    fontSize: 17,
+                                    fontWeight: FontWeight.w300,
+                                  ),
                                 ),
                               ],
                             ),
                           ),
                           Padding(
-                            padding: const EdgeInsets.fromLTRB(0, 2, 0, 0),
+                            padding: const EdgeInsets.fromLTRB(1, 12, 0, 8),
                             child: Row(
                               children: [
-                                Icon(Icons.location_on),
-                                Text(
-                                  data[index]['address'],
-                                  style: TextStyle(
-                                      fontSize: 13,
-                                      fontWeight: FontWeight.bold),
+                                Container(
+                                  padding: EdgeInsets.only(right: 5),
+                                  child: Column(
+                                    children: [
+                                      Icon(Icons.location_on),
+                                    ],
+                                  ),
+                                ),
+                                Container(
+
+                                  child: Column(
+                                    children: [
+                                      Text(
+                                        data[index]['address'],
+                                        style: TextStyle(
+                                          fontSize: 17,
+                                          // fontWeight: FontWeight.bold,
+                                          color: Colors.black,
+                                          fontWeight: FontWeight.w300,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
                                 ),
                               ],
                             ),
                           ),
-                          Column(
-                            children: [
-                              Icon(Icons.person),
-                              Text(
-                                "Đăng bởi",
-                                style: TextStyle(
-                                    fontSize: 13, fontWeight: FontWeight.bold),
-                              ),
-                              Text(
-                                data[index]['user'],
-                                style: TextStyle(
-                                    fontSize: 13, fontStyle: FontStyle.italic),
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.fromLTRB(0, 20, 0, 0),
-                                child: Row(
-                                  children: [
-                                    // Icon(Icons.location_on),
-                                    Text("Khoảng cách: "),
-                                    Text(
-                                      data[index]['distance'],
-                                      style: TextStyle(
-                                          fontSize: 13,
-                                          fontWeight: FontWeight.bold),
-                                    ),
-                                  ],
+
+                          Padding(
+                            padding: const EdgeInsets.fromLTRB(1, 12, 0, 8),
+                            child: Row(
+                              children: [
+                                // Icon(Icons.location_on),
+                                Text("Khoảng cách: "),
+                                Text(
+                                  data[index]['distance'],
+                                  style:  TextStyle(
+                                    fontSize: 15,
+                                    fontWeight: FontWeight.w300,
+                                    fontStyle: FontStyle.italic,
+                                  ),
                                 ),
-                              ),
-                            ],
+                              ],
+                            ),
                           ),
                         ],
                       ),
@@ -191,6 +255,7 @@ class _ListViewPetState extends State<ListViewPet> {
                   ],
                 ),
               ],
+            ),
             ),
           );
         });
