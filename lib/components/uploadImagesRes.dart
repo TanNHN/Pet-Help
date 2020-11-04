@@ -163,7 +163,7 @@ class _UploadImagesResState extends State<UploadImagesRes> {
             children: <Widget>[
               new ListTile(
                 title: new Text(
-                  "Đến: Dũng Xạo",
+                  "Đến: Dũng",
                   style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold, fontSize: 18,),
                 ),
               ),
@@ -369,7 +369,7 @@ class _UploadImagesResState extends State<UploadImagesRes> {
                 },
                 child: Text("Đã cứu trợ",
                     style: TextStyle(
-                      fontSize: 24,
+                      fontSize: 20,
                       color: Colors.white,
                     )),
               ),
