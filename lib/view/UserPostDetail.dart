@@ -293,7 +293,7 @@ class UserPostDetailState extends State<UserPostDetail> {
                                 Container(
                                   width: 230,
                                   child: Text(
-                                    "Cam",
+                                    "Vàng",
                                     style: TextStyle(
                                       fontSize: 17,
                                       fontWeight: FontWeight.w300,
