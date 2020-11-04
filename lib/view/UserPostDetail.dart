@@ -522,7 +522,7 @@ class UserPostDetailState extends State<UserPostDetail> {
                               child: Column(
                                 children: [
                                   Align(
-                                    child: Text("Chấp nhận cứu trợ",
+                                    child: Text("Cứu trợ",
                                         style: TextStyle(
                                             color: Colors.white,
                                             fontSize: 16,
