@@ -48,7 +48,7 @@ class MapPic extends StatelessWidget {
 
             child: FloatingActionButton.extended(
               backgroundColor: Color.fromRGBO(253, 158, 121, 1),
-                label: Text('Chấp nhận cứu trợ', style: TextStyle(fontSize: 20,)),
+                label: Text('Hoàn tất', style: TextStyle(fontSize: 25,)),
                 icon: Icon(Icons.done),
                 onPressed: () {
                   Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => AddPetAfterRes()));

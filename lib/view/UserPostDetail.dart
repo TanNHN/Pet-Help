@@ -321,8 +321,16 @@ class UserPostDetailState extends State<UserPostDetail> {
                                   fontWeight: FontWeight.bold,
                                 ),
                               ),
+                              Text('Khẩn Cấp',
+                                style: TextStyle(
+                                  fontSize: 21,
+                                  fontWeight: FontWeight.w900,
+                                  color: Colors.red,
+                                ),
+                              ),
                             ],
                           ),
+
                           Padding(
                             padding: const EdgeInsets.fromLTRB(8, 8, 0, 8),
                             child: Row(

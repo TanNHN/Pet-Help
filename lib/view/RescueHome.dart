@@ -150,22 +150,22 @@ class RescueHome extends StatelessWidget {
                 );
               },
             ),
-            ListTile(
-              title: Text('Đánh giá ứng dụng'),
-              leading: new Tab(
-                icon: new Image.asset("src/image/start_rating.png"),
-              ),
-              onTap: () {
-                // Update the state of the app
-                // ...
-                // Then close the drawer
-                Navigator.of(context).pushReplacement(
-                  MaterialPageRoute(
-                    builder: (context) => RateMyAppRescue(),
-                  ),
-                );
-              },
-            ),
+            // ListTile(
+            //   title: Text('Đánh giá ứng dụng'),
+            //   leading: new Tab(
+            //     icon: new Icon(Icons.star_border, size: 40,color: Colors.black54,)
+            //   ),
+            //   onTap: () {
+            //     // Update the state of the app
+            //     // ...
+            //     // Then close the drawer
+            //     Navigator.of(context).pushReplacement(
+            //       MaterialPageRoute(
+            //         builder: (context) => RateMyAppRescue(),
+            //       ),
+            //     );
+            //   },
+            // ),
           ],
         ),
       ),
