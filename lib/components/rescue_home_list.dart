@@ -29,15 +29,11 @@ class RescueHomeList extends StatelessWidget {
                       builder: (context) => new UserPostDetail()),
                 );
               },
-
-
                   child: Banner(
                     message: 'SOS',
                     location: BannerLocation.topEnd,
-
                     textStyle: TextStyle(fontSize: 20, fontWeight: FontWeight.w900),
                     color: Colors.red,
-
                     child: Container(
                       width: double.infinity,
                       child: Row(children: <Widget>[
