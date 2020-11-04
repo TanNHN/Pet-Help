@@ -119,7 +119,7 @@ class _ListViewPetState extends State<ListViewPet> {
                                   data[index]['user'],
                                   style: TextStyle(
                                     fontSize: 17,
-                                    fontWeight: FontWeight.w300,
+                                    fontWeight: FontWeight.w500,
                                   ),)
                                 ],
                               ),

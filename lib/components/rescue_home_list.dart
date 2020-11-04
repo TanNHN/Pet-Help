@@ -506,7 +506,7 @@ class RescueHomeList extends StatelessWidget {
                               child: Column(
                                 children: [
                                   Text(
-                                    "5 phút trước",
+                                    "30 phút trước",
                                     style: TextStyle(
                                       fontSize: 15,
                                       fontWeight: FontWeight.w300,
@@ -698,7 +698,7 @@ class RescueHomeList extends StatelessWidget {
                               child: Column(
                                 children: [
                                   Text(
-                                    "15 ngày trước",
+                                    "2 tiếng trước",
                                     style: TextStyle(
                                       fontSize: 15,
                                       fontWeight: FontWeight.w300,
