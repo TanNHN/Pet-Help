@@ -24,7 +24,11 @@ class ChatScreen extends StatelessWidget {
           children: <Widget>[
             IconButton(
                 icon: Icon(Icons.arrow_back_ios, color: Colors.white),
-              // onPressed: () => _scaffoldKey.currentState.openDrawer(),
+                onPressed: () {
+                  Navigator.of(context).pushReplacement(MaterialPageRoute(
+                    builder: (context) => ContactView(),
+                  ));
+                }
             ),
             CircleAvatar(
               backgroundImage: NetworkImage(UrlImage),
