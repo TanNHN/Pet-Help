@@ -16,41 +16,51 @@ class ChatScreen extends StatelessWidget {
       resizeToAvoidBottomPadding: false, // tránh overcross
       resizeToAvoidBottomInset: true,
       appBar: AppBar(
-        leading: IconButton(
-            icon: Icon(Icons.arrow_back_ios, color: Colors.white),
-            onPressed: () {
-              Navigator.of(context).pushReplacement(MaterialPageRoute(
-                builder: (context) => ContactView(),
-              ));
-            }),
         backgroundColor: Color.fromRGBO(253, 158, 121, 1),
+        titleSpacing: 0.0,
         title: Row(
-          mainAxisSize: MainAxisSize.min,
-          children: [
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: <Widget>[
+            IconButton(
+                icon: Icon(Icons.arrow_back_ios, color: Colors.white),
+              // onPressed: () => _scaffoldKey.currentState.openDrawer(),
+            ),
             CircleAvatar(
               backgroundImage: NetworkImage(UrlImage),
               radius: 27,
             ),
-            SizedBox(width: 15),
-            Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  "${name}",
-                  style: Theme.of(context).textTheme.subhead,
-                  overflow: TextOverflow.clip,
+            Stack(
+              alignment: Alignment.center,
+              children: <Widget>[
+                Text("    ${name}", style: Theme.of(context).textTheme.subhead, overflow: TextOverflow.clip,),
+                Text("\n\nOnline",
+                  style: Theme.of(context).textTheme.subtitle.apply(color: Colors.green,),
                 ),
-                Text(
-                  "Online",
-                  style: Theme.of(context).textTheme.subtitle.apply(
-                        color: Colors.green,
-                      ),
-                )
               ],
             ),
           ],
         ),
+        automaticallyImplyLeading: false,
+        centerTitle: true,
+        actions: <Widget>[
+          Row(
+            children: <Widget>[
+                Padding(
+                  padding: const EdgeInsets.only(right: 3.0),
+                  child: IconButton(icon: Icon (Icons.video_call),
+                    onPressed: () {},
+                  ),
+                ),
+              Padding(
+                padding: const EdgeInsets.only(right: 5.0),
+                child: IconButton(icon: Icon(Icons.call),
+                  onPressed: () {},
+                ),
+              ),
+            ],
+          )
+        ],
       ),
       body: SafeArea(
         child: Container(
