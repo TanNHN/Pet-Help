@@ -3,11 +3,11 @@ import 'package:flutter/material.dart';
 import 'package:pet_help/components/chat.dart';
 import 'package:pet_help/view/UserPostDetail.dart';
 
-import '../components/chat.dart';
-import 'AddPetAfterRes.dart';
-import 'Contact.dart';
+import '../../components/chat.dart';
+import '../AddPetAfterRes.dart';
+import '../Contact.dart';
 
-class CallScreen extends StatelessWidget {
+class CallScreenRescue extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -36,9 +36,8 @@ class CallScreen extends StatelessWidget {
                           width: 90,
                           child: FittedBox(
                               child: FloatingActionButton(
-
                                 onPressed: () {
-                                  Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => ChatScreen(name: 'Dũng', UrlImage: '',)));
+                                  Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => ContactView()));
                                 },
                                 child: Icon(Icons.call_end),
                                 backgroundColor: Colors.red,
