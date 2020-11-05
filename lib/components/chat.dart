@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pet_help/view/CallScreen.dart';
 import 'package:pet_help/view/Contact.dart';
 import 'package:pet_help/Global/Settings.dart ' as Settings;
 import 'package:pet_help/Global/Colors.dart' as MyColors;
@@ -59,7 +60,9 @@ class ChatScreen extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.only(right: 5.0),
                 child: IconButton(icon: Icon(Icons.call),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => CallScreen()));
+                  },
                 ),
               ),
             ],

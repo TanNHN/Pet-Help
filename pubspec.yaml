@@ -106,6 +106,7 @@ flutter:
     - src/image/rescue_cat2.jpg
     - src/image/rescue_cat3.jpg
     - src/image/nga.jpg
+    - src/image/CallScreen.jpg
     - src/image/lost_puppyjpg.jpg
     - src/image/samoyed.jpg
     - src/image/pet_4.jpg

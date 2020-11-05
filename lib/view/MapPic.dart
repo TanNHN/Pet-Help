@@ -32,7 +32,7 @@ class MapPic extends StatelessWidget {
               image: AssetImage('src/image/MapGG.jpg'), fit: BoxFit.fitWidth),
         ),
         child: Padding(
-          padding: const EdgeInsets.fromLTRB(0, 650, 0, 0),
+          padding: const EdgeInsets.fromLTRB(0, 720, 0, 0),
           child: Column(
             children: [
               Column(
@@ -56,7 +56,7 @@ class MapPic extends StatelessWidget {
                           children: [
                             GestureDetector(
                               onTap: () {
-
+                                Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => UserPostDetail()));
                               },
                               child: Align(
                                 child: Text("Từ chối cứu trợ",
