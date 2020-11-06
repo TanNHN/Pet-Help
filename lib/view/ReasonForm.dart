@@ -109,7 +109,8 @@ class AddPetStage extends State<ReasonForm> {
                 width: double.infinity,
                 height: 45,
                 child: RaisedButton(
-                  color: Color.fromRGBO(253, 158, 121, 1),
+                  // color: Color.fromRGBO(253, 158, 121, 1),
+                  color: Colors.blueAccent,
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.all(Radius.circular(8))),
                   onPressed: () {
@@ -119,7 +120,7 @@ class AddPetStage extends State<ReasonForm> {
                   },
                   child: Text("Xác nhận",
                       style: TextStyle(
-                        fontSize: 24,
+                        fontSize: 22,
                         color: Colors.white,
                       )),
                 ),
