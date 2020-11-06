@@ -10,6 +10,7 @@ import '../Contact.dart';
 class CallScreenRescue extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     return Scaffold(
 
       body: Container(
@@ -32,12 +33,12 @@ class CallScreenRescue extends StatelessWidget {
 
 
                         Container(
-                          height: 90,
+                          height: size.height * 0.1,
                           width: 90,
                           child: FittedBox(
                               child: FloatingActionButton(
                                 onPressed: () {
-                                  Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => ContactView()));
+                                  Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => ChatScreen(name: 'Luân',UrlImage: '',)));
                                 },
                                 child: Icon(Icons.call_end),
                                 backgroundColor: Colors.red,

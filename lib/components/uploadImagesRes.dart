@@ -163,7 +163,7 @@ class _UploadImagesResState extends State<UploadImagesRes> {
             children: <Widget>[
               new ListTile(
                 title: new Text(
-                  "Đến: Dũng",
+                  "Đến: Luân",
                   style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold, fontSize: 18,),
                 ),
               ),
@@ -277,14 +277,14 @@ class _UploadImagesResState extends State<UploadImagesRes> {
                 //     )
                 //
                 // ),
-                new ListTile(
-                  title: new TextField(
-                    decoration: new InputDecoration(
-
-                      hintText: "Cân nặng",
-                    ),
-                  ),
-                ),
+                // new ListTile(
+                //   title: new TextField(
+                //     decoration: new InputDecoration(
+                //
+                //       hintText: "Cân nặng",
+                //     ),
+                //   ),
+                // ),
                 Row(
                   children: [
                     Text(
@@ -315,6 +315,7 @@ class _UploadImagesResState extends State<UploadImagesRes> {
 
                   ],
                 ),
+
                 SizedBox(height: 10,),
                 Row(
                   children: [
@@ -348,7 +349,86 @@ class _UploadImagesResState extends State<UploadImagesRes> {
 
                   ],
                 ),
+              SizedBox(height: 20,),
+              new ListTile(
+                title: new TextField(
+                  decoration: new InputDecoration(
+
+                    hintText: "Vị trí vết thương: ",
+                  ),
+                ),
+              ),
                 SizedBox(height: 20,),
+              Row(
+                children: [
+                  Text(
+                    "    Có bị nôn mửa không? ",
+                    style: TextStyle(
+                        fontSize: 17, color: Colors.black54 ),
+                  ),
+                  DropdownButton(
+                      value: _value,
+                      items: [
+                        DropdownMenuItem(
+                          child: Text(""),
+                          value: 1,
+                        ),
+                        DropdownMenuItem(
+                          child: Text("Có"),
+                          value: 2,
+                        ),
+                        DropdownMenuItem(
+                            child: Text("Không"), value: 3),
+
+                      ],
+                      onChanged: (value) {
+                        setState(() {
+                          _value = value;
+                        });
+                      }),
+
+                ],
+              ),
+              SizedBox(height: 20,),
+              Row(
+                children: [
+                  Text(
+                    "    Có ho, hắt hơi hoặc chảy dịch từ mắt không? ",
+                    style: TextStyle(
+                        fontSize: 17, color: Colors.black54 ),
+                  ),
+                  DropdownButton(
+                      value: _value,
+                      items: [
+                        DropdownMenuItem(
+                          child: Text(""),
+                          value: 1,
+                        ),
+                        DropdownMenuItem(
+                          child: Text("Có"),
+                          value: 2,
+                        ),
+                        DropdownMenuItem(
+                            child: Text("Không"), value: 3),
+
+                      ],
+                      onChanged: (value) {
+                        setState(() {
+                          _value = value;
+                        });
+                      }),
+
+                ],
+              ),
+                SizedBox(height: 20,),
+              new ListTile(
+                title: new TextField(
+                  decoration: new InputDecoration(
+
+                    hintText: "Có bị bất kỳ vấn đề nào khác không ?",
+                  ),
+                ),
+              ),
                 const Divider(
                   height: 1.0,
                 ),

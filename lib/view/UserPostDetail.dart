@@ -172,7 +172,7 @@ class UserPostDetailState extends State<UserPostDetail> {
                             ),
                           ),
                           Text(
-                            "Dũng Phạm",
+                            "Luân",
                             style: TextStyle(
                               fontSize: 20,
                               color: Color.fromRGBO(253, 158, 121, 1),
@@ -490,8 +490,8 @@ class UserPostDetailState extends State<UserPostDetail> {
                                   Navigator.of(context)
                                       .push(new MaterialPageRoute(
                                           builder: (context) => ChatScreen(
-                                                name: 'Dũng',
-                                                UrlImage: 'image/cat4.jpg',
+                                                name: 'Luân',
+                                                UrlImage: '',
                                               )));
                                 },
                                 child: Align(
