@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:pet_help/view/CallScreen/CallScreenUser.dart';
+import 'package:pet_help/view/CallScreen/VideoScreenUser.dart';
 import 'package:pet_help/view/Contact.dart';
+import 'package:pet_help/view/ContactUser.dart';
 import 'package:pet_help/view/HomePage.dart';
 import 'package:pet_help/view/UserPetProfile.dart';
 import 'package:pet_help/Global/Settings.dart ' as Settings;
@@ -55,7 +57,9 @@ class ChatUserScreen extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.only(right: 3.0),
                 child: IconButton(icon: Icon (Icons.video_call),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => VideoScreenUser()));
+                  },
                 ),
               ),
               Padding(
