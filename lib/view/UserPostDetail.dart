@@ -469,7 +469,7 @@ class UserPostDetailState extends State<UserPostDetail> {
                     //   ),
                     // ),
                     SizedBox(
-                      height: 38,
+                      height: 20,
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,

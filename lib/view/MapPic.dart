@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:pet_help/components/chat.dart';
+import 'package:pet_help/view/ReasonForm.dart';
 import 'package:pet_help/view/UserPostDetail.dart';
 
 import 'AddPetAfterRes.dart';
@@ -56,7 +57,7 @@ class MapPic extends StatelessWidget {
                           children: [
                             GestureDetector(
                               onTap: () {
-                                Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => UserPostDetail()));
+                                Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => ReasonForm()));
                               },
                               child: Align(
                                 child: Text("Từ chối cứu trợ",
