@@ -2,7 +2,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:pet_help/components/chat.dart';
 import 'package:pet_help/view/ContactUser.dart';
-import 'package:pet_help/view/HomePage.dart';
 import 'package:pet_help/view/UserPostDetail.dart';
 
 

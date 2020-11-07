@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pet_help/view/CallScreen/CallScreenUser.dart';
 import 'package:pet_help/view/CallScreen/VideoScreenUser.dart';
-import 'package:pet_help/view/Contact.dart';
-import 'package:pet_help/view/ContactUser.dart';
-import 'package:pet_help/view/HomePage.dart';
 import 'package:pet_help/view/UserPetProfile.dart';
 import 'package:pet_help/Global/Settings.dart ' as Settings;
 

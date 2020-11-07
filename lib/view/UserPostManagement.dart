@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_material_color_picker/flutter_material_color_picker.dart';
 import 'package:google_fonts/google_fonts.dart';
-// import 'package:pet_help/components/BottomNaviBar.dart';
+import 'package:pet_help/components/BottomNaviBar.dart';
 import 'package:pet_help/components/listView.dart';
 import 'package:pet_help/components/list_header.dart';
 import 'package:pet_help/components/rescue_home_list.dart';
-import 'package:pet_help/view/HomePage.dart';
+import 'package:pet_help/view/HomePageUser/HomePage.dart';
 import 'package:pet_help/view/MyPostDetail.dart';
 import 'package:pet_help/view/MyPostDetail2.dart';
 import 'package:pet_help/view/RescueHome.dart';

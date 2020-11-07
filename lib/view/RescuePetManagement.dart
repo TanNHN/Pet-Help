@@ -5,7 +5,6 @@ import 'package:pet_help/components/BottomNaviBar.dart';
 import 'package:pet_help/components/list_header.dart';
 import 'package:pet_help/components/rescue_home_list.dart';
 import 'package:pet_help/components/rescue_pet_list.dart';
-import 'package:pet_help/view/HomePage.dart';
 import 'package:pet_help/view/RescueHome.dart';
 
 class RescuePetManagement extends StatelessWidget {

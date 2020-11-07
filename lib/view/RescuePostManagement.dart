@@ -4,7 +4,6 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:pet_help/components/listView.dart';
 import 'package:pet_help/components/list_header.dart';
 import 'package:pet_help/components/rescue_home_list.dart';
-import 'package:pet_help/view/HomePage.dart';
 import 'package:pet_help/view/PostDetailRescue.dart';
 import 'package:pet_help/view/RescueHome.dart';
 import 'package:pet_help/view/loadimg.dart';

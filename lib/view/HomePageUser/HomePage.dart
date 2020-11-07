@@ -13,7 +13,7 @@ import 'package:pet_help/view/login_page.dart';
 import 'package:pet_help/view/proflie.dart';
 import 'package:pet_help/rate_my_app/RateMyApp.dart';
 
-import 'ContactUser.dart';
+import '../ContactUser.dart';
 
 class MyHomePage extends StatelessWidget {
   @override

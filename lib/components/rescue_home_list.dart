@@ -1,8 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
-import 'package:pet_help/view/HomePage.dart';
-import 'package:pet_help/view/PetProfile.dart';
 import 'package:pet_help/view/UserPostDetail.dart';
 
 class RescueHomeList extends StatelessWidget {
