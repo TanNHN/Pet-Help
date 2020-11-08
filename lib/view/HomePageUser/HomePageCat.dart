@@ -1,19 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:pet_help/components/BottomNaviBar.dart';
+import 'package:pet_help/components/ListView/listViewCat.dart';
 import 'package:pet_help/components/ListView/listview.dart';
 
 import 'package:pet_help/components/list_header.dart';
-import 'package:pet_help/view/Contact.dart';
 import 'package:pet_help/view/Login.dart';
 import 'package:pet_help/view/UserPetManagement.dart';
-import 'package:pet_help/view/RescuePostManagement.dart';
-import 'package:pet_help/view/login_page.dart';
+import 'package:pet_help/view/UserPostManagement.dart';
 import 'package:pet_help/view/proflie.dart';
 
-class MyHomePageRescue extends StatelessWidget {
+
+import 'package:pet_help/view/ContactUser.dart';
+
+class MyHomeCatPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    var bottomNaviBar = BottomNaviBar;
     return Scaffold(
       resizeToAvoidBottomPadding: false,
       appBar: AppBar(
@@ -50,7 +53,6 @@ class MyHomePageRescue extends StatelessWidget {
                     child: Container(
                       width: 75,
                       height: 75,
-                      padding: EdgeInsets.all(15),
                       child: Image.asset('src/icon/cat.png'),
                       decoration: BoxDecoration(
                           color: Colors.white, shape: BoxShape.circle),
@@ -59,10 +61,11 @@ class MyHomePageRescue extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.fromLTRB(10, 0, 0, 0),
                     child: Text(
-                      'Tom\nUser@gmail.com',
+                      'Tom\n'
+                          'user@gmail.com',
                       style: GoogleFonts.lato(
                           fontStyle: FontStyle.normal,
-                          color: Colors.black,
+                          color: Colors.white,
                           fontSize: 20),
                     ),
                   ),
@@ -70,7 +73,7 @@ class MyHomePageRescue extends StatelessWidget {
               ),
             ),
             ListTile(
-              title: Text('Profile'),
+              title: Text('Thông tin của tôi'),
               leading: new Tab(
                 icon: new Image.asset("src/icon/profile.png"),
               ),
@@ -83,7 +86,7 @@ class MyHomePageRescue extends StatelessWidget {
               },
             ),
             ListTile(
-              title: Text('My pets'),
+              title: Text('Thú cưng của tôi'),
               leading: new Tab(
                 icon: new Image.asset("src/icon/pet-house.png"),
               ),
@@ -94,29 +97,29 @@ class MyHomePageRescue extends StatelessWidget {
               },
             ),
             ListTile(
-              title: Text('My Post'),
+              title: Text('Bài Post của tôi'),
               leading: new Tab(
                 icon: new Image.asset("src/icon/post.png"),
               ),
               onTap: () {
                 Navigator.of(context).pushReplacement(MaterialPageRoute(
-                  builder: (context) => MyPost(),
+                  builder: (context) => UserPostManagement(),
                 ));
               },
             ),
             ListTile(
-              title: Text('Contact'),
+              title: Text('Liên lạc'),
               leading: new Tab(
                 icon: new Image.asset("src/icon/contact.png"),
               ),
               onTap: () {
                 Navigator.of(context).pushReplacement(MaterialPageRoute(
-                  builder: (context) => ContactView(),
+                  builder: (context) => ContactViewUser(),
                 ));
               },
             ),
             ListTile(
-              title: Text('Log out'),
+              title: Text('Đăng xuất'),
               leading: new Tab(
                 icon: new Image.asset("src/icon/logout.png"),
               ),
@@ -144,7 +147,7 @@ class MyHomePageRescue extends StatelessWidget {
         child: Column(
           children: [
             HeaderList(),
-            Expanded(child: ListViewPet()),
+            Expanded(child: ListViewCat()),
             BottomNaviBar()
           ],
         ),

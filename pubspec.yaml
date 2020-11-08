@@ -127,7 +127,9 @@ flutter:
     - src/icon/logout.png
     - src/icon/logoCute.png
     - src/icon/google_logo.png
-    - src/data/pet.json
+    - src/data/pet/pet.json
+    - src/data/pet/petCat.json
+    - src/data/pet/petDog.json
     - src/data/contact.json
 
   # To add assets to your application, add an assets section, like this:

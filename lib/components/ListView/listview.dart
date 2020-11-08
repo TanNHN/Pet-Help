@@ -15,7 +15,7 @@ class _ListViewPetState extends State<ListViewPet> {
   List data;
 
   Future<String> getData() async {
-    String response = await rootBundle.loadString('src/data/pet.json');
+    String response = await rootBundle.loadString('src/data/pet/pet.json');
 
     this.setState(() {
       data = json.decode(response);

@@ -6,16 +6,16 @@ import 'package:flutter/services.dart' show rootBundle;
 import 'package:pet_help/view/PostDetail.dart';
 import 'dart:convert';
 
-class ListViewPet extends StatefulWidget {
+class ListViewDog extends StatefulWidget {
   @override
-  _ListViewPetState createState() => _ListViewPetState();
+  _ListViewDogState createState() => _ListViewDogState();
 }
 
-class _ListViewPetState extends State<ListViewPet> {
+class _ListViewDogState extends State<ListViewDog> {
   List data;
 
   Future<String> getData() async {
-    String response = await rootBundle.loadString('src/data/pet.json');
+    String response = await rootBundle.loadString('src/data/pet/petDog.json');
 
     this.setState(() {
       data = json.decode(response);
