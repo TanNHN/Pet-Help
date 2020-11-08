@@ -4,33 +4,12 @@ import 'package:pet_help/view/HomePageUser/HomePage.dart';
 import 'package:pet_help/view/HomePageUser/HomePageCat.dart';
 import 'package:pet_help/view/HomePageUser/HomePageDog.dart';
 
-class HeaderList extends StatefulWidget {
+class HeaderListDog extends StatefulWidget {
   @override
-  _HeaderListState createState() => _HeaderListState();
+  _HeaderListDogState createState() => _HeaderListDogState();
 }
 
-Widget chip(String label, Color color) {
-  return Chip(
-    labelPadding: EdgeInsets.all(5.0),
-    avatar: CircleAvatar(
-      backgroundColor: Colors.grey.shade600,
-      child: Text(label[0].toUpperCase()),
-    ),
-    label: Text(
-      label,
-      style: TextStyle(
-        color: Colors.white,
-      ),
-    ),
-    backgroundColor: color,
-    elevation: 6.0,
-    shadowColor: Colors.grey[60],
-    padding: EdgeInsets.all(6.0),
-  );
-}
-
-
-class _HeaderListState extends State<HeaderList> {
+class _HeaderListDogState extends State<HeaderListDog> {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -72,20 +51,16 @@ class _HeaderListState extends State<HeaderList> {
             ),
 
           ),
-          // SingleChildScrollView(
-          //   scrollDirection: Axis.horizontal,
-          //   child: rowChips(),
-          //
+          // SizedBox(
+          //   height: 8,
           // ),
-          SizedBox(
-            height: 10,
-          ),
            SingleChildScrollView(
             scrollDirection: Axis.horizontal,
             child: Row(
               children: <Widget>[
                 SizedBox(
-                  width: 14,
+                  width: 18,
+                  height: 18,
                 ),
                 GestureDetector(
                     onTap: () {
@@ -100,11 +75,12 @@ class _HeaderListState extends State<HeaderList> {
                       padding: EdgeInsets.all(12),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(8),
-                        // color: Colors.green,
-                        border: Border.all(
-                          color: Colors.black,
-                          width: 1,
-                        ),
+                        color: Colors.white,
+                        // color: Color.fromRGBO(253, 158, 121, 1),
+                        // border: Border.all(
+                        //   color: Colors.black,
+                        //   width: 1,
+                        // ),
                       ),
                       child: Column(
                         children: [
@@ -113,13 +89,16 @@ class _HeaderListState extends State<HeaderList> {
                                 style: TextStyle(
                                     color: Colors.black,
                                     fontSize: 16,
-                                    fontWeight: FontWeight.bold)),
+                                    // fontWeight: FontWeight.bold,
+                                )
+                            ),
                           )
                         ],
                       ),
                     )),
                 SizedBox(
                   width: 18,
+                  height: 18,
                 ),
                 GestureDetector(
                     onTap: () {
@@ -134,11 +113,12 @@ class _HeaderListState extends State<HeaderList> {
                       padding: EdgeInsets.all(12),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(8),
-                        // color: Colors.green,
-                        border: Border.all(
-                          color: Colors.black,
-                          width: 1,
-                        ),
+                        color: Colors.white,
+                        // color: Color.fromRGBO(253, 158, 121, 1),
+                        // border: Border.all(
+                        //   color: Colors.black,
+                        //   width: 1,
+                        // ),
                       ),
                       child: Column(
                         children: [
@@ -147,13 +127,16 @@ class _HeaderListState extends State<HeaderList> {
                                 style: TextStyle(
                                     color: Colors.black,
                                     fontSize: 16,
-                                    fontWeight: FontWeight.bold)),
+                                    // fontWeight: FontWeight.bold,
+                                )
+                            ),
                           )
                         ],
                       ),
                     )),
                 SizedBox(
                   width: 18,
+                  height: 18,
                 ),
                 GestureDetector(
                     onTap: () {
@@ -168,11 +151,12 @@ class _HeaderListState extends State<HeaderList> {
                       padding: EdgeInsets.all(12),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(8),
-                        // color: Colors.green,
-                        border: Border.all(
-                          color: Colors.black,
-                          width: 1,
-                        ),
+                        // color: Colors.white,
+                        color: Color.fromRGBO(253, 158, 121, 1),
+                        // border: Border.all(
+                        //   color: Colors.black,
+                        //   width: 1,
+                        // ),
                       ),
 
                       child: Column(
@@ -180,15 +164,18 @@ class _HeaderListState extends State<HeaderList> {
                           Align(
                             child: Text("Chó",
                                 style: TextStyle(
-                                    color: Colors.black,
+                                    color: Colors.white,
                                     fontSize: 16,
-                                    fontWeight: FontWeight.bold)),
+                                    fontWeight: FontWeight.bold,
+                                )
+                            ),
                           )
                         ],
                       ),
                     )),
                 SizedBox(
                   width: 18,
+                  height: 18,
                 ),
                 GestureDetector(
                     onTap: () {
@@ -201,11 +188,11 @@ class _HeaderListState extends State<HeaderList> {
                       padding: EdgeInsets.all(12),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(8),
-                        // color: Colors.green,
-                        border: Border.all(
-                          color: Colors.black,
-                          width: 1,
-                        ),
+                        color: Colors.white,
+                        // border: Border.all(
+                        //   color: Colors.black,
+                        //   width: 1,
+                        // ),
                       ),
 
                       child: Column(
@@ -215,13 +202,16 @@ class _HeaderListState extends State<HeaderList> {
                                 style: TextStyle(
                                     color: Colors.black,
                                     fontSize: 16,
-                                    fontWeight: FontWeight.bold)),
+                                    // fontWeight: FontWeight.bold,
+                                )
+                            ),
                           )
                         ],
                       ),
                     )),
                 SizedBox(
                   width: 18,
+                  height: 18,
                 ),
                 GestureDetector(
                     onTap: () {
@@ -234,11 +224,11 @@ class _HeaderListState extends State<HeaderList> {
                       padding: EdgeInsets.all(12),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(8),
-                        // color: Colors.green,
-                        border: Border.all(
-                          color: Colors.black,
-                          width: 1,
-                        ),
+                        color: Colors.white,
+                        // border: Border.all(
+                        //   color: Colors.black,
+                        //   width: 1,
+                        // ),
                       ),
 
                       child: Column(
@@ -248,16 +238,22 @@ class _HeaderListState extends State<HeaderList> {
                                 style: TextStyle(
                                     color: Colors.black,
                                     fontSize: 16,
-                                    fontWeight: FontWeight.bold)),
+                                    // fontWeight: FontWeight.bold,
+                                )
+                            ),
                           )
                         ],
                       ),
                     )),
                 SizedBox(
-                  width: 14,
+                  width: 18,
+                  height: 18,
                 ),
               ],
             ),
+          ),
+          SizedBox(
+            height: 8,
           ),
         ],
       ),

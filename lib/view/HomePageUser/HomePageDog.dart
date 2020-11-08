@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:pet_help/components/BottomNaviBar.dart';
-import 'package:pet_help/components/ListView/listViewCat.dart';
+import 'package:pet_help/components/ListHeader/list_header.dart';
+import 'package:pet_help/components/ListHeader/list_header_dog.dart';
 import 'package:pet_help/components/ListView/listViewDog.dart';
-import 'package:pet_help/components/ListView/listview.dart';
-
-import 'package:pet_help/components/list_header.dart';
 import 'package:pet_help/view/Login.dart';
 import 'package:pet_help/view/UserPetManagement.dart';
 import 'package:pet_help/view/UserPostManagement.dart';
@@ -147,7 +145,7 @@ class MyHomeDogPage extends StatelessWidget {
         ),
         child: Column(
           children: [
-            HeaderList(),
+            HeaderListDog(),
             Expanded(child: ListViewDog()),
             BottomNaviBar()
           ],
