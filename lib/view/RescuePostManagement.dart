@@ -177,7 +177,7 @@ class MyPost extends StatelessWidget {
                                       children: [
 
                                         Text(
-                                          "111 Trường Chinh, Phường 12, Tân Bình, TP.HCM",
+                                          "Lô 24, Công viên phần mềm Quang Trung, Q.12 TP.HCM",
                                           style: TextStyle(
                                             fontSize: 15,
                                             fontWeight: FontWeight.w300,
@@ -342,7 +342,7 @@ class MyPost extends StatelessWidget {
                                     Column(
                                       children: [
                                         Text(
-                                          "111 Trường Chinh, Phường 12, Tân Bình, TP.HCM",
+                                          "Lô 24, Công viên phần mềm Quang Trung, Q.12 TP.HCM",
                                           style: TextStyle(
                                             fontSize: 15,
                                             fontWeight: FontWeight.w300,

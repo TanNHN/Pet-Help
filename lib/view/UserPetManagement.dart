@@ -126,7 +126,7 @@ class UserPetManagement extends StatelessWidget {
                               alignment: Alignment.center,
                               // width: 170,
                               child: Text(
-                                "Bệnh viện Pet PRO",
+                                "Trung tâm Pet Pro",
                                 maxLines: 2,
                                 style: TextStyle(
                                   fontSize: 15,

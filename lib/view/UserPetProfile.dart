@@ -269,7 +269,7 @@ class ItemInfo extends State<UserPetProfile> {
                             style: TextStyle(fontWeight: FontWeight.bold, color: Colors.black),
                           ),
                           Text(
-                            "Bệnh viện Pet PRO",
+                            "Trung tâm Pet Pro",
                             style: TextStyle(color: Colors.orange),
                           ),
                         ],
@@ -297,7 +297,7 @@ class ItemInfo extends State<UserPetProfile> {
                                   Navigator.of(context)
                                       .push(new MaterialPageRoute(
                                     builder: (context) => ChatUserScreen(
-                                      name: "Bệnh viện Pet PRO",
+                                      name: "Trung tâm Pet PRO",
                                       UrlImage: "",
                                     ),
                                   ));
