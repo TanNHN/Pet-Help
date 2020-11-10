@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:pet_help/components/ListHeader/list_header.dart';
+import 'package:pet_help/components/ListHeader/rescue_list_header.dart';
 // import 'package:pet_help/components/BottomNaviBar.dart';
 // import 'file:///E:/Github/HCI201/Pet-Help/lib/components/ListHeader/list_header.dart';
 import 'package:pet_help/components/rescue_home_list.dart';
@@ -45,7 +46,7 @@ class MyPost extends StatelessWidget {
         decoration: BoxDecoration(),
         child: Column(
           children: [
-            HeaderList(),
+            RescueHeaderList(),
             Expanded(
                 child: SingleChildScrollView(
               child: Column(
