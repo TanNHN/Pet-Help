@@ -1,9 +1,22 @@
 import 'package:flutter/material.dart';
+import 'package:pet_help/view/HomePageUser/HomePage.dart';
 
 class ProfileApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        leading: IconButton(
+            icon: Icon(Icons.arrow_back_ios, color: Colors.white),
+            onPressed: () {
+              Navigator.of(context).pushReplacement(MaterialPageRoute(
+                builder: (context) => MyHomePage(),
+              ));
+            }),
+
+        backgroundColor: Color.fromRGBO(253, 158, 121, 1),
+        centerTitle: true,
+      ),
       body: Column(
         children: <Widget>[
           Container(

@@ -1,25 +1,50 @@
 import 'package:flutter/material.dart';
 import 'package:pet_help/components/chat.dart';
-import 'package:pet_help/view/RescueHome.dart';
+import 'package:pet_help/view/ReportForm.dart';
 
-class FPTProfileApp extends StatelessWidget {
+import '../RescueHome.dart';
+
+class LuanDangProfile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: IconButton(
-            icon: Icon(Icons.arrow_back_ios, color: Colors.white),
-            onPressed: () {
-              Navigator.of(context).pushReplacement(MaterialPageRoute(
-                builder: (context) => RescueHome(),
-              ));
-            }),
-
         backgroundColor: Color.fromRGBO(253, 158, 121, 1),
+        titleSpacing: 0.0,
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: <Widget>[
+            IconButton(
+                icon: Icon(Icons.arrow_back_ios, color: Colors.white),
+                onPressed: () {
+                  Navigator.of(context).pushReplacement(MaterialPageRoute(
+                    builder: (context) => RescueHome(),
+                  ));
+                }
+            ),
+
+
+          ],
+        ),
+        automaticallyImplyLeading: false,
         centerTitle: true,
+        actions: <Widget>[
+          Row(
+            children: <Widget>[
+
+              Padding(
+                padding: const EdgeInsets.only(right: 5.0),
+                child: IconButton(icon: Icon(Icons.warning),
+                  onPressed: () {
+                    Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => ReportForm()));
+                  },
+                ),
+              ),
+            ],
+          )
+        ],
       ),
-
-
       body: Column(
         children: <Widget>[
           Container(
@@ -43,7 +68,8 @@ class FPTProfileApp extends StatelessWidget {
                     children: <Widget>[
                       CircleAvatar(
                         backgroundImage: NetworkImage(
-                          "https://i.pinimg.com/originals/bf/ca/4d/bfca4d372b34c0fe341901ee31200796.jpg",
+                          // "https://sohanews.sohacdn.com/160588918557773824/2020/10/5/photo-1-1601889002966448421364.jpg",
+                            "https://files.giaoducthoidai.vn/Uploaded/tranghn/2019-05-15/n6-MDJP.jpg",
                         ),
                         radius: 50.0,
                       ),
@@ -51,7 +77,7 @@ class FPTProfileApp extends StatelessWidget {
                         height: 10.0,
                       ),
                       Text(
-                        "Cứu Trợ FPT",
+                        "Luan Dang",
                         style: TextStyle(
                           fontSize: 22.0,
                           color: Colors.black,
@@ -69,7 +95,7 @@ class FPTProfileApp extends StatelessWidget {
           ),
           Container(
             child: Text(
-              'FptRescue@gmail.com',
+              'LuanDang@gmail.com',
               style: TextStyle(
                 fontSize: 19.0,
                 fontStyle: FontStyle.italic,
@@ -132,7 +158,42 @@ class FPTProfileApp extends StatelessWidget {
           SizedBox(
             height: 20.0,
           ),
-
+          Container(
+            width: 300.00,
+            child: RaisedButton(
+                onPressed: () {},
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(80.0)),
+                elevation: 0.0,
+                padding: EdgeInsets.all(0.0),
+                child: Ink(
+                  decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                        begin: Alignment.centerRight,
+                        end: Alignment.centerLeft,
+                        colors: [Colors.redAccent, Colors.pinkAccent]
+                    ),
+                    borderRadius: BorderRadius.circular(30.0),
+                  ),
+                  child: GestureDetector(
+                    onTap: (){
+                      Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => ChatScreen(name: 'Luan Dang', UrlImage: '',)));
+                    },
+                    child: Container(
+                      constraints:
+                      BoxConstraints(maxWidth: 300.0, minHeight: 50.0),
+                      alignment: Alignment.center,
+                      child: Text(
+                        "Contact me",
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 26.0,
+                            fontWeight: FontWeight.w300),
+                      ),
+                    ),
+                  ),
+                )),
+          ),
         ],
       ),
     );

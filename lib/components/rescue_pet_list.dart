@@ -152,7 +152,7 @@ class RescuePetListState extends State<RescuePetList> {
                                             "Nguyễn Văn Du",
                                             style: TextStyle(
                                               fontSize: 18,
-                                              color: Colors.orange,
+                                              color: Color.fromRGBO(253, 158, 121, 1),
                                               fontWeight: FontWeight.w700
                                             ),
                                           )

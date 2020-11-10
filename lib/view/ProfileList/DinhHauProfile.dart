@@ -1,25 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:pet_help/components/chat.dart';
-import 'package:pet_help/view/RescueHome.dart';
 
-class FPTProfileApp extends StatelessWidget {
+class DinhHauProfile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        leading: IconButton(
-            icon: Icon(Icons.arrow_back_ios, color: Colors.white),
-            onPressed: () {
-              Navigator.of(context).pushReplacement(MaterialPageRoute(
-                builder: (context) => RescueHome(),
-              ));
-            }),
-
-        backgroundColor: Color.fromRGBO(253, 158, 121, 1),
-        centerTitle: true,
-      ),
-
-
       body: Column(
         children: <Widget>[
           Container(
@@ -43,7 +28,8 @@ class FPTProfileApp extends StatelessWidget {
                     children: <Widget>[
                       CircleAvatar(
                         backgroundImage: NetworkImage(
-                          "https://i.pinimg.com/originals/bf/ca/4d/bfca4d372b34c0fe341901ee31200796.jpg",
+                          // "https://sohanews.sohacdn.com/160588918557773824/2020/10/5/photo-1-1601889002966448421364.jpg",
+                          "https://scontent.fsgn2-1.fna.fbcdn.net/v/t1.0-9/12920488_519234948276543_4172868031031562857_n.jpg?_nc_cat=107&ccb=2&_nc_sid=09cbfe&_nc_ohc=b6Dw6Y1GcG8AX8W06ko&_nc_ht=scontent.fsgn2-1.fna&oh=237a7ad6273c84dd382dba23fb064051&oe=5FC8E384",
                         ),
                         radius: 50.0,
                       ),
@@ -51,7 +37,7 @@ class FPTProfileApp extends StatelessWidget {
                         height: 10.0,
                       ),
                       Text(
-                        "Cứu Trợ FPT",
+                        "Trung tâm SAR",
                         style: TextStyle(
                           fontSize: 22.0,
                           color: Colors.black,
@@ -69,7 +55,7 @@ class FPTProfileApp extends StatelessWidget {
           ),
           Container(
             child: Text(
-              'FptRescue@gmail.com',
+              'SarRescue@gmail.com',
               style: TextStyle(
                 fontSize: 19.0,
                 fontStyle: FontStyle.italic,
@@ -132,7 +118,42 @@ class FPTProfileApp extends StatelessWidget {
           SizedBox(
             height: 20.0,
           ),
-
+          Container(
+            width: 300.00,
+            child: RaisedButton(
+                onPressed: () {},
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(80.0)),
+                elevation: 0.0,
+                padding: EdgeInsets.all(0.0),
+                child: Ink(
+                  decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                        begin: Alignment.centerRight,
+                        end: Alignment.centerLeft,
+                        colors: [Colors.redAccent, Colors.pinkAccent]
+                    ),
+                    borderRadius: BorderRadius.circular(30.0),
+                  ),
+                  child: GestureDetector(
+                    onTap: (){
+                      Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => ChatScreen(name: 'Trung Tâm SAR', UrlImage: '',)));
+                    },
+                    child: Container(
+                      constraints:
+                      BoxConstraints(maxWidth: 300.0, minHeight: 50.0),
+                      alignment: Alignment.center,
+                      child: Text(
+                        "Contact us",
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 26.0,
+                            fontWeight: FontWeight.w300),
+                      ),
+                    ),
+                  ),
+                )),
+          ),
         ],
       ),
     );
