@@ -47,7 +47,7 @@ class ConfirmEmailSent extends StatelessWidget {
                   Container(
                     width: 350,
                     child: Text(
-                      'Mã xác nhận đã được gửi tới SĐT của bạn',
+                      'Vui lòng nhập mã OTP đã được gửi tới SĐT của bạn đã đăng kí',
                       style: TextStyle(
                         // color: Colors.blue,
                           color: Colors.black87,
