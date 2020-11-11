@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:pet_help/components/chat.dart';
 import 'package:pet_help/view/HomePageUser/HomePage.dart';
+import 'package:pet_help/view/ReportFormList/PetProReportForm.dart';
 import 'package:pet_help/view/RescueReportForm.dart';
 
-import '../ReportForm.dart';
+import '../ReportFormList/ReportForm.dart';
 
 class PetProProfileApp extends StatelessWidget {
   @override
@@ -38,7 +39,7 @@ class PetProProfileApp extends StatelessWidget {
                 padding: const EdgeInsets.only(right: 5.0),
                 child: IconButton(icon: Icon(Icons.warning),
                   onPressed: () {
-                    Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => RescueReportForm()));
+                    Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => PetProReportForm()));
                   },
                 ),
               ),

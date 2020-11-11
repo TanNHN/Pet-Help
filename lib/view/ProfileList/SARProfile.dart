@@ -3,7 +3,7 @@ import 'package:pet_help/components/chat.dart';
 import 'package:pet_help/view/HomePageUser/HomePage.dart';
 import 'package:pet_help/view/RescueReportForm.dart';
 
-import '../ReportForm.dart';
+import '../ReportFormList/ReportForm.dart';
 
 class SARProfileApp extends StatelessWidget {
   @override
