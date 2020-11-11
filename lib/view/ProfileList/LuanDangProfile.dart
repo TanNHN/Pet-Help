@@ -68,8 +68,7 @@ class LuanDangProfile extends StatelessWidget {
                     children: <Widget>[
                       CircleAvatar(
                         backgroundImage: NetworkImage(
-                          // "https://sohanews.sohacdn.com/160588918557773824/2020/10/5/photo-1-1601889002966448421364.jpg",
-                            "https://files.giaoducthoidai.vn/Uploaded/tranghn/2019-05-15/n6-MDJP.jpg",
+                            "https://scontent.fsgn1-1.fna.fbcdn.net/v/t1.0-9/68360040_1370816656398860_4474408856373428224_o.jpg?_nc_cat=111&ccb=2&_nc_sid=09cbfe&_nc_ohc=b8sLfBXIWJYAX9NTIb_&_nc_ht=scontent.fsgn1-1.fna&oh=82e90ae7e2db51f2f2ec7b59434c6a1b&oe=5FCF42D1",
                         ),
                         radius: 50.0,
                       ),
