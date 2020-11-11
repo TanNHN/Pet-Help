@@ -63,8 +63,8 @@ class ConfirmEmailSent extends StatelessWidget {
               ),
 
               CustomTextField(
-                hint: '    Vui lòng nhập mã xác nhận',
-                issecured: true,
+                hint: '    ••••••',
+                issecured: false,
               ),
               SizedBox(height: 25,),
               Padding(
