@@ -290,6 +290,7 @@ class RescueHomeList extends StatelessWidget {
                           ],
                         ),
                       ),
+
                       Padding(
                         padding: const EdgeInsets.fromLTRB(1, 0, 0, 8),
                         child: Row(
@@ -411,6 +412,7 @@ class RescueHomeList extends StatelessWidget {
             ),
             SizedBox(height: 10),
             SizedBox(height: 10),
+
             new GestureDetector(
               onTap: () {
                 Navigator.push(

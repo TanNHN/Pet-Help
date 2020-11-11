@@ -121,6 +121,7 @@ flutter:
     - src/image/dog_attack.jpg
     - src/image/lost_kitty.jpg
     - src/image/CatVang.jpg
+    - src/image/LostCat2.jpg
     - src/icon/contact.png
     - src/icon/cat.png
     - src/icon/adopt.png

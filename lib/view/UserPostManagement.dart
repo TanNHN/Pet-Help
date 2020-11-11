@@ -75,7 +75,7 @@ class UserPostManagement extends StatelessWidget {
                             child: Row(
                               children: <Widget>[
                                 Image.asset(
-                                  'src/image/rescue_cat3.jpg',
+                                  'src/image/LostCat2.jpg',
                                   width: 140,
                                   height: 280,
                                 ),

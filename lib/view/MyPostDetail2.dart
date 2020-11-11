@@ -27,12 +27,12 @@ class MyPostDetail2 extends StatefulWidget {
 }
 
 class MyPostDetail2State extends State<MyPostDetail2> {
-  String imgUrl = "src/image/rescue_cat3.jpg";
+  String imgUrl = "src/image/LostCat2.jpg";
 
   @override
   void initState() {
     super.initState();
-    imgUrl = 'src/image/rescue_cat3.jpg';
+    imgUrl = 'src/image/LostCat2.jpg';
     _getLocationPermission();
   }
 
@@ -108,11 +108,11 @@ class MyPostDetail2State extends State<MyPostDetail2> {
                                         onTap: () {
                                           setState(() {
                                             imgUrl =
-                                                "src/image/rescue_cat3.jpg";
+                                                "src/image/LostCat2.jpg";
                                           });
                                         },
                                         child: Image.asset(
-                                          'src/image/rescue_cat3.jpg',
+                                          'src/image/LostCat2.jpg',
                                         ),
                                       ),
                                       Padding(

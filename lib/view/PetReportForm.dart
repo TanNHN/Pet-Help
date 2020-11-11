@@ -70,7 +70,7 @@ class PetReportFormStage extends State<PetReportForm> {
           );
         });
   }
-
+  var value1;
   @override
   Widget build(BuildContext context) {
     int _value = 1;
@@ -157,26 +157,26 @@ class PetReportFormStage extends State<PetReportForm> {
                         child: Row(
                           children: [
                             Text(
-                              "  Tình trạng tổng quát: ",
+                              "  Tình trạng sức khoẻ: ",
                               style: TextStyle(
                                   fontSize: 18, fontWeight: FontWeight.bold),
                             ),
                             DropdownButton(
-                                value: _value,
+                                value: this.value1,
                                 items: [
                                   DropdownMenuItem(
                                     child: Text(""),
-                                    value: 1,
+                                    value: '',
                                   ),
                                   DropdownMenuItem(
                                     child: Text("Khỏe mạnh"),
-                                    value: 2,
+                                    value: 'Khỏe mạnh',
                                   ),
                                   DropdownMenuItem(
-                                      child: Text("Ổn định"), value: 3),
+                                      child: Text("Ổn định"), value: 'Ổn định'),
                                   DropdownMenuItem(
-                                      child: Text("Thất thường"), value: 4),
-                                  DropdownMenuItem(child: Text("Yếu"), value: 5)
+                                      child: Text("Thất thường"), value: 'Thất thường'),
+                                  DropdownMenuItem(child: Text("Yếu"), value: 'Yếu')
                                 ],
                                 onChanged: (value) {
                                   setState(() {
@@ -229,11 +229,14 @@ class PetReportFormStage extends State<PetReportForm> {
                     ),
 
 
+
+
+
                     Padding(
-                      padding: const EdgeInsets.all(8.0),
+                      padding: const EdgeInsets.all(10.0),
                       child: Container(
                         width: 440,
-                        height: 50,
+                        height: 130,
                         decoration: BoxDecoration(
                             color: Colors.white,
                             borderRadius: BorderRadius.circular(18),
@@ -243,113 +246,25 @@ class PetReportFormStage extends State<PetReportForm> {
                                   offset: new Offset(1.0, 2.0),
                                   blurRadius: 3.5),
                             ]),
-                        child: Row(
-                          children: [
-                            Text(
-                              "  Giới tính: ",
-                              style: TextStyle(
-                                  fontSize: 18, fontWeight: FontWeight.bold),
-                            ),
-                            DropdownButton(
-                                value: _value,
-                                items: [
-                                  DropdownMenuItem(
-                                    child: Text(""),
-                                    value: 1,
-                                  ),
-                                  DropdownMenuItem(
-                                    child: Text("Đực"),
-                                    value: 2,
-                                  ),
-                                  DropdownMenuItem(
-                                      child: Text("Cái"), value: 3),
-                                ],
-                                onChanged: (value) {
-                                  setState(() {
-                                    _value = value;
-                                  });
-                                }),
-                          ],
-                        ),
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Container(
-                        width: 440,
-                        height: 215,
-                        decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(18),
-                            boxShadow: [
-                              new BoxShadow(
-                                  color: Colors.black54,
-                                  offset: new Offset(1.0, 2.0),
-                                  blurRadius: 3.5),
-                            ]),
-                        child: Row(
-                          children: [
-                            Text(
-                              "  Màu: ",
-                              style: TextStyle(
-                                  fontSize: 18, fontWeight: FontWeight.bold),
-                            ),
-                            MaterialColorPicker(
-                                allowShades: false, // default true
-                                onMainColorChange: (ColorSwatch color) {
-                                  // Handle main color changes
-                                },
-                                selectedColor: Colors.red),
-                          ],
-                        ),
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Container(
-                        width: 440,
-                        height: 50,
-                        decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(18),
-                            boxShadow: [
-                              new BoxShadow(
-                                  color: Colors.black54,
-                                  offset: new Offset(1.0, 2.0),
-                                  blurRadius: 3.5),
-                            ]),
-                        child: Row(
-                          children: [
-                            Text(
-                              "  Cảm xúc: ",
-                              style: TextStyle(
-                                  fontSize: 18, fontWeight: FontWeight.bold),
-                            ),
-                            DropdownButton(
-                                value: _value,
-                                items: [
-                                  DropdownMenuItem(
-                                    child: Text(""),
-                                    value: 1,
-                                  ),
-                                  DropdownMenuItem(
-                                    child: Text("Vui vẻ"),
-                                    value: 2,
-                                  ),
-                                  DropdownMenuItem(child: Text("Sợ"), value: 3),
-                                  DropdownMenuItem(
-                                      child: Text("Lãng tránh"), value: 4),
-                                  DropdownMenuItem(
-                                      child: Text("Thất thường"), value: 5),
-                                  DropdownMenuItem(
-                                      child: Text("Cảm giác cao"), value: 6),
-                                ],
-                                onChanged: (value) {
-                                  setState(() {
-                                    _value = value;
-                                  });
-                                }),
-                          ],
+                        child: TextFormField(
+                          maxLines: 4,
+                          decoration: new InputDecoration(
+                            // labelText: 'Tình trạng hiện tại',
+                            // labelStyle: TextStyle(
+                            //     color: Colors.green,
+                            //     fontSize: 25,
+                            //     fontWeight: FontWeight.bold),
+                              focusedBorder: InputBorder.none,
+                              enabledBorder: InputBorder.none,
+                              disabledBorder: InputBorder.none,
+                              contentPadding: EdgeInsets.all(30),
+                              suffixIcon: Icon(Icons.mode_edit, color: Colors.orange,),
+                              focusColor: Colors.green,
+                              hintText: "Báo cáo chi tiết",
+                              hintStyle: TextStyle(
+                                  fontSize: 15,
+                                  color: Colors.grey,
+                                  fontStyle: FontStyle.italic)),
                         ),
                       ),
                     ),
