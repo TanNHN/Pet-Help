@@ -226,7 +226,7 @@ class ItemInfo extends State<PetProfile> {
                                   TextStyle(color: Colors.black54, fontWeight: FontWeight.bold, fontSize: 17, ),
                             ),
                           Text(
-                              "20/05/2020",
+                              "26/09/2020",
                             style:
                             TextStyle(color: Colors.grey, fontWeight: FontWeight.w300, fontStyle: FontStyle.italic, fontSize: 15,),
                           ),

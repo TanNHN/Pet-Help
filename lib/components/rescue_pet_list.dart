@@ -50,7 +50,7 @@ class RescuePetListState extends State<RescuePetList> {
                       value: 1,
                     ),
                     DropdownMenuItem(
-                      child: Text("Đang được nuôi"),
+                      child: Text("Đang được chăm sóc"),
                       value: 2,
                     ),
                     DropdownMenuItem(
@@ -108,7 +108,7 @@ class RescuePetListState extends State<RescuePetList> {
                                 Column(
                                   children: [
                                     Text(
-                                      "BUM\n",
+                                      "Bum\n",
                                       style: TextStyle(
                                           fontSize: 30,
                                           fontWeight: FontWeight.bold,
@@ -181,7 +181,7 @@ class RescuePetListState extends State<RescuePetList> {
                                             ));
                                           },
                                           child: Text(
-                                            'Đã có người nuôi',
+                                            'Đã được nhận nuôi',
                                             style: TextStyle(
                                               color: Colors.green,
                                               fontSize: 15,
@@ -229,7 +229,7 @@ class RescuePetListState extends State<RescuePetList> {
                     child: Row(
                       children: <Widget>[
                         Image.asset(
-                          'src/image/pet_5.jpg',
+                          'src/image/samoyed.jpg',
                           width: 140,
                           height: 240,
                         ),
@@ -253,7 +253,7 @@ class RescuePetListState extends State<RescuePetList> {
                                 Column(
                                   children: [
                                     Text(
-                                      "NGA\n",
+                                      "Sam\n",
                                       style: TextStyle(
                                         fontSize: 30,
                                         fontWeight: FontWeight.bold,
@@ -350,7 +350,7 @@ class RescuePetListState extends State<RescuePetList> {
                     child: Row(
                       children: <Widget>[
                         Image.asset(
-                          'src/image/pet_6.jpg',
+                          'src/image/CatVang.jpg',
                           width: 140,
                           height: 240,
                         ),
@@ -369,7 +369,7 @@ class RescuePetListState extends State<RescuePetList> {
                               Column(
                                 children: [
                                   Text(
-                                    "BÊ\n",
+                                    "Vàng\n",
                                     style: TextStyle(
                                       fontSize: 30,
                                       fontWeight: FontWeight.bold,

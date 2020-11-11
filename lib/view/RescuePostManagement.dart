@@ -85,7 +85,7 @@ class MyPost extends StatelessWidget {
                                 child: Container(
 
                                   child: (Text(
-                                    "BỦN",
+                                    "Bủn",
                                     style: TextStyle(
                                       fontSize: 20,
                                       fontWeight: FontWeight.bold,
@@ -254,7 +254,7 @@ class MyPost extends StatelessWidget {
                                 child: Container(
 
                                   child: (Text(
-                                    "SAM",
+                                    "Sam",
                                     style: TextStyle(
                                       fontSize: 20,
                                       fontWeight: FontWeight.bold,
